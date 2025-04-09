@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<RoboticsAPIData version="3">
+    <world>
+        <gravitation x="0.0" y="0.0" z="9.81"/>
+        <frame id="_fe09a00c-ac9a-4582-8e46-324424ff9856" name="DrivePos">
+            <transformation a="0.9452114246805668" b="0.00510853677504222" c="-3.139501826844158" x="10.935389425175797" y="-451.4688320594969" z="376.2847982239901"/>
+            <additionalInformation>
+                <info key="LastModificationTime" type="java.lang.Long" value="1500297520541"/>
+                <info base="LBR_iiwa_14_R820_1" controller="KUKA_Sunrise_Cabinet_1" device="LBR_iiwa_14_R820_1" tcpName="Flange" tool="Flange" type="com.kuka.roboticsAPI.deviceModel.TeachInformation">
+                    <tcpTransformation a="0.0" b="0.0" c="0.0" x="0.0" y="0.0" z="0.0"/>
+                </info>
+            </additionalInformation>
+            <redundancyData>
+                <redundancy transformationProviderName="KUKA_Sunrise_Cabinet_1/LBR_iiwa_14_R820_1" type="com.kuka.roboticsAPI.deviceModel.LBRE1Redundancy">
+                    <info type="com.kuka.roboticsAPI.deviceModel.StatusTurnRedundancy$StatusParameter" value="2" valueType="java.lang.Integer"/>
+                    <info type="com.kuka.roboticsAPI.deviceModel.StatusTurnRedundancy$TurnParameter" value="25" valueType="java.lang.Integer"/>
+                    <info type="com.kuka.roboticsAPI.deviceModel.LBRE1Redundancy$E1Parameter" value="0.01805123872193497" valueType="java.lang.Double"/>
+                </redundancy>
+            </redundancyData>
+        </frame>
+    </world>
+    <objectTemplates>
+        <toolTemplate class="" name="NoLoad">
+            <frames>
+                <frame id="_5d382cd1-bcdd-4ce5-9ef7-ff979be52947" name="TCP1">
+                    <transformation a="0.0" b="0.0" c="0.0" x="540.0" y="-315.0" z="0.0"/>
+                    <additionalInformation>
+                        <info key="Radius" type="java.lang.Integer" value="25"/>
+                        <info key="SafetyID" type="java.lang.Integer" value="0"/>
+                    </additionalInformation>
+                </frame>
+                <frame id="_e5b06d4f-a992-4acb-8f04-fcc3648d9691" name="TCP2">
+                    <transformation a="0.0" b="0.0" c="0.0" x="540.0" y="315.0" z="0.0"/>
+                    <additionalInformation>
+                        <info key="Radius" type="java.lang.Integer" value="25"/>
+                        <info key="SafetyID" type="java.lang.Integer" value="3"/>
+                    </additionalInformation>
+                </frame>
+                <frame id="_ec562d38-61f2-4c24-a197-0de55e49ce2f" name="TCP4">
+                    <transformation a="0.0" b="0.0" c="0.0" x="-540.0" y="315.0" z="0.0"/>
+                    <additionalInformation>
+                        <info key="Radius" type="java.lang.Integer" value="25"/>
+                        <info key="SafetyID" type="java.lang.Integer" value="2"/>
+                    </additionalInformation>
+                </frame>
+                <frame id="_2fad5e82-ce67-477d-8e43-5265331a183a" name="TCP3">
+                    <transformation a="0.0" b="0.0" c="0.0" x="-540.0" y="-315.0" z="0.0"/>
+                    <additionalInformation>
+                        <info key="Radius" type="java.lang.Integer" value="25"/>
+                        <info key="SafetyID" type="java.lang.Integer" value="1"/>
+                    </additionalInformation>
+                </frame>
+            </frames>
+            <additionalInformation>
+                <info key="SafetyID" type="java.lang.Integer" value="0"/>
+                <info key="Comment" type="java.lang.String" value="Corner 1 of the AGV where the tool-related-velocity will be monitored if the PLC sends the signal to activate this corner."/>
+                <info key="ToolVelocityPointPath" type="java.lang.String" value="/TCP3"/>
+                <info key="ToolVelocityPointPath" type="java.lang.String" value="/TCP2"/>
+                <info key="ToolVelocityPointPath" type="java.lang.String" value="/TCP4"/>
+                <info key="ToolVelocityPointPath" type="java.lang.String" value="/TCP1"/>
+                <info key="ID" type="java.lang.String" value="56051ef0-c504-45b9-9320-52755eaade56"/>
+            </additionalInformation>
+            <loadData cogA="0.0" cogB="0.0" cogC="0.0" cogX="0.0" cogY="0.0" cogZ="0.0" inertiaX="0.0" inertiaY="0.0" inertiaZ="0.0" mass="0.0"/>
+        </toolTemplate>
+        <toolTemplate class="" name="Load">
+            <frames>
+                <frame id="_4e48e470-f674-4608-af7a-974d9feeb469" name="TCP1">
+                    <transformation a="0.0" b="0.0" c="0.0" x="540.0" y="-315.0" z="0.0"/>
+                    <additionalInformation>
+                        <info key="Radius" type="java.lang.Integer" value="25"/>
+                        <info key="SafetyID" type="java.lang.Integer" value="3"/>
+                    </additionalInformation>
+                </frame>
+                <frame id="_40bfa844-5b70-47e7-bb84-fcace9cf0ad4" name="TCP2">
+                    <transformation a="0.0" b="0.0" c="0.0" x="540.0" y="315.0" z="0.0"/>
+                    <additionalInformation>
+                        <info key="Radius" type="java.lang.Integer" value="25"/>
+                        <info key="SafetyID" type="java.lang.Integer" value="2"/>
+                    </additionalInformation>
+                </frame>
+                <frame id="_537dbe05-1d2f-43ac-82f8-ab04bccb5bb5" name="TCP4">
+                    <transformation a="0.0" b="0.0" c="0.0" x="-540.0" y="315.0" z="0.0"/>
+                    <additionalInformation>
+                        <info key="Radius" type="java.lang.Integer" value="25"/>
+                        <info key="SafetyID" type="java.lang.Integer" value="0"/>
+                    </additionalInformation>
+                </frame>
+                <frame id="_4609f686-f9d4-42f1-81bc-03490573f198" name="TCP3">
+                    <transformation a="0.0" b="0.0" c="0.0" x="-540.0" y="-315.0" z="0.0"/>
+                    <additionalInformation>
+                        <info key="Radius" type="java.lang.Integer" value="25"/>
+                        <info key="SafetyID" type="java.lang.Integer" value="1"/>
+                    </additionalInformation>
+                </frame>
+            </frames>
+            <additionalInformation>
+                <info key="Comment" type="java.lang.String" value="Corner 1 of the AGV where the tool-related-velocity will be monitored if the PLC sends the signal to activate this corner."/>
+                <info key="SafetyID" type="java.lang.Integer" value="1"/>
+                <info key="ToolVelocityPointPath" type="java.lang.String" value="/TCP3"/>
+                <info key="ToolVelocityPointPath" type="java.lang.String" value="/TCP2"/>
+                <info key="ToolVelocityPointPath" type="java.lang.String" value="/TCP4"/>
+                <info key="ToolVelocityPointPath" type="java.lang.String" value="/TCP1"/>
+                <info key="ID" type="java.lang.String" value="da8f4046-9589-4906-a70d-c7e15ccc3618"/>
+            </additionalInformation>
+            <loadData cogA="0.0" cogB="0.0" cogC="0.0" cogX="0.0" cogY="0.0" cogZ="0.0" inertiaX="0.0" inertiaY="0.0" inertiaZ="0.0" mass="0.0"/>
+        </toolTemplate>
+        <workpieceTemplate class="" name="WorkpieceTemplate">
+            <frames>
+                <frame id="_b0712bee-cb71-43d2-8d6f-8bf8a5b6e4dd" name="Frame">
+                    <transformation a="0.0" b="0.0" c="0.0" x="0.0" y="0.0" z="0.0"/>
+                </frame>
+            </frames>
+            <loadData cogA="0.0" cogB="0.0" cogC="0.0" cogX="0.0" cogY="0.0" cogZ="0.0" inertiaX="0.0" inertiaY="0.0" inertiaZ="0.0" mass="0.0"/>
+        </workpieceTemplate>
+    </objectTemplates>
+</RoboticsAPIData>

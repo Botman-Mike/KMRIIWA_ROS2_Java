@@ -1,0 +1,93 @@
+2025-04-07 14:05:18,810 DEBUG [.. for Service: DeploymentService-thread-1] Task instance "1@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to CREATING.
+2025-04-07 14:05:19,609 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "1@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to INITIALIZING.
+2025-04-07 14:05:19,648 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "1@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to RUNNING.
+2025-04-07 14:07:09,537 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "1@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to DISPOSING.
+2025-04-07 14:07:09,665 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "1@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to STOPPING.
+2025-04-07 14:07:09,666 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "1@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to STOPPED.
+2025-04-07 14:07:28,748 DEBUG [..executor for Service: AppServer-thread-1] Task instance "2@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to CREATING.
+2025-04-07 14:07:30,442 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "2@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to INITIALIZING.
+2025-04-07 14:07:30,473 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "2@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to RUNNING.
+2025-04-07 14:07:33,751 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "2@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to DISPOSING.
+2025-04-07 14:07:34,299 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "2@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to STOPPING.
+2025-04-07 14:07:34,440 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "2@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to STOPPED.
+2025-04-07 14:07:37,519 DEBUG [..executor for Service: AppServer-thread-1] Task instance "4@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to CREATING.
+2025-04-07 14:07:37,914 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "4@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to INITIALIZING.
+2025-04-07 14:07:37,915 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "4@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to RUNNING.
+2025-04-07 14:51:58,145 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "4@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to DISPOSING.
+2025-04-07 14:51:58,159 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "4@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to STOPPING.
+2025-04-07 14:51:58,160 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "4@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to STOPPED.
+2025-04-07 14:52:02,163 DEBUG [.. for Service: DeploymentService-thread-1] Task instance "1@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to CREATING.
+2025-04-07 14:52:02,716 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "1@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to INITIALIZING.
+2025-04-07 14:52:02,716 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "1@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to RUNNING.
+2025-04-07 15:00:25,819 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "1@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to DISPOSING.
+2025-04-07 15:00:25,834 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "1@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to STOPPING.
+2025-04-07 15:00:25,836 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "1@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to STOPPED.
+2025-04-08 10:09:39,807 DEBUG [..edOsgiServiceStarter<IDeploymentManager>] Task instance "1@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to CREATING.
+2025-04-08 10:09:40,520 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "1@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to INITIALIZING.
+2025-04-08 10:09:40,522 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "1@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to RUNNING.
+2025-04-08 14:25:56,098 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "1@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to DISPOSING.
+2025-04-08 14:25:56,248 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "1@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to STOPPING.
+2025-04-08 14:25:56,250 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "1@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to STOPPED.
+2025-04-08 14:26:00,307 DEBUG [.. for Service: DeploymentService-thread-1] Task instance "1@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to CREATING.
+2025-04-08 14:26:00,896 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "1@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to INITIALIZING.
+2025-04-08 14:26:00,897 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "1@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to RUNNING.
+2025-04-08 14:29:13,438 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "1@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to DISPOSING.
+2025-04-08 14:29:13,490 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "1@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to STOPPING.
+2025-04-08 14:29:13,561 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "1@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to STOPPED.
+2025-04-08 14:29:16,923 DEBUG [..executor for Service: AppServer-thread-1] Task instance "2@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to CREATING.
+2025-04-08 14:29:17,629 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "2@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to INITIALIZING.
+2025-04-08 14:29:17,663 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "2@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to RUNNING.
+2025-04-08 14:50:01,161 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "2@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to DISPOSING.
+2025-04-08 14:50:01,173 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "2@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to STOPPING.
+2025-04-08 14:50:01,174 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "2@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to STOPPED.
+2025-04-08 14:50:05,082 DEBUG [.. for Service: DeploymentService-thread-1] Task instance "1@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to CREATING.
+2025-04-08 14:50:05,574 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "1@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to INITIALIZING.
+2025-04-08 14:50:05,575 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "1@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to RUNNING.
+2025-04-08 15:02:20,489 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "1@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to DISPOSING.
+2025-04-08 15:02:20,502 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "1@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to STOPPING.
+2025-04-08 15:02:20,503 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "1@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to STOPPED.
+2025-04-08 15:02:24,258 DEBUG [.. for Service: DeploymentService-thread-1] Task instance "1@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to CREATING.
+2025-04-08 15:02:24,777 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "1@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to INITIALIZING.
+2025-04-08 15:02:24,778 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "1@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to RUNNING.
+2025-04-08 15:02:58,683 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "1@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to DISPOSING.
+2025-04-08 15:02:58,808 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "1@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to STOPPING.
+2025-04-08 15:02:58,809 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "1@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to STOPPED.
+2025-04-08 15:03:01,030 DEBUG [..executor for Service: AppServer-thread-1] Task instance "2@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to CREATING.
+2025-04-08 15:03:01,223 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "2@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to INITIALIZING.
+2025-04-08 15:03:01,224 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "2@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to RUNNING.
+2025-04-08 15:14:23,846 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "2@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to DISPOSING.
+2025-04-08 15:14:25,472 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "2@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to STOPPING.
+2025-04-08 15:14:25,571 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "2@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to STOPPED.
+2025-04-08 15:17:10,010 DEBUG [..edOsgiServiceStarter<IDeploymentManager>] Task instance "1@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to CREATING.
+2025-04-08 15:17:10,546 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "1@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to INITIALIZING.
+2025-04-08 15:17:10,551 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "1@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to RUNNING.
+2025-04-08 15:53:01,431 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "1@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to DISPOSING.
+2025-04-08 15:53:01,666 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "1@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to STOPPING.
+2025-04-08 15:53:01,669 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "1@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to STOPPED.
+2025-04-08 15:53:08,808 DEBUG [.. for Service: DeploymentService-thread-1] Task instance "1@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to CREATING.
+2025-04-08 15:53:11,254 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "1@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to INITIALIZING.
+2025-04-08 15:53:11,256 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "1@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to RUNNING.
+2025-04-08 15:55:11,297 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "1@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to DISPOSING.
+2025-04-08 15:55:11,425 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "1@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to STOPPING.
+2025-04-08 15:55:11,427 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "1@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to STOPPED.
+2025-04-08 15:55:35,246 DEBUG [..executor for Service: AppServer-thread-1] Task instance "2@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to CREATING.
+2025-04-08 15:55:35,881 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "2@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to INITIALIZING.
+2025-04-08 15:55:35,915 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "2@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to RUNNING.
+2025-04-08 16:19:20,853 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "2@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to DISPOSING.
+2025-04-08 16:19:21,040 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "2@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to STOPPING.
+2025-04-08 16:19:21,344 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "2@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to STOPPED.
+2025-04-08 16:19:43,319 DEBUG [.. for Service: DeploymentService-thread-1] Task instance "1@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to CREATING.
+2025-04-08 16:19:44,169 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "1@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to INITIALIZING.
+2025-04-08 16:19:44,170 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "1@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to RUNNING.
+2025-04-08 16:36:17,791 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "1@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to DISPOSING.
+2025-04-08 16:36:17,933 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "1@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to STOPPING.
+2025-04-08 16:36:17,934 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "1@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to STOPPED.
+2025-04-08 16:36:22,193 DEBUG [.. for Service: DeploymentService-thread-1] Task instance "1@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to CREATING.
+2025-04-08 16:36:22,777 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "1@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to INITIALIZING.
+2025-04-08 16:36:22,786 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "1@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to RUNNING.
+2025-04-08 16:40:51,426 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "1@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to DISPOSING.
+2025-04-08 16:40:51,594 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "1@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to STOPPING.
+2025-04-08 16:40:51,734 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "1@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to STOPPED.
+2025-04-08 16:41:31,374 DEBUG [..executor for Service: AppServer-thread-1] Task instance "2@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to CREATING.
+2025-04-08 16:41:31,696 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "2@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to INITIALIZING.
+2025-04-08 16:41:31,696 DEBUG [..maticResumeBackgroundTask@SunriseProject] Task instance "2@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" changed state to RUNNING.
