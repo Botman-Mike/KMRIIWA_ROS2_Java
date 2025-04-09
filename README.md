@@ -1,0 +1,1 @@
+Kuka Sunrise project to implement ROS 2 Humble control of KMR IIWA 14 R820.  This is the Java only workspace for installing on the robot that acts as the driver.  It was tested in Kuka sunrise workbench 1.16
