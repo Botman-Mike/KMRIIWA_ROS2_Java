@@ -1,0 +1,6 @@
+# Exclude IDE and environment-specific files
+.metadata/
+
+# Exclude internal SunriseProject git
+SunriseProject/.git/
+
