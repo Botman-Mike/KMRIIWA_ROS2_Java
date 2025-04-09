@@ -1,0 +1,2332 @@
+
+Safety configuration  
+
+
+
+
+Sunrise project: SunriseProject 
+Safety version: 7.50 
+Safety ID: FC68108C 
+Last modification: Apr 3, 2025 2:10:09 PM 
+
+Notes
+
+
+
+
+
+ 
+KUKA PSM
+
+
+Row
+
+Category
+
+AMF 1
+
+AMF 2
+
+AMF 3
+
+Reaction
+
+OK
+
+
+1
+Emergency stop local   Emergency stop smartPAD
+
+ Instance 1   Stop 1 (on-path)  
+
+2
+Enabling Device  Hand guiding device inactive
+
+ Instance 1   Operating mode Test
+
+ Instance 1   Control panel enable smartPAD inactive
+
+ Instance 1  Stop 1 (on-path)  
+
+3
+Velocity Monitoring  Hand guiding device active
+
+ Instance 1   Cartesian velocity monitoring
+
+ Instance 100   Stop 1 (on-path)  
+
+Customer PSM
+
+
+Row
+
+Category
+
+AMF 1
+
+AMF 2
+
+AMF 3
+
+Reaction
+
+OK
+
+
+1
+Emergency stop local  Input signal
+
+ Emergency Stop Corners (Instance 1)    Stop 1 (on-path)  
+
+2
+Output  Input signal
+
+ Emergency Stop Corners (Instance 1)    Output PROFIsafe Byte 0/0  
+
+3
+Output  Emergency stop smartPAD
+
+ Instance 1    Output PROFIsafe Byte 0/0  
+
+4
+Emergency stop local  Input signal
+
+ Keyswitch Position (Instance 3)   Input signal
+
+ Emergency Stop Remote Control (Instance 7)   Stop 1 (on-path)  
+
+5
+Output  Input signal
+
+ Keyswitch Position (Instance 3)   Input signal
+
+ Emergency Stop Remote Control (Instance 7)   Output PROFIsafe Byte 0/0  
+
+6
+Velocity Monitoring  Input signal
+
+ Incorrect TCP values for kinematic 2 (Instance 2)    Stop 1 (on-path)  
+
+7
+Output  Input signal
+
+ Keyswitch Position (Instance 3)    Output PROFIsafe Byte 1/7  
+
+8
+Protective stop  Input signal
+
+ Inconsistency Sunrise to Vehicle-PLC (Instance 5)    Stop 1 (on-path)  
+
+9
+Output  Operating mode with reduced speed
+
+ Instance 1    Output PROFIsafe Byte 0/1  
+
+10
+Output  Operating mode with high speed
+
+ Instance 1    Output PROFIsafe Byte 0/2  
+
+11
+Output  Operating mode Automatic
+
+ Instance 1    Output PROFIsafe Byte 0/3  
+
+12
+Output  Motion enable
+
+ Instance 1    Output PROFIsafe Byte 0/4  
+
+13
+Output  Input signal
+
+ Emergency Stop Remote Control (Instance 7)    Output PROFIsafe Byte 0/5  
+
+14
+Output  Control panel enable smartPAD inactive
+
+ Instance 1    Output PROFIsafe Byte 0/7  
+
+15
+Output  Cartesian velocity monitoring
+
+ Standstillmonitoring Kinematic 2 (Instance 1)    Output PROFIsafe Byte 1/0  
+
+16
+Output  Cartesian velocity monitoring
+
+ Vmax for Protection field muting (Instance 2)    Output PROFIsafe Byte 1/1  
+
+17
+Velocity Monitoring  Tool related velocity component
+
+ Vmax X positiv (Instance 9)    Stop 1 (on-path)  
+
+18
+Velocity Monitoring  Tool related velocity component
+
+ Vmax X negativ (Instance 10)    Stop 1 (on-path)  
+
+19
+Velocity Monitoring  Tool related velocity component
+
+ Vmax Y negativ (Instance 11)    Stop 1 (on-path)  
+
+20
+Velocity Monitoring  Tool related velocity component
+
+ Vmax Y positiv (Instance 12)    Stop 1 (on-path)  
+
+21
+None  Input signal
+
+ Vehicle-PLC App Interface Input 1 (Instance 6)    Stop 1 (on-path)  
+
+22
+None  Input signal
+
+ Vehicle-PLC App Interface Input 2 (Instance 9)    Stop 1 (on-path)  
+
+23
+None  Input signal
+
+ Vehicle-PLC App Interface Input 3 (Instance 10)    Stop 1 (on-path)  
+
+24
+Output  Cartesian velocity monitoring
+
+ TCP Vel Check (Instance 4)    Output PROFIsafe Byte 3/6  
+
+25
+Operator protection  Input signal
+
+ Protection Field Status (Instance 4)    Stop 1 (on-path)  
+
+26
+Output  Cartesian velocity monitoring
+
+ Vmax Standard DIN1525 (Instance 3)    Output PROFIsafe Byte 2/0  
+
+27
+Output  Tool related velocity component
+
+ Limit protection field level 1 - X negativ (Instance 1)    Output PROFIsafe Byte 2/1  
+
+28
+Output  Tool related velocity component
+
+ Limit protection field level 1 - X positiv (Instance 2)    Output PROFIsafe Byte 2/2  
+
+29
+Output  Tool related velocity component
+
+ Limit protection field level 2 - X negativ (Instance 3)    Output PROFIsafe Byte 2/3  
+
+30
+Output  Tool related velocity component
+
+ Limit protection field level 2 - X positiv (Instance 4)    Output PROFIsafe Byte 2/4  
+
+31
+Output  Tool related velocity component
+
+ Limit protection field level 1 - Y negativ (Instance 5)    Output PROFIsafe Byte 2/5  
+
+32
+Output  Tool related velocity component
+
+ Limit protection field level 1 - Y positiv (Instance 6)    Output PROFIsafe Byte 2/6  
+
+33
+Output  Tool related velocity component
+
+ Limit protection field level 2 - Y negativ (Instance 7)    Output PROFIsafe Byte 2/7  
+
+34
+Output  Tool related velocity component
+
+ Limit protection field level 2 - Y positiv (Instance 8)    Output PROFIsafe Byte 3/0  
+
+35
+Output  Operating mode with high speed
+
+ Instance 1   Operating mode with reduced speed
+
+ Instance 1   Output PROFIsafe Byte 1/4  
+
+36
+Output  Tool related velocity component
+
+ TCP Vel Check (Instance 13)    Output PROFIsafe Byte 3/1  
+
+37
+Output  Tool related velocity component
+
+ TCP Vel Check (Instance 14)    Output PROFIsafe Byte 3/2  
+
+38
+Output  Tool related velocity component
+
+ TCP Vel Check (Instance 15)    Output PROFIsafe Byte 3/3  
+
+39
+Output  Tool related velocity component
+
+ TCP Vel Check (Instance 16)    Output PROFIsafe Byte 3/4  
+
+40
+Protective stop  Input signal
+
+ Charging Contactors (Instance 8)    Output CIB.HS1  
+
+41
+Output  Operating mode with high speed
+
+ Instance 1   Operating mode with reduced speed
+
+ Instance 1   Output PROFIsafe Byte 3/5  
+
+42
+Workspace Monitoring  Position referencing
+
+ Instance 1   Operating mode Automatic
+
+ Instance 1   Stop 1 (on-path)  
+
+43
+Workspace Monitoring  Cartesian workspace monitoring
+
+ Basic shape of the mobile platform (Instance 1)   Operating mode Automatic
+
+ Instance 1   Cartesian velocity monitoring
+
+ Standstillmonitoring Kinematic 2 (Instance 1)  Stop 1 (on-path)  
+
+44
+Workspace Monitoring  Cartesian workspace monitoring
+
+ Small cubes at DrivePosition (Instance 2)   Operating mode Automatic
+
+ Instance 1   Stop 1 (on-path)  
+
+45
+Output  Cartesian velocity monitoring
+
+ Standstillmonitoring Kinematic 1 (Instance 5)    Output PROFIsafe Byte 1/2  
+  
+
+AMF Cartesian velocity monitoring
+
+The AMF can be tested by moving a monitored point of the monitored kinematic system at a Cartesian velocity of approx. 10% over the configured velocity limit.
+
+
+Standstillmonitoring Kinematic 2 (Instance 1)
+ 
+
+No.
+
+Activity
+
+OK
+
+
+1
+The configured reaction is triggered if the maximum permissible Cartesian velocity of a monitored point is exceeded.  
+
+ 
+
+Parameter
+
+Value
+
+Monitored kinematic system Second kinematic system 
+Monitored structure Robot and tool 
+Maximum velocity 1 mm/s 
+
+
+Notes
+
+
+
+
+
+
+
+Vmax for Protection field muting (Instance 2)
+ 
+
+No.
+
+Activity
+
+OK
+
+
+1
+The configured reaction is triggered if the maximum permissible Cartesian velocity of a monitored point is exceeded.  
+
+ 
+
+Parameter
+
+Value
+
+Monitored kinematic system Second kinematic system 
+Monitored structure Robot and tool 
+Maximum velocity 130 mm/s 
+
+
+Notes
+
+
+
+
+
+
+
+Vmax Standard DIN1525 (Instance 3)
+ 
+
+No.
+
+Activity
+
+OK
+
+
+1
+The configured reaction is triggered if the maximum permissible Cartesian velocity of a monitored point is exceeded.  
+
+ 
+
+Parameter
+
+Value
+
+Monitored kinematic system Second kinematic system 
+Monitored structure Robot and tool 
+Maximum velocity 300 mm/s 
+
+
+Notes
+
+
+
+
+
+
+
+TCP Vel Check (Instance 4)
+ 
+
+No.
+
+Activity
+
+OK
+
+
+1
+The configured reaction is triggered if the maximum permissible Cartesian velocity of a monitored point is exceeded.  
+
+ 
+
+Parameter
+
+Value
+
+Monitored kinematic system Second kinematic system 
+Monitored structure Robot and tool 
+Maximum velocity 100 mm/s 
+
+
+Notes
+
+
+
+
+
+
+
+Standstillmonitoring Kinematic 1 (Instance 5)
+ 
+
+No.
+
+Activity
+
+OK
+
+
+1
+The configured reaction is triggered if the maximum permissible Cartesian velocity of a monitored point is exceeded.  
+
+ 
+
+Parameter
+
+Value
+
+Monitored kinematic system First kinematic system 
+Monitored structure Robot and tool 
+Maximum velocity 1 mm/s 
+
+
+Notes
+
+
+
+
+
+
+
+Instance 100
+ 
+
+No.
+
+Activity
+
+OK
+
+
+1
+The configured reaction is triggered if the maximum permissible Cartesian velocity of a monitored point is exceeded.  
+
+ 
+
+Parameter
+
+Value
+
+Monitored kinematic system First kinematic system 
+Monitored structure Robot and tool 
+Maximum velocity 250 mm/s 
+
+
+Notes
+
+
+
+
+
+
+
+AMF Cartesian workspace monitoring
+
+The first step is to test whether the orientation of the monitoring space is correctly configured. This involves violating 2 adjoining space surfaces at a minimum of 3 different points in each case.
+The second step is to test whether the size of the monitoring space is correctly configured. This involves violating the other space surfaces at a minimum of 1 point in each case. In total, at least 10 points must be addressed.
+The third step is to test whether the structure to be monitored is correctly configured. This involves violating the space monitoring, both with the monitoring spheres on the robot and on the tool (if both structures are to be monitored), or just with the monitoring spheres on the robot or on the tool.
+
+
+Basic shape of the mobile platform (Instance 1)
+ 
+
+No.
+
+Activity
+
+OK
+
+
+1
+The configured reaction is triggered if the monitoring space is violated by the monitored kinematic system.  
+
+2
+The configured reaction is triggered if the space monitoring is violated on the monitoring spheres on the robot of the monitored kinematic system.  
+
+3
+The configured reaction is triggered if the space monitoring is violated on the monitoring spheres on the tool of the monitored kinematic system.  
+
+ 
+
+Parameter
+
+Value
+
+Monitored kinematic system First kinematic system 
+Monitored structure Robot and tool 
+X -499 mm 
+Y -903 mm 
+Z -200 mm 
+A 0 ° 
+B 0 ° 
+C 0 ° 
+Length 659 mm 
+Width 1080 mm 
+Height 1500 mm 
+
+
+Notes
+
+
+
+
+
+
+
+Small cubes at DrivePosition (Instance 2)
+ 
+
+No.
+
+Activity
+
+OK
+
+
+1
+The configured reaction is triggered if the monitoring space is violated by the monitored kinematic system.  
+
+2
+The configured reaction is triggered if the space monitoring is violated on the monitoring spheres on the robot of the monitored kinematic system.  
+
+3
+The configured reaction is triggered if the space monitoring is violated on the monitoring spheres on the tool of the monitored kinematic system.  
+
+ 
+
+Parameter
+
+Value
+
+Monitored kinematic system First kinematic system 
+Monitored structure Tool 
+X -1000 mm 
+Y -1000 mm 
+Z -500 mm 
+A 0 ° 
+B 0 ° 
+C 0 ° 
+Length 2000 mm 
+Width 2000 mm 
+Height 3000 mm 
+
+
+Notes
+
+
+
+
+
+
+
+AMF Control panel enable smartPAD inactive
+
+
+
+Instance 1
+ 
+
+No.
+
+Activity
+
+OK
+
+
+1
+The configured reaction is triggered by releasing an enabling switch on the smartPAD.  
+
+ 
+Notes
+
+
+
+
+
+
+
+AMF Emergency stop smartPAD
+
+
+
+Instance 1
+ 
+
+No.
+
+Activity
+
+OK
+
+
+1
+The configured reaction is triggered by pressing the E-STOP on the smartPAD.  
+
+ 
+Notes
+
+
+
+
+
+
+
+AMF Hand guiding device active
+
+All configured enabling and panic switches for the hand guiding device must be tested.
+
+
+Instance 1
+ 
+
+No.
+
+Activity
+
+OK
+
+
+1
+The configured reaction is triggered by pressing enabling switch 1.  
+
+2
+The configured reaction is triggered by pressing enabling switch 2.  
+
+3
+The configured reaction is triggered by pressing enabling switch 3.  
+
+ 
+Notes
+
+
+
+
+
+
+
+AMF Hand guiding device inactive
+
+All configured enabling and panic switches for the hand guiding device must be tested.
+
+
+Instance 1
+ 
+
+No.
+
+Activity
+
+OK
+
+
+1
+The configured reaction is triggered by releasing of enabling switch 1.  
+
+2
+The configured reaction is triggered by pressing fully down on enabling switch 1 on the hand guiding device.  
+
+3
+The configured reaction is triggered by releasing of enabling switch 2.  
+
+4
+The configured reaction is triggered by pressing fully down on enabling switch 2 on the hand guiding device.  
+
+5
+The configured reaction is triggered by releasing of enabling switch 3.  
+
+6
+The configured reaction is triggered by pressing fully down on enabling switch 3 on the hand guiding device.  
+
+ 
+
+Parameter
+
+Value
+
+Enabling switch 1 used false 
+Enabling switch 1 input signal Enabling switch MF Touch 
+Enabling switch 2 used false 
+Enabling switch 2 input signal Input CIB_SR.1 
+Enabling switch 3 used false 
+Enabling switch 3 input signal Input CIB_SR.1 
+Panic switch 1 used false 
+Panic switch 1 input signal Panic switch MF Touch 
+Panic switch 2 used false 
+Panic switch 2 input signal Input CIB_SR.1 
+Panic switch 3 used false 
+Panic switch 3 input signal Input CIB_SR.1 
+
+
+Notes
+
+
+
+
+
+
+
+AMF Input signal
+
+
+
+Emergency Stop Corners (Instance 1)
+ 
+
+No.
+
+Activity
+
+OK
+
+
+1
+The configured reaction is triggered if the input is LOW (state “0”).  
+
+ 
+
+Parameter
+
+Value
+
+Input for safety signal Input CIB.ZSE1 
+
+
+Notes
+
+
+
+
+
+
+
+Incorrect TCP values for kinematic 2 (Instance 2)
+ 
+
+No.
+
+Activity
+
+OK
+
+
+1
+The configured reaction is triggered if the input is LOW (state “0”).  
+
+ 
+
+Parameter
+
+Value
+
+Input for safety signal Input PROFIsafe Byte 2/2 
+
+
+Notes
+
+
+
+
+
+
+
+Keyswitch Position (Instance 3)
+ 
+
+No.
+
+Activity
+
+OK
+
+
+1
+The configured reaction is triggered if the input is LOW (state “0”).  
+
+ 
+
+Parameter
+
+Value
+
+Input for safety signal Input CIB.NHS 
+
+
+Notes
+
+
+
+
+
+
+
+Protection Field Status (Instance 4)
+ 
+
+No.
+
+Activity
+
+OK
+
+
+1
+The configured reaction is triggered if the input is LOW (state “0”).  
+
+ 
+
+Parameter
+
+Value
+
+Input for safety signal Input PROFIsafe Byte 0/1 
+
+
+Notes
+
+
+
+
+
+
+
+Inconsistency Sunrise to Vehicle-PLC (Instance 5)
+ 
+
+No.
+
+Activity
+
+OK
+
+
+1
+The configured reaction is triggered if the input is LOW (state “0”).  
+
+ 
+
+Parameter
+
+Value
+
+Input for safety signal Input PROFIsafe Byte 0/0 
+
+
+Notes
+
+
+
+
+
+
+
+Vehicle-PLC App Interface Input 1 (Instance 6)
+ 
+
+No.
+
+Activity
+
+OK
+
+
+1
+The configured reaction is triggered if the input is LOW (state “0”).  
+
+ 
+
+Parameter
+
+Value
+
+Input for safety signal Input PROFIsafe Byte 0/2 
+
+
+Notes
+
+
+
+
+
+
+
+Emergency Stop Remote Control (Instance 7)
+ 
+
+No.
+
+Activity
+
+OK
+
+
+1
+The configured reaction is triggered if the input is LOW (state “0”).  
+
+ 
+
+Parameter
+
+Value
+
+Input for safety signal Input CIB.ZSE2 
+
+
+Notes
+
+
+
+
+
+
+
+Charging Contactors (Instance 8)
+ 
+
+No.
+
+Activity
+
+OK
+
+
+1
+The configured reaction is triggered if the input is LOW (state “0”).  
+
+ 
+
+Parameter
+
+Value
+
+Input for safety signal Input PROFIsafe Byte 0/3 
+
+
+Notes
+
+
+
+
+
+
+
+Vehicle-PLC App Interface Input 2 (Instance 9)
+ 
+
+No.
+
+Activity
+
+OK
+
+
+1
+The configured reaction is triggered if the input is LOW (state “0”).  
+
+ 
+
+Parameter
+
+Value
+
+Input for safety signal Input PROFIsafe Byte 2/0 
+
+
+Notes
+
+
+
+
+
+
+
+Vehicle-PLC App Interface Input 3 (Instance 10)
+ 
+
+No.
+
+Activity
+
+OK
+
+
+1
+The configured reaction is triggered if the input is LOW (state “0”).  
+
+ 
+
+Parameter
+
+Value
+
+Input for safety signal Input PROFIsafe Byte 2/1 
+
+
+Notes
+
+
+
+
+
+
+
+AMF Motion enable
+
+
+
+Instance 1
+ 
+
+No.
+
+Activity
+
+OK
+
+
+1
+The configured reaction is triggered if the E-STOP is pressed on the smartPAD.  
+
+ 
+Notes
+
+
+
+
+
+
+
+AMF Operating mode Automatic
+
+
+
+Instance 1
+ 
+
+No.
+
+Activity
+
+OK
+
+
+1
+The configured reaction is triggered in AUT.  
+
+ 
+Notes
+
+
+
+
+
+
+
+AMF Operating mode Test
+
+
+
+Instance 1
+ 
+
+No.
+
+Activity
+
+OK
+
+
+1
+The configured reaction is triggered in T1.  
+
+2
+The configured reaction is triggered in T2.  
+
+3
+The configured reaction is triggered in CRR.  
+
+ 
+Notes
+
+
+
+
+
+
+
+AMF Operating mode with high speed
+
+
+
+Instance 1
+ 
+
+No.
+
+Activity
+
+OK
+
+
+1
+The configured reaction is triggered in T2.  
+
+2
+The configured reaction is triggered in AUT.  
+
+ 
+Notes
+
+
+
+
+
+
+
+AMF Operating mode with reduced speed
+
+
+
+Instance 1
+ 
+
+No.
+
+Activity
+
+OK
+
+
+1
+The configured reaction is triggered in T1.  
+
+2
+The configured reaction is triggered in CRR.  
+
+ 
+Notes
+
+
+
+
+
+
+
+AMF Position referencing
+
+Note: This AMF is violated after the robot controller is rebooted.
+
+
+Instance 1
+ 
+
+No.
+
+Activity
+
+OK
+
+
+1
+The configured reaction is triggered if one or more axes of the monitored kinematic system is not referenced.  
+
+ 
+
+Parameter
+
+Value
+
+Monitored kinematic system First kinematic system 
+
+
+Notes
+
+
+
+
+
+
+
+AMF Tool related velocity component
+
+For the test, a motion with the configured point for the tool-specific velocity component must be programmed. It must be ensured that the test motions include a reorientation of the tool in order to check the correct configuration of the monitored point.
+The test must be performed twice:
+• Once at a velocity slightly above the maximum permissible velocity.
+• Once at a velocity slightly below the maximum permissible velocity.
+This is to ensure that the velocity limit is only violated by the configured monitored point.
+
+
+Limit protection field level 1 - X negativ (Instance 1)
+ 
+
+No.
+
+Activity
+
+OK
+
+
+1
+The configured reaction is triggered if the motion is executed with a velocity that exceeds the maximum permissible velocity.  
+
+2
+The configured reaction is not triggered if the motion is executed with a velocity that is below the maximum permissible velocity.  
+
+ 
+
+Parameter
+
+Value
+
+Monitored kinematic system Second kinematic system 
+Maximum velocity 100 mm/s 
+Component of the velocity vector X negative 
+
+
+Notes
+
+
+
+
+
+
+
+Limit protection field level 1 - X positiv (Instance 2)
+ 
+
+No.
+
+Activity
+
+OK
+
+
+1
+The configured reaction is triggered if the motion is executed with a velocity that exceeds the maximum permissible velocity.  
+
+2
+The configured reaction is not triggered if the motion is executed with a velocity that is below the maximum permissible velocity.  
+
+ 
+
+Parameter
+
+Value
+
+Monitored kinematic system Second kinematic system 
+Maximum velocity 100 mm/s 
+Component of the velocity vector X positive 
+
+
+Notes
+
+
+
+
+
+
+
+Limit protection field level 2 - X negativ (Instance 3)
+ 
+
+No.
+
+Activity
+
+OK
+
+
+1
+The configured reaction is triggered if the motion is executed with a velocity that exceeds the maximum permissible velocity.  
+
+2
+The configured reaction is not triggered if the motion is executed with a velocity that is below the maximum permissible velocity.  
+
+ 
+
+Parameter
+
+Value
+
+Monitored kinematic system Second kinematic system 
+Maximum velocity 500 mm/s 
+Component of the velocity vector X negative 
+
+
+Notes
+
+
+
+
+
+
+
+Limit protection field level 2 - X positiv (Instance 4)
+ 
+
+No.
+
+Activity
+
+OK
+
+
+1
+The configured reaction is triggered if the motion is executed with a velocity that exceeds the maximum permissible velocity.  
+
+2
+The configured reaction is not triggered if the motion is executed with a velocity that is below the maximum permissible velocity.  
+
+ 
+
+Parameter
+
+Value
+
+Monitored kinematic system Second kinematic system 
+Maximum velocity 500 mm/s 
+Component of the velocity vector X positive 
+
+
+Notes
+
+
+
+
+
+
+
+Limit protection field level 1 - Y negativ (Instance 5)
+ 
+
+No.
+
+Activity
+
+OK
+
+
+1
+The configured reaction is triggered if the motion is executed with a velocity that exceeds the maximum permissible velocity.  
+
+2
+The configured reaction is not triggered if the motion is executed with a velocity that is below the maximum permissible velocity.  
+
+ 
+
+Parameter
+
+Value
+
+Monitored kinematic system Second kinematic system 
+Maximum velocity 100 mm/s 
+Component of the velocity vector Y negative 
+
+
+Notes
+
+
+
+
+
+
+
+Limit protection field level 1 - Y positiv (Instance 6)
+ 
+
+No.
+
+Activity
+
+OK
+
+
+1
+The configured reaction is triggered if the motion is executed with a velocity that exceeds the maximum permissible velocity.  
+
+2
+The configured reaction is not triggered if the motion is executed with a velocity that is below the maximum permissible velocity.  
+
+ 
+
+Parameter
+
+Value
+
+Monitored kinematic system Second kinematic system 
+Maximum velocity 100 mm/s 
+Component of the velocity vector Y positive 
+
+
+Notes
+
+
+
+
+
+
+
+Limit protection field level 2 - Y negativ (Instance 7)
+ 
+
+No.
+
+Activity
+
+OK
+
+
+1
+The configured reaction is triggered if the motion is executed with a velocity that exceeds the maximum permissible velocity.  
+
+2
+The configured reaction is not triggered if the motion is executed with a velocity that is below the maximum permissible velocity.  
+
+ 
+
+Parameter
+
+Value
+
+Monitored kinematic system Second kinematic system 
+Maximum velocity 280 mm/s 
+Component of the velocity vector Y negative 
+
+
+Notes
+
+
+
+
+
+
+
+Limit protection field level 2 - Y positiv (Instance 8)
+ 
+
+No.
+
+Activity
+
+OK
+
+
+1
+The configured reaction is triggered if the motion is executed with a velocity that exceeds the maximum permissible velocity.  
+
+2
+The configured reaction is not triggered if the motion is executed with a velocity that is below the maximum permissible velocity.  
+
+ 
+
+Parameter
+
+Value
+
+Monitored kinematic system Second kinematic system 
+Maximum velocity 280 mm/s 
+Component of the velocity vector Y positive 
+
+
+Notes
+
+
+
+
+
+
+
+Vmax X positiv (Instance 9)
+ 
+
+No.
+
+Activity
+
+OK
+
+
+1
+The configured reaction is triggered if the motion is executed with a velocity that exceeds the maximum permissible velocity.  
+
+2
+The configured reaction is not triggered if the motion is executed with a velocity that is below the maximum permissible velocity.  
+
+ 
+
+Parameter
+
+Value
+
+Monitored kinematic system Second kinematic system 
+Maximum velocity 1100 mm/s 
+Component of the velocity vector X positive 
+
+
+Notes
+
+
+
+
+
+
+
+Vmax X negativ (Instance 10)
+ 
+
+No.
+
+Activity
+
+OK
+
+
+1
+The configured reaction is triggered if the motion is executed with a velocity that exceeds the maximum permissible velocity.  
+
+2
+The configured reaction is not triggered if the motion is executed with a velocity that is below the maximum permissible velocity.  
+
+ 
+
+Parameter
+
+Value
+
+Monitored kinematic system Second kinematic system 
+Maximum velocity 1100 mm/s 
+Component of the velocity vector X negative 
+
+
+Notes
+
+
+
+
+
+
+
+Vmax Y negativ (Instance 11)
+ 
+
+No.
+
+Activity
+
+OK
+
+
+1
+The configured reaction is triggered if the motion is executed with a velocity that exceeds the maximum permissible velocity.  
+
+2
+The configured reaction is not triggered if the motion is executed with a velocity that is below the maximum permissible velocity.  
+
+ 
+
+Parameter
+
+Value
+
+Monitored kinematic system Second kinematic system 
+Maximum velocity 620 mm/s 
+Component of the velocity vector Y negative 
+
+
+Notes
+
+
+
+
+
+
+
+Vmax Y positiv (Instance 12)
+ 
+
+No.
+
+Activity
+
+OK
+
+
+1
+The configured reaction is triggered if the motion is executed with a velocity that exceeds the maximum permissible velocity.  
+
+2
+The configured reaction is not triggered if the motion is executed with a velocity that is below the maximum permissible velocity.  
+
+ 
+
+Parameter
+
+Value
+
+Monitored kinematic system Second kinematic system 
+Maximum velocity 620 mm/s 
+Component of the velocity vector Y positive 
+
+
+Notes
+
+
+
+
+
+
+
+TCP Vel Check (Instance 13)
+ 
+
+No.
+
+Activity
+
+OK
+
+
+1
+The configured reaction is triggered if the motion is executed with a velocity that exceeds the maximum permissible velocity.  
+
+2
+The configured reaction is not triggered if the motion is executed with a velocity that is below the maximum permissible velocity.  
+
+ 
+
+Parameter
+
+Value
+
+Monitored kinematic system Second kinematic system 
+Maximum velocity 30 mm/s 
+Component of the velocity vector X negative 
+
+
+Notes
+
+
+
+
+
+
+
+TCP Vel Check (Instance 14)
+ 
+
+No.
+
+Activity
+
+OK
+
+
+1
+The configured reaction is triggered if the motion is executed with a velocity that exceeds the maximum permissible velocity.  
+
+2
+The configured reaction is not triggered if the motion is executed with a velocity that is below the maximum permissible velocity.  
+
+ 
+
+Parameter
+
+Value
+
+Monitored kinematic system Second kinematic system 
+Maximum velocity 30 mm/s 
+Component of the velocity vector X positive 
+
+
+Notes
+
+
+
+
+
+
+
+TCP Vel Check (Instance 15)
+ 
+
+No.
+
+Activity
+
+OK
+
+
+1
+The configured reaction is triggered if the motion is executed with a velocity that exceeds the maximum permissible velocity.  
+
+2
+The configured reaction is not triggered if the motion is executed with a velocity that is below the maximum permissible velocity.  
+
+ 
+
+Parameter
+
+Value
+
+Monitored kinematic system Second kinematic system 
+Maximum velocity 80 mm/s 
+Component of the velocity vector Y negative 
+
+
+Notes
+
+
+
+
+
+
+
+TCP Vel Check (Instance 16)
+ 
+
+No.
+
+Activity
+
+OK
+
+
+1
+The configured reaction is triggered if the motion is executed with a velocity that exceeds the maximum permissible velocity.  
+
+2
+The configured reaction is not triggered if the motion is executed with a velocity that is below the maximum permissible velocity.  
+
+ 
+
+Parameter
+
+Value
+
+Monitored kinematic system Second kinematic system 
+Maximum velocity 80 mm/s 
+Component of the velocity vector Y positive 
+
+
+Notes
+
+
+
+
+
+ 
+Safety-oriented tools 1) 2)
+
+
+NoLoad
+
+
+Parameter
+
+Value
+
+Mass 0.000 kg 
+Center of mass  
+X 0 mm 
+Y 0 mm 
+Z 0 mm 
+A 0° 
+B 0° 
+C 0° 
+Principal moments of inertia  
+jX 0.000 kg*m2 
+jY 0.000 kg*m2 
+jZ 0.000 kg*m2 
+Orientation for the AMF “Tool orientation”  
+A 0.0° 
+B 0.0° 
+C 0.0° 
+Orientation for the AMF “Tool-related velocity component”  
+A 0.0° 
+B 0.0° 
+C 0.0° 
+Pickup frame  
+X 0 mm 
+Y 0 mm 
+Z 0 mm 
+A 0° 
+B 0° 
+C 0° 
+
+Safety spheres for Cartesian space and velocity monitoring
+
+
+Sphere frame TCP1
+
+
+Parameter
+
+Value
+
+Radius 25 mm 
+Transformation  
+X 540 mm 
+Y -315 mm 
+Z 0 mm 
+
+
+Sphere frame TCP3
+
+
+Parameter
+
+Value
+
+Radius 25 mm 
+Transformation  
+X -540 mm 
+Y -315 mm 
+Z 0 mm 
+
+
+Sphere frame TCP4
+
+
+Parameter
+
+Value
+
+Radius 25 mm 
+Transformation  
+X -540 mm 
+Y 315 mm 
+Z 0 mm 
+
+
+Sphere frame TCP2
+
+
+Parameter
+
+Value
+
+Radius 25 mm 
+Transformation  
+X 540 mm 
+Y 315 mm 
+Z 0 mm 
+
+Points for the AMF 'Tool-related velocity component'
+
+
+Point /TCP3
+
+
+Parameter
+
+Value
+
+Transformation  
+X -540 mm 
+Y -315 mm 
+Z 0 mm 
+
+
+Point /TCP2
+
+
+Parameter
+
+Value
+
+Transformation  
+X 540 mm 
+Y 315 mm 
+Z 0 mm 
+
+
+Point /TCP4
+
+
+Parameter
+
+Value
+
+Transformation  
+X -540 mm 
+Y 315 mm 
+Z 0 mm 
+
+
+Point /TCP1
+
+
+Parameter
+
+Value
+
+Transformation  
+X 540 mm 
+Y -315 mm 
+Z 0 mm 
+
+
+Load
+
+
+Parameter
+
+Value
+
+Mass 0.000 kg 
+Center of mass  
+X 0 mm 
+Y 0 mm 
+Z 0 mm 
+A 0° 
+B 0° 
+C 0° 
+Principal moments of inertia  
+jX 0.000 kg*m2 
+jY 0.000 kg*m2 
+jZ 0.000 kg*m2 
+Orientation for the AMF “Tool orientation”  
+A 0.0° 
+B 0.0° 
+C 0.0° 
+Orientation for the AMF “Tool-related velocity component”  
+A 0.0° 
+B 0.0° 
+C 0.0° 
+Pickup frame  
+X 0 mm 
+Y 0 mm 
+Z 0 mm 
+A 0° 
+B 0° 
+C 0° 
+
+Safety spheres for Cartesian space and velocity monitoring
+
+
+Sphere frame TCP4
+
+
+Parameter
+
+Value
+
+Radius 25 mm 
+Transformation  
+X -540 mm 
+Y 315 mm 
+Z 0 mm 
+
+
+Sphere frame TCP3
+
+
+Parameter
+
+Value
+
+Radius 25 mm 
+Transformation  
+X -540 mm 
+Y -315 mm 
+Z 0 mm 
+
+
+Sphere frame TCP2
+
+
+Parameter
+
+Value
+
+Radius 25 mm 
+Transformation  
+X 540 mm 
+Y 315 mm 
+Z 0 mm 
+
+
+Sphere frame TCP1
+
+
+Parameter
+
+Value
+
+Radius 25 mm 
+Transformation  
+X 540 mm 
+Y -315 mm 
+Z 0 mm 
+
+Points for the AMF 'Tool-related velocity component'
+
+
+Point /TCP3
+
+
+Parameter
+
+Value
+
+Transformation  
+X -540 mm 
+Y -315 mm 
+Z 0 mm 
+
+
+Point /TCP2
+
+
+Parameter
+
+Value
+
+Transformation  
+X 540 mm 
+Y 315 mm 
+Z 0 mm 
+
+
+Point /TCP4
+
+
+Parameter
+
+Value
+
+Transformation  
+X -540 mm 
+Y 315 mm 
+Z 0 mm 
+
+
+Point /TCP1
+
+
+Parameter
+
+Value
+
+Transformation  
+X 540 mm 
+Y -315 mm 
+Z 0 mm 
+ 
+
+
+
+
+1) Names of tools and sphere frames are not safety-related data and therefore subject to change 
+
+2) Data with respect to pickup frame 
+
+
+
+
+ 
+Tool selection table
+
+
+Row
+
+Assigned kinematic system
+
+Selected tool
+
+Activation signal
+
+OK
+
+
+1
+Second kinematic system Load Input PROFIsafe Byte 1/0  
+
+2
+Second kinematic system NoLoad Input PROFIsafe Byte 1/1  
+ 
+Mounting position 3)
+
+
+Kinematic system 1
+
+
+Parameter
+
+Value
+
+Orientation for the AMF “Tool orientation”  
+A 0.0° 
+B 0.0° 
+C 0.0° 
+
+
+
+
+
+3) This parameter is verified by means of the relevant AMFs and does not need to be verified explicitly. It is not relevant for mobile platforms. 
+
+
+
+
+  
+General settings
+
+
+smartPAD unplugging
+
+This parameter determines whether it is allowed to safely unplug the smartPAD during operation.
+ 
+
+No.
+
+Activity
+
+OK
+
+
+1
+The configured value can be verified in AUT, when the robot is moving. Press the unplugging button, unplug the smartPAD and verify the behavior.  
+
+ 
+
+Parameter
+
+Value
+
+smartPAD unplugging allowed true 
+
+
+
+Input for the deactivation of safety functions
+
+This parameter determines which safe input is used in order to activate the muting.
+ 
+
+No.
+
+Activity
+
+OK
+
+
+1
+Trigger a safety stop by a violation of one of the mutable AMFs. The expected behaviour occurs when you set the muting input and try to move the robot.  
+
+ 
+
+Parameter
+
+Value
+
+Muting allowed false 
+Input for the deactivation of safety functions Input PROFIsafe Byte 0/0 
+
+
+
+Input for external position referencing
+
+This parameter determines which safe input is used in order to activate the external position referencing.
+ 
+
+No.
+
+Activity
+
+OK
+
+
+1
+When the external position referencing input is set to HIGH for less than 2 s, the warning "Axis not referenced" will no longer be shown, if the external position referencing is configured to be allowed.  
+
+ 
+
+Parameter
+
+Value
+
+External position referencing allowed false 
+Input for external position referencing Input PROFIsafe Byte 0/0 
+
+
+
+Heaviest workpiece
+
+If the AMF TCP-force monitoring or the AMF base related TCP-force component is used, the mass of the heaviest workpiece configured in the safety related project settings must be verified.
+ 
+
+No.
+
+Activity
+
+OK
+
+
+1
+A message has to appear on the control panel saying that the load data of the used workpiece is invalid, if a workpiece is set by means of robot.setSafetyWorkpiece(workpiece) with a mass higher by one gram than the configured mass of the heaviest workpiece.  
+
+2
+No message must appear on the control panel saying that the load data of the used workpiece is invalid, if a workpiece is set by means of robot.setSafetyWorkpiece(workpiece) with a mass equal to the configured mass of the heaviest workpiece.  
+
+ 
+
+Parameter
+
+Value
+
+Heaviest workpiece 0 g 
+
+
+Notes
+
+
+
+
+
+ 
+Warnings
+
+The following table refers to aspects of the safety configuration which should be checked separately. Please explain why these do not have a detrimental effect on your safety concept. 
+
+
+No.
+
+Description
+
+Reason
+
+
+
+1 
+Unplugging of the smartPAD is allowed, but no external EMERGENCY STOP is configured.  
+ 
+
+2 
+Position or torque-based AMFs are used, therefore a brake test should be planned and an application created for this purpose. If this is not planned, please explain your decision.  
+ 
+  
+
+Acceptance declaration
+
+By signing this document, the signatories confirm the correct and complete execution of the safety acceptance procedure in accordance with the instructions in this document and the user manual.
+
+Notes
+
+
+
+
+
+
+      
+      
+ 
+ 
+  
+Name City, date Signature 
+      
+      
+ 
+ 
+  
+Name City, date Signature 
+      
+      
+ 
+ 
+  
+Name City, date Signature 
+ 
+
+
+Safety configuration KUKA 

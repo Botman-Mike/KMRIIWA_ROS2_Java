@@ -1,0 +1,29 @@
+2025-04-04 11:02:42,352 [main] ERROR com.kuka.roboticsAPI.applicationModel.RoboticsAPIApplication - Exception running application.
+java.lang.IllegalStateException: No ITaskManager initialized. Either inject it or pass it to the tasks' constructor
+	at com.kuka.roboticsAPI.applicationModel.tasks.RoboticsAPITask.getTaskManager(RoboticsAPITask.java:342)
+	at API_ROS2_Sunrise.KMRiiwaSunriseApplication.initialize(KMRiiwaSunriseApplication.java:115)
+	at com.kuka.roboticsAPI.applicationModel.RoboticsAPIApplication.runApplication(RoboticsAPIApplication.java:81)
+	at API_ROS2_Sunrise.KMRiiwaSunriseApplication.main(KMRiiwaSunriseApplication.java:430)
+2025-04-04 11:14:10,435 [main] ERROR com.kuka.roboticsAPI.applicationModel.RoboticsAPIApplication - Exception running application.
+java.lang.IllegalStateException: TaskManager not injected!
+	at API_ROS2_Sunrise.KMRiiwaSunriseApplication.initialize(KMRiiwaSunriseApplication.java:123)
+	at com.kuka.roboticsAPI.applicationModel.RoboticsAPIApplication.runApplication(RoboticsAPIApplication.java:81)
+	at API_ROS2_Sunrise.KMRiiwaSunriseApplication.main(KMRiiwaSunriseApplication.java:442)
+2025-04-04 11:17:19,192 [main] ERROR com.kuka.roboticsAPI.applicationModel.RoboticsAPIApplication - Exception running application.
+java.lang.IllegalStateException: TaskManager not injected!
+	at API_ROS2_Sunrise.KMRiiwaSunriseApplication.initialize(KMRiiwaSunriseApplication.java:123)
+	at com.kuka.roboticsAPI.applicationModel.RoboticsAPIApplication.runApplication(RoboticsAPIApplication.java:81)
+	at API_ROS2_Sunrise.KMRiiwaSunriseApplication.main(KMRiiwaSunriseApplication.java:442)
+2025-04-04 11:21:46,403 [main] ERROR com.kuka.roboticsAPI.applicationModel.RoboticsAPIApplication - Exception running application.
+java.lang.IllegalStateException: No ITaskManager initialized. Either inject it or pass it to the tasks' constructor
+	at com.kuka.roboticsAPI.applicationModel.tasks.RoboticsAPITask.getTaskManager(RoboticsAPITask.java:342)
+	at API_ROS2_Sunrise.KMRiiwaSunriseApplication.initialize(KMRiiwaSunriseApplication.java:120)
+	at com.kuka.roboticsAPI.applicationModel.RoboticsAPIApplication.runApplication(RoboticsAPIApplication.java:81)
+	at API_ROS2_Sunrise.KMRiiwaSunriseApplication.main(KMRiiwaSunriseApplication.java:432)
+2025-04-04 11:27:17,371 [main] ERROR com.kuka.roboticsAPI.applicationModel.RoboticsAPIApplication - Exception running application.
+java.lang.IllegalStateException: No RoboticsAPIContext initialized. Either inject it or pass it to the tasks' constructor
+	at com.kuka.roboticsAPI.applicationModel.tasks.RoboticsAPITask.getContext(RoboticsAPITask.java:83)
+	at com.kuka.roboticsAPI.applicationModel.tasks.RoboticsAPITask.getController(RoboticsAPITask.java:246)
+	at API_ROS2_Sunrise.KMRiiwaSunriseApplication.initialize(KMRiiwaSunriseApplication.java:136)
+	at com.kuka.roboticsAPI.applicationModel.RoboticsAPIApplication.runApplication(RoboticsAPIApplication.java:81)
+	at API_ROS2_Sunrise.KMRiiwaSunriseApplication.main(KMRiiwaSunriseApplication.java:435)

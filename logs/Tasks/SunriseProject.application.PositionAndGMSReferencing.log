@@ -1,0 +1,75 @@
+2025-04-07 14:05:34,918 DEBUG [..executor for Service: AppServer-thread-1] Task instance "1@application.PositionAndGMSReferencing@SunriseProject" changed state to CREATING.
+2025-04-07 14:05:35,107 DEBUG [..PositionAndGMSReferencing@SunriseProject] Task instance "1@application.PositionAndGMSReferencing@SunriseProject" changed state to INITIALIZING.
+2025-04-07 14:05:35,110 DEBUG [..PositionAndGMSReferencing@SunriseProject] Task instance "1@application.PositionAndGMSReferencing@SunriseProject" changed state to RUNNING.
+2025-04-07 14:05:35,161 INFO  [..PositionAndGMSReferencing@SunriseProject] Perform position and GMS referencing with 5 positions
+2025-04-07 14:05:35,163 INFO  [..PositionAndGMSReferencing@SunriseProject] Moving to home position
+2025-04-07 14:05:43,611 INFO  [..PositionAndGMSReferencing@SunriseProject] Moving to position #1
+2025-04-07 14:05:47,090 INFO  [..PositionAndGMSReferencing@SunriseProject] Moving to current position from negative direction
+2025-04-07 14:05:51,643 INFO  [..PositionAndGMSReferencing@SunriseProject] Moving to current position from positive direction
+2025-04-07 14:05:56,203 INFO  [..PositionAndGMSReferencing@SunriseProject] Moving to position #2
+2025-04-07 14:05:59,593 INFO  [..PositionAndGMSReferencing@SunriseProject] Moving to current position from negative direction
+2025-04-07 14:06:04,113 INFO  [..PositionAndGMSReferencing@SunriseProject] Moving to current position from positive direction
+2025-04-07 14:06:08,641 INFO  [..PositionAndGMSReferencing@SunriseProject] Moving to position #3
+2025-04-07 14:06:16,287 INFO  [..PositionAndGMSReferencing@SunriseProject] Moving to current position from negative direction
+2025-04-07 14:06:20,921 INFO  [..PositionAndGMSReferencing@SunriseProject] Moving to current position from positive direction
+2025-04-07 14:06:25,544 INFO  [..PositionAndGMSReferencing@SunriseProject] Moving to position #4
+2025-04-07 14:06:30,510 INFO  [..PositionAndGMSReferencing@SunriseProject] Moving to current position from negative direction
+2025-04-07 14:06:35,041 INFO  [..PositionAndGMSReferencing@SunriseProject] Moving to current position from positive direction
+2025-04-07 14:06:39,607 INFO  [..PositionAndGMSReferencing@SunriseProject] Moving to position #5
+2025-04-07 14:06:46,812 INFO  [..PositionAndGMSReferencing@SunriseProject] Moving to current position from negative direction
+2025-04-07 14:06:51,322 INFO  [..PositionAndGMSReferencing@SunriseProject] Moving to current position from positive direction
+2025-04-07 14:06:55,862 INFO  [..PositionAndGMSReferencing@SunriseProject] Moving to home position
+2025-04-07 14:07:02,505 DEBUG [..PositionAndGMSReferencing@SunriseProject] Task instance "1@application.PositionAndGMSReferencing@SunriseProject" changed state to DISPOSING.
+2025-04-07 14:07:02,576 DEBUG [..Executor for Pause State Events-thread-1] State of the task "class application.PositionAndGMSReferencing" changed from "RUNNING" to "STOPPING".
+2025-04-07 14:07:03,614 DEBUG [..PositionAndGMSReferencing@SunriseProject] Task instance "1@application.PositionAndGMSReferencing@SunriseProject" changed state to STOPPING.
+2025-04-07 14:07:03,620 DEBUG [..PositionAndGMSReferencing@SunriseProject] Task instance "1@application.PositionAndGMSReferencing@SunriseProject" changed state to STOPPED.
+2025-04-08 14:27:24,680 DEBUG [..executor for Service: AppServer-thread-1] Task instance "1@application.PositionAndGMSReferencing@SunriseProject" changed state to CREATING.
+2025-04-08 14:27:24,862 DEBUG [..PositionAndGMSReferencing@SunriseProject] Task instance "1@application.PositionAndGMSReferencing@SunriseProject" changed state to INITIALIZING.
+2025-04-08 14:27:24,863 DEBUG [..PositionAndGMSReferencing@SunriseProject] Task instance "1@application.PositionAndGMSReferencing@SunriseProject" changed state to RUNNING.
+2025-04-08 14:27:24,918 INFO  [..PositionAndGMSReferencing@SunriseProject] Perform position and GMS referencing with 5 positions
+2025-04-08 14:27:24,921 INFO  [..PositionAndGMSReferencing@SunriseProject] Moving to home position
+2025-04-08 14:27:33,319 INFO  [..PositionAndGMSReferencing@SunriseProject] Moving to position #1
+2025-04-08 14:27:36,788 INFO  [..PositionAndGMSReferencing@SunriseProject] Moving to current position from negative direction
+2025-04-08 14:27:41,328 INFO  [..PositionAndGMSReferencing@SunriseProject] Moving to current position from positive direction
+2025-04-08 14:27:45,887 INFO  [..PositionAndGMSReferencing@SunriseProject] Moving to position #2
+2025-04-08 14:27:49,262 INFO  [..PositionAndGMSReferencing@SunriseProject] Moving to current position from negative direction
+2025-04-08 14:27:53,806 INFO  [..PositionAndGMSReferencing@SunriseProject] Moving to current position from positive direction
+2025-04-08 14:27:58,323 INFO  [..PositionAndGMSReferencing@SunriseProject] Moving to position #3
+2025-04-08 14:28:05,959 INFO  [..PositionAndGMSReferencing@SunriseProject] Moving to current position from negative direction
+2025-04-08 14:28:10,586 INFO  [..PositionAndGMSReferencing@SunriseProject] Moving to current position from positive direction
+2025-04-08 14:28:15,194 INFO  [..PositionAndGMSReferencing@SunriseProject] Moving to position #4
+2025-04-08 14:28:20,164 INFO  [..PositionAndGMSReferencing@SunriseProject] Moving to current position from negative direction
+2025-04-08 14:28:24,702 INFO  [..PositionAndGMSReferencing@SunriseProject] Moving to current position from positive direction
+2025-04-08 14:28:29,248 INFO  [..PositionAndGMSReferencing@SunriseProject] Moving to position #5
+2025-04-08 14:28:36,454 INFO  [..PositionAndGMSReferencing@SunriseProject] Moving to current position from negative direction
+2025-04-08 14:28:40,956 INFO  [..PositionAndGMSReferencing@SunriseProject] Moving to current position from positive direction
+2025-04-08 14:28:45,468 INFO  [..PositionAndGMSReferencing@SunriseProject] Moving to home position
+2025-04-08 14:28:52,108 DEBUG [..PositionAndGMSReferencing@SunriseProject] Task instance "1@application.PositionAndGMSReferencing@SunriseProject" changed state to DISPOSING.
+2025-04-08 14:28:52,167 DEBUG [..Executor for Pause State Events-thread-1] State of the task "class application.PositionAndGMSReferencing" changed from "RUNNING" to "STOPPING".
+2025-04-08 14:28:53,192 DEBUG [..PositionAndGMSReferencing@SunriseProject] Task instance "1@application.PositionAndGMSReferencing@SunriseProject" changed state to STOPPING.
+2025-04-08 14:28:53,196 DEBUG [..PositionAndGMSReferencing@SunriseProject] Task instance "1@application.PositionAndGMSReferencing@SunriseProject" changed state to STOPPED.
+2025-04-08 15:53:38,678 DEBUG [..executor for Service: AppServer-thread-1] Task instance "1@application.PositionAndGMSReferencing@SunriseProject" changed state to CREATING.
+2025-04-08 15:53:38,839 DEBUG [..PositionAndGMSReferencing@SunriseProject] Task instance "1@application.PositionAndGMSReferencing@SunriseProject" changed state to INITIALIZING.
+2025-04-08 15:53:38,840 DEBUG [..PositionAndGMSReferencing@SunriseProject] Task instance "1@application.PositionAndGMSReferencing@SunriseProject" changed state to RUNNING.
+2025-04-08 15:53:38,898 INFO  [..PositionAndGMSReferencing@SunriseProject] Perform position and GMS referencing with 5 positions
+2025-04-08 15:53:38,900 INFO  [..PositionAndGMSReferencing@SunriseProject] Moving to home position
+2025-04-08 15:53:47,334 INFO  [..PositionAndGMSReferencing@SunriseProject] Moving to position #1
+2025-04-08 15:53:50,832 INFO  [..PositionAndGMSReferencing@SunriseProject] Moving to current position from negative direction
+2025-04-08 15:53:55,409 INFO  [..PositionAndGMSReferencing@SunriseProject] Moving to current position from positive direction
+2025-04-08 15:53:59,981 INFO  [..PositionAndGMSReferencing@SunriseProject] Moving to position #2
+2025-04-08 15:54:03,356 INFO  [..PositionAndGMSReferencing@SunriseProject] Moving to current position from negative direction
+2025-04-08 15:54:07,876 INFO  [..PositionAndGMSReferencing@SunriseProject] Moving to current position from positive direction
+2025-04-08 15:54:12,426 INFO  [..PositionAndGMSReferencing@SunriseProject] Moving to position #3
+2025-04-08 15:54:20,082 INFO  [..PositionAndGMSReferencing@SunriseProject] Moving to current position from negative direction
+2025-04-08 15:54:24,706 INFO  [..PositionAndGMSReferencing@SunriseProject] Moving to current position from positive direction
+2025-04-08 15:54:29,354 INFO  [..PositionAndGMSReferencing@SunriseProject] Moving to position #4
+2025-04-08 15:54:34,340 INFO  [..PositionAndGMSReferencing@SunriseProject] Moving to current position from negative direction
+2025-04-08 15:54:38,878 INFO  [..PositionAndGMSReferencing@SunriseProject] Moving to current position from positive direction
+2025-04-08 15:54:43,462 INFO  [..PositionAndGMSReferencing@SunriseProject] Moving to position #5
+2025-04-08 15:54:50,688 INFO  [..PositionAndGMSReferencing@SunriseProject] Moving to current position from negative direction
+2025-04-08 15:54:55,193 INFO  [..PositionAndGMSReferencing@SunriseProject] Moving to current position from positive direction
+2025-04-08 15:54:59,722 INFO  [..PositionAndGMSReferencing@SunriseProject] Moving to home position
+2025-04-08 15:55:06,404 DEBUG [..PositionAndGMSReferencing@SunriseProject] Task instance "1@application.PositionAndGMSReferencing@SunriseProject" changed state to DISPOSING.
+2025-04-08 15:55:06,468 DEBUG [..Executor for Pause State Events-thread-1] State of the task "class application.PositionAndGMSReferencing" changed from "RUNNING" to "STOPPING".
+2025-04-08 15:55:07,530 DEBUG [..PositionAndGMSReferencing@SunriseProject] Task instance "1@application.PositionAndGMSReferencing@SunriseProject" changed state to STOPPING.
+2025-04-08 15:55:07,535 DEBUG [..PositionAndGMSReferencing@SunriseProject] Task instance "1@application.PositionAndGMSReferencing@SunriseProject" changed state to STOPPED.

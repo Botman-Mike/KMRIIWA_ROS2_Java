@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources xmlns="http://www.kuka.com/schemas/kxr/2009">
+   <module name="UserDefinedSafetyNames">
+      <message key="E_AMF_TYPE_CARTESIAN_TRANSLATIONAL_VELOCITY_3_Name">
+         <text xml:lang="en">TCP Vel Check</text>
+      </message>
+      <message key="E_AMF_TYPE_TOOL_RELATED_VELOCITY_COMPONENT_2_Name">
+         <text xml:lang="en">Limit protection field level 2 - X negativ</text>
+      </message>
+      <message key="E_AMF_TYPE_INPUT_SIGNAL_0_Name">
+         <text xml:lang="en">Emergency Stop Corners</text>
+      </message>
+      <message key="E_AMF_TYPE_INPUT_SIGNAL_3_Name">
+         <text xml:lang="en">Protection Field Status</text>
+      </message>
+      <message key="E_AMF_TYPE_TOOL_RELATED_VELOCITY_COMPONENT_8_Name">
+         <text xml:lang="en">Vmax X positiv</text>
+      </message>
+      <message key="E_AMF_TYPE_TOOL_RELATED_VELOCITY_COMPONENT_0_Name">
+         <text xml:lang="en">Limit protection field level 1 - X negativ</text>
+      </message>
+      <message key="E_AMF_TYPE_CARTESIAN_TRANSLATIONAL_VELOCITY_1_Name">
+         <text xml:lang="en">Vmax for Protection field muting</text>
+      </message>
+      <message key="E_AMF_TYPE_INPUT_SIGNAL_1_Name">
+         <text xml:lang="en">Incorrect TCP values for kinematic 2</text>
+      </message>
+      <message key="E_AMF_TYPE_INPUT_SIGNAL_6_Name">
+         <text xml:lang="en">Emergency Stop Remote Control</text>
+      </message>
+      <message key="E_AMF_TYPE_TOOL_RELATED_VELOCITY_COMPONENT_14_Name">
+         <text xml:lang="en">TCP Vel Check</text>
+      </message>
+      <message key="E_AMF_TYPE_TOOL_RELATED_VELOCITY_COMPONENT_12_Name">
+         <text xml:lang="en">TCP Vel Check</text>
+      </message>
+      <message key="E_AMF_TYPE_TOOL_RELATED_VELOCITY_COMPONENT_1_Name">
+         <text xml:lang="en">Limit protection field level 1 - X positiv</text>
+      </message>
+      <message key="E_AMF_TYPE_INPUT_SIGNAL_7_Name">
+         <text xml:lang="en">Charging Contactors</text>
+      </message>
+      <message key="E_AMF_TYPE_TOOL_RELATED_VELOCITY_COMPONENT_13_Name">
+         <text xml:lang="en">TCP Vel Check</text>
+      </message>
+      <message key="E_AMF_TYPE_INPUT_SIGNAL_8_Name">
+         <text xml:lang="en">Vehicle-PLC App Interface Input 2</text>
+      </message>
+      <message key="E_AMF_TYPE_CARTESIAN_TRANSLATIONAL_VELOCITY_4_Name">
+         <text xml:lang="en">Standstillmonitoring Kinematic 1</text>
+      </message>
+      <message key="E_AMF_TYPE_INPUT_SIGNAL_5_Name">
+         <text xml:lang="en">Vehicle-PLC App Interface Input 1</text>
+      </message>
+      <message key="E_AMF_TYPE_INPUT_SIGNAL_4_Name">
+         <text xml:lang="en">Inconsistency Sunrise to Vehicle-PLC</text>
+      </message>
+      <message key="E_AMF_TYPE_TOOL_RELATED_VELOCITY_COMPONENT_4_Name">
+         <text xml:lang="en">Limit protection field level 1 - Y negativ</text>
+      </message>
+      <message key="E_AMF_TYPE_CART_WORKSPACE_1_Name">
+         <text xml:lang="en">Small cubes at DrivePosition</text>
+      </message>
+      <message key="E_AMF_TYPE_TOOL_RELATED_VELOCITY_COMPONENT_9_Name">
+         <text xml:lang="en">Vmax X negativ</text>
+      </message>
+      <message key="E_AMF_TYPE_CARTESIAN_TRANSLATIONAL_VELOCITY_0_Name">
+         <text xml:lang="en">Standstillmonitoring Kinematic 2</text>
+      </message>
+      <message key="E_AMF_TYPE_TOOL_RELATED_VELOCITY_COMPONENT_11_Name">
+         <text xml:lang="en">Vmax Y positiv</text>
+      </message>
+      <message key="E_AMF_TYPE_INPUT_SIGNAL_9_Name">
+         <text xml:lang="en">Vehicle-PLC App Interface Input 3</text>
+      </message>
+      <message key="E_AMF_TYPE_CART_WORKSPACE_0_Name">
+         <text xml:lang="en">Basic shape of the mobile platform</text>
+      </message>
+      <message key="E_AMF_TYPE_INPUT_SIGNAL_2_Name">
+         <text xml:lang="en">Keyswitch Position</text>
+      </message>
+      <message key="E_AMF_TYPE_TOOL_RELATED_VELOCITY_COMPONENT_3_Name">
+         <text xml:lang="en">Limit protection field level 2 - X positiv</text>
+      </message>
+      <message key="E_AMF_TYPE_TOOL_RELATED_VELOCITY_COMPONENT_6_Name">
+         <text xml:lang="en">Limit protection field level 2 - Y negativ</text>
+      </message>
+      <message key="E_AMF_TYPE_CARTESIAN_TRANSLATIONAL_VELOCITY_2_Name">
+         <text xml:lang="en">Vmax Standard DIN1525</text>
+      </message>
+      <message key="E_AMF_TYPE_TOOL_RELATED_VELOCITY_COMPONENT_10_Name">
+         <text xml:lang="en">Vmax Y negativ</text>
+      </message>
+      <message key="E_AMF_TYPE_TOOL_RELATED_VELOCITY_COMPONENT_5_Name">
+         <text xml:lang="en">Limit protection field level 1 - Y positiv</text>
+      </message>
+      <message key="E_AMF_TYPE_TOOL_RELATED_VELOCITY_COMPONENT_15_Name">
+         <text xml:lang="en">TCP Vel Check</text>
+      </message>
+      <message key="E_AMF_TYPE_TOOL_RELATED_VELOCITY_COMPONENT_7_Name">
+         <text xml:lang="en">Limit protection field level 2 - Y positiv</text>
+      </message>
+   </module>
+</resources>
