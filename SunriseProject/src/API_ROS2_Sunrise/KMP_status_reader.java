@@ -107,10 +107,10 @@ public class KMP_status_reader extends Node{
 			try{
 				this.socket.send_message(toSend);
 				if(closed){
-					System.out.println("KMP status sender selv om han ikke faar lov");
+					LogUtil.logInfo("KMP status sender selv om han ikke faar lov");
 				}
 			}catch(Exception e){
-				System.out.println("Could not send KMP status message to ROS: " + e);
+				LogUtil.logInfo("Could not send KMP status message to ROS: " + e);
 			}
 		}
 	}
@@ -126,12 +126,12 @@ public class KMP_status_reader extends Node{
 				try {
 					Thread.sleep(connection_timeout);
 				} catch (InterruptedException e) {
-					System.out.println("");
+					LogUtil.logInfo("");
 				}
 				
 			}
 			if(!closed){
-				System.out.println("Connection with KMP Status Node OK!");
+				LogUtil.logInfo("Connection with KMP Status Node OK!");
 				runmainthread();					
 				}	
 		}
@@ -144,8 +144,8 @@ public class KMP_status_reader extends Node{
 		try{
 			this.socket.close();
 		}catch(Exception e){
-				System.out.println("Could not close KMP status connection: " +e);
-			}		System.out.println("KMP status closed!");
+				LogUtil.logInfo("Could not close KMP status connection: " +e);
+			}		LogUtil.logInfo("KMP status closed!");
 
 	}
 

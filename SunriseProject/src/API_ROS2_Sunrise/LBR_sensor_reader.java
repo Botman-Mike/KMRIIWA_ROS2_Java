@@ -58,11 +58,11 @@ public class LBR_sensor_reader extends Node{
 				try {
 					Thread.sleep(connection_timeout);
 				} catch (InterruptedException e) {
-					System.out.println("Waiting for connection to LBR commander node ..");
+					LogUtil.logInfo("Waiting for connection to LBR commander node ..");
 				}
 			}
 			if(!closed){
-				System.out.println("Connection with KMP Command Node OK!");
+				LogUtil.logInfo("Connection with KMP Command Node OK!");
 				runmainthread();
 				}	
 		}
@@ -80,9 +80,9 @@ public class LBR_sensor_reader extends Node{
 	        }
 	    } catch (InterruptedException e) {
 	        Thread.currentThread().interrupt();
-	        System.out.println("LBR sensor reader thread interrupted.");
+	        LogUtil.logInfo("LBR sensor reader thread interrupted.");
 	    } catch (Exception e) {
-	        System.out.println("Error in LBR sensor reader run loop: " + e.getMessage());
+	        LogUtil.logInfo("Error in LBR sensor reader run loop: " + e.getMessage());
 	    } finally {
 	        close();
 	    }
@@ -103,11 +103,11 @@ public class LBR_sensor_reader extends Node{
 	private String generateSensorString() {
 	    // Check for null or insufficient array lengths
 	    if (JointPosition == null || MeasuredTorque == null) {
-	        System.out.println("LBR_sensor_reader: JointPosition or MeasuredTorque is null");
+	        LogUtil.logInfo("LBR_sensor_reader: JointPosition or MeasuredTorque is null");
 	        return "";
 	    }
 	    if (JointPosition.length < 7 || MeasuredTorque.length < 7) {
-	        System.out.println("LBR_sensor_reader: Sensor arrays do not contain enough data.");
+	        LogUtil.logInfo("LBR_sensor_reader: Sensor arrays do not contain enough data.");
 	        return "";
 	    }
 	    
@@ -125,10 +125,10 @@ public class LBR_sensor_reader extends Node{
 			try{
 				this.socket.send_message(sensorString);
 				if(closed){
-					System.out.println("LBR sensor sender selv om han ikke faar lov");
+					LogUtil.logInfo("LBR sensor sender selv om han ikke faar lov");
 				}
 			}catch(Exception e){
-				System.out.println("Could not send LBR sensormessage to ROS: " + e);
+				LogUtil.logInfo("Could not send LBR sensormessage to ROS: " + e);
 			}
 		}
 	}
@@ -141,9 +141,9 @@ public class LBR_sensor_reader extends Node{
 	            socket.close();
 	        }
 	    } catch(Exception e){
-	        System.out.println("Cannot close sensor socket connection: " + e.getMessage());
+	        LogUtil.logInfo("Cannot close sensor socket connection: " + e.getMessage());
 	    }
-	    System.out.println("LBR sensor reader closed.");
+	    LogUtil.logInfo("LBR sensor reader closed.");
 	}
 	
 }

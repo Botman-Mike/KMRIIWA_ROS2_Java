@@ -21454,7 +21454,7 @@ nently > 10 messages/s) can have a negative effect on the runtime of
 the application and the operation of the smartHMI.
 For message output, it is advisable to use only the commands descri-
 bed here and not other logging functionalities, e.g. the Java commands
-System.out.println(...) or System.err.println(...). If these commands are
+LogUtil.logInfo(...) or System.err.println(...). If these commands are
 used, it is not possible to guarantee that the message will be displayed
 on the smartHMI.
 Syntax

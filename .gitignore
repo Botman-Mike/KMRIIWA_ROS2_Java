@@ -4,3 +4,6 @@
 # Exclude internal SunriseProject git
 SunriseProject/.git/
 
+# Exclude internal logs
+SunriseProject/logs/
+

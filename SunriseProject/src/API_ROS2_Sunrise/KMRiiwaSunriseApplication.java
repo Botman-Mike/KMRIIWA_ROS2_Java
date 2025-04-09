@@ -120,16 +120,16 @@ public class KMRiiwaSunriseApplication extends RoboticsAPIApplication{
 	            taskManager = getTaskManager();
 	        }
 	    } catch (IllegalStateException e) {
-	        System.out.println("WARNING: " + e.getMessage() + " Continuing without task functions.");
+	        LogUtil.logInfo("WARNING: " + e.getMessage() + " Continuing without task functions.");
 	        taskManager = null;
 	    }
 	    if(taskManager == null) { 
-	        System.out.println("WARNING: TaskManager not injected! Continuing without it.");
+	        LogUtil.logInfo("WARNING: TaskManager not injected! Continuing without it.");
 	    } else {
-	        System.out.println("Task manager initialized: " + taskManager);
+	        LogUtil.logInfo("Task manager initialized: " + taskManager);
 	    }
 	    
-	    System.out.println("Initializing Robotics API Application");
+	    LogUtil.logInfo("Initializing Robotics API Application");
 	    BasicConfigurator.configure();
 	    
 	    // Configure robot
@@ -154,10 +154,10 @@ public class KMRiiwaSunriseApplication extends RoboticsAPIApplication{
 	    while(!AppRunning) {
 	        if(kmp_commander.isSocketConnected() || lbr_commander.isSocketConnected()){
 	            AppRunning = true;
-	            System.out.println("Application ready to run!");   
+	            LogUtil.logInfo("Application ready to run!");   
 	            break;
 	        } else if((System.currentTimeMillis() - startTime) > shutDownAfterMs){
-	            System.out.println("Could not connect to a command node after " + shutDownAfterMs/1000 + "s. Shutting down.");   
+	            LogUtil.logInfo("Could not connect to a command node after " + shutDownAfterMs/1000 + "s. Shutting down.");   
 	            shutdown_application();
 	            break;
 	        }               
@@ -175,13 +175,13 @@ public class KMRiiwaSunriseApplication extends RoboticsAPIApplication{
 	public void shutdown_application() {
 	    synchronized (shutdownLock) {
 	        if (isShuttingDown) {
-	            System.out.println("Shutdown already in progress");
+	            LogUtil.logInfo("Shutdown already in progress");
 	            return;
 	        }
 	        isShuttingDown = true;
 	    }
 	    
-	    System.out.println("----- Shutting down Application -----");
+	    LogUtil.logInfo("----- Shutting down Application -----");
 	    
 	    // 1. Stop the safety state listener
 	    if (safetylistener != null) {
@@ -246,12 +246,12 @@ public class KMRiiwaSunriseApplication extends RoboticsAPIApplication{
 	    waitForThread(kmp_sensor_thread, "KMP sensor", 1000);
 	    waitForThread(lbr_sensor_thread, "LBR sensor", 1000);
 	    
-	    System.out.println("Application terminated");
+	    LogUtil.logInfo("Application terminated");
 	}
 
 	private void interruptThread(Thread thread, String name) {
 	    if (thread != null && thread.isAlive()) {
-	        System.out.println("Interrupting " + name + " thread");
+	        LogUtil.logInfo("Interrupting " + name + " thread");
 	        thread.interrupt();
 	    }
 	}
@@ -261,11 +261,11 @@ public class KMRiiwaSunriseApplication extends RoboticsAPIApplication{
 	        try {
 	            thread.join(timeoutMs);
 	            if (thread.isAlive()) {
-	                System.out.println("WARNING: " + name + " thread did not terminate within timeout");
+	                LogUtil.logInfo("WARNING: " + name + " thread did not terminate within timeout");
 	                forceTerminate(thread, name);
 	            }
 	        } catch (InterruptedException e) {
-	            System.out.println("Interrupted while waiting for " + name + " thread");
+	            LogUtil.logInfo("Interrupted while waiting for " + name + " thread");
 	        }
 	    }
 	}
@@ -275,14 +275,14 @@ public class KMRiiwaSunriseApplication extends RoboticsAPIApplication{
 	        try {
 	            node.close();
 	        } catch (Exception e) {
-	            System.out.println("Error closing " + name + ": " + e.getMessage());
+	            LogUtil.logInfo("Error closing " + name + ": " + e.getMessage());
 	        }
 	    }
 	}
 	
 	private void forceTerminate(Thread thread, String name) {
 	    if (thread != null && thread.isAlive()) {
-	        System.out.println("WARNING: " + name + " thread still alive after timeout. Attempting force termination...");
+	        LogUtil.logInfo("WARNING: " + name + " thread still alive after timeout. Attempting force termination...");
 	        
 	        // Try one more interrupt before giving up
 	        thread.interrupt();
@@ -290,12 +290,12 @@ public class KMRiiwaSunriseApplication extends RoboticsAPIApplication{
 	            thread.join(1000);  // Give it one more second
 	            
 	            if (thread.isAlive()) {
-	                System.out.println("SEVERE: " + name + " thread cannot be terminated gracefully");
+	                LogUtil.logInfo("SEVERE: " + name + " thread cannot be terminated gracefully");
 	                // Thread cannot be forcibly terminated in a better way in Java
 	                // We'll let the JVM handle it during shutdown
 	            }
 	        } catch (InterruptedException e) {
-	            System.out.println("Interrupted while waiting final time for " + name + " thread");
+	            LogUtil.logInfo("Interrupted while waiting final time for " + name + " thread");
 	        }
 	    }
 	}
@@ -306,10 +306,10 @@ public class KMRiiwaSunriseApplication extends RoboticsAPIApplication{
 	        resumeFunction = getTaskFunction(IAutomaticResumeFunction.class);
 	        setAutomaticallyResumable(true);
 	    } catch (Exception e) {
-	        System.out.println("Error getting resume function: " + e.getMessage());
+	        LogUtil.logInfo("Error getting resume function: " + e.getMessage());
 	    }
 
-	    System.out.println("Running app!");
+	    LogUtil.logInfo("Running app!");
 	    
 	    // Start all connected nodes
 	    kmp_commander.setPriority(Thread.MAX_PRIORITY);
@@ -362,27 +362,27 @@ public class KMRiiwaSunriseApplication extends RoboticsAPIApplication{
 	            
 	            // Check KMP commander
 	            if (kmp_commander_thread != null && !kmp_commander_thread.isAlive() && !isShuttingDown) {
-	                System.out.println("WARNING: KMP commander thread died unexpectedly, attempting restart");
+	                LogUtil.logInfo("WARNING: KMP commander thread died unexpectedly, attempting restart");
 	                try {
 	                    kmp_commander = new KMP_commander(KMP_command_port, kmp, TCPConnection);
 	                    kmp_commander.setPriority(Thread.MAX_PRIORITY);
 	                    kmp_commander.start();
 	                    kmp_commander_thread = kmp_commander;
 	                } catch (Exception e) {
-	                    System.out.println("Failed to restart KMP commander: " + e.getMessage());
+	                    LogUtil.logInfo("Failed to restart KMP commander: " + e.getMessage());
 	                }
 	            }
 	            
 	            // Check LBR commander
 	            if (lbr_commander_thread != null && !lbr_commander_thread.isAlive() && !isShuttingDown) {
-	                System.out.println("WARNING: LBR commander thread died unexpectedly, attempting restart");
+	                LogUtil.logInfo("WARNING: LBR commander thread died unexpectedly, attempting restart");
 	                try {
 	                    lbr_commander = new LBR_commander(LBR_command_port, lbr, TCPConnection, getApplicationData().getFrame("/DrivePos"));
 	                    lbr_commander.setPriority(Thread.MAX_PRIORITY);
 	                    lbr_commander.start();
 	                    lbr_commander_thread = lbr_commander;
 	                } catch (Exception e) {
-	                    System.out.println("Failed to restart LBR commander: " + e.getMessage());
+	                    LogUtil.logInfo("Failed to restart LBR commander: " + e.getMessage());
 	                }
 	            }
 	        }
@@ -397,12 +397,12 @@ public class KMRiiwaSunriseApplication extends RoboticsAPIApplication{
 	        // 2. Check if any of the commanders signaled for shutdown
 	        if (kmp_commander != null && kmp_commander.getShutdown() ||
 	            lbr_commander != null && lbr_commander.getShutdown()) {
-	            System.out.println("Commander signaled for shutdown");
-	            System.out.println("LBR commander shutdown: " + (lbr_commander != null ? lbr_commander.getShutdown() : "null"));
-	            System.out.println("KMP commander shutdown: " + (kmp_commander != null ? kmp_commander.getShutdown() : "null"));
+	            LogUtil.logInfo("Commander signaled for shutdown");
+	            LogUtil.logInfo("LBR commander shutdown: " + (lbr_commander != null ? lbr_commander.getShutdown() : "null"));
+	            LogUtil.logInfo("KMP commander shutdown: " + (kmp_commander != null ? kmp_commander.getShutdown() : "null"));
 	            
 	            // NEW DIAGNOSTIC CODE
-	            System.out.println("DIAGNOSTIC: Tracking shutdown source");
+	            LogUtil.logInfo("DIAGNOSTIC: Tracking shutdown source");
 
 	            // Check controller states
 	            try {
@@ -411,14 +411,14 @@ public class KMRiiwaSunriseApplication extends RoboticsAPIApplication{
 	                boolean kmpValid = true;
 	                try {
 	                    String name = kmpController.getName();
-	                    System.out.println("KMP controller appears valid (name: " + name + ")");
+	                    LogUtil.logInfo("KMP controller appears valid (name: " + name + ")");
 	                } catch (Exception e) {
 	                    kmpValid = false;
-	                    System.out.println("KMP controller appears invalid: " + e.getMessage());
+	                    LogUtil.logInfo("KMP controller appears invalid: " + e.getMessage());
 	                }
-	                System.out.println("KMP controller state: " + (kmpValid ? "valid" : "invalid"));
+	                LogUtil.logInfo("KMP controller state: " + (kmpValid ? "valid" : "invalid"));
 	            } catch (Exception e) {
-	                System.out.println("KMP controller check error: " + e.getMessage());
+	                LogUtil.logInfo("KMP controller check error: " + e.getMessage());
 	            }
 
 	            try {
@@ -427,14 +427,14 @@ public class KMRiiwaSunriseApplication extends RoboticsAPIApplication{
 	                boolean lbrValid = true;
 	                try {
 	                    String name = lbrController.getName();
-	                    System.out.println("LBR controller appears valid (name: " + name + ")");
+	                    LogUtil.logInfo("LBR controller appears valid (name: " + name + ")");
 	                } catch (Exception e) {
 	                    lbrValid = false;
-	                    System.out.println("LBR controller appears invalid: " + e.getMessage());
+	                    LogUtil.logInfo("LBR controller appears invalid: " + e.getMessage());
 	                }
-	                System.out.println("LBR controller state: " + (lbrValid ? "valid" : "invalid"));
+	                LogUtil.logInfo("LBR controller state: " + (lbrValid ? "valid" : "invalid"));
 	            } catch (Exception e) {
-	                System.out.println("LBR controller check error: " + e.getMessage());
+	                LogUtil.logInfo("LBR controller check error: " + e.getMessage());
 	            }
 	            // End DIAGNOSTIC CODE
 
@@ -456,50 +456,50 @@ public class KMRiiwaSunriseApplication extends RoboticsAPIApplication{
 	                           currentStatus.contains("STOPPED"));
 	                
 	                if (isPaused != wasPaused) {
-	                    System.out.println("Application pause state changed to: " + (isPaused ? "PAUSED" : "RUNNING"));
-	                    System.out.println("Current status: " + currentStatus);
+	                    LogUtil.logInfo("Application pause state changed to: " + (isPaused ? "PAUSED" : "RUNNING"));
+	                    LogUtil.logInfo("Current status: " + currentStatus);
 	                    
 	                    // If we're paused by the user, be prepared to respond when they resume
 	                    if (isPaused) {
-	                        System.out.println("Application paused - waiting for resume button");
+	                        LogUtil.logInfo("Application paused - waiting for resume button");
 	                    }
 	                }
 	                wasPaused = isPaused;
 	            } else {
-	                System.out.println("StatusController is null, cannot check application state");
+	                LogUtil.logInfo("StatusController is null, cannot check application state");
 	            }
 	        } catch (Exception e) {
-	            System.out.println("Error checking pause state with StatusController: " + e.getMessage());
+	            LogUtil.logInfo("Error checking pause state with StatusController: " + e.getMessage());
 	        }
 	        */
 	        
 	        // 4. Check for operation mode changes (with reduced logging)
 	        String currentMode = lbr.getOperationMode().toString();
 	        if (!currentMode.equals(lastMode)) {
-	            System.out.println("Mode changed from " + lastMode + " to " + currentMode);
+	            LogUtil.logInfo("Mode changed from " + lastMode + " to " + currentMode);
 	            
 	            // If we exit AUTO mode, this is a critical change requiring shutdown
 	            if (lastMode.equals("AUTO") && !currentMode.equals("AUTO")) {
-	                System.out.println("Exited AUTO mode - initiating shutdown");
+	                LogUtil.logInfo("Exited AUTO mode - initiating shutdown");
 	                AppRunning = false;
 	                break;
 	            }
 	            lastMode = currentMode;
 	        } else if (currentTime - lastLogTime > 60000) {  // Only log every minute instead of every 5 seconds
-	            System.out.println("Current operating mode: " + currentMode);
+	            LogUtil.logInfo("Current operating mode: " + currentMode);
 	            lastLogTime = currentTime;
 	        }
 	        
 	        // 5. Handle state changes (thread priorities)  
 	        if (StateChange) {
-	            System.out.println("State change.");
+	            LogUtil.logInfo("State change.");
 	            StateChange = false;
 	            
 	            if (!(threading_prio == "LBR") && lbr_commander != null && !lbr_commander.getisPathFinished()) {
 	                threading_prio = "LBR";
 	                if (kmp_status_reader != null) kmp_status_reader.setPriority(Thread.MIN_PRIORITY);
 	                
-	                System.out.println("Threading priority: " + threading_prio);
+	                LogUtil.logInfo("Threading priority: " + threading_prio);
 	                
 	                if (lbr_sensor_reader != null) lbr_sensor_reader.setPriority(Thread.MAX_PRIORITY);
 	                if (lbr_status_reader != null) lbr_status_reader.setPriority(Thread.MAX_PRIORITY);
@@ -508,7 +508,7 @@ public class KMRiiwaSunriseApplication extends RoboticsAPIApplication{
 	                if (lbr_sensor_reader != null) lbr_sensor_reader.setPriority(Thread.MIN_PRIORITY);
 	                if (lbr_status_reader != null) lbr_status_reader.setPriority(Thread.MIN_PRIORITY);
 	                
-	                System.out.println("Threading priority: " + threading_prio);
+	                LogUtil.logInfo("Threading priority: " + threading_prio);
 	                if (kmp_status_reader != null) kmp_status_reader.setPriority(Thread.MAX_PRIORITY);
 	            }
 	        }
@@ -516,7 +516,7 @@ public class KMRiiwaSunriseApplication extends RoboticsAPIApplication{
 	        // Check safety states - don't shut down for scanner warnings
 	        boolean safetyOk = handleSafetyStates();
 	        if (!safetyOk) {
-	            System.out.println("Critical safety violation - initiating shutdown");
+	            LogUtil.logInfo("Critical safety violation - initiating shutdown");
 	            AppRunning = false;
 	            break;
 	        }
@@ -528,15 +528,15 @@ public class KMRiiwaSunriseApplication extends RoboticsAPIApplication{
 	                boolean scannerWarning = safetyStateStr.contains("WARNING_FIELD");
 	                
 	                if (!scannerWarning) {
-	                    System.out.println("KMRiiwaSunriseApplication: Safety scanner warning cleared, resetting emergency flag");
+	                    LogUtil.logInfo("KMRiiwaSunriseApplication: Safety scanner warning cleared, resetting emergency flag");
 						Node.setEmergencyStop(false);
 	                    // Give UI feedback that system can move again
-	                    System.out.println("Robot is ready to move again - scanner warning cleared");
+	                    LogUtil.logInfo("Robot is ready to move again - scanner warning cleared");
 	                } else {
-	                    System.out.println("Robot still in scanner warning zone, cannot move");
+	                    LogUtil.logInfo("Robot still in scanner warning zone, cannot move");
 	                }
 	            } catch (Exception e) {
-	                System.out.println("Error checking scanner state: " + e.getMessage());
+	                LogUtil.logInfo("Error checking scanner state: " + e.getMessage());
 	            }	
 	        }
 	        
@@ -549,12 +549,12 @@ public class KMRiiwaSunriseApplication extends RoboticsAPIApplication{
 	        }
 	    }
 	    
-	    System.out.println("Shutdown message received in main application");
+	    LogUtil.logInfo("Shutdown message received in main application");
 	    if (kmp_commander != null) {
-	        System.out.println("KMP commander shutdown: " + kmp_commander.getShutdown());
+	        LogUtil.logInfo("KMP commander shutdown: " + kmp_commander.getShutdown());
 	    }
 	    if (lbr_commander != null) {
-	        System.out.println("LBR commander shutdown: " + lbr_commander.getShutdown());
+	        LogUtil.logInfo("LBR commander shutdown: " + lbr_commander.getShutdown());
 	    }
 	    shutdown_application();
 	}
@@ -566,7 +566,7 @@ public class KMRiiwaSunriseApplication extends RoboticsAPIApplication{
 	        if (resumeFunction != null) {
 	            resumeFunction.enableApplicationResuming(getClass().getCanonicalName());
 	        } else {
-	            System.out.println("WARNING: resumeFunction is null, cannot enable automatic resuming");
+	            LogUtil.logInfo("WARNING: resumeFunction is null, cannot enable automatic resuming");
 	        }
 	        return;
 	    }
@@ -574,7 +574,7 @@ public class KMRiiwaSunriseApplication extends RoboticsAPIApplication{
 	    if (resumeFunction != null) {
 	        resumeFunction.disableApplicationResuming(getClass().getCanonicalName());
 	    } else {
-	        System.out.println("WARNING: resumeFunction is null, cannot disable automatic resuming");
+	        LogUtil.logInfo("WARNING: resumeFunction is null, cannot disable automatic resuming");
 	    }
 	}
 
@@ -589,7 +589,7 @@ public class KMRiiwaSunriseApplication extends RoboticsAPIApplication{
 	                                lbrSafetyState.contains("WARNING_FIELD");
 	        
 	        if (scannerWarning) {
-	            System.out.println("Safety scanner warning field detected");
+	            LogUtil.logInfo("Safety scanner warning field detected");
 	            
 	            // Pause motion but don't shut down
 	            if (kmp_commander != null) {
@@ -607,21 +607,21 @@ public class KMRiiwaSunriseApplication extends RoboticsAPIApplication{
 	        // No safety issues detected
 	        return true;
 	    } catch (Exception e) {
-	        System.out.println("Error checking safety state: " + e.getMessage());
+	        LogUtil.logInfo("Error checking safety state: " + e.getMessage());
 	        // Don't trigger shutdown for errors in safety state checking
 	        return true;
 	    }
 	}
 	
 	private void monitorSocketConnections() {
-	    System.out.println("=== Socket Connection Status ===");
+	    LogUtil.logInfo("=== Socket Connection Status ===");
 	    if (kmp_commander != null) {
 	        boolean socketOk = kmp_commander.isSocketConnected();
-	        System.out.println("KMP commander socket: " + (socketOk ? "CONNECTED" : "DISCONNECTED"));
+	        LogUtil.logInfo("KMP commander socket: " + (socketOk ? "CONNECTED" : "DISCONNECTED"));
 	    }
 	    if (lbr_commander != null) {
 	        boolean socketOk = lbr_commander.isSocketConnected();
-	        System.out.println("LBR commander socket: " + (socketOk ? "CONNECTED" : "DISCONNECTED"));
+	        LogUtil.logInfo("LBR commander socket: " + (socketOk ? "CONNECTED" : "DISCONNECTED"));
 	    }
 	    // Add same checks for other nodes
 	}

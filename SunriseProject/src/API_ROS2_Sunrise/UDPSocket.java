@@ -37,7 +37,7 @@ public class UDPSocket implements ISocket{
 	{
 		while (!isConnected){
 			try{
-				System.out.println("Connecting  "+ this.nodename+ " to ROS over UDP on port: " + COMport); 
+				LogUtil.logInfo("Connecting  "+ this.nodename+ " to ROS over UDP on port: " + COMport); 
 		    	int kuka_port = this.COMport; // change this if cannot bind error
 		        InetSocketAddress socket_address = new InetSocketAddress(kuka_port);
 		    	
@@ -67,19 +67,19 @@ public class UDPSocket implements ISocket{
 
 		        udpConn.receive(package_in); 
 		        String s = decode(package_in);
-		        System.out.println(this.nodename+ " received packet data over UDP on port : " + COMport + " Message: " +s);  
+		        LogUtil.logInfo(this.nodename+ " received packet data over UDP on port : " + COMport + " Message: " +s);  
 		        
 		        if(s.length()<1){
 		    	   udpConn.close();
 		       		isConnected=false;
-		       		System.out.println( this.nodename+ "  did not receive any message in 3 seconds, shutting off");
+		       		LogUtil.logInfo( this.nodename+ "  did not receive any message in 3 seconds, shutting off");
 		       		break;
 		       	 }
 		        udpConn.setSoTimeout(0);
 		        isConnected=true;
 			}
 			catch(Exception e1){
-		        System.out.println("ERROR connecting  "+ this.nodename+ " to ROS over UDP on port: " + this.COMport + " Error: " + e1);
+		        LogUtil.logInfo("ERROR connecting  "+ this.nodename+ " to ROS over UDP on port: " + this.COMport + " Error: " + e1);
 		        isConnected=false;
 		        close();
 				b = new BindException();
@@ -114,7 +114,7 @@ public class UDPSocket implements ISocket{
      try {
 			udpConn.send(package_out);
 		} catch (Exception e) {
-			System.out.println( this.nodename+ " could not send package over UDP on port: "  + this.COMport + " error: " + e);
+			LogUtil.logInfo( this.nodename+ " could not send package over UDP on port: "  + this.COMport + " error: " + e);
 		}
 	}
     
@@ -123,13 +123,13 @@ public class UDPSocket implements ISocket{
 	    if (!isConnected()) {
 	        // Try to repair the connection
 	        try {
-	            System.out.println(nodename + " UDP Socket lost, attempting reconnection");
+	            LogUtil.logInfo(nodename + " UDP Socket lost, attempting reconnection");
 	            connect();
 	            if (!isConnected()) {
 	                return null;
 	            }
 	        } catch (Exception e) {
-	            System.out.println(nodename + " UDP Socket reconnection failed: " + e.getMessage());
+	            LogUtil.logInfo(nodename + " UDP Socket reconnection failed: " + e.getMessage());
 	            return null;
 	        }
 	    }
@@ -151,7 +151,7 @@ public class UDPSocket implements ISocket{
 	    } catch (Exception e) {
 	        // Only log if it's not a timeout and not due to shutdown
 	        if (running && !(e instanceof InterruptedIOException)) {
-	            System.out.println(nodename + " UDP receive error: " + e.getMessage());
+	            LogUtil.logInfo(nodename + " UDP receive error: " + e.getMessage());
 	        }
 	        return null;
 	    }
@@ -159,15 +159,15 @@ public class UDPSocket implements ISocket{
 	
     @Override
 	public void close() {
-	    System.out.println(nodename + " UDP connection closing");
+	    LogUtil.logInfo(nodename + " UDP connection closing");
 	    running = false;
 	    
 	    if (udpConn != null && !udpConn.isClosed()) {
 	        try {
 	            udpConn.close();
-	            System.out.println(nodename + " UDP socket closed successfully");
+	            LogUtil.logInfo(nodename + " UDP socket closed successfully");
 	        } catch (Exception e) {
-	            System.out.println(nodename + " UDP socket close error: " + e.getMessage());
+	            LogUtil.logInfo(nodename + " UDP socket close error: " + e.getMessage());
 	        }
 	    }
 	}
@@ -175,7 +175,7 @@ public class UDPSocket implements ISocket{
 	@Override
 	public boolean isConnected() {
 	    if (udpConn == null || udpConn.isClosed()) {
-	        System.out.println(nodename + " UDP Socket check: Socket is null or closed");
+	        LogUtil.logInfo(nodename + " UDP Socket check: Socket is null or closed");
 	        return false;
 	    }
 	    
@@ -183,7 +183,7 @@ public class UDPSocket implements ISocket{
 	        // For UDP, we don't have a true "connection" status like TCP
 	        // Instead, check if socket is bound and not closed
 	        if (!udpConn.isBound()) {
-	            System.out.println(nodename + " UDP Socket check: Socket is not bound");
+	            LogUtil.logInfo(nodename + " UDP Socket check: Socket is not bound");
 	            return false;
 	        }
 	        
@@ -191,7 +191,7 @@ public class UDPSocket implements ISocket{
 	        udpConn.getReceiveBufferSize(); // This will throw if socket is invalid
 	        return true;
 	    } catch (Exception e) {
-	        System.out.println(nodename + " UDP Socket check exception: " + e.getMessage());
+	        LogUtil.logInfo(nodename + " UDP Socket check exception: " + e.getMessage());
 	        return false;
 	    }
 	}

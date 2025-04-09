@@ -35,6 +35,10 @@ import static com.kuka.roboticsAPI.motionModel.BasicMotions.ptp;
 // Java util
 import java.util.ArrayList;
 import java.util.List;
+import javax.inject.Inject;
+
+// KUKA Robotics API
+
 
 
 public class LBR_commander extends Node{
@@ -68,7 +72,7 @@ public class LBR_commander extends Node{
 	// Startup
 	boolean startup = true;
 
-
+	
 	public LBR_commander(int port,LBR robot, String ConnectionType, AbstractFrame drivepos) {
 		super(port, ConnectionType, "LBR commander");
 		
@@ -81,7 +85,7 @@ public class LBR_commander extends Node{
 		accelerations = new double[jointCount];
 		
 		if (!(isSocketConnected())) {
-			System.out.println("Starting thread to connect LBR command node....");
+			LogUtil.logInfo("Starting thread to connect LBR command node....");
 			Thread monitorLBRCommandConnections = new MonitorLBRCommandConnectionsThread();
 			monitorLBRCommandConnections.start();
 			}else {
@@ -106,7 +110,7 @@ public class LBR_commander extends Node{
 	        while(isNodeRunning()) {
 	            // Check for interruption frequently
 	            if (Thread.currentThread().isInterrupted() || getShutdown()) {
-	                System.out.println("LBR commander thread interrupted or shutdown requested");
+	                LogUtil.logInfo("LBR commander thread interrupted or shutdown requested");
 	                break;
 	            }
 	            
@@ -124,7 +128,7 @@ public class LBR_commander extends Node{
 	                String[] splt = Commandstr.split(" ");
 	                if (!getShutdown() && !closed) {
 	                    if ((splt[0]).equals("shutdown")) {
-	                        System.out.println("LBR RECEIVED SHUTDOWN");
+	                        LogUtil.logInfo("LBR RECEIVED SHUTDOWN");
 	                        setShutdown(true);
 	                        break;
 	                    }
@@ -141,11 +145,11 @@ public class LBR_commander extends Node{
 					if (getShutdown() || Thread.currentThread().isInterrupted()) {
 						break;
 					}
-					System.out.println("Error in LBR commander: " + e.getMessage());
+					LogUtil.logInfo("Error in LBR commander: " + e.getMessage());
 				}
 	        }
 	    } finally {
-	        System.out.println("LBR commander thread ending");
+	        LogUtil.logInfo("LBR commander thread ending");
 	    }
 	}
 
@@ -157,7 +161,7 @@ public class LBR_commander extends Node{
 		if(pointType.equals("StartPoint")){
 			
 			splineSegments.clear();
-			System.out.println("Startpoint received");
+			LogUtil.logInfo("Startpoint received");
 			
 			setisPathFinished(false);
 			
@@ -178,7 +182,7 @@ public class LBR_commander extends Node{
 			splineSegments.add(ptp.getPTP());
 			
 			if(pointType.equals("EndPoint")){
-				System.out.println("endpoint received");
+				LogUtil.logInfo("endpoint received");
 				followPath();
 			}
 		}
@@ -246,12 +250,12 @@ public class LBR_commander extends Node{
 	        try {
 	            currentmotion.cancel();
 	            setisLBRMoving(false);
-	            System.out.println("LBR motion stopped by stopMotion().");
+	            LogUtil.logInfo("LBR motion stopped by stopMotion().");
 	        } catch (Exception e) {
-	            System.out.println("Error stopping LBR motion: " + e.getMessage());
+	            LogUtil.logInfo("Error stopping LBR motion: " + e.getMessage());
 	        }
 	    } else {
-	        System.out.println("No LBR motion to stop.");
+	        LogUtil.logInfo("No LBR motion to stop.");
 	    }
 	}
 
@@ -260,7 +264,7 @@ public class LBR_commander extends Node{
 			while(isNodeRunning()) {
 				if (getEmergencyStop()){
 						if (getisLBRMoving()){
-							System.out.println("Lbr emergencythread");
+							LogUtil.logInfo("Lbr emergencythread");
 							if(!(currentmotion==null)){
 								currentmotion.cancel();
 							}
@@ -287,11 +291,11 @@ public class LBR_commander extends Node{
 				try {
 					Thread.sleep(timeout);
 				} catch (InterruptedException e) {
-					System.out.println("Waiting for connection to LBR commander node ..");
+					LogUtil.logInfo("Waiting for connection to LBR commander node ..");
 				}
 			}
 			if(!closed){
-				System.out.println("Connection with LBR Command Node OK!");
+				LogUtil.logInfo("Connection with LBR Command Node OK!");
 				runmainthread();
 				}	
 		}
@@ -306,7 +310,7 @@ public class LBR_commander extends Node{
 
 		@Override
 		public void containerFinished(IMotionContainer arg0) {
-			System.out.println("Container finished!");
+			LogUtil.logInfo("Container finished!");
 			setisLBRMoving(false);
 			setisPathFinished(true);
 			splineSegments.clear();
@@ -328,22 +332,22 @@ public class LBR_commander extends Node{
 		try{
 		CommandedjointPos.set(lbr.getCurrentJointPosition());
 		}catch(Exception e){
-			System.out.println("No motion to end!");
+			LogUtil.logInfo("No motion to end!");
 		}
 
 		if(getisLBRMoving()){
 			try{
 			currentmotion.cancel();
 			}catch(Exception e){
-				System.out.println("LBR could not stop motion: " +e);
+				LogUtil.logInfo("LBR could not stop motion: " +e);
 			}
 		}
 		try{
 			this.socket.close();
 		}catch(Exception e){
-				System.out.println("Could not close LBR commander connection: " +e);
+				LogUtil.logInfo("Could not close LBR commander connection: " +e);
 			}
-		System.out.println("LBR command closed!");
+		LogUtil.logInfo("LBR command closed!");
 
 	}
 

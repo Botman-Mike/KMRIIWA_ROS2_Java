@@ -42,107 +42,101 @@ public class SafetyStateListener implements ISunriseControllerStateListener {
     }
 
     public void stop() {
-        System.out.println("SafetyStateListener: Stopping listener");
+        LogUtil.logInfo("SafetyStateListener: Stopping listener");
         try {
             controller.removeControllerListener(this);
-            System.out.println("SafetyStateListener: Successfully removed controller listener");
+            LogUtil.logInfo("SafetyStateListener: Successfully removed controller listener");
         } catch (Exception e) {
-            System.out.println("SafetyStateListener: Error removing controller listener: " + e.getMessage());
+            LogUtil.logInfo("SafetyStateListener: Error removing controller listener: " + e.getMessage());
         }
     }
 
     @Override
     public void onFieldBusDeviceConfigurationChangeReceived(String deviceName, DispatchedEventData eventData) {
-        System.out.println("SafetyStateListener: Field bus device configuration changed");
-        System.out.println("  Device name: " + deviceName);
-        System.out.println("  Event data: " + eventData);
+        LogUtil.logInfo("SafetyStateListener: Field bus device configuration changed");
+        LogUtil.logInfo("  Device name: " + deviceName);
+        LogUtil.logInfo("  Event data: " + eventData);
         // Field bus configuration changes shouldn't affect our operation
         // but we should log them for debugging purposes
     }
 
     @Override
     public void onFieldBusDeviceIdentificationRequestReceived(String deviceName, DispatchedEventData eventData) {
-        System.out.println("SafetyStateListener: Field bus device identification requested");
-        System.out.println("  Device name: " + deviceName);
-        System.out.println("  Event data: " + eventData);
+        LogUtil.logInfo("SafetyStateListener: Field bus device identification requested");
+        LogUtil.logInfo("  Device name: " + deviceName);
+        LogUtil.logInfo("  Event data: " + eventData);
         // This is just for logging purposes - occurs when the controller
         // requests identification from field bus devices
     }
 
     @Override
     public void onIsReadyToMoveChanged(Device arg0, boolean arg1) {
-        System.out.println("READY TO MOVE! " + arg1 + " " + arg0);
+        LogUtil.logInfo("READY TO MOVE! " + arg1 + " " + arg0);
     }
 
     @Override
     public void onShutdown(Controller controller) {
-        System.out.println("SafetyStateListener: Controller shutdown detected");
-        System.out.println("  Controller: " + controller.getName());
+        LogUtil.logInfo("SafetyStateListener: Controller shutdown detected");
+        LogUtil.logInfo("  Controller: " + controller.getName());
 
         // When controller is shutting down, we should ensure our application
         // also performs a clean shutdown - temporarily disabled for debugging
         if (kmp_commander != null) {
-            System.out.println("SafetyStateListener: KMP commander shutdown flag would be set here - temporarily disabled");
+            LogUtil.logInfo("SafetyStateListener: KMP commander shutdown flag would be set here - temporarily disabled");
             // kmp_commander.setShutdown(true);  // Commented out to prevent triggering shutdown
         }
 
         if (lbr_commander != null) {
-            System.out.println("SafetyStateListener: LBR commander shutdown flag would be set here - temporarily disabled");
+            LogUtil.logInfo("SafetyStateListener: LBR commander shutdown flag would be set here - temporarily disabled");
             // lbr_commander.setShutdown(true);  // Commented out to prevent triggering shutdown
         }
     }
 
     @Override
     public void onStatePortChangeReceived(Controller controller, StatePortData statePortData) {
-        System.out.println("SafetyStateListener: State port change received");
-        System.out.println("  Controller: " + controller.getName());
-        System.out.println("  Port name: " + statePortData.getPortName());
+        LogUtil.logInfo("SafetyStateListener: State port change received");
+        LogUtil.logInfo("  Controller: " + controller.getName());
+        LogUtil.logInfo("  Port name: " + statePortData.getPortName());
         // Note: The API does not provide a getValue() method.
     }
 
     @Override
     public void onConnectionLost(Controller controller) {
-        System.out.println("SafetyStateListener: CONNECTION LOST TO CONTROLLER");
-        System.out.println("  Controller: " + controller.getName());
+        LogUtil.logInfo("SafetyStateListener: CONNECTION LOST TO CONTROLLER");
+        LogUtil.logInfo("  Controller: " + controller.getName());
 
         // Connection loss is a critical event - logging only for now
-        System.out.println("SafetyStateListener: Would set emergency stop due to lost connection - temporarily disabled");
+        LogUtil.logInfo("SafetyStateListener: Would set emergency stop due to lost connection - temporarily disabled");
         // Node.setEmergencyStop(true);  // Commented out to prevent triggering emergency stop
 
         // Also try to trigger shutdown on commanders if they're still accessible
         if (kmp_commander != null) {
-            System.out.println("SafetyStateListener: KMP commander shutdown flag would be set here - temporarily disabled");
+            LogUtil.logInfo("SafetyStateListener: KMP commander shutdown flag would be set here - temporarily disabled");
             // kmp_commander.setShutdown(true);  // Commented out to prevent triggering shutdown
         }
 
         if (lbr_commander != null) {
-            System.out.println("SafetyStateListener: LBR commander shutdown flag would be set here - temporarily disabled");
+            LogUtil.logInfo("SafetyStateListener: LBR commander shutdown flag would be set here - temporarily disabled");
             // lbr_commander.setShutdown(true);  // Commented out to prevent triggering shutdown
         }
     }
 
     @Override
     public void onSafetyStateChanged(Device device, SunriseSafetyState safetyState) {
-        // Log the full safety state for diagnostics
-        System.out.println("Safety state change detected on device: " + device.getName());
-        System.out.println("Full safety state: " + safetyState);
+        LogUtil.logInfo("safety_state", "Safety state change on device: " + device.getName() + 
+                        "\nFull safety state: " + safetyState);
         
         if (safetyState.getSafetyStopSignal() == SunriseSafetyState.SafetyStopType.STOP1) {
-            System.out.println("Safety STOP1 detected - safety scanner may have triggered");
+            LogUtil.logInfo("safety_stop", "Safety STOP1 detected - safety scanner may have triggered");
             
-            // For safety scanner warnings, we want to pause rather than shut down
             if (isLaserScannerWarning(safetyState)) {
-                System.out.println("Laser scanner warning field detected - pausing motion");
+                LogUtil.logInfo("scanner_warning", "Laser scanner warning field detected - pausing motion");
                 pauseAllMotion();
-                // Don't set emergency stop or shutdown flags yet
             } else {
-                // For other serious safety issues, we can still shut down
-                System.out.println("Critical safety event - initiating controlled shutdown");
-                // Only uncomment this if you want emergency shutdowns for non-scanner safety events
-                // setEmergencyStop(true);
+                LogUtil.logInfo("safety_critical", "Critical safety event - initiating controlled shutdown");
             }
         } else if (safetyState.getSafetyStopSignal() == SunriseSafetyState.SafetyStopType.NOSTOP) {
-            System.out.println("Safety stop cleared - operations can resume");
+            LogUtil.logInfo("Safety stop cleared - operations can resume");
             resumeIfSafe();
         }
     }
@@ -171,9 +165,9 @@ public class SafetyStateListener implements ISunriseControllerStateListener {
             if (lbr_commander != null) {
                 lbr_commander.stopMotion();
             }
-            System.out.println("All motion paused due to safety event");
+            LogUtil.logInfo("All motion paused due to safety event");
         } catch (Exception e) {
-            System.out.println("Error pausing motion: " + e.getMessage());
+            LogUtil.logInfo("Error pausing motion: " + e.getMessage());
         }
     }
 
@@ -182,7 +176,7 @@ public class SafetyStateListener implements ISunriseControllerStateListener {
      */
     private void resumeIfSafe() {
         // Add logic to check if it's safe to resume
-        System.out.println("Safety conditions cleared - motion can resume");
+        LogUtil.logInfo("Safety conditions cleared - motion can resume");
         // You may want to send a notification to your ROS nodes that they can resume operations
     }
 }

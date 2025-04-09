@@ -53,7 +53,7 @@ public abstract class Node extends Thread {
 	
 	public Node(int port1, String Conn1, int port2, String Conn2, String node_name) {
 		if (node_name == null) {
-			System.out.println("This is a test, node_name is null in Node.");
+			LogUtil.logInfo("This is a test, node_name is null in Node.");
 		}
 		this.KMP_laser_port = port1;
 		this.KMP_odometry_port = port2;
@@ -123,7 +123,7 @@ public abstract class Node extends Thread {
 			} else {
 				// Only count actual transitions to disconnected state
 				if (lastKnownConnectionState) {
-					System.out.println(node_name + ": Connection state changed to DISCONNECTED");
+					LogUtil.logInfo(node_name + ": Connection state changed to DISCONNECTED");
 					connectionFailCount++;
 					lastKnownConnectionState = false;
 				}
@@ -136,7 +136,7 @@ public abstract class Node extends Thread {
 				// Only report node as not running if socket has been disconnected for some time
 				// This prevents brief connection hiccups from stopping the node
 				if (connectionFailCount >= 3) {
-					System.out.println(node_name + ": Connection persistently lost, node will stop running");
+					LogUtil.logInfo(node_name + ": Connection persistently lost, node will stop running");
 					return false;
 				}
 			}
@@ -162,7 +162,7 @@ public abstract class Node extends Thread {
 	}
 	
 	public void setShutdown(boolean in) {
-		System.out.println("shutdown set by " + this.node_name + " to " + in);
+		LogUtil.logInfo("shutdown set by " + this.node_name + " to " + in);
 		shutdown = in;
 	}
 	
@@ -172,7 +172,7 @@ public abstract class Node extends Thread {
 	        while (isNodeRunning()) {
 	            // Check if thread has been interrupted
 	            if (Thread.currentThread().isInterrupted()) {
-	                System.out.println(node_name + " thread was interrupted, exiting");
+	                LogUtil.logInfo(node_name + " thread was interrupted, exiting");
 	                break;
 	            }
 	            
@@ -189,7 +189,7 @@ public abstract class Node extends Thread {
 	                Thread.sleep(10);
 	            } catch (InterruptedException ie) {
 	                Thread.currentThread().interrupt(); // Restore interrupt status
-	                System.out.println(node_name + " thread interrupted during sleep");
+	                LogUtil.logInfo(node_name + " thread interrupted during sleep");
 	                break;
 	            } catch (Exception e) {
 	                if (Thread.currentThread().isInterrupted() || getShutdown()) {
@@ -199,7 +199,7 @@ public abstract class Node extends Thread {
 	            }
 	        }
 	    } finally {
-	        System.out.println(node_name + " thread ending");
+	        LogUtil.logInfo(node_name + " thread ending");
 	        // Close resources here
 	        close();
 	    }
@@ -255,17 +255,17 @@ public abstract class Node extends Thread {
 	            if (kmp != null && kmp.isReadyToMove() && 
 	                !kmp.getSafetyState().toString().contains("WARNING_FIELD")) {
 	                setEmergencyStop(false);
-	                System.out.println("Emergency stop cleared based on safety state");
+	                LogUtil.logInfo("Emergency stop cleared based on safety state");
 	            }
 	        }
 	    } catch (Exception e) {
-	        System.out.println("Error checking if emergency stop can be cleared: " + e.getMessage());
+	        LogUtil.logInfo("Error checking if emergency stop can be cleared: " + e.getMessage());
 	    }
 	}
 
 	public void ensureSocketConnection() {
 	    if (!isSocketConnected()) {
-	        System.out.println(node_name + ": Socket connection lost, attempting to reconnect");
+	        LogUtil.logInfo(node_name + ": Socket connection lost, attempting to reconnect");
 	        try {
 	            // Close existing if needed
 	            if (socket != null) {
@@ -280,12 +280,12 @@ public abstract class Node extends Thread {
 	            createSocket();
 	            
 	            if (isSocketConnected()) {
-	                System.out.println(node_name + ": Successfully reconnected socket");
+	                LogUtil.logInfo(node_name + ": Successfully reconnected socket");
 	            } else {
-	                System.out.println(node_name + ": Failed to reconnect socket");
+	                LogUtil.logInfo(node_name + ": Failed to reconnect socket");
 	            }
 	        } catch (Exception e) {
-	            System.out.println(node_name + ": Exception during socket reconnection: " + e.getMessage());
+	            LogUtil.logInfo(node_name + ": Exception during socket reconnection: " + e.getMessage());
 	        }
 	    }
 	}

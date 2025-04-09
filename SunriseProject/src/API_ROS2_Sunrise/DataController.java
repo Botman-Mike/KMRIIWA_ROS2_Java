@@ -57,7 +57,7 @@ public class DataController implements DataListener, DataConnectionListener{
 			try{
 				this.laser_socket.send_message(scan_data);
 			}catch(Exception e){
-				System.out.println("Could not send KMP laserdata to ROS: " + e);
+				LogUtil.logError("Could not send KMP laserdata to ROS: " + e);
 			}
 		}
 	}
@@ -73,7 +73,7 @@ public class DataController implements DataListener, DataConnectionListener{
 					this.odometry_socket.send_message(odom_data);
 				}
 			}catch(Exception e){
-				System.out.println("Could not send KMP odometry data to ROS: " + e);
+				LogUtil.logError("Could not send KMP odometry data to ROS: " + e);
 			}
 	}
 	}
@@ -86,34 +86,32 @@ public class DataController implements DataListener, DataConnectionListener{
 	@Override
 	public void onConnectionClosed() {
 		fdi_isConnected = false;
-		System.out.println("FDIConnection closed");
+		LogUtil.logInfo("FDIConnection closed");
 		}
 
 	@Override
 	public void onConnectionFailed(Exception arg0) {
 		fdi_isConnected = false;
-		System.out.println("FDIConnection failed");
-		System.out.println(arg0);
-
+		LogUtil.logInfo("fdi_fail", "FDIConnection failed");
+		LogUtil.logError("fdi_fail", arg0); // Using error level for exceptions
 	}
 
 	@Override
 	public void onConnectionSuccessful() {
 		fdi_isConnected = true;
-		System.out.println("FDIConnection successful");
+		LogUtil.logInfo("FDIConnection successful");
 		
 	}
 
 	@Override
 	public void onConnectionTimeout() {
-		System.out.println("FDIConnection timeout");
+		LogUtil.logInfo("FDIConnection timeout");
 	}
 
 	@Override
 	public void onReceiveError(Exception arg0) {
-		System.out.println("FDIconnection - Received error");
-		System.out.println(arg0);
-		
+		LogUtil.logInfo("fdi_error", "FDIconnection - Received error");
+		LogUtil.logError("fdi_error", arg0); // Using error level for exceptions
 	}
 
 

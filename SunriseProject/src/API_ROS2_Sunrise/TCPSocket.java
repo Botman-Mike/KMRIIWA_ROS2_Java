@@ -51,11 +51,11 @@ public class TCPSocket implements ISocket{
 
 				TCPConn = new Socket(remotePC,COMport);
 				TCPConn.setReuseAddress(true);
-				System.out.println(this.nodename + " connecting to ROS over TCP on port: "+ COMport);
+				LogUtil.logInfo(this.nodename + " connecting to ROS over TCP on port: "+ COMport);
 				break;
 			}
 			catch(IOException e1){
-				System.out.println("Could not connect "+ this.nodename+ " to ROS over TCP on port : "+ this.COMport + " Error: " +e1);
+				LogUtil.logInfo("Could not connect "+ this.nodename+ " to ROS over TCP on port : "+ this.COMport + " Error: " +e1);
 			return null;
 			}
 		}
@@ -65,7 +65,7 @@ public class TCPSocket implements ISocket{
 			isConnected=true;
 			return TCPConn;
 		}catch(Exception e){
-			System.out.println("Error creating I/O ports for TCP communication for  "+ this.nodename+ " on port: "+ this.COMport + " Error: " +e);
+			LogUtil.logInfo("Error creating I/O ports for TCP communication for  "+ this.nodename+ " on port: "+ this.COMport + " Error: " +e);
 			return null;
 		}
 		
@@ -81,32 +81,34 @@ public class TCPSocket implements ISocket{
 	@Override
 	public boolean isConnected() {
 	    if (TCPConn == null) {
-	        System.out.println(nodename + " TCP Socket check: Socket is null");
+	        LogUtil.logInfo("tcp_null_" + nodename, nodename + " TCP Socket check: Socket is null");
 	        return false;
 	    }
 	    
 	    try {
-	        // First, check if socket is marked as closed
 	        if (TCPConn.isClosed()) {
-	            System.out.println(nodename + " TCP Socket check: Socket is closed");
+	            LogUtil.logInfo("tcp_closed_" + nodename, nodename + " TCP Socket check: Socket is closed");
 	            return false;
 	        }
 	        
-	        // Check if the socket is connected
 	        if (!TCPConn.isConnected()) {
-	            System.out.println(nodename + " TCP Socket check: Socket not connected");
+	            LogUtil.logInfo("tcp_disconnected_" + nodename, nodename + " TCP Socket check: Socket not connected");
 	            return false;
 	        }
 	        
-	        // Check if connection is still alive by testing if it's input shutdown
 	        if (TCPConn.isInputShutdown() || TCPConn.isOutputShutdown()) {
-	            System.out.println(nodename + " TCP Socket check: Input or output is shutdown");
+	            LogUtil.logInfo("tcp_shutdown_" + nodename, nodename + " TCP Socket check: Input or output is shutdown");
 	            return false;
 	        }
 	        
+	        // If we get here, connection is good - reset throttles
+	        LogUtil.resetLogThrottle("tcp_null_" + nodename);
+	        LogUtil.resetLogThrottle("tcp_closed_" + nodename);
+	        LogUtil.resetLogThrottle("tcp_disconnected_" + nodename);
+	        LogUtil.resetLogThrottle("tcp_shutdown_" + nodename);
 	        return true;
 	    } catch (Exception e) {
-	        System.out.println(nodename + " TCP Socket check exception: " + e.getMessage());
+	        LogUtil.logError("tcp_error_" + nodename, nodename + " TCP Socket check exception: " + e.getMessage());
 	        return false;
 	    }
 	}
@@ -116,13 +118,13 @@ public class TCPSocket implements ISocket{
 	    if (!isConnected()) {
 	        // Try to repair the connection
 	        try {
-	            System.out.println(nodename + " TCP Socket lost, attempting reconnection");
+	            LogUtil.logInfo(nodename + " TCP Socket lost, attempting reconnection");
 	            connect();
 	            if (!isConnected()) {
 	                return null;
 	            }
 	        } catch (Exception e) {
-	            System.out.println(nodename + " TCP Socket reconnection failed: " + e.getMessage());
+	            LogUtil.logInfo(nodename + " TCP Socket reconnection failed: " + e.getMessage());
 	            return null;
 	        }
 	    }
@@ -140,14 +142,14 @@ public class TCPSocket implements ISocket{
 	    } catch (Exception e) {
 	        // Only log if it's not a timeout and not due to shutdown
 	        if (running && !(e instanceof InterruptedIOException)) {
-	            System.out.println(nodename + " TCP receive error: " + e.getMessage());
+	            LogUtil.logInfo(nodename + " TCP receive error: " + e.getMessage());
 	            
 	            // Try to detect if connection is broken
 	            if (e instanceof SocketException || 
 	                e instanceof EOFException || 
 	                e.getMessage().contains("Connection reset")) {
 	                
-	                System.out.println(nodename + " TCP Connection appears broken, forcing reconnection");
+	                LogUtil.logInfo(nodename + " TCP Connection appears broken, forcing reconnection");
 	                try {
 	                    TCPConn.close();
 	                } catch (Exception ex) {
@@ -162,24 +164,24 @@ public class TCPSocket implements ISocket{
 
 	@Override
 	public void close() {
-	    System.out.println(nodename + " TCP connection closing");
+	    LogUtil.logInfo(nodename + " TCP connection closing");
 	    running = false;
 	    
 	    if (TCPConn != null) {
 	        try {
 	            TCPConn.close();
-	            System.out.println(nodename + " TCP socket closed successfully");
+	            LogUtil.logInfo(nodename + " TCP socket closed successfully");
 	        } catch (Exception e) {
-	            System.out.println(nodename + " TCP socket close error: " + e.getMessage());
+	            LogUtil.logInfo(nodename + " TCP socket close error: " + e.getMessage());
 	        }
 	    }
 	    
 	    if (serverSocket != null) {
 	        try {
 	            serverSocket.close();
-	            System.out.println(nodename + " TCP server socket closed successfully");
+	            LogUtil.logInfo(nodename + " TCP server socket closed successfully");
 	        } catch (Exception e) {
-	            System.out.println(nodename + " TCP server socket close error: " + e.getMessage());
+	            LogUtil.logInfo(nodename + " TCP server socket close error: " + e.getMessage());
 	        }
 	    }
 	}
