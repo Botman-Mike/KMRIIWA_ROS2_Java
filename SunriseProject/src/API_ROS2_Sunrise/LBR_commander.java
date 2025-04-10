@@ -35,7 +35,6 @@ import static com.kuka.roboticsAPI.motionModel.BasicMotions.ptp;
 // Java util
 import java.util.ArrayList;
 import java.util.List;
-import javax.inject.Inject;
 
 // KUKA Robotics API
 

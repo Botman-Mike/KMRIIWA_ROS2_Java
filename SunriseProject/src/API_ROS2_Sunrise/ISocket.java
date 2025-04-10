@@ -1,7 +1,6 @@
 package API_ROS2_Sunrise;
 
-
-
+import java.net.DatagramPacket;
 
 public interface ISocket {
 	
@@ -11,5 +10,9 @@ public interface ISocket {
 	public byte[] encode(String string);
 	public boolean isConnected();
 
-
+    /**
+     * Handle received messages from the socket
+     * @param packet The received datagram packet
+     */
+    void onMessageReceived(DatagramPacket packet);
 }

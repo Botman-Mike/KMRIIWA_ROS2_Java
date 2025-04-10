@@ -12,14 +12,21 @@ public class LogUtil {
     private static final long THROTTLE_MS = 5000;
     
     @Inject
-    public static void setLogger(ITaskLogger injectedLogger) {
+    public void setLogger(ITaskLogger injectedLogger) {
         logger = injectedLogger;
+        // Add initialization log to verify logger is working
+        if (logger != null) {
+            logger.info("Logger initialized successfully");
+        }
     }
     
     // For direct messages without throttling
     public static void logInfo(String message) {
         if (logger != null) {
             logger.info(message);
+        } else {
+            // Fallback to System.out for debugging logger initialization issues
+            System.out.println("WARNING: Logger not initialized - " + message);
         }
     }
     

@@ -1,276 +1,949 @@
-2025-04-08 16:43:11,558 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #12560 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:11,600 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #12580 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:11,625 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #12600 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:11,649 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #12620 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:11,740 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #12640 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:11,762 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #12660 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:11,787 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #12680 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:11,812 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #12700 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:11,870 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #12720 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:11,959 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #12740 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:11,985 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #12760 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:12,009 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #12780 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:12,067 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #12800 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:12,092 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #12820 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:12,116 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #12840 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:12,177 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #12860 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:12,260 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #12880 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:12,285 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #12900 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:12,312 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #12920 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:12,366 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #12940 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:12,391 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #12960 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:12,415 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #12980 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:12,469 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #13000 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:12,494 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #13020 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:12,518 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #13040 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:12,548 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #13060 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:12,636 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #13080 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:12,660 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #13100 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:12,690 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #13120 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:12,715 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #13140 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:12,800 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #13160 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:12,825 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #13180 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:12,868 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #13200 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:13,040 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #13220 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:13,086 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #13240 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:13,182 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #13260 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:13,206 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #13280 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:13,238 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #13300 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:13,839 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #13320 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:13,863 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #13340 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:13,890 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #13360 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:13,915 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #13380 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:13,996 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #13400 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:14,145 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #13420 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:14,201 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #13440 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:14,228 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #13460 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:14,286 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #13480 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:14,311 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #13500 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:14,360 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #13520 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:14,386 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #13540 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:14,410 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #13560 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:14,464 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #13580 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:14,509 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #13600 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:14,539 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #13620 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:14,624 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #13640 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:14,649 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #13660 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:14,677 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #13680 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:14,701 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #13700 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:14,755 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #13720 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:14,782 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #13740 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:14,807 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #13760 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:14,866 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #13780 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:14,891 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #13800 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:14,915 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #13820 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:14,940 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #13840 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:15,026 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #13860 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:15,085 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #13880 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:15,112 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #13900 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:15,143 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #13920 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:15,218 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #13940 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:15,379 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #13960 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:15,455 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #13980 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:15,480 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #14000 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:15,505 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #14020 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:15,550 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #14040 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:15,636 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #14060 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:15,729 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #14080 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:15,794 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #14100 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:15,821 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #14120 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:15,876 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #14140 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:15,903 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #14160 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:15,997 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #14180 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:16,091 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #14200 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:16,177 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #14220 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:16,240 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #14240 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:16,289 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #14260 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:16,330 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #14280 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:16,355 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #14300 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:16,412 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #14320 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:16,604 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #14340 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:16,630 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #14360 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:16,658 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #14380 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:16,685 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #14400 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:16,868 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #14420 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:16,912 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #14440 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:16,941 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #14460 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:16,966 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #14480 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:17,060 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #14500 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:17,085 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #14520 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:17,110 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #14540 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:17,160 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #14560 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:17,241 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #14580 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:17,330 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #14600 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:17,369 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #14620 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:17,454 INFO  [..                        pool-58-thread-1] KMPjogger: Sending jog command #14640 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:17,479 INFO  [..                              Thread-120] KMP_commander: Received command: setTwist 0.0 0.0 0.0
-2025-04-08 16:43:17,480 INFO  [..                              Thread-120] KMP_commander: Processing setTwist command
-2025-04-08 16:43:17,480 INFO  [..                              Thread-120] KMP_commander: Received velocity command: setTwist 0.0 0.0 0.0
-2025-04-08 16:43:17,480 INFO  [..                              Thread-120] KMP_commander: Parsed velocities - x: 0.0, y: 0.0, theta: 0.0
-2025-04-08 16:43:17,480 INFO  [..                              Thread-120] KMP_commander: Zero velocity command received
-2025-04-08 16:43:17,480 INFO  [..                              Thread-120] KMP_commander: Robot is currently moving, stopping
-2025-04-08 16:43:17,480 INFO  [..                              Thread-120] KMPjogger: Stopping jogging execution, isMoving=true
-2025-04-08 16:43:17,480 INFO  [..                              Thread-120] KMPjogger: Shutting down executor
-2025-04-08 16:43:17,639 INFO  [..                              Thread-120] KMPjogger: Executor shutdown complete
-2025-04-08 16:43:17,639 INFO  [..                              Thread-120] KMPjogger: Stopping device since it was moving
-2025-04-08 16:43:17,639 INFO  [..                              Thread-120] KMPjogger: Stopping device by setting zero velocities
-2025-04-08 16:43:17,639 INFO  [..                              Thread-120] KMPjogger: Device isReadyToMove=true
-2025-04-08 16:43:17,639 INFO  [..                              Thread-120] KMPjogger: Sending zero jog command
-2025-04-08 16:43:17,641 INFO  [..                              Thread-120] KMPjogger: Jogger stopped without triggering commander shutdown
-2025-04-08 16:43:17,641 INFO  [..                              Thread-120] KMP_commander: Motion stopped successfully without shutdown
-2025-04-08 16:43:21,636 INFO  [..                              Thread-120] KMP_commander: Received command: setTwist -0.1 0.0 0.0
-2025-04-08 16:43:21,636 INFO  [..                              Thread-120] KMP_commander: Processing setTwist command
-2025-04-08 16:43:21,636 INFO  [..                              Thread-120] KMP_commander: Received velocity command: setTwist -0.1 0.0 0.0
-2025-04-08 16:43:21,636 INFO  [..                              Thread-120] KMP_commander: Parsed velocities - x: -0.1, y: 0.0, theta: 0.0
-2025-04-08 16:43:21,636 INFO  [..                              Thread-120] KMP_commander: Non-zero velocity command received
-2025-04-08 16:43:21,636 INFO  [..                              Thread-120] KMP_commander: Current states - IsMoving: false, EmergencyStop: false, ReadyToMove: true
-2025-04-08 16:43:21,636 INFO  [..                              Thread-120] KMP_commander: Starting robot movement
-2025-04-08 16:43:21,636 INFO  [..                              Thread-120] KMPjogger: Updating velocities - x: -0.1, y: 0.0, theta: 0.0
-2025-04-08 16:43:21,636 INFO  [..                              Thread-120] KMPjogger: Attempting to start jogging execution
-2025-04-08 16:43:21,636 INFO  [..                              Thread-120] KMPjogger: Creating new executor
-2025-04-08 16:43:21,636 INFO  [..                              Thread-120] KMPjogger: Starting jog task with period 1ms
-2025-04-08 16:43:21,637 INFO  [..                              Thread-120] KMPjogger: JogTimerTask created
-2025-04-08 16:43:21,637 INFO  [..                              Thread-120] KMPjogger: Jogging task scheduled successfully
-2025-04-08 16:43:21,858 INFO  [..KMRiiwaSunriseApplication@SunriseProject] State change.
-2025-04-08 16:43:21,971 INFO  [..                        pool-59-thread-1] KMPjogger: Sending jog command #20 - x: -0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:21,971 INFO  [..                        pool-59-thread-1] KMPjogger: Sending jog command #40 - x: -0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:21,971 INFO  [..                        pool-59-thread-1] KMPjogger: Sending jog command #60 - x: -0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:21,971 INFO  [..                        pool-59-thread-1] KMPjogger: Sending jog command #80 - x: -0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:21,971 INFO  [..                        pool-59-thread-1] KMPjogger: Sending jog command #100 - x: -0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:21,972 INFO  [..                        pool-59-thread-1] KMPjogger: Sending jog command #120 - x: -0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:21,972 INFO  [..                        pool-59-thread-1] KMPjogger: Sending jog command #140 - x: -0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:21,972 INFO  [..                        pool-59-thread-1] KMPjogger: Sending jog command #160 - x: -0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:21,972 INFO  [..                        pool-59-thread-1] KMPjogger: Sending jog command #180 - x: -0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:21,972 INFO  [..                        pool-59-thread-1] KMPjogger: Sending jog command #200 - x: -0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:21,972 INFO  [..                        pool-59-thread-1] KMPjogger: Sending jog command #220 - x: -0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:21,972 INFO  [..                        pool-59-thread-1] KMPjogger: Sending jog command #240 - x: -0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:21,972 INFO  [..                        pool-59-thread-1] KMPjogger: Sending jog command #260 - x: -0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:21,972 INFO  [..                        pool-59-thread-1] KMPjogger: Sending jog command #280 - x: -0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:21,972 INFO  [..                        pool-59-thread-1] KMPjogger: Sending jog command #300 - x: -0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:21,972 INFO  [..                        pool-59-thread-1] KMPjogger: Sending jog command #320 - x: -0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:21,973 INFO  [..                        pool-59-thread-1] KMPjogger: Sending jog command #340 - x: -0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:22,045 INFO  [..                        pool-59-thread-1] KMPjogger: Sending jog command #360 - x: -0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:22,073 INFO  [..                        pool-59-thread-1] KMPjogger: Sending jog command #380 - x: -0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:22,098 INFO  [..                        pool-59-thread-1] KMPjogger: Sending jog command #400 - x: -0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:22,132 INFO  [..                        pool-59-thread-1] KMPjogger: Sending jog command #420 - x: -0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:22,352 INFO  [..                        pool-59-thread-1] KMPjogger: Sending jog command #440 - x: -0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:22,376 INFO  [..                        pool-59-thread-1] KMPjogger: Sending jog command #460 - x: -0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:22,404 INFO  [..                        pool-59-thread-1] KMPjogger: Sending jog command #480 - x: -0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:22,431 INFO  [..                        pool-59-thread-1] KMPjogger: Sending jog command #500 - x: -0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:22,457 INFO  [..                        pool-59-thread-1] KMPjogger: Sending jog command #520 - x: -0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:22,488 INFO  [..                        pool-59-thread-1] KMPjogger: Sending jog command #540 - x: -0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:22,543 INFO  [..                        pool-59-thread-1] KMPjogger: Sending jog command #560 - x: -0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:22,568 INFO  [..                        pool-59-thread-1] KMPjogger: Sending jog command #580 - x: -0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:22,592 INFO  [..                        pool-59-thread-1] KMPjogger: Sending jog command #600 - x: -0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:22,663 INFO  [..                        pool-59-thread-1] KMPjogger: Sending jog command #620 - x: -0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:22,688 INFO  [..                        pool-59-thread-1] KMPjogger: Sending jog command #640 - x: -0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:22,713 INFO  [..                        pool-59-thread-1] KMPjogger: Sending jog command #660 - x: -0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:22,737 INFO  [..                        pool-59-thread-1] KMPjogger: Sending jog command #680 - x: -0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:22,853 INFO  [..                        pool-59-thread-1] KMPjogger: Sending jog command #700 - x: -0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:22,906 INFO  [..                        pool-59-thread-1] KMPjogger: Sending jog command #720 - x: -0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:22,936 INFO  [..                        pool-59-thread-1] KMPjogger: Sending jog command #740 - x: -0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:23,012 INFO  [..                        pool-59-thread-1] KMPjogger: Sending jog command #760 - x: -0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:23,085 INFO  [..                        pool-59-thread-1] KMPjogger: Sending jog command #780 - x: -0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:23,137 INFO  [..                        pool-59-thread-1] KMPjogger: Sending jog command #800 - x: -0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:23,162 INFO  [..                        pool-59-thread-1] KMPjogger: Sending jog command #820 - x: -0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:23,187 INFO  [..                        pool-59-thread-1] KMPjogger: Sending jog command #840 - x: -0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:23,225 INFO  [..                        pool-59-thread-1] KMPjogger: Sending jog command #860 - x: -0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:23,381 INFO  [..                        pool-59-thread-1] KMPjogger: Sending jog command #880 - x: -0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:23,406 INFO  [..                        pool-59-thread-1] KMPjogger: Sending jog command #900 - x: -0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:23,432 INFO  [..                        pool-59-thread-1] KMPjogger: Sending jog command #920 - x: -0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:23,467 INFO  [..                        pool-59-thread-1] KMPjogger: Sending jog command #940 - x: -0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:23,525 INFO  [..                        pool-59-thread-1] KMPjogger: Sending jog command #960 - x: -0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:23,550 INFO  [..                        pool-59-thread-1] KMPjogger: Sending jog command #980 - x: -0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:23,574 INFO  [..                        pool-59-thread-1] KMPjogger: Sending jog command #1000 - x: -0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:23,643 INFO  [..                        pool-59-thread-1] KMPjogger: Sending jog command #1020 - x: -0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:23,668 INFO  [..                        pool-59-thread-1] KMPjogger: Sending jog command #1040 - x: -0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:23,692 INFO  [..                        pool-59-thread-1] KMPjogger: Sending jog command #1060 - x: -0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:23,718 INFO  [..                        pool-59-thread-1] KMPjogger: Sending jog command #1080 - x: -0.1, y: 0.0, theta: 0.0, isReady: true
-2025-04-08 16:43:26,951 INFO  [..                              Thread-120] KMP_commander: Received command: setTwist 0.0 0.0 0.0
-2025-04-08 16:43:26,951 INFO  [..                              Thread-120] KMP_commander: Processing setTwist command
-2025-04-08 16:43:26,951 INFO  [..                              Thread-120] KMP_commander: Received velocity command: setTwist 0.0 0.0 0.0
-2025-04-08 16:43:26,951 INFO  [..                              Thread-120] KMP_commander: Parsed velocities - x: 0.0, y: 0.0, theta: 0.0
-2025-04-08 16:43:26,951 INFO  [..                              Thread-120] KMP_commander: Zero velocity command received
-2025-04-08 16:43:26,951 INFO  [..                              Thread-120] KMP_commander: Robot is currently moving, stopping
-2025-04-08 16:43:26,951 INFO  [..                              Thread-120] KMPjogger: Stopping jogging execution, isMoving=true
-2025-04-08 16:43:26,951 INFO  [..                              Thread-120] KMPjogger: Shutting down executor
-2025-04-08 16:43:29,005 INFO  [..                              Thread-120] KMPjogger: Forcing executor shutdown since tasks did not terminate
-2025-04-08 16:43:29,297 INFO  [..                              Thread-120] KMPjogger: Executor shutdown complete
-2025-04-08 16:43:29,297 INFO  [..                              Thread-120] KMPjogger: Stopping device since it was moving
-2025-04-08 16:43:29,297 INFO  [..                              Thread-120] KMPjogger: Stopping device by setting zero velocities
-2025-04-08 16:43:29,297 INFO  [..                              Thread-120] KMPjogger: Device isReadyToMove=true
-2025-04-08 16:43:29,297 INFO  [..                              Thread-120] KMPjogger: Sending zero jog command
-2025-04-08 16:43:29,298 INFO  [..                              Thread-120] KMPjogger: Jogger stopped without triggering commander shutdown
-2025-04-08 16:43:29,298 INFO  [..                              Thread-120] KMP_commander: Motion stopped successfully without shutdown
-2025-04-08 16:43:50,591 INFO  [..                              Thread-120] KMP_commander: Received command: setTwist 0.0 0.0 0.0
-2025-04-08 16:43:50,591 INFO  [..                              Thread-120] KMP_commander: Processing setTwist command
-2025-04-08 16:43:50,591 INFO  [..                              Thread-120] KMP_commander: Received velocity command: setTwist 0.0 0.0 0.0
-2025-04-08 16:43:50,591 INFO  [..                              Thread-120] KMP_commander: Parsed velocities - x: 0.0, y: 0.0, theta: 0.0
-2025-04-08 16:43:50,591 INFO  [..                              Thread-120] KMP_commander: Zero velocity command received
-2025-04-08 16:43:50,591 INFO  [..                              Thread-120] KMP_commander: Robot already stopped
-2025-04-08 16:43:53,127 INFO  [..                              Thread-120] KMP_commander: Received command: setTwist 0.1 0.0 0.0
-2025-04-08 16:43:53,127 INFO  [..                              Thread-120] KMP_commander: Processing setTwist command
-2025-04-08 16:43:53,127 INFO  [..                              Thread-120] KMP_commander: Received velocity command: setTwist 0.1 0.0 0.0
-2025-04-08 16:43:53,127 INFO  [..                              Thread-120] KMP_commander: Parsed velocities - x: 0.1, y: 0.0, theta: 0.0
-2025-04-08 16:43:53,127 INFO  [..                              Thread-120] KMP_commander: Non-zero velocity command received
-2025-04-08 16:43:53,127 INFO  [..                              Thread-120] KMP_commander: Current states - IsMoving: false, EmergencyStop: false, ReadyToMove: true
-2025-04-08 16:43:53,128 INFO  [..                              Thread-120] KMP_commander: Starting robot movement
-2025-04-08 16:43:53,128 INFO  [..                              Thread-120] KMPjogger: Updating velocities - x: 0.1, y: 0.0, theta: 0.0
-2025-04-08 16:43:53,128 INFO  [..                              Thread-120] KMPjogger: Attempting to start jogging execution
-2025-04-08 16:43:53,128 INFO  [..                              Thread-120] KMPjogger: Creating new executor
-2025-04-08 16:43:53,128 INFO  [..                              Thread-120] KMPjogger: Starting jog task with period 1ms
-2025-04-08 16:43:53,128 INFO  [..                              Thread-120] KMPjogger: JogTimerTask created
-2025-04-08 16:43:53,128 INFO  [..                              Thread-120] KMPjogger: Jogging task scheduled successfully
-2025-04-08 16:43:53,238 INFO  [..                        pool-60-thread-1] KMPjogger: ERROR during jog: Controller has been disposed
-2025-04-08 16:43:53,240 ERROR [..                        pool-60-thread-1] com.kuka.roboticsAPI.executionModel.ApplicationExitException: Controller has been disposed
-2025-04-08 16:43:53,240 ERROR [..                        pool-60-thread-1] 	at com.kuka.roboticsAPI.controllerModel.Controller.checkServicesInitialized(Controller.java:834)
-2025-04-08 16:43:53,240 ERROR [..                        pool-60-thread-1] 	at com.kuka.roboticsAPI.controllerModel.Controller.getExecutionService(Controller.java:269)
-2025-04-08 16:43:53,240 ERROR [..                        pool-60-thread-1] 	at com.kuka.roboticsAPI.controllerModel.sunrise.SunriseController.getExecutionService(SunriseController.java:1022)
-2025-04-08 16:43:53,240 ERROR [..                        pool-60-thread-1] 	at com.kuka.roboticsAPI.controllerModel.sunrise.SunriseController.getExecutionService(SunriseController.java:1)
-2025-04-08 16:43:53,240 ERROR [..                        pool-60-thread-1] 	at com.kuka.roboticsAPI.deviceModel.MobilePlatform.moveAsync(MobilePlatform.java:77)
-2025-04-08 16:43:53,240 ERROR [..                        pool-60-thread-1] 	at com.kuka.roboticsAPI.deviceModel.kmp.SunriseOmniMoveMobilePlatform.startJoggingMotionAsync(SunriseOmniMoveMobilePlatform.java:286)
-2025-04-08 16:43:53,240 ERROR [..                        pool-60-thread-1] 	at com.kuka.roboticsAPI.deviceModel.kmp.SunriseOmniMoveMobilePlatform.jog(SunriseOmniMoveMobilePlatform.java:270)
-2025-04-08 16:43:53,240 ERROR [..                        pool-60-thread-1] 	at API_ROS2_Sunrise.KMPjogger$JogTimerTask.run(KMPjogger.java:87)
-2025-04-08 16:43:53,240 ERROR [..                        pool-60-thread-1] 	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
-2025-04-08 16:43:53,240 ERROR [..                        pool-60-thread-1] 	at java.util.concurrent.FutureTask$Sync.innerRunAndReset(Unknown Source)
-2025-04-08 16:43:53,240 ERROR [..                        pool-60-thread-1] 	at java.util.concurrent.FutureTask.runAndReset(Unknown Source)
-2025-04-08 16:43:53,240 ERROR [..                        pool-60-thread-1] 	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$101(Unknown Source)
-2025-04-08 16:43:53,240 ERROR [..                        pool-60-thread-1] 	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.runPeriodic(Unknown Source)
-2025-04-08 16:43:53,240 ERROR [..                        pool-60-thread-1] 	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
-2025-04-08 16:43:53,240 ERROR [..                        pool-60-thread-1] 	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Unknown Source)
-2025-04-08 16:43:53,240 ERROR [..                        pool-60-thread-1] 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-2025-04-08 16:43:53,240 ERROR [..                        pool-60-thread-1] 	at java.lang.Thread.run(Unknown Source)
-2025-04-08 16:43:53,240 INFO  [..                        pool-60-thread-1] KMPjogger: Controller disposed error detected, shutting down executor
-2025-04-08 16:43:53,344 INFO  [..KMRiiwaSunriseApplication@SunriseProject] State change.
-2025-04-08 16:44:03,866 INFO  [..                              Thread-120] KMP_commander: Received command: setTwist 0.0 0.0 0.0
-2025-04-08 16:44:03,866 INFO  [..                              Thread-120] KMP_commander: Processing setTwist command
-2025-04-08 16:44:03,866 INFO  [..                              Thread-120] KMP_commander: Received velocity command: setTwist 0.0 0.0 0.0
-2025-04-08 16:44:03,866 INFO  [..                              Thread-120] KMP_commander: Parsed velocities - x: 0.0, y: 0.0, theta: 0.0
-2025-04-08 16:44:03,866 INFO  [..                              Thread-120] KMP_commander: Zero velocity command received
-2025-04-08 16:44:03,866 INFO  [..                              Thread-120] KMP_commander: Robot is currently moving, stopping
-2025-04-08 16:44:03,866 INFO  [..                              Thread-120] KMPjogger: Stopping jogging execution, isMoving=true
-2025-04-08 16:44:03,866 INFO  [..                              Thread-120] KMPjogger: Shutting down executor
-2025-04-08 16:44:03,866 INFO  [..                              Thread-120] KMPjogger: Executor shutdown complete
-2025-04-08 16:44:03,866 INFO  [..                              Thread-120] KMPjogger: Stopping device since it was moving
-2025-04-08 16:44:03,866 INFO  [..                              Thread-120] KMPjogger: Stopping device by setting zero velocities
-2025-04-08 16:44:03,866 INFO  [..                              Thread-120] KMPjogger: Device isReadyToMove=true
-2025-04-08 16:44:03,866 INFO  [..                              Thread-120] KMPjogger: Sending zero jog command
-2025-04-08 16:44:03,867 INFO  [..                              Thread-120] KMPjogger: Jogger stopped without triggering commander shutdown
-2025-04-08 16:44:03,867 INFO  [..                              Thread-120] KMP_commander: Motion stopped successfully without shutdown
-2025-04-08 16:44:04,963 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Current operating mode: AUT
-2025-04-08 16:44:23,980 DEBUG [..Executor for Pause State Events-thread-1] State of the task "class API_ROS2_Sunrise.KMRiiwaSunriseApplication" changed from "RUNNING" to "RUNNING".
-2025-04-08 16:45:05,030 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Current operating mode: AUT
-2025-04-08 16:46:05,130 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Current operating mode: AUT
-2025-04-08 16:46:15,968 INFO  [..                              Thread-120] KMP_commander: Received command: setTwist 0.0 0.0 0.0
-2025-04-08 16:46:15,968 INFO  [..                              Thread-120] KMP_commander: Processing setTwist command
-2025-04-08 16:46:15,968 INFO  [..                              Thread-120] KMP_commander: Received velocity command: setTwist 0.0 0.0 0.0
-2025-04-08 16:46:15,968 INFO  [..                              Thread-120] KMP_commander: Parsed velocities - x: 0.0, y: 0.0, theta: 0.0
-2025-04-08 16:46:15,968 INFO  [..                              Thread-120] KMP_commander: Zero velocity command received
-2025-04-08 16:46:15,968 INFO  [..                              Thread-120] KMP_commander: Robot already stopped
-2025-04-08 16:47:05,168 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Current operating mode: AUT
-2025-04-08 16:48:05,285 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Current operating mode: AUT
-2025-04-08 16:49:05,299 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Current operating mode: AUT
-2025-04-08 16:50:07,826 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Current operating mode: AUT
-2025-04-08 16:51:07,906 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Current operating mode: AUT
-2025-04-08 16:52:07,955 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Current operating mode: AUT
-2025-04-08 16:53:08,168 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Current operating mode: AUT
+2025-04-09 16:35:37,676 INFO  [..                               Thread-60] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:37,676 INFO  [..                               Thread-60] KMP commander TCP Socket lost, attempting reconnection
+2025-04-09 16:35:37,676 INFO  [..                               Thread-61] Could not connect LBR commander to ROS over TCP on port : 30005 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:37,678 INFO  [..                               Thread-61] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:37,678 INFO  [..                               Thread-61] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:37,679 INFO  [..                               Thread-61] LBR commander TCP Socket lost, attempting reconnection
+2025-04-09 16:35:38,070 INFO  [..                               Thread-66] Could not connect KMP commander to ROS over TCP on port : 30002 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:38,070 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:38,070 INFO  [..                               Thread-66] KMP commander: Failed to reconnect socket
+2025-04-09 16:35:38,173 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:38,173 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:38,173 INFO  [..                               Thread-66] KMP commander: Socket connection lost, attempting to reconnect
+2025-04-09 16:35:38,173 INFO  [..                               Thread-66] KMP commander TCP connection closing
+2025-04-09 16:35:38,274 INFO  [..KMRiiwaSunriseApplication@SunriseProject] === Socket Connection Status ===
+2025-04-09 16:35:38,274 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:38,274 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP commander socket: DISCONNECTED
+2025-04-09 16:35:38,274 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:38,274 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR commander socket: DISCONNECTED
+2025-04-09 16:35:38,788 INFO  [..                               Thread-67] Could not connect LBR commander to ROS over TCP on port : 30005 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:38,788 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:38,788 INFO  [..                               Thread-67] LBR commander: Failed to reconnect socket
+2025-04-09 16:35:38,788 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:38,788 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:38,788 INFO  [..                               Thread-67] LBR commander: Socket connection lost, attempting to reconnect
+2025-04-09 16:35:38,788 INFO  [..                               Thread-67] LBR commander TCP connection closing
+2025-04-09 16:35:38,793 INFO  [..                               Thread-60] Could not connect KMP commander to ROS over TCP on port : 30002 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:38,793 INFO  [..                               Thread-60] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:38,793 INFO  [..                               Thread-60] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:38,793 INFO  [..                               Thread-60] KMP commander TCP Socket lost, attempting reconnection
+2025-04-09 16:35:38,793 INFO  [..                               Thread-61] Could not connect LBR commander to ROS over TCP on port : 30005 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:38,793 INFO  [..                               Thread-61] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:38,793 INFO  [..                               Thread-61] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:38,793 INFO  [..                               Thread-61] LBR commander TCP Socket lost, attempting reconnection
+2025-04-09 16:35:39,200 INFO  [..                               Thread-66] Could not connect KMP commander to ROS over TCP on port : 30002 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:39,200 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:39,200 INFO  [..                               Thread-66] KMP commander: Failed to reconnect socket
+2025-04-09 16:35:39,303 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:39,303 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:39,303 INFO  [..                               Thread-66] KMP commander: Socket connection lost, attempting to reconnect
+2025-04-09 16:35:39,303 INFO  [..                               Thread-66] KMP commander TCP connection closing
+2025-04-09 16:35:39,818 INFO  [..                               Thread-67] Could not connect LBR commander to ROS over TCP on port : 30005 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:39,818 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:39,818 INFO  [..                               Thread-67] LBR commander: Failed to reconnect socket
+2025-04-09 16:35:39,818 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:39,818 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:39,818 INFO  [..                               Thread-67] LBR commander: Socket connection lost, attempting to reconnect
+2025-04-09 16:35:39,818 INFO  [..                               Thread-67] LBR commander TCP connection closing
+2025-04-09 16:35:39,820 INFO  [..                               Thread-60] Could not connect KMP commander to ROS over TCP on port : 30002 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:39,820 INFO  [..                               Thread-60] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:39,820 INFO  [..                               Thread-60] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:39,820 INFO  [..                               Thread-60] KMP commander TCP Socket lost, attempting reconnection
+2025-04-09 16:35:39,820 INFO  [..                               Thread-61] Could not connect LBR commander to ROS over TCP on port : 30005 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:39,820 INFO  [..                               Thread-61] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:39,820 INFO  [..                               Thread-61] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:39,820 INFO  [..                               Thread-61] LBR commander TCP Socket lost, attempting reconnection
+2025-04-09 16:35:40,332 INFO  [..                               Thread-66] Could not connect KMP commander to ROS over TCP on port : 30002 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:40,333 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:40,333 INFO  [..                               Thread-66] KMP commander: Failed to reconnect socket
+2025-04-09 16:35:40,436 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:40,436 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:40,436 INFO  [..                               Thread-66] KMP commander: Socket connection lost, attempting to reconnect
+2025-04-09 16:35:40,436 INFO  [..                               Thread-66] KMP commander TCP connection closing
+2025-04-09 16:35:40,848 INFO  [..                               Thread-67] Could not connect LBR commander to ROS over TCP on port : 30005 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:40,848 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:40,848 INFO  [..                               Thread-67] LBR commander: Failed to reconnect socket
+2025-04-09 16:35:40,848 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:40,848 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:40,848 INFO  [..                               Thread-67] LBR commander: Socket connection lost, attempting to reconnect
+2025-04-09 16:35:40,848 INFO  [..                               Thread-67] LBR commander TCP connection closing
+2025-04-09 16:35:40,850 INFO  [..                               Thread-60] Could not connect KMP commander to ROS over TCP on port : 30002 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:40,850 INFO  [..                               Thread-60] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:40,850 INFO  [..                               Thread-60] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:40,850 INFO  [..                               Thread-60] KMP commander TCP Socket lost, attempting reconnection
+2025-04-09 16:35:40,850 INFO  [..                               Thread-61] Could not connect LBR commander to ROS over TCP on port : 30005 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:40,850 INFO  [..                               Thread-61] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:40,850 INFO  [..                               Thread-61] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:40,851 INFO  [..                               Thread-61] LBR commander TCP Socket lost, attempting reconnection
+2025-04-09 16:35:41,466 INFO  [..                               Thread-66] Could not connect KMP commander to ROS over TCP on port : 30002 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:41,466 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:41,466 INFO  [..                               Thread-66] KMP commander: Failed to reconnect socket
+2025-04-09 16:35:41,568 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:41,568 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:41,568 INFO  [..                               Thread-66] KMP commander: Socket connection lost, attempting to reconnect
+2025-04-09 16:35:41,568 INFO  [..                               Thread-66] KMP commander TCP connection closing
+2025-04-09 16:35:41,876 INFO  [..                               Thread-67] Could not connect LBR commander to ROS over TCP on port : 30005 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:41,876 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:41,876 INFO  [..                               Thread-67] LBR commander: Failed to reconnect socket
+2025-04-09 16:35:41,876 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:41,876 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:41,876 INFO  [..                               Thread-67] LBR commander: Socket connection lost, attempting to reconnect
+2025-04-09 16:35:41,876 INFO  [..                               Thread-67] LBR commander TCP connection closing
+2025-04-09 16:35:41,878 INFO  [..                               Thread-60] Could not connect KMP commander to ROS over TCP on port : 30002 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:41,878 INFO  [..                               Thread-60] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:41,878 INFO  [..                               Thread-60] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:41,878 INFO  [..                               Thread-60] KMP commander TCP Socket lost, attempting reconnection
+2025-04-09 16:35:41,878 INFO  [..                               Thread-61] Could not connect LBR commander to ROS over TCP on port : 30005 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:41,878 INFO  [..                               Thread-61] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:41,878 INFO  [..                               Thread-61] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:41,878 INFO  [..                               Thread-61] LBR commander TCP Socket lost, attempting reconnection
+2025-04-09 16:35:42,598 INFO  [..                               Thread-66] Could not connect KMP commander to ROS over TCP on port : 30002 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:42,598 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:42,598 INFO  [..                               Thread-66] KMP commander: Failed to reconnect socket
+2025-04-09 16:35:42,701 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:42,701 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:42,701 INFO  [..                               Thread-66] KMP commander: Socket connection lost, attempting to reconnect
+2025-04-09 16:35:42,701 INFO  [..                               Thread-66] KMP commander TCP connection closing
+2025-04-09 16:35:42,907 INFO  [..                               Thread-67] Could not connect LBR commander to ROS over TCP on port : 30005 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:42,907 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:42,907 INFO  [..                               Thread-67] LBR commander: Failed to reconnect socket
+2025-04-09 16:35:42,907 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:42,907 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:42,907 INFO  [..                               Thread-67] LBR commander: Socket connection lost, attempting to reconnect
+2025-04-09 16:35:42,907 INFO  [..                               Thread-67] LBR commander TCP connection closing
+2025-04-09 16:35:42,908 INFO  [..                               Thread-61] Could not connect LBR commander to ROS over TCP on port : 30005 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:42,908 INFO  [..                               Thread-61] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:42,908 INFO  [..                               Thread-61] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:42,908 INFO  [..                               Thread-61] LBR commander TCP Socket lost, attempting reconnection
+2025-04-09 16:35:42,908 INFO  [..                               Thread-60] Could not connect KMP commander to ROS over TCP on port : 30002 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:42,908 INFO  [..                               Thread-60] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:42,908 INFO  [..                               Thread-60] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:42,908 INFO  [..                               Thread-60] KMP commander TCP Socket lost, attempting reconnection
+2025-04-09 16:35:43,300 INFO  [..KMRiiwaSunriseApplication@SunriseProject] === Socket Connection Status ===
+2025-04-09 16:35:43,300 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:43,300 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP commander socket: DISCONNECTED
+2025-04-09 16:35:43,300 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:43,300 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR commander socket: DISCONNECTED
+2025-04-09 16:35:43,730 INFO  [..                               Thread-66] Could not connect KMP commander to ROS over TCP on port : 30002 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:43,730 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:43,730 INFO  [..                               Thread-66] KMP commander: Failed to reconnect socket
+2025-04-09 16:35:43,871 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:43,871 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:43,871 INFO  [..                               Thread-66] KMP commander: Socket connection lost, attempting to reconnect
+2025-04-09 16:35:43,871 INFO  [..                               Thread-66] KMP commander TCP connection closing
+2025-04-09 16:35:43,936 INFO  [..                               Thread-67] Could not connect LBR commander to ROS over TCP on port : 30005 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:43,936 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:43,936 INFO  [..                               Thread-67] LBR commander: Failed to reconnect socket
+2025-04-09 16:35:43,936 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:43,936 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:43,936 INFO  [..                               Thread-67] LBR commander: Socket connection lost, attempting to reconnect
+2025-04-09 16:35:43,936 INFO  [..                               Thread-67] LBR commander TCP connection closing
+2025-04-09 16:35:43,937 INFO  [..                               Thread-60] Could not connect KMP commander to ROS over TCP on port : 30002 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:43,937 INFO  [..                               Thread-60] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:43,937 INFO  [..                               Thread-60] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:43,937 INFO  [..                               Thread-60] KMP commander TCP Socket lost, attempting reconnection
+2025-04-09 16:35:43,937 INFO  [..                               Thread-61] Could not connect LBR commander to ROS over TCP on port : 30005 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:43,937 INFO  [..                               Thread-61] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:43,937 INFO  [..                               Thread-61] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:43,937 INFO  [..                               Thread-61] LBR commander TCP Socket lost, attempting reconnection
+2025-04-09 16:35:44,966 INFO  [..                               Thread-66] Could not connect KMP commander to ROS over TCP on port : 30002 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:44,966 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:44,966 INFO  [..                               Thread-66] KMP commander: Failed to reconnect socket
+2025-04-09 16:35:44,967 INFO  [..                               Thread-67] Could not connect LBR commander to ROS over TCP on port : 30005 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:44,967 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:44,967 INFO  [..                               Thread-67] LBR commander: Failed to reconnect socket
+2025-04-09 16:35:44,967 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:44,967 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:44,967 INFO  [..                               Thread-67] LBR commander: Socket connection lost, attempting to reconnect
+2025-04-09 16:35:44,967 INFO  [..                               Thread-67] LBR commander TCP connection closing
+2025-04-09 16:35:44,968 INFO  [..                               Thread-60] Could not connect KMP commander to ROS over TCP on port : 30002 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:44,968 INFO  [..                               Thread-60] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:44,968 INFO  [..                               Thread-60] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:44,968 INFO  [..                               Thread-60] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:44,968 INFO  [..                               Thread-60] KMP commander: Socket connection lost, attempting to reconnect
+2025-04-09 16:35:44,968 INFO  [..                               Thread-60] KMP commander TCP connection closing
+2025-04-09 16:35:44,968 INFO  [..                               Thread-61] Could not connect LBR commander to ROS over TCP on port : 30005 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:44,968 INFO  [..                               Thread-61] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:44,968 INFO  [..                               Thread-61] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:44,968 INFO  [..                               Thread-61] LBR commander TCP Socket lost, attempting reconnection
+2025-04-09 16:35:45,995 INFO  [..                               Thread-67] Could not connect LBR commander to ROS over TCP on port : 30005 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:45,995 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:45,995 INFO  [..                               Thread-67] LBR commander: Failed to reconnect socket
+2025-04-09 16:35:45,995 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:45,995 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:45,995 INFO  [..                               Thread-67] LBR commander: Socket connection lost, attempting to reconnect
+2025-04-09 16:35:45,995 INFO  [..                               Thread-67] LBR commander TCP connection closing
+2025-04-09 16:35:45,996 INFO  [..                               Thread-60] Could not connect KMP commander to ROS over TCP on port : 30002 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:45,996 INFO  [..                               Thread-60] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:45,996 INFO  [..                               Thread-60] KMP commander: Failed to reconnect socket
+2025-04-09 16:35:45,996 INFO  [..                               Thread-60] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:45,996 INFO  [..                               Thread-60] KMP commander TCP Socket lost, attempting reconnection
+2025-04-09 16:35:45,996 INFO  [..                               Thread-61] Could not connect LBR commander to ROS over TCP on port : 30005 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:45,996 INFO  [..                               Thread-61] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:45,996 INFO  [..                               Thread-61] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:45,996 INFO  [..                               Thread-61] LBR commander TCP Socket lost, attempting reconnection
+2025-04-09 16:35:46,113 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:46,113 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:46,113 INFO  [..                               Thread-66] KMP commander: Socket connection lost, attempting to reconnect
+2025-04-09 16:35:46,113 INFO  [..                               Thread-66] KMP commander TCP connection closing
+2025-04-09 16:35:47,025 INFO  [..                               Thread-67] Could not connect LBR commander to ROS over TCP on port : 30005 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:47,026 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:47,026 INFO  [..                               Thread-67] LBR commander: Failed to reconnect socket
+2025-04-09 16:35:47,026 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:47,026 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:47,026 INFO  [..                               Thread-67] LBR commander: Socket connection lost, attempting to reconnect
+2025-04-09 16:35:47,026 INFO  [..                               Thread-67] LBR commander TCP connection closing
+2025-04-09 16:35:47,027 INFO  [..                               Thread-60] Could not connect KMP commander to ROS over TCP on port : 30002 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:47,027 INFO  [..                               Thread-60] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:47,027 INFO  [..                               Thread-60] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:47,027 INFO  [..                               Thread-60] KMP commander TCP Socket lost, attempting reconnection
+2025-04-09 16:35:47,027 INFO  [..                               Thread-61] Could not connect LBR commander to ROS over TCP on port : 30005 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:47,027 INFO  [..                               Thread-61] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:47,027 INFO  [..                               Thread-61] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:47,027 INFO  [..                               Thread-61] LBR commander TCP Socket lost, attempting reconnection
+2025-04-09 16:35:47,127 INFO  [..                               Thread-66] Could not connect KMP commander to ROS over TCP on port : 30002 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:47,127 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:47,127 INFO  [..                               Thread-66] KMP commander: Failed to reconnect socket
+2025-04-09 16:35:47,238 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:47,238 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:47,238 INFO  [..                               Thread-66] KMP commander: Socket connection lost, attempting to reconnect
+2025-04-09 16:35:47,238 INFO  [..                               Thread-66] KMP commander TCP connection closing
+2025-04-09 16:35:48,053 INFO  [..                               Thread-67] Could not connect LBR commander to ROS over TCP on port : 30005 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:48,053 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:48,053 INFO  [..                               Thread-67] LBR commander: Failed to reconnect socket
+2025-04-09 16:35:48,053 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:48,053 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:48,053 INFO  [..                               Thread-67] LBR commander: Socket connection lost, attempting to reconnect
+2025-04-09 16:35:48,053 INFO  [..                               Thread-67] LBR commander TCP connection closing
+2025-04-09 16:35:48,056 INFO  [..                               Thread-60] Could not connect KMP commander to ROS over TCP on port : 30002 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:48,056 INFO  [..                               Thread-60] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:48,056 INFO  [..                               Thread-60] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:48,056 INFO  [..                               Thread-60] KMP commander TCP Socket lost, attempting reconnection
+2025-04-09 16:35:48,056 INFO  [..                               Thread-61] Could not connect LBR commander to ROS over TCP on port : 30005 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:48,056 INFO  [..                               Thread-61] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:48,056 INFO  [..                               Thread-61] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:48,056 INFO  [..                               Thread-61] LBR commander TCP Socket lost, attempting reconnection
+2025-04-09 16:35:48,277 INFO  [..                               Thread-66] Could not connect KMP commander to ROS over TCP on port : 30002 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:48,277 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:48,277 INFO  [..                               Thread-66] KMP commander: Failed to reconnect socket
+2025-04-09 16:35:48,369 INFO  [..KMRiiwaSunriseApplication@SunriseProject] === Socket Connection Status ===
+2025-04-09 16:35:48,369 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:48,369 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP commander socket: DISCONNECTED
+2025-04-09 16:35:48,369 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:48,369 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR commander socket: DISCONNECTED
+2025-04-09 16:35:48,380 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:48,380 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:48,380 INFO  [..                               Thread-66] KMP commander: Socket connection lost, attempting to reconnect
+2025-04-09 16:35:48,380 INFO  [..                               Thread-66] KMP commander TCP connection closing
+2025-04-09 16:35:49,083 INFO  [..                               Thread-67] Could not connect LBR commander to ROS over TCP on port : 30005 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:49,083 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:49,083 INFO  [..                               Thread-67] LBR commander: Failed to reconnect socket
+2025-04-09 16:35:49,083 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:49,083 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:49,083 INFO  [..                               Thread-67] LBR commander: Socket connection lost, attempting to reconnect
+2025-04-09 16:35:49,083 INFO  [..                               Thread-67] LBR commander TCP connection closing
+2025-04-09 16:35:49,083 INFO  [..                               Thread-60] Could not connect KMP commander to ROS over TCP on port : 30002 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:49,083 INFO  [..                               Thread-60] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:49,083 INFO  [..                               Thread-60] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:49,083 INFO  [..                               Thread-60] KMP commander TCP Socket lost, attempting reconnection
+2025-04-09 16:35:49,085 INFO  [..                               Thread-61] Could not connect LBR commander to ROS over TCP on port : 30005 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:49,085 INFO  [..                               Thread-61] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:49,085 INFO  [..                               Thread-61] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:49,085 INFO  [..                               Thread-61] LBR commander TCP Socket lost, attempting reconnection
+2025-04-09 16:35:49,494 INFO  [..                               Thread-66] Could not connect KMP commander to ROS over TCP on port : 30002 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:49,494 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:49,494 INFO  [..                               Thread-66] KMP commander: Failed to reconnect socket
+2025-04-09 16:35:49,597 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:49,597 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:49,597 INFO  [..                               Thread-66] KMP commander: Socket connection lost, attempting to reconnect
+2025-04-09 16:35:49,597 INFO  [..                               Thread-66] KMP commander TCP connection closing
+2025-04-09 16:35:50,110 INFO  [..                               Thread-67] Could not connect LBR commander to ROS over TCP on port : 30005 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:50,111 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:50,111 INFO  [..                               Thread-67] LBR commander: Failed to reconnect socket
+2025-04-09 16:35:50,111 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:50,111 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:50,111 INFO  [..                               Thread-67] LBR commander: Socket connection lost, attempting to reconnect
+2025-04-09 16:35:50,111 INFO  [..                               Thread-67] LBR commander TCP connection closing
+2025-04-09 16:35:50,111 INFO  [..                               Thread-60] Could not connect KMP commander to ROS over TCP on port : 30002 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:50,111 INFO  [..                               Thread-60] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:50,111 INFO  [..                               Thread-60] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:50,111 INFO  [..                               Thread-60] KMP commander TCP Socket lost, attempting reconnection
+2025-04-09 16:35:50,114 INFO  [..                               Thread-61] Could not connect LBR commander to ROS over TCP on port : 30005 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:50,114 INFO  [..                               Thread-61] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:50,114 INFO  [..                               Thread-61] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:50,116 INFO  [..                               Thread-61] LBR commander TCP Socket lost, attempting reconnection
+2025-04-09 16:35:50,627 INFO  [..                               Thread-66] Could not connect KMP commander to ROS over TCP on port : 30002 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:50,627 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:50,627 INFO  [..                               Thread-66] KMP commander: Failed to reconnect socket
+2025-04-09 16:35:50,737 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:50,737 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:50,737 INFO  [..                               Thread-66] KMP commander: Socket connection lost, attempting to reconnect
+2025-04-09 16:35:50,737 INFO  [..                               Thread-66] KMP commander TCP connection closing
+2025-04-09 16:35:51,138 INFO  [..                               Thread-67] Could not connect LBR commander to ROS over TCP on port : 30005 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:51,139 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:51,139 INFO  [..                               Thread-67] LBR commander: Failed to reconnect socket
+2025-04-09 16:35:51,139 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:51,139 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:51,139 INFO  [..                               Thread-67] LBR commander: Socket connection lost, attempting to reconnect
+2025-04-09 16:35:51,139 INFO  [..                               Thread-67] LBR commander TCP connection closing
+2025-04-09 16:35:51,139 INFO  [..                               Thread-60] Could not connect KMP commander to ROS over TCP on port : 30002 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:51,139 INFO  [..                               Thread-60] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:51,139 INFO  [..                               Thread-60] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:51,139 INFO  [..                               Thread-60] KMP commander TCP Socket lost, attempting reconnection
+2025-04-09 16:35:51,140 INFO  [..                               Thread-61] Could not connect LBR commander to ROS over TCP on port : 30005 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:51,140 INFO  [..                               Thread-61] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:51,140 INFO  [..                               Thread-61] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:51,140 INFO  [..                               Thread-61] LBR commander TCP Socket lost, attempting reconnection
+2025-04-09 16:35:51,756 INFO  [..                               Thread-66] Could not connect KMP commander to ROS over TCP on port : 30002 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:51,756 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:51,756 INFO  [..                               Thread-66] KMP commander: Failed to reconnect socket
+2025-04-09 16:35:51,872 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:51,872 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:51,872 INFO  [..                               Thread-66] KMP commander: Socket connection lost, attempting to reconnect
+2025-04-09 16:35:51,872 INFO  [..                               Thread-66] KMP commander TCP connection closing
+2025-04-09 16:35:52,166 INFO  [..                               Thread-67] Could not connect LBR commander to ROS over TCP on port : 30005 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:52,167 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:52,167 INFO  [..                               Thread-67] LBR commander: Failed to reconnect socket
+2025-04-09 16:35:52,167 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:52,167 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:52,167 INFO  [..                               Thread-67] LBR commander: Socket connection lost, attempting to reconnect
+2025-04-09 16:35:52,167 INFO  [..                               Thread-67] LBR commander TCP connection closing
+2025-04-09 16:35:52,169 INFO  [..                               Thread-60] Could not connect KMP commander to ROS over TCP on port : 30002 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:52,169 INFO  [..                               Thread-60] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:52,169 INFO  [..                               Thread-60] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:52,169 INFO  [..                               Thread-60] KMP commander TCP Socket lost, attempting reconnection
+2025-04-09 16:35:52,169 INFO  [..                               Thread-61] Could not connect LBR commander to ROS over TCP on port : 30005 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:52,169 INFO  [..                               Thread-61] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:52,169 INFO  [..                               Thread-61] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:52,169 INFO  [..                               Thread-61] LBR commander TCP Socket lost, attempting reconnection
+2025-04-09 16:35:52,886 INFO  [..                               Thread-66] Could not connect KMP commander to ROS over TCP on port : 30002 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:52,886 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:52,886 INFO  [..                               Thread-66] KMP commander: Failed to reconnect socket
+2025-04-09 16:35:52,989 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:52,989 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:52,989 INFO  [..                               Thread-66] KMP commander: Socket connection lost, attempting to reconnect
+2025-04-09 16:35:52,989 INFO  [..                               Thread-66] KMP commander TCP connection closing
+2025-04-09 16:35:53,194 INFO  [..                               Thread-67] Could not connect LBR commander to ROS over TCP on port : 30005 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:53,195 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:53,195 INFO  [..                               Thread-67] LBR commander: Failed to reconnect socket
+2025-04-09 16:35:53,195 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:53,195 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:53,195 INFO  [..                               Thread-67] LBR commander: Socket connection lost, attempting to reconnect
+2025-04-09 16:35:53,195 INFO  [..                               Thread-67] LBR commander TCP connection closing
+2025-04-09 16:35:53,195 INFO  [..                               Thread-60] Could not connect KMP commander to ROS over TCP on port : 30002 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:53,195 INFO  [..                               Thread-60] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:53,195 INFO  [..                               Thread-60] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:53,195 INFO  [..                               Thread-60] KMP commander TCP Socket lost, attempting reconnection
+2025-04-09 16:35:53,196 INFO  [..                               Thread-61] Could not connect LBR commander to ROS over TCP on port : 30005 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:53,196 INFO  [..                               Thread-61] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:53,196 INFO  [..                               Thread-61] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:53,196 INFO  [..                               Thread-61] LBR commander TCP Socket lost, attempting reconnection
+2025-04-09 16:35:53,537 INFO  [..KMRiiwaSunriseApplication@SunriseProject] === Socket Connection Status ===
+2025-04-09 16:35:53,537 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:53,537 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP commander socket: DISCONNECTED
+2025-04-09 16:35:53,537 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:53,537 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR commander socket: DISCONNECTED
+2025-04-09 16:35:54,017 INFO  [..                               Thread-66] Could not connect KMP commander to ROS over TCP on port : 30002 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:54,017 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:54,017 INFO  [..                               Thread-66] KMP commander: Failed to reconnect socket
+2025-04-09 16:35:54,120 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:54,120 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:54,120 INFO  [..                               Thread-66] KMP commander: Socket connection lost, attempting to reconnect
+2025-04-09 16:35:54,120 INFO  [..                               Thread-66] KMP commander TCP connection closing
+2025-04-09 16:35:54,222 INFO  [..                               Thread-67] Could not connect LBR commander to ROS over TCP on port : 30005 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:54,222 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:54,222 INFO  [..                               Thread-67] LBR commander: Failed to reconnect socket
+2025-04-09 16:35:54,222 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:54,222 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:54,222 INFO  [..                               Thread-67] LBR commander: Socket connection lost, attempting to reconnect
+2025-04-09 16:35:54,222 INFO  [..                               Thread-67] LBR commander TCP connection closing
+2025-04-09 16:35:54,224 INFO  [..                               Thread-61] Could not connect LBR commander to ROS over TCP on port : 30005 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:54,224 INFO  [..                               Thread-61] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:54,224 INFO  [..                               Thread-61] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:54,224 INFO  [..                               Thread-61] LBR commander TCP Socket lost, attempting reconnection
+2025-04-09 16:35:54,224 INFO  [..                               Thread-60] Could not connect KMP commander to ROS over TCP on port : 30002 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:54,224 INFO  [..                               Thread-60] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:54,224 INFO  [..                               Thread-60] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:54,224 INFO  [..                               Thread-60] KMP commander TCP Socket lost, attempting reconnection
+2025-04-09 16:35:55,148 INFO  [..                               Thread-66] Could not connect KMP commander to ROS over TCP on port : 30002 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:55,148 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:55,148 INFO  [..                               Thread-66] KMP commander: Failed to reconnect socket
+2025-04-09 16:35:55,266 INFO  [..                               Thread-67] Could not connect LBR commander to ROS over TCP on port : 30005 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:55,266 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:55,266 INFO  [..                               Thread-67] LBR commander: Failed to reconnect socket
+2025-04-09 16:35:55,266 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:55,266 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:55,266 INFO  [..                               Thread-67] LBR commander: Socket connection lost, attempting to reconnect
+2025-04-09 16:35:55,266 INFO  [..                               Thread-67] LBR commander TCP connection closing
+2025-04-09 16:35:55,267 INFO  [..                               Thread-61] Could not connect LBR commander to ROS over TCP on port : 30005 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:55,267 INFO  [..                               Thread-61] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:55,267 INFO  [..                               Thread-61] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:55,267 INFO  [..                               Thread-61] LBR commander TCP Socket lost, attempting reconnection
+2025-04-09 16:35:55,267 INFO  [..                               Thread-60] Could not connect KMP commander to ROS over TCP on port : 30002 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:55,267 INFO  [..                               Thread-60] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:55,267 INFO  [..                               Thread-60] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:55,267 INFO  [..                               Thread-60] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:55,267 INFO  [..                               Thread-60] KMP commander: Socket connection lost, attempting to reconnect
+2025-04-09 16:35:55,267 INFO  [..                               Thread-60] KMP commander TCP connection closing
+2025-04-09 16:35:56,381 INFO  [..                               Thread-67] Could not connect LBR commander to ROS over TCP on port : 30005 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:56,381 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:56,381 INFO  [..                               Thread-67] LBR commander: Failed to reconnect socket
+2025-04-09 16:35:56,381 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:56,381 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:56,381 INFO  [..                               Thread-67] LBR commander: Socket connection lost, attempting to reconnect
+2025-04-09 16:35:56,381 INFO  [..                               Thread-67] LBR commander TCP connection closing
+2025-04-09 16:35:56,382 INFO  [..                               Thread-61] Could not connect LBR commander to ROS over TCP on port : 30005 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:56,382 INFO  [..                               Thread-61] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:56,382 INFO  [..                               Thread-61] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:56,382 INFO  [..                               Thread-61] LBR commander TCP Socket lost, attempting reconnection
+2025-04-09 16:35:56,383 INFO  [..                               Thread-60] Could not connect KMP commander to ROS over TCP on port : 30002 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:56,383 INFO  [..                               Thread-60] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:56,383 INFO  [..                               Thread-60] KMP commander: Failed to reconnect socket
+2025-04-09 16:35:56,383 INFO  [..                               Thread-60] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:56,383 INFO  [..                               Thread-60] KMP commander TCP Socket lost, attempting reconnection
+2025-04-09 16:35:56,464 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:56,465 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:56,465 INFO  [..                               Thread-66] KMP commander: Socket connection lost, attempting to reconnect
+2025-04-09 16:35:56,465 INFO  [..                               Thread-66] KMP commander TCP connection closing
+2025-04-09 16:35:57,409 INFO  [..                               Thread-67] Could not connect LBR commander to ROS over TCP on port : 30005 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:57,409 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:57,409 INFO  [..                               Thread-67] LBR commander: Failed to reconnect socket
+2025-04-09 16:35:57,409 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:57,409 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:57,409 INFO  [..                               Thread-67] LBR commander: Socket connection lost, attempting to reconnect
+2025-04-09 16:35:57,409 INFO  [..                               Thread-67] LBR commander TCP connection closing
+2025-04-09 16:35:57,411 INFO  [..                               Thread-60] Could not connect KMP commander to ROS over TCP on port : 30002 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:57,411 INFO  [..                               Thread-60] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:57,411 INFO  [..                               Thread-60] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:57,411 INFO  [..                               Thread-60] KMP commander TCP Socket lost, attempting reconnection
+2025-04-09 16:35:57,411 INFO  [..                               Thread-61] Could not connect LBR commander to ROS over TCP on port : 30005 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:57,411 INFO  [..                               Thread-61] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:57,411 INFO  [..                               Thread-61] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:57,411 INFO  [..                               Thread-61] LBR commander TCP Socket lost, attempting reconnection
+2025-04-09 16:35:57,514 INFO  [..                               Thread-66] Could not connect KMP commander to ROS over TCP on port : 30002 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:57,515 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:57,515 INFO  [..                               Thread-66] KMP commander: Failed to reconnect socket
+2025-04-09 16:35:57,630 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:57,630 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:57,631 INFO  [..                               Thread-66] KMP commander: Socket connection lost, attempting to reconnect
+2025-04-09 16:35:57,631 INFO  [..                               Thread-66] KMP commander TCP connection closing
+2025-04-09 16:35:58,438 INFO  [..                               Thread-67] Could not connect LBR commander to ROS over TCP on port : 30005 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:58,438 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:58,438 INFO  [..                               Thread-67] LBR commander: Failed to reconnect socket
+2025-04-09 16:35:58,438 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:58,438 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:58,438 INFO  [..                               Thread-67] LBR commander: Socket connection lost, attempting to reconnect
+2025-04-09 16:35:58,438 INFO  [..                               Thread-67] LBR commander TCP connection closing
+2025-04-09 16:35:58,439 INFO  [..                               Thread-61] Could not connect LBR commander to ROS over TCP on port : 30005 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:58,439 INFO  [..                               Thread-61] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:58,439 INFO  [..                               Thread-61] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:58,439 INFO  [..                               Thread-61] LBR commander TCP Socket lost, attempting reconnection
+2025-04-09 16:35:58,439 INFO  [..                               Thread-60] Could not connect KMP commander to ROS over TCP on port : 30002 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:58,439 INFO  [..                               Thread-60] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:58,439 INFO  [..                               Thread-60] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:58,439 INFO  [..                               Thread-60] KMP commander TCP Socket lost, attempting reconnection
+2025-04-09 16:35:58,707 INFO  [..KMRiiwaSunriseApplication@SunriseProject] === Socket Connection Status ===
+2025-04-09 16:35:58,708 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:58,708 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP commander socket: DISCONNECTED
+2025-04-09 16:35:58,708 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:58,708 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR commander socket: DISCONNECTED
+2025-04-09 16:35:58,747 INFO  [..                               Thread-66] Could not connect KMP commander to ROS over TCP on port : 30002 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:58,747 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:58,747 INFO  [..                               Thread-66] KMP commander: Failed to reconnect socket
+2025-04-09 16:35:58,849 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:58,849 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:58,849 INFO  [..                               Thread-66] KMP commander: Socket connection lost, attempting to reconnect
+2025-04-09 16:35:58,849 INFO  [..                               Thread-66] KMP commander TCP connection closing
+2025-04-09 16:35:59,466 INFO  [..                               Thread-67] Could not connect LBR commander to ROS over TCP on port : 30005 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:59,466 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:59,466 INFO  [..                               Thread-67] LBR commander: Failed to reconnect socket
+2025-04-09 16:35:59,466 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:59,466 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:59,466 INFO  [..                               Thread-67] LBR commander: Socket connection lost, attempting to reconnect
+2025-04-09 16:35:59,466 INFO  [..                               Thread-67] LBR commander TCP connection closing
+2025-04-09 16:35:59,468 INFO  [..                               Thread-60] Could not connect KMP commander to ROS over TCP on port : 30002 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:59,468 INFO  [..                               Thread-60] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:59,468 INFO  [..                               Thread-60] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:59,468 INFO  [..                               Thread-60] KMP commander TCP Socket lost, attempting reconnection
+2025-04-09 16:35:59,468 INFO  [..                               Thread-61] Could not connect LBR commander to ROS over TCP on port : 30005 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:59,468 INFO  [..                               Thread-61] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:59,468 INFO  [..                               Thread-61] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:35:59,468 INFO  [..                               Thread-61] LBR commander TCP Socket lost, attempting reconnection
+2025-04-09 16:35:59,878 INFO  [..                               Thread-66] Could not connect KMP commander to ROS over TCP on port : 30002 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:35:59,878 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:59,880 INFO  [..                               Thread-66] KMP commander: Failed to reconnect socket
+2025-04-09 16:35:59,990 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:59,990 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:35:59,990 INFO  [..                               Thread-66] KMP commander: Socket connection lost, attempting to reconnect
+2025-04-09 16:35:59,990 INFO  [..                               Thread-66] KMP commander TCP connection closing
+2025-04-09 16:36:00,494 INFO  [..                               Thread-67] Could not connect LBR commander to ROS over TCP on port : 30005 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:36:00,494 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:36:00,494 INFO  [..                               Thread-67] LBR commander: Failed to reconnect socket
+2025-04-09 16:36:00,494 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:36:00,494 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:36:00,494 INFO  [..                               Thread-67] LBR commander: Socket connection lost, attempting to reconnect
+2025-04-09 16:36:00,494 INFO  [..                               Thread-67] LBR commander TCP connection closing
+2025-04-09 16:36:00,494 INFO  [..                               Thread-60] Could not connect KMP commander to ROS over TCP on port : 30002 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:36:00,494 INFO  [..                               Thread-60] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:36:00,494 INFO  [..                               Thread-60] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:36:00,494 INFO  [..                               Thread-60] KMP commander TCP Socket lost, attempting reconnection
+2025-04-09 16:36:00,495 INFO  [..                               Thread-61] Could not connect LBR commander to ROS over TCP on port : 30005 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:36:00,495 INFO  [..                               Thread-61] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:36:00,495 INFO  [..                               Thread-61] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:36:00,495 INFO  [..                               Thread-61] LBR commander TCP Socket lost, attempting reconnection
+2025-04-09 16:36:01,008 INFO  [..                               Thread-66] Could not connect KMP commander to ROS over TCP on port : 30002 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:36:01,008 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:36:01,008 INFO  [..                               Thread-66] KMP commander: Failed to reconnect socket
+2025-04-09 16:36:01,111 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:36:01,111 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:36:01,111 INFO  [..                               Thread-66] KMP commander: Socket connection lost, attempting to reconnect
+2025-04-09 16:36:01,111 INFO  [..                               Thread-66] KMP commander TCP connection closing
+2025-04-09 16:36:01,532 INFO  [..                               Thread-67] Could not connect LBR commander to ROS over TCP on port : 30005 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:36:01,532 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:36:01,532 INFO  [..                               Thread-67] LBR commander: Failed to reconnect socket
+2025-04-09 16:36:01,532 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:36:01,532 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:36:01,532 INFO  [..                               Thread-67] LBR commander: Socket connection lost, attempting to reconnect
+2025-04-09 16:36:01,532 INFO  [..                               Thread-67] LBR commander TCP connection closing
+2025-04-09 16:36:01,532 INFO  [..                               Thread-60] Could not connect KMP commander to ROS over TCP on port : 30002 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:36:01,532 INFO  [..                               Thread-60] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:36:01,532 INFO  [..                               Thread-60] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:36:01,532 INFO  [..                               Thread-60] KMP commander TCP Socket lost, attempting reconnection
+2025-04-09 16:36:01,533 INFO  [..                               Thread-61] Could not connect LBR commander to ROS over TCP on port : 30005 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:36:01,533 INFO  [..                               Thread-61] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:36:01,533 INFO  [..                               Thread-61] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:36:01,533 INFO  [..                               Thread-61] LBR commander TCP Socket lost, attempting reconnection
+2025-04-09 16:36:02,139 INFO  [..                               Thread-66] Could not connect KMP commander to ROS over TCP on port : 30002 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:36:02,139 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:36:02,139 INFO  [..                               Thread-66] KMP commander: Failed to reconnect socket
+2025-04-09 16:36:02,251 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:36:02,251 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:36:02,251 INFO  [..                               Thread-66] KMP commander: Socket connection lost, attempting to reconnect
+2025-04-09 16:36:02,253 INFO  [..                               Thread-66] KMP commander TCP connection closing
+2025-04-09 16:36:02,652 INFO  [..                               Thread-67] Could not connect LBR commander to ROS over TCP on port : 30005 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:36:02,653 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:36:02,653 INFO  [..                               Thread-67] LBR commander: Failed to reconnect socket
+2025-04-09 16:36:02,653 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:36:02,653 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:36:02,653 INFO  [..                               Thread-67] LBR commander: Socket connection lost, attempting to reconnect
+2025-04-09 16:36:02,653 INFO  [..                               Thread-67] LBR commander TCP connection closing
+2025-04-09 16:36:02,653 INFO  [..                               Thread-60] Could not connect KMP commander to ROS over TCP on port : 30002 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:36:02,653 INFO  [..                               Thread-60] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:36:02,653 INFO  [..                               Thread-60] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:36:02,653 INFO  [..                               Thread-60] KMP commander TCP Socket lost, attempting reconnection
+2025-04-09 16:36:02,654 INFO  [..                               Thread-61] Could not connect LBR commander to ROS over TCP on port : 30005 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:36:02,654 INFO  [..                               Thread-61] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:36:02,654 INFO  [..                               Thread-61] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:36:02,654 INFO  [..                               Thread-61] LBR commander TCP Socket lost, attempting reconnection
+2025-04-09 16:36:03,270 INFO  [..                               Thread-66] Could not connect KMP commander to ROS over TCP on port : 30002 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:36:03,270 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:36:03,270 INFO  [..                               Thread-66] KMP commander: Failed to reconnect socket
+2025-04-09 16:36:03,388 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:36:03,388 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:36:03,388 INFO  [..                               Thread-66] KMP commander: Socket connection lost, attempting to reconnect
+2025-04-09 16:36:03,388 INFO  [..                               Thread-66] KMP commander TCP connection closing
+2025-04-09 16:36:03,704 INFO  [..                               Thread-67] Could not connect LBR commander to ROS over TCP on port : 30005 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:36:03,704 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:36:03,704 INFO  [..                               Thread-67] LBR commander: Failed to reconnect socket
+2025-04-09 16:36:03,704 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:36:03,704 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:36:03,704 INFO  [..                               Thread-67] LBR commander: Socket connection lost, attempting to reconnect
+2025-04-09 16:36:03,704 INFO  [..                               Thread-67] LBR commander TCP connection closing
+2025-04-09 16:36:03,704 INFO  [..                               Thread-60] Could not connect KMP commander to ROS over TCP on port : 30002 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:36:03,704 INFO  [..                               Thread-60] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:36:03,704 INFO  [..                               Thread-60] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:36:03,704 INFO  [..                               Thread-60] KMP commander TCP Socket lost, attempting reconnection
+2025-04-09 16:36:03,705 INFO  [..                               Thread-61] Could not connect LBR commander to ROS over TCP on port : 30005 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:36:03,705 INFO  [..                               Thread-61] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:36:03,705 INFO  [..                               Thread-61] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:36:03,705 INFO  [..                               Thread-61] LBR commander TCP Socket lost, attempting reconnection
+2025-04-09 16:36:03,756 INFO  [..KMRiiwaSunriseApplication@SunriseProject] === Socket Connection Status ===
+2025-04-09 16:36:03,756 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:36:03,756 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP commander socket: DISCONNECTED
+2025-04-09 16:36:03,756 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:36:03,756 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR commander socket: DISCONNECTED
+2025-04-09 16:36:04,504 INFO  [..                               Thread-66] Could not connect KMP commander to ROS over TCP on port : 30002 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:36:04,504 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:36:04,504 INFO  [..                               Thread-66] KMP commander: Failed to reconnect socket
+2025-04-09 16:36:04,607 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:36:04,607 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:36:04,607 INFO  [..                               Thread-66] KMP commander: Socket connection lost, attempting to reconnect
+2025-04-09 16:36:04,607 INFO  [..                               Thread-66] KMP commander TCP connection closing
+2025-04-09 16:36:04,812 INFO  [..                               Thread-67] Could not connect LBR commander to ROS over TCP on port : 30005 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:36:04,812 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:36:04,812 INFO  [..                               Thread-67] LBR commander: Failed to reconnect socket
+2025-04-09 16:36:04,812 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:36:04,812 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:36:04,812 INFO  [..                               Thread-67] LBR commander: Socket connection lost, attempting to reconnect
+2025-04-09 16:36:04,812 INFO  [..                               Thread-67] LBR commander TCP connection closing
+2025-04-09 16:36:04,813 INFO  [..                               Thread-60] Could not connect KMP commander to ROS over TCP on port : 30002 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:36:04,813 INFO  [..                               Thread-60] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:36:04,813 INFO  [..                               Thread-60] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:36:04,813 INFO  [..                               Thread-60] KMP commander TCP Socket lost, attempting reconnection
+2025-04-09 16:36:04,813 INFO  [..                               Thread-61] Could not connect LBR commander to ROS over TCP on port : 30005 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:36:04,813 INFO  [..                               Thread-61] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:36:04,813 INFO  [..                               Thread-61] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:36:04,813 INFO  [..                               Thread-61] LBR commander TCP Socket lost, attempting reconnection
+2025-04-09 16:36:05,635 INFO  [..                               Thread-66] Could not connect KMP commander to ROS over TCP on port : 30002 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:36:05,635 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:36:05,635 INFO  [..                               Thread-66] KMP commander: Failed to reconnect socket
+2025-04-09 16:36:05,740 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:36:05,740 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:36:05,740 INFO  [..                               Thread-66] KMP commander: Socket connection lost, attempting to reconnect
+2025-04-09 16:36:05,740 INFO  [..                               Thread-66] KMP commander TCP connection closing
+2025-04-09 16:36:05,742 DEBUG [..KMRiiwaSunriseApplication@SunriseProject] Task instance "2@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to DISPOSING.
+2025-04-09 16:36:05,842 INFO  [..                               Thread-67] Could not connect LBR commander to ROS over TCP on port : 30005 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:36:05,842 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:36:05,842 INFO  [..                               Thread-67] LBR commander: Failed to reconnect socket
+2025-04-09 16:36:05,842 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:36:05,842 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:36:05,842 INFO  [..                               Thread-67] LBR commander: Socket connection lost, attempting to reconnect
+2025-04-09 16:36:05,842 INFO  [..                               Thread-67] LBR commander TCP connection closing
+2025-04-09 16:36:05,842 INFO  [..                               Thread-60] Could not connect KMP commander to ROS over TCP on port : 30002 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:36:05,842 INFO  [..                               Thread-60] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:36:05,842 INFO  [..                               Thread-60] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:36:05,842 INFO  [..                               Thread-60] KMP commander TCP Socket lost, attempting reconnection
+2025-04-09 16:36:05,843 INFO  [..                               Thread-61] Could not connect LBR commander to ROS over TCP on port : 30005 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:36:05,843 INFO  [..                               Thread-61] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:36:05,843 INFO  [..                               Thread-61] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:36:05,843 INFO  [..                               Thread-61] LBR commander TCP Socket lost, attempting reconnection
+2025-04-09 16:36:06,337 DEBUG [..KMRiiwaSunriseApplication@SunriseProject] Task instance "2@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to STOPPING.
+2025-04-09 16:36:06,404 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Shutdown message received in main application
+2025-04-09 16:36:06,404 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP commander shutdown: false
+2025-04-09 16:36:06,404 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR commander shutdown: false
+2025-04-09 16:36:06,404 INFO  [..KMRiiwaSunriseApplication@SunriseProject] ----- Shutting down Application -----
+2025-04-09 16:36:06,404 INFO  [..KMRiiwaSunriseApplication@SunriseProject] SafetyStateListener: Stopping listener
+2025-04-09 16:36:06,404 INFO  [..KMRiiwaSunriseApplication@SunriseProject] SafetyStateListener: Successfully removed controller listener
+2025-04-09 16:36:06,404 INFO  [..KMRiiwaSunriseApplication@SunriseProject] shutdown set by KMP commander to true
+2025-04-09 16:36:06,404 INFO  [..KMRiiwaSunriseApplication@SunriseProject] shutdown set by LBR commander to true
+2025-04-09 16:36:06,404 INFO  [..KMRiiwaSunriseApplication@SunriseProject] shutdown set by KMP status reader to true
+2025-04-09 16:36:06,404 INFO  [..KMRiiwaSunriseApplication@SunriseProject] shutdown set by LBR status reader to true
+2025-04-09 16:36:06,404 INFO  [..KMRiiwaSunriseApplication@SunriseProject] shutdown set by KMP sensor reader to true
+2025-04-09 16:36:06,404 INFO  [..KMRiiwaSunriseApplication@SunriseProject] shutdown set by LBR sensor reader to true
+2025-04-09 16:36:06,404 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMPjogger: Stopping jogging execution, isMoving=false
+2025-04-09 16:36:06,404 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMPjogger: Executor was already null
+2025-04-09 16:36:06,404 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMPjogger: Device was not moving, no need to stop
+2025-04-09 16:36:06,404 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMPjogger: Jogger stopped without triggering commander shutdown
+2025-04-09 16:36:06,404 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP_commander: Motion stopped.
+2025-04-09 16:36:06,405 INFO  [..KMRiiwaSunriseApplication@SunriseProject] No LBR motion to stop.
+2025-04-09 16:36:06,405 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Interrupting KMP commander thread
+2025-04-09 16:36:06,405 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Interrupting LBR commander thread
+2025-04-09 16:36:06,405 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Interrupting KMP status thread
+2025-04-09 16:36:06,405 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Interrupting LBR status thread
+2025-04-09 16:36:06,405 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Interrupting LBR sensor thread
+2025-04-09 16:36:06,405 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMPjogger: Stopping jogging execution, isMoving=false
+2025-04-09 16:36:06,405 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMPjogger: Executor was already null
+2025-04-09 16:36:06,405 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMPjogger: Device was not moving, no need to stop
+2025-04-09 16:36:06,405 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMPjogger: Jogger stopped without triggering commander shutdown
+2025-04-09 16:36:06,405 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMPJogger ended successfully
+2025-04-09 16:36:06,405 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP commander TCP connection closing
+2025-04-09 16:36:06,405 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP commander closed!
+2025-04-09 16:36:06,405 INFO  [..KMRiiwaSunriseApplication@SunriseProject] No motion to end!
+2025-04-09 16:36:06,405 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR commander TCP connection closing
+2025-04-09 16:36:06,405 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR command closed!
+2025-04-09 16:36:06,405 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP status reader TCP connection closing
+2025-04-09 16:36:06,405 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP status reader TCP socket closed successfully
+2025-04-09 16:36:06,405 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP status closed!
+2025-04-09 16:36:06,406 INFO  [..KMRiiwaSunriseApplication@SunriseProject] closing fdi
+2025-04-09 16:36:06,406 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP sensor reader TCP connection closing
+2025-04-09 16:36:06,407 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP sensor reader TCP socket closed successfully
+2025-04-09 16:36:06,407 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP sensor reader TCP connection closing
+2025-04-09 16:36:06,407 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP sensor reader TCP socket closed successfully
+2025-04-09 16:36:06,407 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP sensor closed!
+2025-04-09 16:36:06,407 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR status reader TCP connection closing
+2025-04-09 16:36:06,407 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR status reader TCP socket closed successfully
+2025-04-09 16:36:06,407 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR status closed!
+2025-04-09 16:36:06,407 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR sensor reader TCP connection closing
+2025-04-09 16:36:06,407 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR sensor reader TCP socket closed successfully
+2025-04-09 16:36:06,407 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR sensor reader closed.
+2025-04-09 16:36:06,407 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Interrupted while waiting for KMP commander thread
+2025-04-09 16:36:06,408 INFO  [..                               Thread-64] LBR sensor reader TCP Socket check: Socket is closed
+2025-04-09 16:36:06,408 INFO  [..                               Thread-64] LBR sensor reader closed.
+2025-04-09 16:36:06,411 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Interrupted while waiting for LBR commander thread
+2025-04-09 16:36:06,411 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Application terminated
+2025-04-09 16:36:06,744 INFO  [..                               Thread-66] Could not connect KMP commander to ROS over TCP on port : 30002 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:36:06,745 INFO  [..                               Thread-66] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:36:06,745 INFO  [..                               Thread-66] KMP commander: Failed to reconnect socket
+2025-04-09 16:36:06,859 INFO  [..                               Thread-67] Could not connect LBR commander to ROS over TCP on port : 30005 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:36:06,859 INFO  [..                               Thread-67] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:36:06,859 INFO  [..                               Thread-67] LBR commander: Failed to reconnect socket
+2025-04-09 16:36:06,859 INFO  [..                               Thread-60] Could not connect KMP commander to ROS over TCP on port : 30002 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:36:06,859 INFO  [..                               Thread-60] KMP commander TCP Socket check: Socket is null
+2025-04-09 16:36:06,859 INFO  [..                               Thread-60] KMPcommander no longer running
+2025-04-09 16:36:06,860 INFO  [..                               Thread-61] Could not connect LBR commander to ROS over TCP on port : 30005 Error: java.net.ConnectException: Connection refused: connect
+2025-04-09 16:36:06,860 INFO  [..                               Thread-61] LBR commander TCP Socket check: Socket is null
+2025-04-09 16:36:06,860 INFO  [..                               Thread-61] LBR commander thread ending
+2025-04-09 16:36:06,876 DEBUG [..KMRiiwaSunriseApplication@SunriseProject] Task instance "2@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to STOPPED.
+2025-04-09 16:45:30,031 DEBUG [..executor for Service: AppServer-thread-1] Task instance "3@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to CREATING.
+2025-04-09 16:45:30,331 DEBUG [..KMRiiwaSunriseApplication@SunriseProject] Task instance "3@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to INITIALIZING.
+2025-04-09 16:45:30,332 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Task manager initialized: com.kuka.task.osgi.TaskManagerComponent@a5e0cf
+2025-04-09 16:45:30,332 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Initializing Robotics API Application
+2025-04-09 16:45:30,735 INFO  [..KMRiiwaSunriseApplication@SunriseProject] shutdown set by KMP commander to false
+2025-04-09 16:45:30,739 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP commander connecting to ROS over TCP on port: 30002
+2025-04-09 16:45:30,739 INFO  [..KMRiiwaSunriseApplication@SunriseProject] shutdown set by LBR commander to false
+2025-04-09 16:45:30,742 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR commander connecting to ROS over TCP on port: 30005
+2025-04-09 16:45:30,742 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Application ready to run!
+2025-04-09 16:45:30,742 INFO  [..KMRiiwaSunriseApplication@SunriseProject] shutdown set by KMP status reader to false
+2025-04-09 16:45:30,744 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP status reader connecting to ROS over TCP on port: 30001
+2025-04-09 16:45:30,744 INFO  [..KMRiiwaSunriseApplication@SunriseProject] shutdown set by LBR status reader to false
+2025-04-09 16:45:30,746 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR status reader connecting to ROS over TCP on port: 30006
+2025-04-09 16:45:30,746 INFO  [..KMRiiwaSunriseApplication@SunriseProject] shutdown set by LBR sensor reader to false
+2025-04-09 16:45:30,748 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR sensor reader connecting to ROS over TCP on port: 30007
+2025-04-09 16:45:30,748 INFO  [..KMRiiwaSunriseApplication@SunriseProject] shutdown set by KMP sensor reader to false
+2025-04-09 16:45:30,750 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP sensor reader connecting to ROS over TCP on port: 30003
+2025-04-09 16:45:30,754 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP sensor reader connecting to ROS over TCP on port: 30004
+2025-04-09 16:45:30,857 DEBUG [..KMRiiwaSunriseApplication@SunriseProject] Task instance "3@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to RUNNING.
+2025-04-09 16:45:30,945 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Running app!
+2025-04-09 16:45:36,094 INFO  [..KMRiiwaSunriseApplication@SunriseProject] === Socket Connection Status ===
+2025-04-09 16:45:36,094 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP commander socket: CONNECTED
+2025-04-09 16:45:36,094 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR commander socket: CONNECTED
+2025-04-09 16:45:41,297 INFO  [..KMRiiwaSunriseApplication@SunriseProject] === Socket Connection Status ===
+2025-04-09 16:45:41,297 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP commander socket: CONNECTED
+2025-04-09 16:45:41,297 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR commander socket: CONNECTED
+2025-04-09 16:45:46,299 INFO  [..KMRiiwaSunriseApplication@SunriseProject] === Socket Connection Status ===
+2025-04-09 16:45:46,299 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP commander socket: CONNECTED
+2025-04-09 16:45:46,299 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR commander socket: CONNECTED
+2025-04-09 16:45:51,302 INFO  [..KMRiiwaSunriseApplication@SunriseProject] === Socket Connection Status ===
+2025-04-09 16:45:51,302 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP commander socket: CONNECTED
+2025-04-09 16:45:51,302 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR commander socket: CONNECTED
+2025-04-09 16:45:52,314 INFO  [..                               Thread-70] KMP_commander: Received command: setTwist 0.1 0.0 0.0
+2025-04-09 16:45:52,314 INFO  [..                               Thread-70] KMP_commander: Processing setTwist command
+2025-04-09 16:45:52,314 INFO  [..                               Thread-70] KMP_commander: Received velocity command: setTwist 0.1 0.0 0.0
+2025-04-09 16:45:52,314 INFO  [..                               Thread-70] KMP_commander: Parsed velocities - x: 0.1, y: 0.0, theta: 0.0
+2025-04-09 16:45:52,314 INFO  [..                               Thread-70] KMP_commander: Non-zero velocity command received
+2025-04-09 16:45:52,314 INFO  [..                               Thread-70] KMP_commander: Current states - IsMoving: false, EmergencyStop: false, ReadyToMove: true
+2025-04-09 16:45:52,314 INFO  [..                               Thread-70] KMP_commander: Starting robot movement
+2025-04-09 16:45:52,314 INFO  [..                               Thread-70] KMPjogger: Updating velocities - x: 0.1, y: 0.0, theta: 0.0
+2025-04-09 16:45:52,314 INFO  [..                               Thread-70] KMPjogger: Attempting to start jogging execution
+2025-04-09 16:45:52,314 INFO  [..                               Thread-70] KMPjogger: Creating new executor
+2025-04-09 16:45:52,314 INFO  [..                               Thread-70] KMPjogger: Starting jog task with period 1ms
+2025-04-09 16:45:52,327 INFO  [..                               Thread-70] KMPjogger: JogTimerTask created
+2025-04-09 16:45:52,328 INFO  [..                               Thread-70] KMPjogger: Jogging task scheduled successfully
+2025-04-09 16:45:52,419 INFO  [..KMRiiwaSunriseApplication@SunriseProject] State change.
+2025-04-09 16:45:52,419 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Threading priority: KMP
+2025-04-09 16:45:52,709 INFO  [..                        pool-42-thread-1] KMPjogger: Sending jog command #20 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
+2025-04-09 16:45:52,709 INFO  [..                        pool-42-thread-1] KMPjogger: Sending jog command #40 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
+2025-04-09 16:45:52,709 INFO  [..                        pool-42-thread-1] KMPjogger: Sending jog command #60 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
+2025-04-09 16:45:52,709 INFO  [..                        pool-42-thread-1] KMPjogger: Sending jog command #80 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
+2025-04-09 16:45:52,709 INFO  [..                        pool-42-thread-1] KMPjogger: Sending jog command #100 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
+2025-04-09 16:45:52,710 INFO  [..                        pool-42-thread-1] KMPjogger: Sending jog command #120 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
+2025-04-09 16:45:52,710 INFO  [..                        pool-42-thread-1] KMPjogger: Sending jog command #140 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
+2025-04-09 16:45:52,710 INFO  [..                        pool-42-thread-1] KMPjogger: Sending jog command #160 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
+2025-04-09 16:45:52,710 INFO  [..                        pool-42-thread-1] KMPjogger: Sending jog command #180 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
+2025-04-09 16:45:52,710 INFO  [..                        pool-42-thread-1] KMPjogger: Sending jog command #200 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
+2025-04-09 16:45:52,710 INFO  [..                        pool-42-thread-1] KMPjogger: Sending jog command #220 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
+2025-04-09 16:45:52,710 INFO  [..                        pool-42-thread-1] KMPjogger: Sending jog command #240 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
+2025-04-09 16:45:52,711 INFO  [..                        pool-42-thread-1] KMPjogger: Sending jog command #260 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
+2025-04-09 16:45:52,711 INFO  [..                        pool-42-thread-1] KMPjogger: Sending jog command #280 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
+2025-04-09 16:45:52,711 INFO  [..                        pool-42-thread-1] KMPjogger: Sending jog command #300 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
+2025-04-09 16:45:52,711 INFO  [..                        pool-42-thread-1] KMPjogger: Sending jog command #320 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
+2025-04-09 16:45:52,711 INFO  [..                        pool-42-thread-1] KMPjogger: Sending jog command #340 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
+2025-04-09 16:45:52,711 INFO  [..                        pool-42-thread-1] KMPjogger: Sending jog command #360 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
+2025-04-09 16:45:52,711 INFO  [..                        pool-42-thread-1] KMPjogger: Sending jog command #380 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
+2025-04-09 16:45:52,761 INFO  [..                        pool-42-thread-1] KMPjogger: Sending jog command #400 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
+2025-04-09 16:45:52,789 INFO  [..                        pool-42-thread-1] KMPjogger: Sending jog command #420 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
+2025-04-09 16:45:52,817 INFO  [..                        pool-42-thread-1] KMPjogger: Sending jog command #440 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
+2025-04-09 16:45:52,902 INFO  [..                        pool-42-thread-1] KMPjogger: Sending jog command #460 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
+2025-04-09 16:45:52,956 INFO  [..                        pool-42-thread-1] KMPjogger: Sending jog command #480 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
+2025-04-09 16:45:52,993 INFO  [..                        pool-42-thread-1] KMPjogger: Sending jog command #500 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
+2025-04-09 16:45:53,077 INFO  [..                        pool-42-thread-1] KMPjogger: Sending jog command #520 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
+2025-04-09 16:45:53,101 INFO  [..                        pool-42-thread-1] KMPjogger: Sending jog command #540 - x: 0.1, y: 0.0, theta: 0.0, isReady: true
+2025-04-09 16:45:58,282 INFO  [..KMRiiwaSunriseApplication@SunriseProject] === Socket Connection Status ===
+2025-04-09 16:45:58,282 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP commander socket: CONNECTED
+2025-04-09 16:45:58,282 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR commander socket: CONNECTED
+2025-04-09 16:45:58,345 INFO  [..                               Thread-70] KMP_commander: Received command: setTwist 0.0 0.0 0.0
+2025-04-09 16:45:58,345 INFO  [..                               Thread-70] KMP_commander: Processing setTwist command
+2025-04-09 16:45:58,345 INFO  [..                               Thread-70] KMP_commander: Received velocity command: setTwist 0.0 0.0 0.0
+2025-04-09 16:45:58,345 INFO  [..                               Thread-70] KMP_commander: Parsed velocities - x: 0.0, y: 0.0, theta: 0.0
+2025-04-09 16:45:58,345 INFO  [..                               Thread-70] KMP_commander: Zero velocity command received
+2025-04-09 16:45:58,345 INFO  [..                               Thread-70] KMP_commander: Robot is currently moving, stopping
+2025-04-09 16:45:58,345 INFO  [..                               Thread-70] KMPjogger: Stopping jogging execution, isMoving=true
+2025-04-09 16:45:58,345 INFO  [..                               Thread-70] KMPjogger: Shutting down executor
+2025-04-09 16:45:58,478 INFO  [..                               Thread-70] KMPjogger: Executor shutdown complete
+2025-04-09 16:45:58,478 INFO  [..                               Thread-70] KMPjogger: Stopping device since it was moving
+2025-04-09 16:45:58,478 INFO  [..                               Thread-70] KMPjogger: Stopping device by setting zero velocities
+2025-04-09 16:45:58,478 INFO  [..                               Thread-70] KMPjogger: Device isReadyToMove=true
+2025-04-09 16:45:58,478 INFO  [..                               Thread-70] KMPjogger: Sending zero jog command
+2025-04-09 16:45:58,479 INFO  [..                               Thread-70] KMPjogger: Jogger stopped without triggering commander shutdown
+2025-04-09 16:45:58,479 INFO  [..                               Thread-70] KMP_commander: Motion stopped successfully without shutdown
+2025-04-09 16:46:03,420 INFO  [..KMRiiwaSunriseApplication@SunriseProject] === Socket Connection Status ===
+2025-04-09 16:46:03,420 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP commander socket: CONNECTED
+2025-04-09 16:46:03,420 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR commander socket: CONNECTED
+2025-04-09 16:46:08,464 INFO  [..KMRiiwaSunriseApplication@SunriseProject] === Socket Connection Status ===
+2025-04-09 16:46:08,464 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP commander socket: CONNECTED
+2025-04-09 16:46:08,464 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR commander socket: CONNECTED
+2025-04-09 16:46:13,584 INFO  [..KMRiiwaSunriseApplication@SunriseProject] === Socket Connection Status ===
+2025-04-09 16:46:13,584 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP commander socket: CONNECTED
+2025-04-09 16:46:13,584 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR commander socket: CONNECTED
+2025-04-09 16:46:18,625 INFO  [..KMRiiwaSunriseApplication@SunriseProject] === Socket Connection Status ===
+2025-04-09 16:46:18,625 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP commander socket: CONNECTED
+2025-04-09 16:46:18,625 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR commander socket: CONNECTED
+2025-04-09 16:46:28,067 INFO  [..KMRiiwaSunriseApplication@SunriseProject] === Socket Connection Status ===
+2025-04-09 16:46:28,067 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP commander socket: CONNECTED
+2025-04-09 16:46:28,067 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR commander socket: CONNECTED
+2025-04-09 16:46:28,292 INFO  [..                               Thread-70] KMP_commander: Received command: setTwist -0.1 0.0 0.0
+2025-04-09 16:46:28,292 INFO  [..                               Thread-70] KMP_commander: Processing setTwist command
+2025-04-09 16:46:28,292 INFO  [..                               Thread-70] KMP_commander: Received velocity command: setTwist -0.1 0.0 0.0
+2025-04-09 16:46:28,292 INFO  [..                               Thread-70] KMP_commander: Parsed velocities - x: -0.1, y: 0.0, theta: 0.0
+2025-04-09 16:46:28,292 INFO  [..                               Thread-70] KMP_commander: Non-zero velocity command received
+2025-04-09 16:46:28,292 INFO  [..                               Thread-70] KMP_commander: Current states - IsMoving: false, EmergencyStop: false, ReadyToMove: true
+2025-04-09 16:46:28,292 INFO  [..                               Thread-70] KMP_commander: Starting robot movement
+2025-04-09 16:46:28,292 INFO  [..                               Thread-70] KMPjogger: Updating velocities - x: -0.1, y: 0.0, theta: 0.0
+2025-04-09 16:46:28,292 INFO  [..                               Thread-70] KMPjogger: Attempting to start jogging execution
+2025-04-09 16:46:28,292 INFO  [..                               Thread-70] KMPjogger: Creating new executor
+2025-04-09 16:46:28,292 INFO  [..                               Thread-70] KMPjogger: Starting jog task with period 1ms
+2025-04-09 16:46:28,292 INFO  [..                               Thread-70] KMPjogger: JogTimerTask created
+2025-04-09 16:46:28,292 INFO  [..                               Thread-70] KMPjogger: Jogging task scheduled successfully
+2025-04-09 16:46:28,295 INFO  [..                               Thread-70] KMP_commander: Received command: setTwist 0.0 0.0 0.0
+2025-04-09 16:46:28,295 INFO  [..                               Thread-70] KMP_commander: Processing setTwist command
+2025-04-09 16:46:28,295 INFO  [..                               Thread-70] KMP_commander: Received velocity command: setTwist 0.0 0.0 0.0
+2025-04-09 16:46:28,295 INFO  [..                               Thread-70] KMP_commander: Parsed velocities - x: 0.0, y: 0.0, theta: 0.0
+2025-04-09 16:46:28,295 INFO  [..                               Thread-70] KMP_commander: Zero velocity command received
+2025-04-09 16:46:28,295 INFO  [..                               Thread-70] KMP_commander: Robot is currently moving, stopping
+2025-04-09 16:46:28,295 INFO  [..                               Thread-70] KMPjogger: Stopping jogging execution, isMoving=true
+2025-04-09 16:46:28,295 INFO  [..                               Thread-70] KMPjogger: Shutting down executor
+2025-04-09 16:46:28,419 INFO  [..KMRiiwaSunriseApplication@SunriseProject] State change.
+2025-04-09 16:46:28,421 INFO  [..                               Thread-70] KMPjogger: Executor shutdown complete
+2025-04-09 16:46:28,421 INFO  [..                               Thread-70] KMPjogger: Stopping device since it was moving
+2025-04-09 16:46:28,421 INFO  [..                               Thread-70] KMPjogger: Stopping device by setting zero velocities
+2025-04-09 16:46:28,421 INFO  [..                               Thread-70] KMPjogger: Device isReadyToMove=true
+2025-04-09 16:46:28,421 INFO  [..                               Thread-70] KMPjogger: Sending zero jog command
+2025-04-09 16:46:28,421 INFO  [..                               Thread-70] KMPjogger: Jogger stopped without triggering commander shutdown
+2025-04-09 16:46:28,421 INFO  [..                               Thread-70] KMP_commander: Motion stopped successfully without shutdown
+2025-04-09 16:46:31,134 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Current operating mode: AUT
+2025-04-09 16:46:33,130 INFO  [..KMRiiwaSunriseApplication@SunriseProject] === Socket Connection Status ===
+2025-04-09 16:46:33,130 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP commander socket: CONNECTED
+2025-04-09 16:46:33,130 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR commander socket: CONNECTED
+2025-04-09 16:46:38,184 INFO  [..KMRiiwaSunriseApplication@SunriseProject] === Socket Connection Status ===
+2025-04-09 16:46:38,184 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP commander socket: CONNECTED
+2025-04-09 16:46:38,184 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR commander socket: CONNECTED
+2025-04-09 16:46:43,299 INFO  [..KMRiiwaSunriseApplication@SunriseProject] === Socket Connection Status ===
+2025-04-09 16:46:43,299 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP commander socket: CONNECTED
+2025-04-09 16:46:43,299 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR commander socket: CONNECTED
+2025-04-09 16:46:48,300 INFO  [..KMRiiwaSunriseApplication@SunriseProject] === Socket Connection Status ===
+2025-04-09 16:46:48,300 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP commander socket: CONNECTED
+2025-04-09 16:46:48,300 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR commander socket: CONNECTED
+2025-04-09 16:46:53,367 INFO  [..KMRiiwaSunriseApplication@SunriseProject] === Socket Connection Status ===
+2025-04-09 16:46:53,367 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP commander socket: CONNECTED
+2025-04-09 16:46:53,367 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR commander socket: CONNECTED
+2025-04-09 16:46:58,440 INFO  [..KMRiiwaSunriseApplication@SunriseProject] === Socket Connection Status ===
+2025-04-09 16:46:58,440 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP commander socket: CONNECTED
+2025-04-09 16:46:58,440 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR commander socket: CONNECTED
+2025-04-09 16:47:03,609 INFO  [..KMRiiwaSunriseApplication@SunriseProject] === Socket Connection Status ===
+2025-04-09 16:47:03,610 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP commander socket: CONNECTED
+2025-04-09 16:47:03,610 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR commander socket: CONNECTED
+2025-04-09 16:47:08,774 INFO  [..KMRiiwaSunriseApplication@SunriseProject] === Socket Connection Status ===
+2025-04-09 16:47:08,774 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP commander socket: CONNECTED
+2025-04-09 16:47:08,774 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR commander socket: CONNECTED
+2025-04-09 16:47:15,312 INFO  [..KMRiiwaSunriseApplication@SunriseProject] === Socket Connection Status ===
+2025-04-09 16:47:15,312 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP commander socket: CONNECTED
+2025-04-09 16:47:15,312 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR commander socket: CONNECTED
+2025-04-09 16:47:20,424 INFO  [..KMRiiwaSunriseApplication@SunriseProject] === Socket Connection Status ===
+2025-04-09 16:47:20,425 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP commander socket: CONNECTED
+2025-04-09 16:47:20,425 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR commander socket: CONNECTED
+2025-04-09 16:47:25,530 INFO  [..KMRiiwaSunriseApplication@SunriseProject] === Socket Connection Status ===
+2025-04-09 16:47:25,530 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP commander socket: CONNECTED
+2025-04-09 16:47:25,530 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR commander socket: CONNECTED
+2025-04-09 16:47:27,158 DEBUG [..Executor for Pause State Events-thread-1] State of the task "class API_ROS2_Sunrise.KMRiiwaSunriseApplication" changed from "RUNNING" to "RUNNING".
+2025-04-09 16:47:29,316 DEBUG [..KMRiiwaSunriseApplication@SunriseProject] Task instance "3@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to DISPOSING.
+2025-04-09 16:47:29,672 DEBUG [..KMRiiwaSunriseApplication@SunriseProject] Task instance "3@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to STOPPING.
+2025-04-09 16:47:29,672 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Shutdown message received in main application
+2025-04-09 16:47:29,672 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP commander shutdown: false
+2025-04-09 16:47:29,672 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR commander shutdown: false
+2025-04-09 16:47:29,672 INFO  [..KMRiiwaSunriseApplication@SunriseProject] ----- Shutting down Application -----
+2025-04-09 16:47:29,672 INFO  [..KMRiiwaSunriseApplication@SunriseProject] SafetyStateListener: Stopping listener
+2025-04-09 16:47:29,672 INFO  [..KMRiiwaSunriseApplication@SunriseProject] SafetyStateListener: Successfully removed controller listener
+2025-04-09 16:47:29,672 INFO  [..KMRiiwaSunriseApplication@SunriseProject] shutdown set by KMP commander to true
+2025-04-09 16:47:29,672 INFO  [..KMRiiwaSunriseApplication@SunriseProject] shutdown set by LBR commander to true
+2025-04-09 16:47:29,672 INFO  [..KMRiiwaSunriseApplication@SunriseProject] shutdown set by KMP status reader to true
+2025-04-09 16:47:29,673 INFO  [..KMRiiwaSunriseApplication@SunriseProject] shutdown set by LBR status reader to true
+2025-04-09 16:47:29,673 INFO  [..KMRiiwaSunriseApplication@SunriseProject] shutdown set by KMP sensor reader to true
+2025-04-09 16:47:29,673 INFO  [..KMRiiwaSunriseApplication@SunriseProject] shutdown set by LBR sensor reader to true
+2025-04-09 16:47:29,673 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMPjogger: Stopping jogging execution, isMoving=false
+2025-04-09 16:47:29,673 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMPjogger: Executor was already null
+2025-04-09 16:47:29,673 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMPjogger: Device was not moving, no need to stop
+2025-04-09 16:47:29,673 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMPjogger: Jogger stopped without triggering commander shutdown
+2025-04-09 16:47:29,673 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP_commander: Motion stopped.
+2025-04-09 16:47:29,673 INFO  [..KMRiiwaSunriseApplication@SunriseProject] No LBR motion to stop.
+2025-04-09 16:47:29,673 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Interrupting KMP commander thread
+2025-04-09 16:47:29,673 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Interrupting LBR commander thread
+2025-04-09 16:47:29,673 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Interrupting KMP status thread
+2025-04-09 16:47:29,673 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Interrupting LBR status thread
+2025-04-09 16:47:29,673 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Interrupting LBR sensor thread
+2025-04-09 16:47:29,673 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMPjogger: Stopping jogging execution, isMoving=false
+2025-04-09 16:47:29,673 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMPjogger: Executor was already null
+2025-04-09 16:47:29,673 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMPjogger: Device was not moving, no need to stop
+2025-04-09 16:47:29,673 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMPjogger: Jogger stopped without triggering commander shutdown
+2025-04-09 16:47:29,673 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMPJogger ended successfully
+2025-04-09 16:47:29,673 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP commander TCP connection closing
+2025-04-09 16:47:29,676 INFO  [..                               Thread-70] KMPcommander no longer running
+2025-04-09 16:47:29,677 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP commander TCP socket closed successfully
+2025-04-09 16:47:29,677 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP commander closed!
+2025-04-09 16:47:29,677 INFO  [..KMRiiwaSunriseApplication@SunriseProject] No motion to end!
+2025-04-09 16:47:29,677 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR commander TCP connection closing
+2025-04-09 16:47:29,677 INFO  [..                               Thread-71] LBR commander thread ending
+2025-04-09 16:47:29,677 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR commander TCP socket closed successfully
+2025-04-09 16:47:29,677 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR command closed!
+2025-04-09 16:47:29,677 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP status reader TCP connection closing
+2025-04-09 16:47:29,677 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP status reader TCP socket closed successfully
+2025-04-09 16:47:29,677 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP status closed!
+2025-04-09 16:47:29,680 INFO  [..KMRiiwaSunriseApplication@SunriseProject] closing fdi
+2025-04-09 16:47:29,680 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP sensor reader TCP connection closing
+2025-04-09 16:47:29,680 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP sensor reader TCP socket closed successfully
+2025-04-09 16:47:29,680 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP sensor reader TCP connection closing
+2025-04-09 16:47:29,680 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP sensor reader TCP socket closed successfully
+2025-04-09 16:47:29,680 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP sensor closed!
+2025-04-09 16:47:29,680 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR status reader TCP connection closing
+2025-04-09 16:47:29,680 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR status reader TCP socket closed successfully
+2025-04-09 16:47:29,680 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR status closed!
+2025-04-09 16:47:29,680 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR sensor reader TCP connection closing
+2025-04-09 16:47:29,680 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR sensor reader TCP socket closed successfully
+2025-04-09 16:47:29,680 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR sensor reader closed.
+2025-04-09 16:47:29,680 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Interrupted while waiting for KMP status thread
+2025-04-09 16:47:29,684 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Interrupted while waiting for LBR status thread
+2025-04-09 16:47:29,903 INFO  [..                               Thread-74] LBR sensor reader TCP Socket check: Socket is closed
+2025-04-09 16:47:29,903 INFO  [..                               Thread-74] LBR sensor reader closed.
+2025-04-09 16:47:29,903 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Application terminated
+2025-04-09 16:47:29,906 DEBUG [..KMRiiwaSunriseApplication@SunriseProject] Task instance "3@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to STOPPED.
+2025-04-09 19:13:59,875 DEBUG [..executor for Service: AppServer-thread-1] Task instance "1@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to CREATING.
+2025-04-09 19:14:00,124 DEBUG [..KMRiiwaSunriseApplication@SunriseProject] Task instance "1@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to INITIALIZING.
+2025-04-09 19:14:00,888 DEBUG [..KMRiiwaSunriseApplication@SunriseProject] Task instance "1@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to RUNNING.
+2025-04-09 19:14:00,948 ERROR [..                               Thread-93] Stopping task due to the following error:
+java.lang.NullPointerException
+	at API_ROS2_Sunrise.KMP_sensor_reader.subscribe_kmp_odometry_data(KMP_sensor_reader.java:138)
+	at API_ROS2_Sunrise.KMP_sensor_reader.run(KMP_sensor_reader.java:169)
+2025-04-09 19:14:00,949 DEBUG [..KMRiiwaSunriseApplication@SunriseProject] Task instance "1@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to DISPOSING.
+2025-04-09 19:14:07,261 DEBUG [..Executor for Pause State Events-thread-1] State of the task "class API_ROS2_Sunrise.KMRiiwaSunriseApplication" changed from "RUNNING" to "STOPPING".
+2025-04-09 19:14:09,548 DEBUG [..KMRiiwaSunriseApplication@SunriseProject] Task instance "1@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to STOPPING.
+2025-04-09 19:14:09,558 DEBUG [..KMRiiwaSunriseApplication@SunriseProject] Task instance "1@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to ERROR.
+2025-04-10 10:31:28,334 DEBUG [..executor for Service: AppServer-thread-1] Task instance "1@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to CREATING.
+2025-04-10 10:31:28,713 DEBUG [..KMRiiwaSunriseApplication@SunriseProject] Task instance "1@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to INITIALIZING.
+2025-04-10 10:31:38,438 DEBUG [..Executor for Pause State Events-thread-1] State of the task "class API_ROS2_Sunrise.KMRiiwaSunriseApplication" changed from "RUNNING" to "MOTIONPAUSED".
+2025-04-10 10:31:43,239 DEBUG [..executor for Service: AppServer-thread-1] State of the task "class API_ROS2_Sunrise.KMRiiwaSunriseApplication" changed from "MOTIONPAUSED" to "MOTIONPAUSED".
+2025-04-10 10:31:47,127 DEBUG [..Executor for Pause State Events-thread-1] State of the task "class API_ROS2_Sunrise.KMRiiwaSunriseApplication" changed from "RUNNING" to "STARTING".
+2025-04-10 10:31:48,800 DEBUG [..executor for Service: AppServer-thread-1] State of the task "class API_ROS2_Sunrise.KMRiiwaSunriseApplication" changed from "MOTIONPAUSED" to "MOTIONPAUSED".
+2025-04-10 10:31:48,989 DEBUG [..KMRiiwaSunriseApplication@SunriseProject] Task instance "1@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to RUNNING.
+2025-04-10 10:31:49,010 DEBUG [..KMRiiwaSunriseApplication@SunriseProject] Task instance "1@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to DISPOSING.
+2025-04-10 10:31:49,042 DEBUG [..Executor for Pause State Events-thread-1] State of the task "class API_ROS2_Sunrise.KMRiiwaSunriseApplication" changed from "RUNNING" to "STOPPING".
+2025-04-10 10:31:49,058 DEBUG [..KMRiiwaSunriseApplication@SunriseProject] Task instance "1@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to STOPPING.
+2025-04-10 10:31:49,062 DEBUG [..KMRiiwaSunriseApplication@SunriseProject] Task instance "1@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to STOPPED.
+2025-04-10 10:31:53,554 DEBUG [..executor for Service: AppServer-thread-1] Task instance "2@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to CREATING.
+2025-04-10 10:31:53,700 DEBUG [..KMRiiwaSunriseApplication@SunriseProject] Task instance "2@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to INITIALIZING.
+2025-04-10 10:31:57,959 DEBUG [..Executor for Pause State Events-thread-1] State of the task "class API_ROS2_Sunrise.KMRiiwaSunriseApplication" changed from "RUNNING" to "STARTING".
+2025-04-10 10:32:06,559 DEBUG [..KMRiiwaSunriseApplication@SunriseProject] Task instance "2@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to RUNNING.
+2025-04-10 10:32:06,560 DEBUG [..KMRiiwaSunriseApplication@SunriseProject] Task instance "2@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to DISPOSING.
+2025-04-10 10:32:06,607 DEBUG [..KMRiiwaSunriseApplication@SunriseProject] Task instance "2@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to STOPPING.
+2025-04-10 10:32:06,610 DEBUG [..KMRiiwaSunriseApplication@SunriseProject] Task instance "2@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to STOPPED.
+2025-04-10 10:32:39,527 DEBUG [..executor for Service: AppServer-thread-1] Task instance "3@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to CREATING.
+2025-04-10 10:32:39,677 DEBUG [..KMRiiwaSunriseApplication@SunriseProject] Task instance "3@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to INITIALIZING.
+2025-04-10 10:32:45,564 DEBUG [..Executor for Pause State Events-thread-1] State of the task "class API_ROS2_Sunrise.KMRiiwaSunriseApplication" changed from "RUNNING" to "STARTING".
+2025-04-10 10:32:52,492 DEBUG [..KMRiiwaSunriseApplication@SunriseProject] Task instance "3@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to DISPOSING.
+2025-04-10 10:32:52,533 DEBUG [..KMRiiwaSunriseApplication@SunriseProject] Task instance "3@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to STOPPING.
+2025-04-10 10:32:56,679 DEBUG [..KMRiiwaSunriseApplication@SunriseProject] Task instance "3@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to STOPPED.
+2025-04-10 10:33:04,053 DEBUG [..executor for Service: AppServer-thread-1] Task instance "4@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to CREATING.
+2025-04-10 10:33:04,203 DEBUG [..KMRiiwaSunriseApplication@SunriseProject] Task instance "4@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to INITIALIZING.
+2025-04-10 10:33:14,762 DEBUG [..Executor for Pause State Events-thread-1] State of the task "class API_ROS2_Sunrise.KMRiiwaSunriseApplication" changed from "RUNNING" to "STARTING".
+2025-04-10 10:33:16,863 DEBUG [..KMRiiwaSunriseApplication@SunriseProject] Task instance "4@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to RUNNING.
+2025-04-10 10:33:16,865 DEBUG [..KMRiiwaSunriseApplication@SunriseProject] Task instance "4@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to DISPOSING.
+2025-04-10 10:33:16,902 DEBUG [..KMRiiwaSunriseApplication@SunriseProject] Task instance "4@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to STOPPING.
+2025-04-10 10:33:16,906 DEBUG [..KMRiiwaSunriseApplication@SunriseProject] Task instance "4@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to STOPPED.

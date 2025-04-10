@@ -1,13 +1,29 @@
-Execution of com.kuka.monitoring.jmx.JvmDump started at 8/04/2025 16:52:49
+Execution of com.kuka.monitoring.jmx.JvmDump started at 10/04/2025 10:40:24
 
 Monitored host: local://localhost
 
+Loading C:\KRC\JRE\lib\management-agent.jar into target VM ...
 Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with PID 3876
 
-"JMX server connection timeout 467" Id=467 in RUNNABLE
+"JMX server connection timeout 310" Id=310 in RUNNABLE
+    at java.lang.Object.wait(Native Method)
+    at com.sun.jmx.remote.internal.ServerCommunicatorAdmin$Timeout.run(Unknown Source)
+    at java.lang.Thread.run(Unknown Source)
 
 
-"RMI TCP Connection(4)-192.168.0.1" Id=466 in RUNNABLE
+"RMI Scheduler(0)" Id=309 in TIMED_WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@101fe7
+    at sun.misc.Unsafe.park(Native Method)
+    at java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
+    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
+    at java.util.concurrent.DelayQueue.take(Unknown Source)
+    at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+    at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+    at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+    at java.lang.Thread.run(Unknown Source)
+
+
+"RMI TCP Connection(1)-192.168.0.1" Id=308 in RUNNABLE
     at sun.management.ThreadImpl.dumpThreads0(Native Method)
     at sun.management.ThreadImpl.dumpAllThreads(Unknown Source)
     at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -43,27 +59,39 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
     at java.lang.Thread.run(Unknown Source)
 
-      - java.util.concurrent.locks.ReentrantLock$NonfairSync@10833da
+      - java.util.concurrent.locks.ReentrantLock$NonfairSync@9ea2d5
 
-"cmd.out StreamThread" Id=465 in RUNNABLE (running in native)
+"RMI TCP Accept-0" Id=307 in RUNNABLE (running in native)
+    at java.net.PlainSocketImpl.socketAccept(Native Method)
+    at java.net.PlainSocketImpl.accept(Unknown Source)
+      - locked java.net.SocksSocketImpl@d46d0a
+    at java.net.ServerSocket.implAccept(Unknown Source)
+    at java.net.ServerSocket.accept(Unknown Source)
+    at sun.management.jmxremote.LocalRMIServerSocketFactory$1.accept(Unknown Source)
+    at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.executeAcceptLoop(Unknown Source)
+    at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.run(Unknown Source)
+    at java.lang.Thread.run(Unknown Source)
+
+
+"cmd.out StreamThread" Id=306 in RUNNABLE (running in native)
     at java.io.FileInputStream.readBytes(Native Method)
     at java.io.FileInputStream.read(Unknown Source)
     at java.io.BufferedInputStream.read1(Unknown Source)
     at java.io.BufferedInputStream.read(Unknown Source)
-      - locked java.io.BufferedInputStream@e32513
+      - locked java.io.BufferedInputStream@1f01955
     at sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
     at sun.nio.cs.StreamDecoder.implRead(Unknown Source)
     at sun.nio.cs.StreamDecoder.read(Unknown Source)
-      - locked java.io.InputStreamReader@156768d
+      - locked java.io.InputStreamReader@5c54e
     at java.io.InputStreamReader.read(Unknown Source)
     at java.io.BufferedReader.fill(Unknown Source)
     at java.io.BufferedReader.readLine(Unknown Source)
-      - locked java.io.InputStreamReader@156768d
+      - locked java.io.InputStreamReader@5c54e
     at java.io.BufferedReader.readLine(Unknown Source)
     at com.kuka.util.AsyncStreamReader.run(AsyncStreamReader.java:94)
 
 
-"pool-NCF Session Worker-thread-1" Id=464 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@1814fc6
+"pool-NCF Session Worker-thread-1" Id=305 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@dc8b13
     at sun.misc.Unsafe.park(Native Method)
     at java.util.concurrent.locks.LockSupport.park(Unknown Source)
     at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
@@ -73,17 +101,17 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.lang.Thread.run(Unknown Source)
 
 
-"Session WorkerThreadPort Port:63469" Id=463 in RUNNABLE (running in native)
+"Session WorkerThreadPort Port:61129" Id=304 in RUNNABLE (running in native)
     at java.net.SocketInputStream.socketRead0(Native Method)
     at java.net.SocketInputStream.read(Unknown Source)
     at sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
     at sun.nio.cs.StreamDecoder.implRead(Unknown Source)
     at sun.nio.cs.StreamDecoder.read(Unknown Source)
-      - locked java.io.InputStreamReader@9c8854
+      - locked java.io.InputStreamReader@12e9b32
     at java.io.InputStreamReader.read(Unknown Source)
     at java.io.BufferedReader.fill(Unknown Source)
     at java.io.BufferedReader.read(Unknown Source)
-      - locked java.io.InputStreamReader@9c8854
+      - locked java.io.InputStreamReader@12e9b32
     at com.kuka.publishing.ncf.serialization.json.JSONTokenizer.readChar(JSONTokenizer.java:355)
     at com.kuka.publishing.ncf.serialization.json.JSONTokenizer.read(JSONTokenizer.java:56)
     at com.kuka.publishing.ncf.serialization.json.JSONParser.readToken(JSONParser.java:261)
@@ -94,156 +122,30 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.lang.Thread.run(Unknown Source)
 
 
-"Timer-40" Id=462 in WAITING on lock=java.util.TaskQueue@ba65fd
+"Timer-4" Id=303 in WAITING on lock=java.util.TaskQueue@cf1a48
     at java.lang.Object.wait(Native Method)
     at java.lang.Object.wait(Object.java:485)
     at java.util.TimerThread.mainLoop(Unknown Source)
     at java.util.TimerThread.run(Unknown Source)
 
 
-"pool-PauseManager for 3@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject-thread-1" Id=456 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@17dc56a
-    at sun.misc.Unsafe.park(Native Method)
-    at java.util.concurrent.locks.LockSupport.park(Unknown Source)
-    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
-    at java.util.concurrent.LinkedBlockingQueue.take(Unknown Source)
-    at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
-    at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-    at java.lang.Thread.run(Unknown Source)
-
-
-"pool-Event Executor for Pause State Events-thread-1" Id=455 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@2bd9e4
-    at sun.misc.Unsafe.park(Native Method)
-    at java.util.concurrent.locks.LockSupport.park(Unknown Source)
-    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
-    at java.util.concurrent.LinkedBlockingQueue.take(Unknown Source)
-    at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
-    at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-    at java.lang.Thread.run(Unknown Source)
-
-
-"pool-Event Executor for Pause State Events-thread-1" Id=454 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@ee476c
-    at sun.misc.Unsafe.park(Native Method)
-    at java.util.concurrent.locks.LockSupport.park(Unknown Source)
-    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
-    at java.util.concurrent.LinkedBlockingQueue.take(Unknown Source)
-    at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
-    at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-    at java.lang.Thread.run(Unknown Source)
-
-
-"Thread-127" Id=437 in RUNNABLE
-    at API_ROS2_Sunrise.LBR_commander$MonitorEmergencyStopThread.run(LBR_commander.java:260)
-
-
-"Thread-126" Id=436 in RUNNABLE
-    at API_ROS2_Sunrise.KMP_commander$MonitorEmergencyStopThread.run(KMP_commander.java:120)
-
-
-"Thread-124" Id=433 in TIMED_WAITING
-    at java.lang.Thread.sleep(Native Method)
-    at API_ROS2_Sunrise.LBR_sensor_reader.run(LBR_sensor_reader.java:79)
-
-
-"Thread-123" Id=432 in RUNNABLE
-    at API_ROS2_Sunrise.LBR_status_reader.sendStatus(LBR_status_reader.java:67)
-    at API_ROS2_Sunrise.LBR_status_reader.run(LBR_status_reader.java:46)
-
-
-"Thread-121" Id=430 in RUNNABLE
-    at java.net.PlainSocketImpl.socketSetOption(Native Method)
-    at java.net.PlainSocketImpl.setOption(Unknown Source)
-    at java.net.Socket.setSoTimeout(Unknown Source)
-      - locked java.net.Socket@15ff40e
-    at API_ROS2_Sunrise.TCPSocket.receive_message(TCPSocket.java:82)
-    at API_ROS2_Sunrise.LBR_commander.run(LBR_commander.java:114)
-
-
-"Thread-122" Id=431 in RUNNABLE
-    at API_ROS2_Sunrise.Node.isNodeRunning(Node.java:111)
-    at API_ROS2_Sunrise.KMP_status_reader.run(KMP_status_reader.java:48)
-
-
-"Thread-120" Id=429 in RUNNABLE
-    at java.net.PlainSocketImpl.socketSetOption(Native Method)
-    at java.net.PlainSocketImpl.setOption(Unknown Source)
-    at java.net.Socket.setSoTimeout(Unknown Source)
-      - locked java.net.Socket@1d22857
-    at API_ROS2_Sunrise.TCPSocket.receive_message(TCPSocket.java:82)
-    at API_ROS2_Sunrise.KMP_commander.run(KMP_commander.java:74)
-
-
-"pool-Task Function executor thread for API_ROS2_Sunrise.AutomaticResumeBackgroundTask@175d4f7-thread-1" Id=435 in WAITING on lock=java.util.concurrent.SynchronousQueue$TransferStack@56a015
-    at sun.misc.Unsafe.park(Native Method)
-    at java.util.concurrent.locks.LockSupport.park(Unknown Source)
-    at java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(Unknown Source)
-    at java.util.concurrent.SynchronousQueue$TransferStack.transfer(Unknown Source)
-    at java.util.concurrent.SynchronousQueue.take(Unknown Source)
-    at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
-    at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-    at java.lang.Thread.run(Unknown Source)
-
-
-"pool-ApplicationOverride listener thread.-thread-1" Id=428 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@127c2df
-    at sun.misc.Unsafe.park(Native Method)
-    at java.util.concurrent.locks.LockSupport.park(Unknown Source)
-    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
-    at java.util.concurrent.LinkedBlockingQueue.take(Unknown Source)
-    at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
-    at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-    at java.lang.Thread.run(Unknown Source)
-
-
-"User thread for 3@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" Id=423 in TIMED_WAITING
-    at java.lang.Thread.sleep(Native Method)
-    at API_ROS2_Sunrise.KMRiiwaSunriseApplication.run(KMRiiwaSunriseApplication.java:518)
-    at com.kuka.task.internal.TaskInstanceManagementThread$3.call(TaskInstanceManagementThread.java:588)
-    at com.kuka.task.internal.TaskInstanceManagementThread$3.call(TaskInstanceManagementThread.java:1)
-    at java.util.concurrent.FutureTask$Sync.innerRun(Unknown Source)
-    at java.util.concurrent.FutureTask.run(Unknown Source)
+"pool-ServiceRegistration method executor for Service: DiagnosisService-thread-1" Id=302 in RUNNABLE (running in native)
+    at java.lang.ProcessImpl.waitFor(Native Method)
+    at com.kuka.windows.ShellCommander.execute(ShellCommander.java:41)
+    at com.kuka.roboticsAPI.applicationServer.services.diagnosisService.internal.DiagnosisService.createDiagnosisPackage(DiagnosisService.java:78)
+    at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+    at java.lang.reflect.Method.invoke(Unknown Source)
+    at com.kuka.publishing.ncf.contracts.MethodContract.invoke(MethodContract.java:95)
+    at com.kuka.publishing.ncf.messages.MethodInvoker.run(MethodInvoker.java:36)
     at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Unknown Source)
     at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
     at java.lang.Thread.run(Unknown Source)
 
-      - java.util.concurrent.locks.ReentrantLock$NonfairSync@16adac3
+      - java.util.concurrent.locks.ReentrantLock$NonfairSync@c679b1
 
-"MainThread 3@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" Id=421 in WAITING on lock=java.util.concurrent.FutureTask$Sync@40422a
-    at sun.misc.Unsafe.park(Native Method)
-    at java.util.concurrent.locks.LockSupport.park(Unknown Source)
-    at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(Unknown Source)
-    at java.util.concurrent.locks.AbstractQueuedSynchronizer.doAcquireSharedInterruptibly(Unknown Source)
-    at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireSharedInterruptibly(Unknown Source)
-    at java.util.concurrent.FutureTask$Sync.innerGet(Unknown Source)
-    at java.util.concurrent.FutureTask.get(Unknown Source)
-    at com.kuka.task.internal.TaskInstanceManagementThread.callRunMethod(TaskInstanceManagementThread.java:594)
-    at com.kuka.task.internal.TaskInstanceManagementThread.runAndDisposeUserTask(TaskInstanceManagementThread.java:264)
-    at com.kuka.task.internal.TaskInstanceManagementThread.runUserTask(TaskInstanceManagementThread.java:225)
-    at com.kuka.task.internal.TaskInstanceManagementThread.run(TaskInstanceManagementThread.java:154)
-    at java.lang.Thread.run(Unknown Source)
-
-
-"pool-Event Executor for State events worker for task instance 3@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject-thread-1" Id=422 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@b7fa82
-    at sun.misc.Unsafe.park(Native Method)
-    at java.util.concurrent.locks.LockSupport.park(Unknown Source)
-    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
-    at java.util.concurrent.LinkedBlockingQueue.take(Unknown Source)
-    at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
-    at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-    at java.lang.Thread.run(Unknown Source)
-
-
-"ControlPanelLEDService-TaskThread-3" Id=420 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@9f745a
-    at sun.misc.Unsafe.park(Native Method)
-    at java.util.concurrent.locks.LockSupport.park(Unknown Source)
-    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
-    at java.util.concurrent.DelayQueue.take(Unknown Source)
-    at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
-    at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
-    at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
-    at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-    at java.lang.Thread.run(Unknown Source)
-
-
-"pool-55-thread-1" Id=418 in TIMED_WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@8fea10
+"pool-7-thread-1" Id=279 in TIMED_WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@5f76bd
     at sun.misc.Unsafe.park(Native Method)
     at java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
     at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
@@ -255,7 +157,102 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.lang.Thread.run(Unknown Source)
 
 
-"User thread for 2@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" Id=409 in WAITING on lock=java.util.concurrent.FutureTask$Sync@976065
+"pool-ServiceRegistration method executor for Service: BatteryManagerService-thread-1" Id=258 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@16c9456
+    at sun.misc.Unsafe.park(Native Method)
+    at java.util.concurrent.locks.LockSupport.park(Unknown Source)
+    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
+    at java.util.concurrent.LinkedBlockingQueue.take(Unknown Source)
+    at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+    at java.lang.Thread.run(Unknown Source)
+
+
+"pool-Task Function executor thread for API_ROS2_Sunrise.AutomaticResumeBackgroundTask@1d10bfa-thread-1" Id=236 in WAITING on lock=java.util.concurrent.SynchronousQueue$TransferStack@17e9eef
+    at sun.misc.Unsafe.park(Native Method)
+    at java.util.concurrent.locks.LockSupport.park(Unknown Source)
+    at java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(Unknown Source)
+    at java.util.concurrent.SynchronousQueue$TransferStack.transfer(Unknown Source)
+    at java.util.concurrent.SynchronousQueue.take(Unknown Source)
+    at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+    at java.lang.Thread.run(Unknown Source)
+
+
+"pool-ControllerStateEvents-thread-1" Id=233 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@1f4795f
+    at sun.misc.Unsafe.park(Native Method)
+    at java.util.concurrent.locks.LockSupport.park(Unknown Source)
+    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
+    at java.util.concurrent.LinkedBlockingQueue.take(Unknown Source)
+    at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+    at java.lang.Thread.run(Unknown Source)
+
+
+"pool-36-thread-1" Id=232 in TIMED_WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@14c7a1c
+    at sun.misc.Unsafe.park(Native Method)
+    at java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
+    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
+    at java.util.concurrent.DelayQueue.take(Unknown Source)
+    at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+    at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+    at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+    at java.lang.Thread.run(Unknown Source)
+
+
+"pool-Thread to wait for empty fenced execution area.-thread-1" Id=231 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@1e4e5c2
+    at sun.misc.Unsafe.park(Native Method)
+    at java.util.concurrent.locks.LockSupport.park(Unknown Source)
+    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
+    at java.util.concurrent.LinkedBlockingQueue.take(Unknown Source)
+    at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+    at java.lang.Thread.run(Unknown Source)
+
+
+"pool-ContainerEvents-thread-1" Id=230 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@a8258d
+    at sun.misc.Unsafe.park(Native Method)
+    at java.util.concurrent.locks.LockSupport.park(Unknown Source)
+    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
+    at java.util.concurrent.LinkedBlockingQueue.take(Unknown Source)
+    at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+    at java.lang.Thread.run(Unknown Source)
+
+
+"pool-SPR state setting thread.-thread-1" Id=229 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@13960d5
+    at sun.misc.Unsafe.park(Native Method)
+    at java.util.concurrent.locks.LockSupport.park(Unknown Source)
+    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
+    at java.util.concurrent.LinkedBlockingQueue.take(Unknown Source)
+    at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+    at java.lang.Thread.run(Unknown Source)
+
+
+"pool-SunriseExecutionServiceEvents-thread-1" Id=228 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@45c46
+    at sun.misc.Unsafe.park(Native Method)
+    at java.util.concurrent.locks.LockSupport.park(Unknown Source)
+    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
+    at java.util.concurrent.LinkedBlockingQueue.take(Unknown Source)
+    at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+    at java.lang.Thread.run(Unknown Source)
+
+
+"pool-34-thread-1" Id=227 in TIMED_WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@4603fb
+    at sun.misc.Unsafe.park(Native Method)
+    at java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
+    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
+    at java.util.concurrent.DelayQueue.take(Unknown Source)
+    at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+    at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+    at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+    at java.lang.Thread.run(Unknown Source)
+
+
+"User thread for 2@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" Id=226 in WAITING on lock=java.util.concurrent.FutureTask$Sync@1e0fb35
     at sun.misc.Unsafe.park(Native Method)
     at java.util.concurrent.locks.LockSupport.park(Unknown Source)
     at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(Unknown Source)
@@ -272,9 +269,9 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
     at java.lang.Thread.run(Unknown Source)
 
-      - java.util.concurrent.locks.ReentrantLock$NonfairSync@4fcafb
+      - java.util.concurrent.locks.ReentrantLock$NonfairSync@af77c8
 
-"MainThread 2@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" Id=407 in WAITING on lock=java.util.concurrent.FutureTask$Sync@3998a1
+"MainThread 2@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject" Id=224 in WAITING on lock=java.util.concurrent.FutureTask$Sync@18c5dbe
     at sun.misc.Unsafe.park(Native Method)
     at java.util.concurrent.locks.LockSupport.park(Unknown Source)
     at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(Unknown Source)
@@ -289,7 +286,7 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.lang.Thread.run(Unknown Source)
 
 
-"pool-Event Executor for State events worker for task instance 2@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject-thread-1" Id=408 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@1537224
+"pool-Event Executor for State events worker for task instance 2@API_ROS2_Sunrise.AutomaticResumeBackgroundTask@SunriseProject-thread-1" Id=225 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@5e8aab
     at sun.misc.Unsafe.park(Native Method)
     at java.util.concurrent.locks.LockSupport.park(Unknown Source)
     at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
@@ -299,7 +296,7 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.lang.Thread.run(Unknown Source)
 
 
-"pool-UserTaskWrapper-ApplicationEventExecutor-thread-1" Id=378 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@16abd0a
+"pool-UserTaskWrapper-ApplicationEventExecutor-thread-1" Id=221 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@e1f020
     at sun.misc.Unsafe.park(Native Method)
     at java.util.concurrent.locks.LockSupport.park(Unknown Source)
     at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
@@ -309,7 +306,7 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.lang.Thread.run(Unknown Source)
 
 
-"pool-OnPathChecker-thread-1" Id=377 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@a11197
+"pool-OnPathChecker-thread-1" Id=220 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@15bee5c
     at sun.misc.Unsafe.park(Native Method)
     at java.util.concurrent.locks.LockSupport.park(Unknown Source)
     at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
@@ -321,7 +318,7 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.lang.Thread.run(Unknown Source)
 
 
-"pool-ApplicationServiceLogNotifier for API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject-thread-1" Id=366 in TIMED_WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@8a010a
+"pool-KeepAlive-thread-1" Id=205 in TIMED_WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@7deb20
     at sun.misc.Unsafe.park(Native Method)
     at java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
     at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
@@ -333,7 +330,29 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.lang.Thread.run(Unknown Source)
 
 
-"pool-UserTaskWrapper_MasteringCheck-thread-1" Id=360 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@4a4836
+"Connection Receiver worker" Id=204 in RUNNABLE (running in native)
+    at java.net.SocketInputStream.socketRead0(Native Method)
+    at java.net.SocketInputStream.read(Unknown Source)
+    at com.kuka.roboticsAPI.controllerModel.sunrise.connectionLib.MessageUtilities.receiveFromStreamChecked(MessageUtilities.java:151)
+    at com.kuka.roboticsAPI.controllerModel.sunrise.connectionLib.MessageUtilities.receiveMessageLengthFromStream(MessageUtilities.java:231)
+    at com.kuka.roboticsAPI.controllerModel.sunrise.connectionLib.TcpChannel.tryReceive(TcpChannel.java:178)
+    at com.kuka.roboticsAPI.controllerModel.sunrise.connectionLib.ClientConnectionData.tryReceive(ClientConnectionData.java:84)
+    at com.kuka.roboticsAPI.controllerModel.sunrise.connectionLib.Connection.receive(Connection.java:95)
+    at com.kuka.roboticsAPI.controllerModel.sunrise.connectionLib.ConnectionReceiver.run(ConnectionReceiver.java:60)
+    at java.lang.Thread.run(Unknown Source)
+
+      - java.util.concurrent.locks.ReentrantLock$NonfairSync@d78f76
+
+"Message Handling worker" Id=203 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@bad3c
+    at sun.misc.Unsafe.park(Native Method)
+    at java.util.concurrent.locks.LockSupport.park(Unknown Source)
+    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
+    at java.util.concurrent.ArrayBlockingQueue.take(Unknown Source)
+    at com.kuka.roboticsAPI.controllerModel.sunrise.connectionLib.HandlingWorker.run(HandlingWorker.java:60)
+    at java.lang.Thread.run(Unknown Source)
+
+
+"pool-UserTaskWrapper_MasteringCheck-thread-1" Id=202 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@9a4244
     at sun.misc.Unsafe.park(Native Method)
     at java.util.concurrent.locks.LockSupport.park(Unknown Source)
     at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
@@ -343,7 +362,27 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.lang.Thread.run(Unknown Source)
 
 
-"ControlPanelLEDService-TaskThread-2" Id=356 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@9f745a
+"pool-ApplicationServerService-thread-1" Id=197 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@1749a5d
+    at sun.misc.Unsafe.park(Native Method)
+    at java.util.concurrent.locks.LockSupport.park(Unknown Source)
+    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
+    at java.util.concurrent.LinkedBlockingQueue.take(Unknown Source)
+    at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+    at java.lang.Thread.run(Unknown Source)
+
+
+"pool-UserTaskWrapper-ApplicationEventExecutor-thread-1" Id=196 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@427558
+    at sun.misc.Unsafe.park(Native Method)
+    at java.util.concurrent.locks.LockSupport.park(Unknown Source)
+    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
+    at java.util.concurrent.LinkedBlockingQueue.take(Unknown Source)
+    at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+    at java.lang.Thread.run(Unknown Source)
+
+
+"pool-OnPathChecker-thread-1" Id=195 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@125e79d
     at sun.misc.Unsafe.park(Native Method)
     at java.util.concurrent.locks.LockSupport.park(Unknown Source)
     at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
@@ -355,17 +394,7 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.lang.Thread.run(Unknown Source)
 
 
-"pool-ServiceRegistration method executor for Service: BatteryManagerService-thread-1" Id=354 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@caf440
-    at sun.misc.Unsafe.park(Native Method)
-    at java.util.concurrent.locks.LockSupport.park(Unknown Source)
-    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
-    at java.util.concurrent.LinkedBlockingQueue.take(Unknown Source)
-    at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
-    at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-    at java.lang.Thread.run(Unknown Source)
-
-
-"pool-FileWatcher for RoboticsAPI.data.xml-thread-1" Id=341 in TIMED_WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@69cb7f
+"pool-ApplicationServiceLogNotifier for application.PositionAndGMSReferencing@SunriseProject-thread-1" Id=187 in TIMED_WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@1893081
     at sun.misc.Unsafe.park(Native Method)
     at java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
     at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
@@ -377,20 +406,61 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.lang.Thread.run(Unknown Source)
 
 
-"pool-6-thread-1" Id=247 in TIMED_WAITING
-    at java.lang.Thread.sleep(Native Method)
-    at com.kuka.roboticsAPI.applicationServer.services.ledStripService.mobilePlatform.internal.effectControllers.AbstractLEDStripEffectController.trySleep(AbstractLEDStripEffectController.java:53)
-    at com.kuka.roboticsAPI.applicationServer.services.ledStripService.mobilePlatform.internal.effectControllers.AbstractLEDStripEffectController.run(AbstractLEDStripEffectController.java:39)
-    at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
-    at java.util.concurrent.FutureTask$Sync.innerRun(Unknown Source)
-    at java.util.concurrent.FutureTask.run(Unknown Source)
-    at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Unknown Source)
+"pool-UserTaskWrapper_MasteringCheck-thread-1" Id=181 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@1cf6b11
+    at sun.misc.Unsafe.park(Native Method)
+    at java.util.concurrent.locks.LockSupport.park(Unknown Source)
+    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
+    at java.util.concurrent.LinkedBlockingQueue.take(Unknown Source)
+    at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
     at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
     at java.lang.Thread.run(Unknown Source)
 
-      - java.util.concurrent.locks.ReentrantLock$NonfairSync@19cfdcd
 
-"pool-7-thread-1" Id=246 in TIMED_WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@1dada0e
+"pool-SafetyStopSignalEvents-thread-1" Id=177 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@7e582e
+    at sun.misc.Unsafe.park(Native Method)
+    at java.util.concurrent.locks.LockSupport.park(Unknown Source)
+    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
+    at java.util.concurrent.LinkedBlockingQueue.take(Unknown Source)
+    at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+    at java.lang.Thread.run(Unknown Source)
+
+
+"pool-ControllerStateEvents-thread-1" Id=175 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@cf3b71
+    at sun.misc.Unsafe.park(Native Method)
+    at java.util.concurrent.locks.LockSupport.park(Unknown Source)
+    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
+    at java.util.concurrent.LinkedBlockingQueue.take(Unknown Source)
+    at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+    at java.lang.Thread.run(Unknown Source)
+
+
+"ControlPanelLEDService-TaskThread-10" Id=174 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@1477c3b
+    at sun.misc.Unsafe.park(Native Method)
+    at java.util.concurrent.locks.LockSupport.park(Unknown Source)
+    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
+    at java.util.concurrent.DelayQueue.take(Unknown Source)
+    at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+    at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+    at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+    at java.lang.Thread.run(Unknown Source)
+
+
+"ControlPanelLEDService-TaskThread-9" Id=173 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@1477c3b
+    at sun.misc.Unsafe.park(Native Method)
+    at java.util.concurrent.locks.LockSupport.park(Unknown Source)
+    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
+    at java.util.concurrent.DelayQueue.take(Unknown Source)
+    at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+    at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+    at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+    at java.lang.Thread.run(Unknown Source)
+
+
+"pool-FileWatcher for RoboticsAPI.data.xml-thread-1" Id=160 in TIMED_WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@2d3555
     at sun.misc.Unsafe.park(Native Method)
     at java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
     at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
@@ -402,10 +472,66 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.lang.Thread.run(Unknown Source)
 
 
-"ControlPanelLEDService-TaskThread-1" Id=245 in TIMED_WAITING
+"JGit-AlarmQueue" Id=158 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@85f8a
+    at sun.misc.Unsafe.park(Native Method)
+    at java.util.concurrent.locks.LockSupport.park(Unknown Source)
+    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
+    at java.util.concurrent.DelayQueue.take(Unknown Source)
+    at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+    at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+    at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+    at java.lang.Thread.run(Unknown Source)
+
+
+"pool-MasteringFeature-thread-1" Id=157 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@1b86959
+    at sun.misc.Unsafe.park(Native Method)
+    at java.util.concurrent.locks.LockSupport.park(Unknown Source)
+    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
+    at java.util.concurrent.LinkedBlockingQueue.take(Unknown Source)
+    at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+    at java.lang.Thread.run(Unknown Source)
+
+
+"pool-ServiceRegistration method executor for Service: DeploymentService-thread-1" Id=148 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@c79ec
+    at sun.misc.Unsafe.park(Native Method)
+    at java.util.concurrent.locks.LockSupport.park(Unknown Source)
+    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
+    at java.util.concurrent.LinkedBlockingQueue.take(Unknown Source)
+    at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+    at java.lang.Thread.run(Unknown Source)
+
+
+"ControlPanelLEDService-TaskThread-8" Id=144 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@1477c3b
+    at sun.misc.Unsafe.park(Native Method)
+    at java.util.concurrent.locks.LockSupport.park(Unknown Source)
+    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
+    at java.util.concurrent.DelayQueue.take(Unknown Source)
+    at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+    at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+    at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+    at java.lang.Thread.run(Unknown Source)
+
+
+"ControlPanelLEDService-TaskThread-7" Id=143 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@1477c3b
+    at sun.misc.Unsafe.park(Native Method)
+    at java.util.concurrent.locks.LockSupport.park(Unknown Source)
+    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
+    at java.util.concurrent.DelayQueue.take(Unknown Source)
+    at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+    at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+    at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+    at java.lang.Thread.run(Unknown Source)
+
+
+"ControlPanelLEDService-TaskThread-6" Id=142 in TIMED_WAITING
     at java.lang.Thread.sleep(Native Method)
     at com.kuka.util.ThreadUtil.milliSleep(ThreadUtil.java:40)
-    at com.kuka.service.controlPanel.internal.controlPanelManager.task.BlinkingPlayButtonLEDTask.run(BlinkingPlayButtonLEDTask.java:28)
+    at com.kuka.service.controlPanel.internal.controlPanelManager.task.BlinkingPlayButtonLEDTask.run(BlinkingPlayButtonLEDTask.java:30)
     at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
     at java.util.concurrent.FutureTask$Sync.innerRunAndReset(Unknown Source)
     at java.util.concurrent.FutureTask.runAndReset(Unknown Source)
@@ -416,39 +542,9 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
     at java.lang.Thread.run(Unknown Source)
 
-      - java.util.concurrent.locks.ReentrantLock$NonfairSync@121d857
+      - java.util.concurrent.locks.ReentrantLock$NonfairSync@118780e
 
-"pool-ApplicationServerService-thread-1" Id=203 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@ff6b74
-    at sun.misc.Unsafe.park(Native Method)
-    at java.util.concurrent.locks.LockSupport.park(Unknown Source)
-    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
-    at java.util.concurrent.LinkedBlockingQueue.take(Unknown Source)
-    at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
-    at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-    at java.lang.Thread.run(Unknown Source)
-
-
-"pool-SafetyStopSignalEvents-thread-1" Id=183 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@15513f6
-    at sun.misc.Unsafe.park(Native Method)
-    at java.util.concurrent.locks.LockSupport.park(Unknown Source)
-    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
-    at java.util.concurrent.LinkedBlockingQueue.take(Unknown Source)
-    at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
-    at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-    at java.lang.Thread.run(Unknown Source)
-
-
-"pool-ControllerStateEvents-thread-1" Id=181 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@91b07a
-    at sun.misc.Unsafe.park(Native Method)
-    at java.util.concurrent.locks.LockSupport.park(Unknown Source)
-    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
-    at java.util.concurrent.LinkedBlockingQueue.take(Unknown Source)
-    at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
-    at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-    at java.lang.Thread.run(Unknown Source)
-
-
-"JGit-AlarmQueue" Id=166 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@17549ab
+"ControlPanelLEDService-TaskThread-5" Id=141 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@1477c3b
     at sun.misc.Unsafe.park(Native Method)
     at java.util.concurrent.locks.LockSupport.park(Unknown Source)
     at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
@@ -460,7 +556,43 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.lang.Thread.run(Unknown Source)
 
 
-"pool-MasteringFeature-thread-1" Id=165 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@1378387
+"ControlPanelLEDService-TaskThread-4" Id=140 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@1477c3b
+    at sun.misc.Unsafe.park(Native Method)
+    at java.util.concurrent.locks.LockSupport.park(Unknown Source)
+    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
+    at java.util.concurrent.DelayQueue.take(Unknown Source)
+    at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+    at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+    at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+    at java.lang.Thread.run(Unknown Source)
+
+
+"ControlPanelLEDService-TaskThread-3" Id=139 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@1477c3b
+    at sun.misc.Unsafe.park(Native Method)
+    at java.util.concurrent.locks.LockSupport.park(Unknown Source)
+    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
+    at java.util.concurrent.DelayQueue.take(Unknown Source)
+    at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+    at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+    at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+    at java.lang.Thread.run(Unknown Source)
+
+
+"ControlPanelLEDService-TaskThread-2" Id=138 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@1477c3b
+    at sun.misc.Unsafe.park(Native Method)
+    at java.util.concurrent.locks.LockSupport.park(Unknown Source)
+    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
+    at java.util.concurrent.DelayQueue.take(Unknown Source)
+    at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+    at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+    at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+    at java.lang.Thread.run(Unknown Source)
+
+
+"FleetStateListenerExecutor" Id=137 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@171ee0e
     at sun.misc.Unsafe.park(Native Method)
     at java.util.concurrent.locks.LockSupport.park(Unknown Source)
     at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
@@ -470,27 +602,7 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.lang.Thread.run(Unknown Source)
 
 
-"pool-5-thread-1" Id=161 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@19c523d
-    at sun.misc.Unsafe.park(Native Method)
-    at java.util.concurrent.locks.LockSupport.park(Unknown Source)
-    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
-    at java.util.concurrent.LinkedBlockingQueue.take(Unknown Source)
-    at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
-    at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-    at java.lang.Thread.run(Unknown Source)
-
-
-"pool-ServiceRegistration method executor for Service: DeploymentService-thread-1" Id=152 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@1db3929
-    at sun.misc.Unsafe.park(Native Method)
-    at java.util.concurrent.locks.LockSupport.park(Unknown Source)
-    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
-    at java.util.concurrent.LinkedBlockingQueue.take(Unknown Source)
-    at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
-    at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-    at java.lang.Thread.run(Unknown Source)
-
-
-"RMI Scheduler(0)" Id=144 in TIMED_WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@42bccd
+"MobileRobotsPool-1" Id=136 in TIMED_WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@c3f27e
     at sun.misc.Unsafe.park(Native Method)
     at java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
     at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
@@ -502,45 +614,7 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.lang.Thread.run(Unknown Source)
 
 
-"RMI TCP Accept-0" Id=142 in RUNNABLE (running in native)
-    at java.net.PlainSocketImpl.socketAccept(Native Method)
-    at java.net.PlainSocketImpl.accept(Unknown Source)
-      - locked java.net.SocksSocketImpl@1b5726
-    at java.net.ServerSocket.implAccept(Unknown Source)
-    at java.net.ServerSocket.accept(Unknown Source)
-    at sun.management.jmxremote.LocalRMIServerSocketFactory$1.accept(Unknown Source)
-    at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.executeAcceptLoop(Unknown Source)
-    at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.run(Unknown Source)
-    at java.lang.Thread.run(Unknown Source)
-
-
-"pool-ServiceRegistration method executor for Service: DiagnosisService-thread-1" Id=137 in RUNNABLE (running in native)
-    at java.lang.ProcessImpl.waitFor(Native Method)
-    at com.kuka.windows.ShellCommander.execute(ShellCommander.java:41)
-    at com.kuka.roboticsAPI.applicationServer.services.diagnosisService.internal.DiagnosisService.createDiagnosisPackage(DiagnosisService.java:78)
-    at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-    at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-    at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-    at java.lang.reflect.Method.invoke(Unknown Source)
-    at com.kuka.publishing.ncf.contracts.MethodContract.invoke(MethodContract.java:95)
-    at com.kuka.publishing.ncf.messages.MethodInvoker.run(MethodInvoker.java:36)
-    at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Unknown Source)
-    at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-    at java.lang.Thread.run(Unknown Source)
-
-      - java.util.concurrent.locks.ReentrantLock$NonfairSync@119084
-
-"FleetStateListenerExecutor" Id=133 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@126f226
-    at sun.misc.Unsafe.park(Native Method)
-    at java.util.concurrent.locks.LockSupport.park(Unknown Source)
-    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
-    at java.util.concurrent.LinkedBlockingQueue.take(Unknown Source)
-    at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
-    at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-    at java.lang.Thread.run(Unknown Source)
-
-
-"MobileRobotsPool-1" Id=132 in TIMED_WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@1e3cfa5
+"MobileRobotsPool-0" Id=135 in TIMED_WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@c3f27e
     at sun.misc.Unsafe.park(Native Method)
     at java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
     at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
@@ -552,40 +626,63 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.lang.Thread.run(Unknown Source)
 
 
-"MobileRobotsPool-0" Id=131 in TIMED_WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@1e3cfa5
-    at sun.misc.Unsafe.park(Native Method)
-    at java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
-    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
-    at java.util.concurrent.DelayQueue.take(Unknown Source)
-    at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
-    at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
-    at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
-    at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-    at java.lang.Thread.run(Unknown Source)
-
-
-"Worker-1" Id=130 in TIMED_WAITING on lock=org.eclipse.core.internal.jobs.WorkerPool@15562d0
+"Worker-1" Id=134 in TIMED_WAITING on lock=org.eclipse.core.internal.jobs.WorkerPool@65462e
     at java.lang.Object.wait(Native Method)
     at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:188)
     at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:220)
     at org.eclipse.core.internal.jobs.Worker.run(Worker.java:50)
 
 
-"Provisioning Event Dispatcher" Id=129 in WAITING on lock=org.eclipse.osgi.framework.eventmgr.EventManager$EventThread@ca4765
+"ControlPanelLEDService-TaskThread-1" Id=133 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@1477c3b
+    at sun.misc.Unsafe.park(Native Method)
+    at java.util.concurrent.locks.LockSupport.park(Unknown Source)
+    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
+    at java.util.concurrent.DelayQueue.take(Unknown Source)
+    at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+    at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+    at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+    at java.lang.Thread.run(Unknown Source)
+
+
+"pool-6-thread-1" Id=132 in TIMED_WAITING
+    at java.lang.Thread.sleep(Native Method)
+    at com.kuka.roboticsAPI.applicationServer.services.ledStripService.mobilePlatform.internal.effectControllers.AbstractLEDStripEffectController.trySleep(AbstractLEDStripEffectController.java:53)
+    at com.kuka.roboticsAPI.applicationServer.services.ledStripService.mobilePlatform.internal.effectControllers.AbstractLEDStripEffectController.run(AbstractLEDStripEffectController.java:39)
+    at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+    at java.util.concurrent.FutureTask$Sync.innerRun(Unknown Source)
+    at java.util.concurrent.FutureTask.run(Unknown Source)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Unknown Source)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+    at java.lang.Thread.run(Unknown Source)
+
+      - java.util.concurrent.locks.ReentrantLock$NonfairSync@e29810
+
+"pool-5-thread-1" Id=131 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@6d45f8
+    at sun.misc.Unsafe.park(Native Method)
+    at java.util.concurrent.locks.LockSupport.park(Unknown Source)
+    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
+    at java.util.concurrent.LinkedBlockingQueue.take(Unknown Source)
+    at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+    at java.lang.Thread.run(Unknown Source)
+
+
+"Provisioning Event Dispatcher" Id=130 in WAITING on lock=org.eclipse.osgi.framework.eventmgr.EventManager$EventThread@ca013
     at java.lang.Object.wait(Native Method)
     at java.lang.Object.wait(Object.java:485)
     at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.getNextEvent(EventManager.java:400)
     at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:336)
 
 
-"Worker-0" Id=128 in TIMED_WAITING on lock=org.eclipse.core.internal.jobs.WorkerPool@15562d0
+"Worker-0" Id=129 in TIMED_WAITING on lock=org.eclipse.core.internal.jobs.WorkerPool@65462e
     at java.lang.Object.wait(Native Method)
     at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:188)
     at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:220)
     at org.eclipse.core.internal.jobs.Worker.run(Worker.java:50)
 
 
-"TcpConn" Id=127 in RUNNABLE (running in native)
+"TcpConn" Id=126 in RUNNABLE (running in native)
     at java.net.SocketInputStream.socketRead0(Native Method)
     at java.net.SocketInputStream.read(Unknown Source)
     at com.kuka.comm.net.TcpConnection.connectionThread(TcpConnection.java:356)
@@ -594,7 +691,7 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.lang.Thread.run(Unknown Source)
 
 
-"pool-Event worker for AnyEdge listener for 'IORangeCondition: minIOValue (-1.0E-5) =< Value of Theta <= maxIOValue (1.0E-5)'-thread-1" Id=123 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@156674
+"pool-Event worker for AnyEdge listener for 'IORangeCondition: minIOValue (-1.0E-5) =< Value of Theta <= maxIOValue (1.0E-5)'-thread-1" Id=124 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@e178dd
     at sun.misc.Unsafe.park(Native Method)
     at java.util.concurrent.locks.LockSupport.park(Unknown Source)
     at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
@@ -604,7 +701,7 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.lang.Thread.run(Unknown Source)
 
 
-"pool-Event worker for AnyEdge listener for 'IORangeCondition: minIOValue (-1.0E-5) =< Value of Y <= maxIOValue (1.0E-5)'-thread-1" Id=122 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@f954ff
+"pool-Event worker for AnyEdge listener for 'IORangeCondition: minIOValue (-1.0E-5) =< Value of Y <= maxIOValue (1.0E-5)'-thread-1" Id=123 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@c61c99
     at sun.misc.Unsafe.park(Native Method)
     at java.util.concurrent.locks.LockSupport.park(Unknown Source)
     at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
@@ -614,7 +711,7 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.lang.Thread.run(Unknown Source)
 
 
-"pool-Event worker for AnyEdge listener for 'IORangeCondition: minIOValue (-1.0E-5) =< Value of X <= maxIOValue (1.0E-5)'-thread-1" Id=121 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@13b5df5
+"pool-Event worker for AnyEdge listener for 'IORangeCondition: minIOValue (-1.0E-5) =< Value of X <= maxIOValue (1.0E-5)'-thread-1" Id=122 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@7fb585
     at sun.misc.Unsafe.park(Native Method)
     at java.util.concurrent.locks.LockSupport.park(Unknown Source)
     at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
@@ -624,7 +721,7 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.lang.Thread.run(Unknown Source)
 
 
-"pool-Event worker for AnyEdge listener for 'IORangeCondition: minIOValue (1.5) =< Value of Mode <= maxIOValue (10.5)'-thread-1" Id=120 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@958595
+"pool-Event worker for AnyEdge listener for 'IORangeCondition: minIOValue (1.5) =< Value of Mode <= maxIOValue (10.5)'-thread-1" Id=120 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@665c27
     at sun.misc.Unsafe.park(Native Method)
     at java.util.concurrent.locks.LockSupport.park(Unknown Source)
     at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
@@ -634,7 +731,7 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.lang.Thread.run(Unknown Source)
 
 
-"pool-17-thread-1" Id=119 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@752dd0
+"pool-17-thread-1" Id=119 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@2c1929
     at sun.misc.Unsafe.park(Native Method)
     at java.util.concurrent.locks.LockSupport.park(Unknown Source)
     at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
@@ -646,7 +743,7 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.lang.Thread.run(Unknown Source)
 
 
-"pool-Event worker for AnyEdge listener for 'IORangeCondition: minIOValue (0.5) =< Value of Mode <= maxIOValue (1.5)'-thread-1" Id=118 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@112e52f
+"pool-Event worker for AnyEdge listener for 'IORangeCondition: minIOValue (0.5) =< Value of Mode <= maxIOValue (1.5)'-thread-1" Id=118 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@127fff8
     at sun.misc.Unsafe.park(Native Method)
     at java.util.concurrent.locks.LockSupport.park(Unknown Source)
     at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
@@ -656,7 +753,7 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.lang.Thread.run(Unknown Source)
 
 
-"pool-15-thread-1" Id=117 in TIMED_WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@184afc9
+"pool-15-thread-1" Id=117 in TIMED_WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@1160f12
     at sun.misc.Unsafe.park(Native Method)
     at java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
     at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
@@ -671,7 +768,7 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
 "ServerThread" Id=116 in RUNNABLE (running in native)
     at java.net.PlainSocketImpl.socketAccept(Native Method)
     at java.net.PlainSocketImpl.accept(Unknown Source)
-      - locked java.net.SocksSocketImpl@30c028
+      - locked java.net.SocksSocketImpl@13778bc
     at java.net.ServerSocket.implAccept(Unknown Source)
     at java.net.ServerSocket.accept(Unknown Source)
     at com.kuka.comm.net.TcpServer.serverThread(TcpServer.java:181)
@@ -679,7 +776,7 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.lang.Thread.run(Unknown Source)
 
 
-"pool-ServiceRegistration method executor for Service: BackupManagerService-thread-1" Id=114 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@979ff0
+"pool-ServiceRegistration method executor for Service: BackupManagerService-thread-1" Id=114 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@d7bedd
     at sun.misc.Unsafe.park(Native Method)
     at java.util.concurrent.locks.LockSupport.park(Unknown Source)
     at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
@@ -689,7 +786,7 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.lang.Thread.run(Unknown Source)
 
 
-"pool-ServiceRegistration method executor for Service: ProjectService-thread-1" Id=113 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@8571f9
+"pool-ServiceRegistration method executor for Service: ProjectService-thread-1" Id=113 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@33c27a
     at sun.misc.Unsafe.park(Native Method)
     at java.util.concurrent.locks.LockSupport.park(Unknown Source)
     at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
@@ -699,7 +796,7 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.lang.Thread.run(Unknown Source)
 
 
-"pool-14-thread-1" Id=112 in TIMED_WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@fdd24d
+"pool-14-thread-1" Id=112 in TIMED_WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@24f04f
     at sun.misc.Unsafe.park(Native Method)
     at java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
     at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
@@ -711,7 +808,7 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.lang.Thread.run(Unknown Source)
 
 
-"UpdateEstimatesExecutor" Id=111 in TIMED_WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@1f9cc19
+"UpdateEstimatesExecutor" Id=111 in TIMED_WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@11cdde4
     at sun.misc.Unsafe.park(Native Method)
     at java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
     at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
@@ -723,12 +820,22 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.lang.Thread.run(Unknown Source)
 
 
-"Worker-JM" Id=98 in WAITING on lock=java.util.ArrayList@1d99836
+"pool-ServiceRegistration method executor for Service: ApplicationUIService-thread-1" Id=98 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@2bce5d
+    at sun.misc.Unsafe.park(Native Method)
+    at java.util.concurrent.locks.LockSupport.park(Unknown Source)
+    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
+    at java.util.concurrent.LinkedBlockingQueue.take(Unknown Source)
+    at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+    at java.lang.Thread.run(Unknown Source)
+
+
+"Worker-JM" Id=97 in WAITING on lock=java.util.ArrayList@1f941e9
     at java.lang.Object.wait(Native Method)
     at org.eclipse.core.internal.jobs.InternalWorker.run(InternalWorker.java:58)
 
 
-"pool-ServiceRegistration method executor for Service: ApplicationUIService-thread-1" Id=95 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@983577
+"pool-ServiceRegistration method executor for Service: AppServer-thread-1" Id=96 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@1563030
     at sun.misc.Unsafe.park(Native Method)
     at java.util.concurrent.locks.LockSupport.park(Unknown Source)
     at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
@@ -738,7 +845,7 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.lang.Thread.run(Unknown Source)
 
 
-"pool-ServiceRegistration method executor for Service: AppServer-thread-1" Id=94 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@de308d
+"pool-ServiceRegistration method executor for Service: MobilePlatformJogging-thread-1" Id=92 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@175baab
     at sun.misc.Unsafe.park(Native Method)
     at java.util.concurrent.locks.LockSupport.park(Unknown Source)
     at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
@@ -748,7 +855,7 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.lang.Thread.run(Unknown Source)
 
 
-"pool-ServiceRegistration method executor for Service: MobilePlatformJogging-thread-1" Id=92 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@1ba2933
+"pool-ServiceRegistration method executor for Service: HandGuidingService-thread-1" Id=91 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@3247de
     at sun.misc.Unsafe.park(Native Method)
     at java.util.concurrent.locks.LockSupport.park(Unknown Source)
     at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
@@ -758,25 +865,92 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.lang.Thread.run(Unknown Source)
 
 
-"pool-ServiceRegistration method executor for Service: HandGuidingService-thread-1" Id=91 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@e70d99
+"qtp7854593-89" Id=89 in TIMED_WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@10c4613
     at sun.misc.Unsafe.park(Native Method)
-    at java.util.concurrent.locks.LockSupport.park(Unknown Source)
-    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
-    at java.util.concurrent.LinkedBlockingQueue.take(Unknown Source)
-    at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
-    at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+    at java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
+    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
+    at org.eclipse.jetty.util.BlockingArrayQueue.poll(BlockingArrayQueue.java:342)
+    at org.eclipse.jetty.util.thread.QueuedThreadPool.idleJobPoll(QueuedThreadPool.java:526)
+    at org.eclipse.jetty.util.thread.QueuedThreadPool.access$600(QueuedThreadPool.java:44)
+    at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:572)
     at java.lang.Thread.run(Unknown Source)
 
 
-"qtp18727945-90 Selector0" Id=90 in RUNNABLE (running in native)
+"qtp7854593-88" Id=88 in TIMED_WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@10c4613
+    at sun.misc.Unsafe.park(Native Method)
+    at java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
+    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
+    at org.eclipse.jetty.util.BlockingArrayQueue.poll(BlockingArrayQueue.java:342)
+    at org.eclipse.jetty.util.thread.QueuedThreadPool.idleJobPoll(QueuedThreadPool.java:526)
+    at org.eclipse.jetty.util.thread.QueuedThreadPool.access$600(QueuedThreadPool.java:44)
+    at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:572)
+    at java.lang.Thread.run(Unknown Source)
+
+
+"qtp7854593-87" Id=87 in TIMED_WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@10c4613
+    at sun.misc.Unsafe.park(Native Method)
+    at java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
+    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
+    at org.eclipse.jetty.util.BlockingArrayQueue.poll(BlockingArrayQueue.java:342)
+    at org.eclipse.jetty.util.thread.QueuedThreadPool.idleJobPoll(QueuedThreadPool.java:526)
+    at org.eclipse.jetty.util.thread.QueuedThreadPool.access$600(QueuedThreadPool.java:44)
+    at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:572)
+    at java.lang.Thread.run(Unknown Source)
+
+
+"qtp7854593-86" Id=86 in TIMED_WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@10c4613
+    at sun.misc.Unsafe.park(Native Method)
+    at java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
+    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
+    at org.eclipse.jetty.util.BlockingArrayQueue.poll(BlockingArrayQueue.java:342)
+    at org.eclipse.jetty.util.thread.QueuedThreadPool.idleJobPoll(QueuedThreadPool.java:526)
+    at org.eclipse.jetty.util.thread.QueuedThreadPool.access$600(QueuedThreadPool.java:44)
+    at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:572)
+    at java.lang.Thread.run(Unknown Source)
+
+
+"qtp7854593-85" Id=85 in TIMED_WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@10c4613
+    at sun.misc.Unsafe.park(Native Method)
+    at java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
+    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
+    at org.eclipse.jetty.util.BlockingArrayQueue.poll(BlockingArrayQueue.java:342)
+    at org.eclipse.jetty.util.thread.QueuedThreadPool.idleJobPoll(QueuedThreadPool.java:526)
+    at org.eclipse.jetty.util.thread.QueuedThreadPool.access$600(QueuedThreadPool.java:44)
+    at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:572)
+    at java.lang.Thread.run(Unknown Source)
+
+
+"qtp7854593-83" Id=83 in TIMED_WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@10c4613
+    at sun.misc.Unsafe.park(Native Method)
+    at java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
+    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
+    at org.eclipse.jetty.util.BlockingArrayQueue.poll(BlockingArrayQueue.java:342)
+    at org.eclipse.jetty.util.thread.QueuedThreadPool.idleJobPoll(QueuedThreadPool.java:526)
+    at org.eclipse.jetty.util.thread.QueuedThreadPool.access$600(QueuedThreadPool.java:44)
+    at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:572)
+    at java.lang.Thread.run(Unknown Source)
+
+
+"qtp7854593-82 Acceptor0 SelectChannelConnector@0.0.0.0:23457" Id=82 in RUNNABLE (running in native)
+    at sun.nio.ch.ServerSocketChannelImpl.accept0(Native Method)
+    at sun.nio.ch.ServerSocketChannelImpl.accept(Unknown Source)
+      - locked java.lang.Object@cca6a7
+    at org.eclipse.jetty.server.nio.SelectChannelConnector.accept(SelectChannelConnector.java:109)
+    at org.eclipse.jetty.server.AbstractConnector$Acceptor.run(AbstractConnector.java:938)
+    at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+    at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+    at java.lang.Thread.run(Unknown Source)
+
+
+"qtp7854593-81 Selector0" Id=81 in RUNNABLE (running in native)
     at sun.nio.ch.WindowsSelectorImpl$SubSelector.poll0(Native Method)
     at sun.nio.ch.WindowsSelectorImpl$SubSelector.poll(Unknown Source)
     at sun.nio.ch.WindowsSelectorImpl$SubSelector.access$400(Unknown Source)
     at sun.nio.ch.WindowsSelectorImpl.doSelect(Unknown Source)
     at sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source)
-      - locked sun.nio.ch.Util$2@1df00db
-      - locked java.util.Collections$UnmodifiableSet@1567318
-      - locked sun.nio.ch.WindowsSelectorImpl@145b726
+      - locked sun.nio.ch.Util$2@12c3b3e
+      - locked java.util.Collections$UnmodifiableSet@5ad85c
+      - locked sun.nio.ch.WindowsSelectorImpl@47b775
     at sun.nio.ch.SelectorImpl.select(Unknown Source)
     at org.eclipse.jetty.io.nio.SelectorManager$SelectSet.doSelect(SelectorManager.java:569)
     at org.eclipse.jetty.io.nio.SelectorManager$1.run(SelectorManager.java:290)
@@ -785,18 +959,7 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.lang.Thread.run(Unknown Source)
 
 
-"qtp18727945-89 Acceptor0 SelectChannelConnector@0.0.0.0:23457" Id=89 in RUNNABLE (running in native)
-    at sun.nio.ch.ServerSocketChannelImpl.accept0(Native Method)
-    at sun.nio.ch.ServerSocketChannelImpl.accept(Unknown Source)
-      - locked java.lang.Object@1fb3f37
-    at org.eclipse.jetty.server.nio.SelectChannelConnector.accept(SelectChannelConnector.java:109)
-    at org.eclipse.jetty.server.AbstractConnector$Acceptor.run(AbstractConnector.java:938)
-    at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
-    at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
-    at java.lang.Thread.run(Unknown Source)
-
-
-"MobileRobotNCF" Id=88 in TIMED_WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@1f34a6f
+"MobileRobotNCF" Id=80 in TIMED_WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@5d8558
     at sun.misc.Unsafe.park(Native Method)
     at java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
     at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
@@ -808,79 +971,13 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.lang.Thread.run(Unknown Source)
 
 
-"qtp18727945-87" Id=87 in TIMED_WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@19bfcfc
-    at sun.misc.Unsafe.park(Native Method)
-    at java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
-    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
-    at org.eclipse.jetty.util.BlockingArrayQueue.poll(BlockingArrayQueue.java:342)
-    at org.eclipse.jetty.util.thread.QueuedThreadPool.idleJobPoll(QueuedThreadPool.java:526)
-    at org.eclipse.jetty.util.thread.QueuedThreadPool.access$600(QueuedThreadPool.java:44)
-    at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:572)
-    at java.lang.Thread.run(Unknown Source)
-
-
-"qtp18727945-85" Id=85 in TIMED_WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@19bfcfc
-    at sun.misc.Unsafe.park(Native Method)
-    at java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
-    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
-    at org.eclipse.jetty.util.BlockingArrayQueue.poll(BlockingArrayQueue.java:342)
-    at org.eclipse.jetty.util.thread.QueuedThreadPool.idleJobPoll(QueuedThreadPool.java:526)
-    at org.eclipse.jetty.util.thread.QueuedThreadPool.access$600(QueuedThreadPool.java:44)
-    at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:572)
-    at java.lang.Thread.run(Unknown Source)
-
-
-"qtp18727945-84" Id=84 in TIMED_WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@19bfcfc
-    at sun.misc.Unsafe.park(Native Method)
-    at java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
-    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
-    at org.eclipse.jetty.util.BlockingArrayQueue.poll(BlockingArrayQueue.java:342)
-    at org.eclipse.jetty.util.thread.QueuedThreadPool.idleJobPoll(QueuedThreadPool.java:526)
-    at org.eclipse.jetty.util.thread.QueuedThreadPool.access$600(QueuedThreadPool.java:44)
-    at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:572)
-    at java.lang.Thread.run(Unknown Source)
-
-
-"qtp18727945-83" Id=83 in TIMED_WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@19bfcfc
-    at sun.misc.Unsafe.park(Native Method)
-    at java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
-    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
-    at org.eclipse.jetty.util.BlockingArrayQueue.poll(BlockingArrayQueue.java:342)
-    at org.eclipse.jetty.util.thread.QueuedThreadPool.idleJobPoll(QueuedThreadPool.java:526)
-    at org.eclipse.jetty.util.thread.QueuedThreadPool.access$600(QueuedThreadPool.java:44)
-    at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:572)
-    at java.lang.Thread.run(Unknown Source)
-
-
-"qtp18727945-82" Id=82 in TIMED_WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@19bfcfc
-    at sun.misc.Unsafe.park(Native Method)
-    at java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
-    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
-    at org.eclipse.jetty.util.BlockingArrayQueue.poll(BlockingArrayQueue.java:342)
-    at org.eclipse.jetty.util.thread.QueuedThreadPool.idleJobPoll(QueuedThreadPool.java:526)
-    at org.eclipse.jetty.util.thread.QueuedThreadPool.access$600(QueuedThreadPool.java:44)
-    at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:572)
-    at java.lang.Thread.run(Unknown Source)
-
-
-"qtp18727945-81" Id=81 in TIMED_WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@19bfcfc
-    at sun.misc.Unsafe.park(Native Method)
-    at java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
-    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
-    at org.eclipse.jetty.util.BlockingArrayQueue.poll(BlockingArrayQueue.java:342)
-    at org.eclipse.jetty.util.thread.QueuedThreadPool.idleJobPoll(QueuedThreadPool.java:526)
-    at org.eclipse.jetty.util.thread.QueuedThreadPool.access$600(QueuedThreadPool.java:44)
-    at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:572)
-    at java.lang.Thread.run(Unknown Source)
-
-
-"HashSessionScavenger-0" Id=79 in TIMED_WAITING on lock=java.util.TaskQueue@1fe15a1
+"HashSessionScavenger-0" Id=79 in TIMED_WAITING on lock=java.util.TaskQueue@1dd756b
     at java.lang.Object.wait(Native Method)
     at java.util.TimerThread.mainLoop(Unknown Source)
     at java.util.TimerThread.run(Unknown Source)
 
 
-"pool-ServiceRegistration method executor for Service: ControllerService-thread-1" Id=78 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@3e0120
+"ControlPanelLEDService-TaskThread-1" Id=78 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@47e281
     at sun.misc.Unsafe.park(Native Method)
     at java.util.concurrent.locks.LockSupport.park(Unknown Source)
     at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
@@ -890,17 +987,7 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.lang.Thread.run(Unknown Source)
 
 
-"ControlPanelLEDService-TaskThread-1" Id=75 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@bbf9bf
-    at sun.misc.Unsafe.park(Native Method)
-    at java.util.concurrent.locks.LockSupport.park(Unknown Source)
-    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
-    at java.util.concurrent.LinkedBlockingQueue.take(Unknown Source)
-    at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
-    at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-    at java.lang.Thread.run(Unknown Source)
-
-
-"RobotConnectionManager" Id=73 in TIMED_WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@10989bf
+"RobotConnectionManager" Id=74 in TIMED_WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@167a839
     at sun.misc.Unsafe.park(Native Method)
     at java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
     at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
@@ -912,7 +999,7 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.lang.Thread.run(Unknown Source)
 
 
-"pool-ServiceRegistration method executor for Service: DataService-thread-1" Id=72 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@1328844
+"pool-ServiceRegistration method executor for Service: ControllerService-thread-1" Id=73 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@556b38
     at sun.misc.Unsafe.park(Native Method)
     at java.util.concurrent.locks.LockSupport.park(Unknown Source)
     at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
@@ -922,7 +1009,7 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.lang.Thread.run(Unknown Source)
 
 
-"DelayedOsgiServiceStarter<IControlPanelService>" Id=71 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@9028f9
+"DelayedOsgiServiceStarter<IControlPanelService>" Id=72 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@1f24d9b
     at sun.misc.Unsafe.park(Native Method)
     at java.util.concurrent.locks.LockSupport.park(Unknown Source)
     at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
@@ -932,7 +1019,7 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.lang.Thread.run(Unknown Source)
 
 
-"pool-MobilePlatformEvents-thread-1" Id=70 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@720215
+"pool-ServiceRegistration method executor for Service: DataService-thread-1" Id=71 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@c50451
     at sun.misc.Unsafe.park(Native Method)
     at java.util.concurrent.locks.LockSupport.park(Unknown Source)
     at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
@@ -942,7 +1029,17 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.lang.Thread.run(Unknown Source)
 
 
-"StateService-PollingTaskThread-1" Id=69 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@e6cfb3
+"pool-MobilePlatformEvents-thread-1" Id=70 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@9e7ffb
+    at sun.misc.Unsafe.park(Native Method)
+    at java.util.concurrent.locks.LockSupport.park(Unknown Source)
+    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
+    at java.util.concurrent.LinkedBlockingQueue.take(Unknown Source)
+    at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+    at java.lang.Thread.run(Unknown Source)
+
+
+"StateService-PollingTaskThread-1" Id=69 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@1e4673e
     at sun.misc.Unsafe.park(Native Method)
     at java.util.concurrent.locks.LockSupport.park(Unknown Source)
     at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
@@ -954,7 +1051,7 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.lang.Thread.run(Unknown Source)
 
 
-"StateService-PollingTaskThread-2" Id=68 in TIMED_WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@14e2278
+"StateService-PollingTaskThread-2" Id=68 in TIMED_WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@362cee
     at sun.misc.Unsafe.park(Native Method)
     at java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
     at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
@@ -966,7 +1063,7 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.lang.Thread.run(Unknown Source)
 
 
-"StateService-PollingTaskThread-1" Id=67 in TIMED_WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@14e2278
+"StateService-PollingTaskThread-1" Id=67 in TIMED_WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@362cee
     at sun.misc.Unsafe.park(Native Method)
     at java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
     at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
@@ -978,7 +1075,7 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.lang.Thread.run(Unknown Source)
 
 
-"StateService-PollingTaskThread-1" Id=66 in TIMED_WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@b91dfb
+"StateService-PollingTaskThread-1" Id=66 in TIMED_WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@bfe76c
     at sun.misc.Unsafe.park(Native Method)
     at java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
     at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
@@ -990,7 +1087,7 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.lang.Thread.run(Unknown Source)
 
 
-"DelayedOsgiServiceStarter<IInstallationManager>" Id=65 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@15f7b59
+"DelayedOsgiServiceStarter<IInstallationManager>" Id=65 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@f2961a
     at sun.misc.Unsafe.park(Native Method)
     at java.util.concurrent.locks.LockSupport.park(Unknown Source)
     at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
@@ -1000,7 +1097,7 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.lang.Thread.run(Unknown Source)
 
 
-"DelayedOsgiServiceStarter<IDeploymentManager>" Id=64 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@19b1d12
+"DelayedOsgiServiceStarter<IDeploymentManager>" Id=64 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@5c97e9
     at sun.misc.Unsafe.park(Native Method)
     at java.util.concurrent.locks.LockSupport.park(Unknown Source)
     at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
@@ -1010,7 +1107,7 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.lang.Thread.run(Unknown Source)
 
 
-"pool-PublishToServiceProcessDataChangedHandler-thread-1" Id=63 in TIMED_WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@91af85
+"pool-PublishToServiceProcessDataChangedHandler-thread-1" Id=63 in TIMED_WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@f95bd3
     at sun.misc.Unsafe.park(Native Method)
     at java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
     at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
@@ -1028,7 +1125,7 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.lang.Thread.run(Unknown Source)
 
 
-"com.google.inject.internal.util.$Finalizer" Id=61 in WAITING on lock=java.lang.ref.ReferenceQueue$Lock@9a5fb9
+"com.google.inject.internal.util.$Finalizer" Id=61 in WAITING on lock=java.lang.ref.ReferenceQueue$Lock@fba954
     at java.lang.Object.wait(Native Method)
     at java.lang.ref.ReferenceQueue.remove(Unknown Source)
     at java.lang.ref.ReferenceQueue.remove(Unknown Source)
@@ -1037,10 +1134,10 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
 
 "MulticastServer worker on 0.0.0.0/0.0.0.0:17135" Id=60 in RUNNABLE (running in native)
     at java.net.PlainDatagramSocketImpl.peekData(Native Method)
-      - locked java.net.PlainDatagramSocketImpl@1028fec
+      - locked java.net.PlainDatagramSocketImpl@12608c7
     at java.net.DatagramSocket.receive(Unknown Source)
-      - locked java.net.DatagramPacket@146665b
-      - locked java.net.MulticastSocket@ea04eb
+      - locked java.net.DatagramPacket@300bae
+      - locked java.net.MulticastSocket@d33dd5
     at com.kuka.nav.multicast.MulticastServer.receivePackets(MulticastServer.java:155)
     at com.kuka.nav.multicast.MulticastServer.threadRun(MulticastServer.java:130)
     at com.kuka.nav.multicast.MulticastServer.access$0(MulticastServer.java:126)
@@ -1048,33 +1145,21 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.lang.Thread.run(Unknown Source)
 
 
-"PostgresEvents" Id=59 in TIMED_WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@1e910fb
-    at sun.misc.Unsafe.park(Native Method)
-    at java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
-    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
-    at java.util.concurrent.DelayQueue.take(Unknown Source)
-    at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
-    at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
-    at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
-    at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-    at java.lang.Thread.run(Unknown Source)
-
-
-"UdpReceiver 0" Id=58 in RUNNABLE (running in native)
+"UdpReceiver 0" Id=59 in RUNNABLE (running in native)
     at java.net.PlainDatagramSocketImpl.receive0(Native Method)
-      - locked java.net.PlainDatagramSocketImpl@160c5a2
+      - locked java.net.PlainDatagramSocketImpl@18ff2a3
     at java.net.PlainDatagramSocketImpl.receive(Unknown Source)
-      - locked java.net.PlainDatagramSocketImpl@160c5a2
+      - locked java.net.PlainDatagramSocketImpl@18ff2a3
     at java.net.DatagramSocket.receive(Unknown Source)
-      - locked java.net.DatagramPacket@1e6ac9c
-      - locked java.net.DatagramSocket@13c9793
+      - locked java.net.DatagramPacket@15dac21
+      - locked java.net.DatagramSocket@1bc2814
     at com.kuka.comm.net.UdpConnection.receivePacket(UdpConnection.java:260)
     at com.kuka.comm.net.UdpConnection.access$9(UdpConnection.java:256)
     at com.kuka.comm.net.UdpConnection$1.run(UdpConnection.java:212)
     at java.lang.Thread.run(Unknown Source)
 
 
-"VACExecutor" Id=57 in TIMED_WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@103358d
+"PostgresEvents" Id=58 in TIMED_WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@1eb6e40
     at sun.misc.Unsafe.park(Native Method)
     at java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
     at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
@@ -1086,7 +1171,19 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.lang.Thread.run(Unknown Source)
 
 
-"RelConnWorker [UDP: 20001 -> 172.31.1.200:8112]" Id=56 in TIMED_WAITING on lock=java.lang.Object@1b0fd20
+"VACExecutor" Id=57 in TIMED_WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@193662e
+    at sun.misc.Unsafe.park(Native Method)
+    at java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
+    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
+    at java.util.concurrent.DelayQueue.take(Unknown Source)
+    at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+    at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+    at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+    at java.lang.Thread.run(Unknown Source)
+
+
+"RelConnWorker [UDP: 20001 -> 172.31.1.200:8112]" Id=56 in TIMED_WAITING on lock=java.lang.Object@196219
     at java.lang.Object.wait(Native Method)
     at com.kuka.nav.comm.vac.protocol.ReliableConnection.reconnectLoop(ReliableConnection.java:765)
     at com.kuka.nav.comm.vac.protocol.ReliableConnection.access$8(ReliableConnection.java:715)
@@ -1094,7 +1191,7 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.lang.Thread.run(Unknown Source)
 
 
-"RelConnBackground" Id=55 in TIMED_WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@ba5648
+"RelConnBackground" Id=55 in TIMED_WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@777f5d
     at sun.misc.Unsafe.park(Native Method)
     at java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
     at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
@@ -1106,13 +1203,13 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.lang.Thread.run(Unknown Source)
 
 
-"[ThreadPool Manager] - Idle Thread" Id=54 in WAITING on lock=org.eclipse.equinox.internal.util.impl.tpt.threadpool.Executor@176cac9
+"[ThreadPool Manager] - Idle Thread" Id=54 in WAITING on lock=org.eclipse.equinox.internal.util.impl.tpt.threadpool.Executor@14ae632
     at java.lang.Object.wait(Native Method)
     at java.lang.Object.wait(Object.java:485)
     at org.eclipse.equinox.internal.util.impl.tpt.threadpool.Executor.run(Executor.java:106)
 
 
-"pool-ServiceRegistration method executor for Service: ServiceDirectory-thread-1" Id=53 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@1fb8002
+"pool-ServiceRegistration method executor for Service: ServiceDirectory-thread-1" Id=53 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@4f0e84
     at sun.misc.Unsafe.park(Native Method)
     at java.util.concurrent.locks.LockSupport.park(Unknown Source)
     at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
@@ -1122,7 +1219,7 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.lang.Thread.run(Unknown Source)
 
 
-"pool-ServiceRegistration method executor for Service: VirusScannerService-thread-1" Id=52 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@91065f
+"pool-ServiceRegistration method executor for Service: VirusScannerService-thread-1" Id=52 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@423bde
     at sun.misc.Unsafe.park(Native Method)
     at java.util.concurrent.locks.LockSupport.park(Unknown Source)
     at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
@@ -1132,7 +1229,7 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.lang.Thread.run(Unknown Source)
 
 
-"pool-ServiceRegistration method executor for Service: AuthorizationService-thread-1" Id=51 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@139691d
+"pool-ServiceRegistration method executor for Service: AuthorizationService-thread-1" Id=51 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@68817e
     at sun.misc.Unsafe.park(Native Method)
     at java.util.concurrent.locks.LockSupport.park(Unknown Source)
     at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
@@ -1142,7 +1239,7 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.lang.Thread.run(Unknown Source)
 
 
-"pool-NCF Session Worker-thread-1" Id=50 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@240f58
+"pool-NCF Session Worker-thread-1" Id=50 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@10da9ab
     at sun.misc.Unsafe.park(Native Method)
     at java.util.concurrent.locks.LockSupport.park(Unknown Source)
     at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
@@ -1158,11 +1255,11 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
     at sun.nio.cs.StreamDecoder.implRead(Unknown Source)
     at sun.nio.cs.StreamDecoder.read(Unknown Source)
-      - locked java.io.InputStreamReader@16b8489
+      - locked java.io.InputStreamReader@1fe37d6
     at java.io.InputStreamReader.read(Unknown Source)
     at java.io.BufferedReader.fill(Unknown Source)
     at java.io.BufferedReader.read(Unknown Source)
-      - locked java.io.InputStreamReader@16b8489
+      - locked java.io.InputStreamReader@1fe37d6
     at com.kuka.publishing.ncf.serialization.json.JSONTokenizer.readChar(JSONTokenizer.java:355)
     at com.kuka.publishing.ncf.serialization.json.JSONTokenizer.read(JSONTokenizer.java:56)
     at com.kuka.publishing.ncf.serialization.json.JSONParser.readToken(JSONParser.java:261)
@@ -1173,13 +1270,13 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.lang.Thread.run(Unknown Source)
 
 
-"Timer-0" Id=48 in TIMED_WAITING on lock=java.util.TaskQueue@1ca5ddf
+"Timer-0" Id=48 in TIMED_WAITING on lock=java.util.TaskQueue@1040339
     at java.lang.Object.wait(Native Method)
     at java.util.TimerThread.mainLoop(Unknown Source)
     at java.util.TimerThread.run(Unknown Source)
 
 
-"pool-IpcHandler-thread-1" Id=47 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@d90b94
+"pool-IpcHandler-thread-1" Id=47 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@6fb27a
     at sun.misc.Unsafe.park(Native Method)
     at java.util.concurrent.locks.LockSupport.park(Unknown Source)
     at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
@@ -1189,7 +1286,7 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.lang.Thread.run(Unknown Source)
 
 
-"pool-8-thread-1" Id=45 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@1872a30
+"pool-8-thread-1" Id=45 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@12e91de
     at sun.misc.Unsafe.park(Native Method)
     at java.util.concurrent.locks.LockSupport.park(Unknown Source)
     at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
@@ -1199,7 +1296,7 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.lang.Thread.run(Unknown Source)
 
 
-"Thread-8" Id=41 in WAITING on lock=java.lang.Object@e2c267
+"Thread-8" Id=41 in WAITING on lock=java.lang.Object@6a97dd
     at java.lang.Object.wait(Native Method)
     at java.lang.Object.wait(Object.java:485)
     at io.grpc.internal.ServerImpl.awaitTermination(ServerImpl.java:278)
@@ -1213,9 +1310,9 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at sun.nio.ch.WindowsSelectorImpl$SubSelector.access$400(Unknown Source)
     at sun.nio.ch.WindowsSelectorImpl.doSelect(Unknown Source)
     at sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source)
-      - locked io.netty.channel.nio.SelectedSelectionKeySet@185040b
-      - locked java.util.Collections$UnmodifiableSet@957520
-      - locked sun.nio.ch.WindowsSelectorImpl@195aa3e
+      - locked io.netty.channel.nio.SelectedSelectionKeySet@c236ab
+      - locked java.util.Collections$UnmodifiableSet@282c7e
+      - locked sun.nio.ch.WindowsSelectorImpl@131ed3b
     at sun.nio.ch.SelectorImpl.select(Unknown Source)
     at io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:62)
     at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:753)
@@ -1228,7 +1325,7 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
 "NCFServerThread" Id=40 in RUNNABLE (running in native)
     at java.net.PlainSocketImpl.socketAccept(Native Method)
     at java.net.PlainSocketImpl.accept(Unknown Source)
-      - locked java.net.SocksSocketImpl@62aef
+      - locked java.net.SocksSocketImpl@cdc655
     at java.net.ServerSocket.implAccept(Unknown Source)
     at java.net.ServerSocket.accept(Unknown Source)
     at com.kuka.publishing.ncf.server.NCFRemotingTechnology$ConnectionReceiverRunnable.awaitNewClientSession(NCFRemotingTechnology.java:76)
@@ -1236,7 +1333,7 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.lang.Thread.run(Unknown Source)
 
 
-"pool-StationEvents-thread-1" Id=39 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@eccfb2
+"pool-StationEvents-thread-1" Id=39 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@1981081
     at sun.misc.Unsafe.park(Native Method)
     at java.util.concurrent.locks.LockSupport.park(Unknown Source)
     at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
@@ -1246,7 +1343,7 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.lang.Thread.run(Unknown Source)
 
 
-"pool-BootStateControllerInitializationBehaviour_BootStateEvent-thread-1" Id=38 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@137cc50
+"pool-BootStateControllerInitializationBehaviour_BootStateEvent-thread-1" Id=38 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@63b83c
     at sun.misc.Unsafe.park(Native Method)
     at java.util.concurrent.locks.LockSupport.park(Unknown Source)
     at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
@@ -1256,7 +1353,7 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.lang.Thread.run(Unknown Source)
 
 
-"pool-ContainerEvents-thread-1" Id=37 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@46baaa
+"pool-ContainerEvents-thread-1" Id=37 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@d47599
     at sun.misc.Unsafe.park(Native Method)
     at java.util.concurrent.locks.LockSupport.park(Unknown Source)
     at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
@@ -1266,7 +1363,7 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.lang.Thread.run(Unknown Source)
 
 
-"pool-SPR state setting thread.-thread-1" Id=36 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@188f117
+"pool-SPR state setting thread.-thread-1" Id=36 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@749f9f
     at sun.misc.Unsafe.park(Native Method)
     at java.util.concurrent.locks.LockSupport.park(Unknown Source)
     at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
@@ -1276,17 +1373,7 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.lang.Thread.run(Unknown Source)
 
 
-"pool-SunriseExecutionServiceEvents-thread-1" Id=35 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@18c3d97
-    at sun.misc.Unsafe.park(Native Method)
-    at java.util.concurrent.locks.LockSupport.park(Unknown Source)
-    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
-    at java.util.concurrent.LinkedBlockingQueue.take(Unknown Source)
-    at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
-    at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-    at java.lang.Thread.run(Unknown Source)
-
-
-"LockCtxCleanUp" Id=34 in TIMED_WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@1fa0fe
+"LockCtxCleanUp" Id=35 in TIMED_WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@9b8723
     at sun.misc.Unsafe.park(Native Method)
     at java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
     at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
@@ -1298,7 +1385,17 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.lang.Thread.run(Unknown Source)
 
 
-"pool-1-thread-1" Id=33 in TIMED_WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@82b0e5
+"pool-SunriseExecutionServiceEvents-thread-1" Id=34 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@c51045
+    at sun.misc.Unsafe.park(Native Method)
+    at java.util.concurrent.locks.LockSupport.park(Unknown Source)
+    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
+    at java.util.concurrent.LinkedBlockingQueue.take(Unknown Source)
+    at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+    at java.lang.Thread.run(Unknown Source)
+
+
+"pool-1-thread-1" Id=33 in TIMED_WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@1af57bf
     at sun.misc.Unsafe.park(Native Method)
     at java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
     at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
@@ -1310,7 +1407,7 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.lang.Thread.run(Unknown Source)
 
 
-"pool-KeepAlive-thread-1" Id=32 in TIMED_WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@2b8cb3
+"pool-KeepAlive-thread-1" Id=32 in TIMED_WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@a9eeb3
     at sun.misc.Unsafe.park(Native Method)
     at java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
     at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
@@ -1333,9 +1430,9 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at com.kuka.roboticsAPI.controllerModel.sunrise.connectionLib.ConnectionReceiver.run(ConnectionReceiver.java:60)
     at java.lang.Thread.run(Unknown Source)
 
-      - java.util.concurrent.locks.ReentrantLock$NonfairSync@1224c45
+      - java.util.concurrent.locks.ReentrantLock$NonfairSync@7649e9
 
-"Message Handling worker" Id=30 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@bd4bb8
+"Message Handling worker" Id=30 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@1ee634f
     at sun.misc.Unsafe.park(Native Method)
     at java.util.concurrent.locks.LockSupport.park(Unknown Source)
     at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
@@ -1344,7 +1441,7 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.lang.Thread.run(Unknown Source)
 
 
-"CommandInterceptor" Id=29 in TIMED_WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@1b65af5
+"CommandInterceptor" Id=29 in TIMED_WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@1b9f853
     at sun.misc.Unsafe.park(Native Method)
     at java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
     at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
@@ -1356,7 +1453,7 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.lang.Thread.run(Unknown Source)
 
 
-"pool-IpcExecutor-thread-1" Id=28 in TIMED_WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@10db5c2
+"pool-IpcExecutor-thread-1" Id=28 in TIMED_WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@5e2fc7
     at sun.misc.Unsafe.park(Native Method)
     at java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
     at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
@@ -1368,7 +1465,7 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.lang.Thread.run(Unknown Source)
 
 
-"pool-SunriseConnectionAccess-thread-1" Id=27 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@1180970
+"pool-SunriseConnectionAccess-thread-1" Id=27 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@192c999
     at sun.misc.Unsafe.park(Native Method)
     at java.util.concurrent.locks.LockSupport.park(Unknown Source)
     at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
@@ -1383,7 +1480,7 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at com.kuka.common.WindowsSleepBugSolver$1.run(WindowsSleepBugSolver.java:55)
 
 
-"DelayedOsgiServiceStarter<IStationProvider>" Id=25 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@11399a6
+"DelayedOsgiServiceStarter<IStationProvider>" Id=25 in WAITING on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@1f17121
     at sun.misc.Unsafe.park(Native Method)
     at java.util.concurrent.locks.LockSupport.park(Unknown Source)
     at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
@@ -1393,41 +1490,41 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
     at java.lang.Thread.run(Unknown Source)
 
 
-"[Timer] - Main Queue Handler" Id=23 in TIMED_WAITING on lock=java.lang.Object@1cc713a
+"[Timer] - Main Queue Handler" Id=23 in TIMED_WAITING on lock=java.lang.Object@3a60ca
     at java.lang.Object.wait(Native Method)
     at org.eclipse.equinox.internal.util.impl.tpt.timer.TimerImpl.run(TimerImpl.java:141)
     at java.lang.Thread.run(Unknown Source)
 
 
-"AsyncAppender-Dispatcher-Thread-2" Id=20 in WAITING on lock=java.util.ArrayList@11db78f
+"AsyncAppender-Dispatcher-Thread-2" Id=20 in WAITING on lock=java.util.ArrayList@a86de3
     at java.lang.Object.wait(Native Method)
     at java.lang.Object.wait(Object.java:485)
     at org.apache.log4j.AsyncAppender$Dispatcher.run(AsyncAppender.java:548)
     at java.lang.Thread.run(Unknown Source)
 
 
-"Bundle File Closer" Id=18 in WAITING on lock=org.eclipse.osgi.framework.eventmgr.EventManager$EventThread@1fe10ef
+"Bundle File Closer" Id=18 in WAITING on lock=org.eclipse.osgi.framework.eventmgr.EventManager$EventThread@1c68ff7
     at java.lang.Object.wait(Native Method)
     at java.lang.Object.wait(Object.java:485)
     at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.getNextEvent(EventManager.java:400)
     at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:336)
 
 
-"Start Level Event Dispatcher" Id=16 in WAITING on lock=org.eclipse.osgi.framework.eventmgr.EventManager$EventThread@1a87069
+"Start Level Event Dispatcher" Id=16 in WAITING on lock=org.eclipse.osgi.framework.eventmgr.EventManager$EventThread@d45adb
     at java.lang.Object.wait(Native Method)
     at java.lang.Object.wait(Object.java:485)
     at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.getNextEvent(EventManager.java:400)
     at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:336)
 
 
-"Framework Event Dispatcher" Id=15 in WAITING on lock=org.eclipse.osgi.framework.eventmgr.EventManager$EventThread@109d386
+"Framework Event Dispatcher" Id=15 in WAITING on lock=org.eclipse.osgi.framework.eventmgr.EventManager$EventThread@115df96
     at java.lang.Object.wait(Native Method)
     at java.lang.Object.wait(Object.java:485)
     at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.getNextEvent(EventManager.java:400)
     at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:336)
 
 
-"Framework Active Thread" Id=12 in TIMED_WAITING on lock=org.eclipse.osgi.framework.internal.core.Framework@1e2bfa
+"Framework Active Thread" Id=12 in TIMED_WAITING on lock=org.eclipse.osgi.framework.internal.core.Framework@10a1f91
     at java.lang.Object.wait(Native Method)
     at org.eclipse.osgi.framework.internal.core.Framework.run(Framework.java:1817)
     at java.lang.Thread.run(Unknown Source)
@@ -1436,7 +1533,7 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
 "ConsoleSocketGetter" Id=11 in RUNNABLE (running in native)
     at java.net.PlainSocketImpl.socketAccept(Native Method)
     at java.net.PlainSocketImpl.accept(Unknown Source)
-      - locked java.net.SocksSocketImpl@d95955
+      - locked java.net.SocksSocketImpl@19ea6ac
     at java.net.ServerSocket.implAccept(Unknown Source)
     at java.net.ServerSocket.accept(Unknown Source)
     at org.eclipse.osgi.framework.internal.core.ConsoleManager$ConsoleSocketGetter.run(ConsoleManager.java:61)
@@ -1455,14 +1552,14 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
 "Signal Dispatcher" Id=4 in RUNNABLE
 
 
-"Finalizer" Id=3 in WAITING on lock=java.lang.ref.ReferenceQueue$Lock@177fcb5
+"Finalizer" Id=3 in WAITING on lock=java.lang.ref.ReferenceQueue$Lock@d06a1c
     at java.lang.Object.wait(Native Method)
     at java.lang.ref.ReferenceQueue.remove(Unknown Source)
     at java.lang.ref.ReferenceQueue.remove(Unknown Source)
     at java.lang.ref.Finalizer$FinalizerThread.run(Unknown Source)
 
 
-"Reference Handler" Id=2 in WAITING on lock=java.lang.ref.Reference$Lock@700f6d
+"Reference Handler" Id=2 in WAITING on lock=java.lang.ref.Reference$Lock@e67582
     at java.lang.Object.wait(Native Method)
     at java.lang.Object.wait(Object.java:485)
     at java.lang.ref.Reference$ReferenceHandler.run(Unknown Source)
@@ -1471,5 +1568,5 @@ Execute handler com.kuka.monitoring.jmx.handler.ThreadDumpHandler for JVM with P
 "main" Id=1 in RUNNABLE
 
 
-Execution of com.kuka.monitoring.jmx.JvmDump finished at 8/04/2025 16:52:56
+Execution of com.kuka.monitoring.jmx.JvmDump finished at 10/04/2025 10:40:25
 
