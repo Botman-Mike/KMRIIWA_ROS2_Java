@@ -135,11 +135,18 @@ public class KMP_sensor_reader extends Node{
 	}
 	
 	public void subscribe_kmp_odometry_data() {
-		while(!this.fdi.getSubscription().isOdometrySubscribed()){
-    		this.fdi.getNewOdometry();
-		}
-
-	}
+    if(this.fdi == null) {
+        LogUtil.logError("FDI connection not established. Cannot subscribe to odometry data.");
+        return;
+    }
+    if(this.fdi.getSubscription() == null) {
+        LogUtil.logError("FDI subscription not available. Cannot subscribe to odometry data.");
+        return;
+    }
+    while(!this.fdi.getSubscription().isOdometrySubscribed()){
+        this.fdi.getNewOdometry();
+    }
+}
 	public void subscribe_kmp_laser_data(){
     if(this.fdi == null) {
         LogUtil.logError("FDI connection not established. Cannot subscribe to laser data.");
@@ -162,10 +169,10 @@ public class KMP_sensor_reader extends Node{
 	@Override
 	public void run() {
     // Initial subscriptions if sockets are connected
-    if(isLaserSocketConnected()) {
+    if(isLaserSocketConnected() && fdi != null) {
         subscribe_kmp_laser_data();
     }
-    if(isOdometrySocketConnected()) {
+    if(isOdometrySocketConnected() && fdi != null) {
         subscribe_kmp_odometry_data();
     }
     boolean attempt_reconnection = true;
