@@ -976,4 +976,24 @@ public class ControlPanelIOGroup extends AbstractIOGroup
 		return getBooleanIOValue("IIWA_BASE_FAN_MONITORING", false);
 	}
 
+	/**
+	 * Gets the value of the <b>digital input '<i>Paused</i>'</b>.<br>
+	 * <i>This method is automatically generated. Please, do not modify!</i>
+	 * <p>
+	 * <b>I/O direction and type:</b><br>
+	 * digital input
+	 * <p>
+	 * <b>User description of the I/O:</b><br>
+	 * ./.
+	 * <p>
+	 * <b>Range of the I/O value:</b><br>
+	 * [false; true]
+	 *
+	 * @return current value of the digital input 'Paused'
+	 */
+	public boolean getPaused()
+	{
+		return getBooleanIOValue("Paused", false);
+	}
+
 }

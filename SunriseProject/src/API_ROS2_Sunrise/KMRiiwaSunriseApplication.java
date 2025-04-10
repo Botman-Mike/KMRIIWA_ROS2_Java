@@ -146,12 +146,15 @@ public class KMRiiwaSunriseApplication extends RoboticsAPIApplication {
         kmp = getContext().getDeviceFromType(KmpOmniMove.class);
         lbr = getContext().getDeviceFromType(LBR.class);
         
+        // Read ROS IP from application data (set in your setup)
+        String rosIp = getApplicationData().getStringParam("ROS_IP", "192.168.1.100"); // default IP if not set
+
         // Move to drive position
         lbr.move(ptp(getApplicationData().getFrame("/DrivePos")).setJointVelocityRel(0.5));
         
-        // Create nodes for communication
-        kmp_commander = new KMP_commander(KMP_command_port, kmp, TCPConnection);
-        lbr_commander = new LBR_commander(LBR_command_port, lbr, TCPConnection, getApplicationData().getFrame("/DrivePos"));
+        // Create nodes for communication by passing the rosIp
+        kmp_commander = new KMP_commander(KMP_command_port, kmp, TCPConnection, rosIp);
+        lbr_commander = new LBR_commander(LBR_command_port, lbr, TCPConnection, getApplicationData().getFrame("/DrivePos"), rosIp);
         
         // SafetyStateListener
         safetylistener = new SafetyStateListener(controller, lbr_commander, kmp_commander, lbr_status_reader, kmp_status_reader);

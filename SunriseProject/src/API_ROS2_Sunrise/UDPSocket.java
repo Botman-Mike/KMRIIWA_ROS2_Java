@@ -14,7 +14,9 @@ import API_ROS2_Sunrise.ISocket;
 
 
 public class UDPSocket implements ISocket {
-    
+    private static final int SOCKET_TIMEOUT = 500;  // Reduce to match heartbeat interval
+    private static final int MAX_RETRIES = 5;      // Increase retries for reliability
+
     private ConnectionManager connectionManager;
     
     // Add setter for ConnectionManager
@@ -124,41 +126,35 @@ public class UDPSocket implements ISocket {
 
     @Override
     public String receive_message() {
-        if (!isConnected()) {
-            // Try to repair the connection
-            try {
-                LogUtil.logInfo(nodename + " UDP Socket lost, attempting reconnection");
+        int retries = 0;
+        while (retries < MAX_RETRIES) {
+            if (!isConnected()) {
+                LogUtil.logInfo(nodename + ": Socket disconnected, attempting reconnect");
                 connect();
                 if (!isConnected()) {
-                    return null;
+                    retries++;
+                    continue;
                 }
-            } catch (Exception e) {
-                LogUtil.logInfo(nodename + " UDP Socket reconnection failed: " + e.getMessage());
+            }
+
+            try {
+                udpConn.setSoTimeout(SOCKET_TIMEOUT);
+                byte[] buffer = new byte[1024];
+                DatagramPacket packet = new DatagramPacket(buffer, buffer.length);
+                udpConn.receive(packet);
+                
+                String message = decode(packet);
+                processIncomingMessage(message);
+                return message;
+            } catch (SocketTimeoutException e) {
+                // Expected timeout, continue listening
                 return null;
+            } catch (Exception e) {
+                LogUtil.logError(nodename + " UDP receive error: " + e.getMessage());
+                retries++;
             }
         }
-
-        try {
-            // Set a timeout for receive operations
-            udpConn.setSoTimeout(1000); // 1 second timeout
-
-            byte[] buffer = new byte[1024];
-            DatagramPacket packet = new DatagramPacket(buffer, buffer.length);
-
-            udpConn.receive(packet);
-
-            String message = new String(packet.getData(), 0, packet.getLength());
-            return message;
-        } catch (SocketTimeoutException e) {
-            // Timeout is normal, just return null
-            return null;
-        } catch (Exception e) {
-            // Only log if it's not a timeout and not due to shutdown
-            if (running && !(e instanceof InterruptedIOException)) {
-                LogUtil.logInfo(nodename + " UDP receive error: " + e.getMessage());
-            }
-            return null;
-        }
+        return null;
     }
 
     @Override

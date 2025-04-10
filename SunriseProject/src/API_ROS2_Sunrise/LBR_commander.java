@@ -17,7 +17,6 @@ package API_ROS2_Sunrise;
 // Implemented classes
 import API_ROS2_Sunrise.PTPpoint;
 
-
 // RoboticsAPI
 import com.kuka.roboticsAPI.deviceModel.JointPosition;
 import com.kuka.roboticsAPI.deviceModel.LBR;
@@ -36,11 +35,12 @@ import static com.kuka.roboticsAPI.motionModel.BasicMotions.ptp;
 import java.util.ArrayList;
 import java.util.List;
 
+// Java net
+import java.net.Socket;
+
 // KUKA Robotics API
 
-
-
-public class LBR_commander extends Node{
+public class LBR_commander extends Node {
 	
 	// Robot Specific
 	LBR lbr;
@@ -71,14 +71,18 @@ public class LBR_commander extends Node{
 	// Startup
 	boolean startup = true;
 
-	
-	public LBR_commander(int port,LBR robot, String ConnectionType, AbstractFrame drivepos) {
+	// ROS IP Address
+	private String rosIpAddress;
+
+	// Updated constructor accepting the ROS IP
+	public LBR_commander(int port, LBR robot, String ConnectionType, AbstractFrame drivepos, String rosIpAddress) {
 		super(port, ConnectionType, "LBR commander");
 		
 		this.lbr = robot;
 		this.drivePos = drivepos;
+		this.rosIpAddress = rosIpAddress;
 		
-		jointCount=lbr.getJointCount();
+		jointCount = lbr.getJointCount();
 		poses = new double[jointCount];
 		velocities = new double[jointCount];
 		accelerations = new double[jointCount];
@@ -87,10 +91,9 @@ public class LBR_commander extends Node{
 			LogUtil.logInfo("Starting thread to connect LBR command node....");
 			Thread monitorLBRCommandConnections = new MonitorLBRCommandConnectionsThread();
 			monitorLBRCommandConnections.start();
-			}else {
-				setisLBRConnected(true);
-			}
-
+		} else {
+			setisLBRConnected(true);
+		}
 	}
 	
 	@Override
@@ -258,6 +261,17 @@ public class LBR_commander extends Node{
 	    }
 	}
 
+	private void createSocketConnection() {
+		try {
+			// Log the connection parameters for diagnostic purposes.
+			LogUtil.logInfo("Attempting connection to ROS at " + rosIpAddress + " on port: " + port);
+			socket = new SocketAdapter(new Socket(rosIpAddress, port));
+			// ...existing code to initialize I/O ports...
+		} catch (Exception e) {
+			LogUtil.logInfo("Error creating I/O ports for TCP communication for LBR commander on port: " + port + " Error: " + e);
+		}
+	}
+
 	public class MonitorEmergencyStopThread extends Thread {
 		public void run(){
 			while(isNodeRunning()) {
@@ -282,7 +296,7 @@ public class LBR_commander extends Node{
 				if(getisKMPConnected()) {
 					timeout = connection_timeout;
 				}
-				createSocket();
+				createSocketConnection();
 				if (isSocketConnected()){
 					setisLBRConnected(true);
 					break;

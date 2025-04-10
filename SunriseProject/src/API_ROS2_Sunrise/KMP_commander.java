@@ -13,9 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
 package API_ROS2_Sunrise;
-
 
 import API_ROS2_Sunrise.KMPjogger;
 
@@ -24,19 +22,17 @@ import com.kuka.roboticsAPI.deviceModel.kmp.KmpOmniMove;
 import com.kuka.roboticsAPI.executionModel.ICommandContainer;
 import com.kuka.roboticsAPI.motionModel.kmp.MobilePlatformRelativeMotion;
 
-
-public class KMP_commander extends Node{
-
+public class KMP_commander extends Node {
 
 	// Robot
 	KmpOmniMove kmp;
-	
+
 	// Motion variables: KMP
 	ICommandContainer KMP_currentMotion;
-	double[] velocities = {0.0,0.0,0.0};
+	double[] velocities = {0.0, 0.0, 0.0};
 	KMPjogger kmp_jogger;
-	long jogging_period  = 1L;
-	
+	long jogging_period = 1L;
+
 	// Implemented node classes
 	LBR_sensor_reader lbr_sensor_reader;
 	LBR_status_reader lbr_status_reader;
@@ -47,17 +43,20 @@ public class KMP_commander extends Node{
 	// Startup
 	boolean startup = true;
 
-	public KMP_commander(int port, KmpOmniMove robot, String ConnectionType) {
-		super(port,ConnectionType, "KMP commander");
+	private String rosIpAddress;
+
+	// Updated constructor accepting the ROS IP
+	public KMP_commander(int port, KmpOmniMove robot, String connectionType, String rosIpAddress) {
+		super(port, connectionType, "KMP commander");
 		this.kmp = robot;
-		this.kmp_jogger = new KMPjogger((ICartesianJoggingSupport)kmp, jogging_period);
-		
-		
+		this.kmp_jogger = new KMPjogger((ICartesianJoggingSupport) kmp, jogging_period);
+		this.rosIpAddress = rosIpAddress;
+
 		if (!(isSocketConnected())) {
 			Thread monitorKMPCommandConnections = new MonitorKMPCommandConnectionsThread();
 			monitorKMPCommandConnections.start();
-			}else {
-				setisKMPConnected(true);
+		} else {
+			setisKMPConnected(true);
 		}
 	}
 
@@ -252,6 +251,16 @@ public class KMP_commander extends Node{
 	    }
 	}
 	
+	private void createSocketConnection() {
+		try {
+			LogUtil.logInfo("Attempting connection to ROS at " + rosIpAddress + ":" + getPort());
+			socket = new TCPSocket(getPort(), node_name);
+			LogUtil.logInfo("Created TCP socket for " + node_name);
+		} catch (Exception e) {
+			LogUtil.logInfo("Error creating TCP socket for " + node_name + " on port: " + getPort() + " Error: " + e);
+		}
+	}
+
 	public class MonitorKMPCommandConnectionsThread extends Thread {
 		int timeout = 3000;
 		public void run(){
@@ -259,7 +268,7 @@ public class KMP_commander extends Node{
 				if(getisLBRConnected()) {
 					timeout = 5000;
 				}
-				createSocket();
+				createSocketConnection();
 				if (isSocketConnected()){
 					setisKMPConnected(true);
 					break;
