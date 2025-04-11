@@ -22,12 +22,11 @@ import java.util.logging.Logger;
 import API_ROS2_Sunrise.DataController;
 import com.kuka.nav.fdi.FDIConnection;
 
-public class KMP_sensor_reader extends Node{
+public class KMP_sensor_reader extends Node {
 	// Logger instance
 	private static final Logger logger = Logger.getLogger(KMP_sensor_reader.class.getName());
 
 	// Data retrieval socket via FDI 
-    // Data retrieval socket via FDI 
     public FDIConnection fdi;
 	public DataController listener;
 	String FDI_IP = "172.31.1.102";
@@ -36,7 +35,9 @@ public class KMP_sensor_reader extends Node{
 	// Laser ports on controller
 	private static int laser_B1 = 1801;
 	private static int laser_B4 = 1802;
-	
+
+	// Ensure UDP buffering is appropriate for sensor data rate
+    private static final int UDP_BUFFER_SIZE = 65535; // Larger buffer for sensor data
 	
 	public KMP_sensor_reader(int laserport, int odomport, String LaserConnectionType, String OdometryConnectionType) {
 		super(laserport, LaserConnectionType, odomport, OdometryConnectionType, "KMP sensor reader");
@@ -241,5 +242,17 @@ public class KMP_sensor_reader extends Node{
 	public boolean isSocketConnected()  {
 		return (isOdometrySocketConnected() || isLaserSocketConnected()); 
 	}
+
+	public void createSocket(String Type) {
+        if (Type == "Laser") {
+            if (laser_socket != null && laser_socket instanceof UDPSocket) {
+                ((UDPSocket)laser_socket).setReceiveBufferSize(UDP_BUFFER_SIZE);
+            }
+        } else if (Type == "Odom") {
+            if (odometry_socket != null && odometry_socket instanceof UDPSocket) {
+                ((UDPSocket)odometry_socket).setReceiveBufferSize(UDP_BUFFER_SIZE);
+            }
+        }
+    }
 	
 }

@@ -127,6 +127,14 @@ public class KMRiiwaSunriseApplication extends RoboticsAPIApplication {
 	    kmp_commander = new KMP_commander(KMP_command_port, kmp, TCPConnection);
 	    lbr_commander = new LBR_commander(LBR_command_port, lbr, TCPConnection, getApplicationData().getFrame("/DrivePos"));
 	    
+	    // Start heartbeat threads immediately after socket creation
+	    if (kmp_commander != null && kmp_commander.isSocketConnected()) {
+	        kmp_commander.getSocket().startHeartbeatThread();
+	    }
+	    if (lbr_commander != null && lbr_commander.isSocketConnected()) {
+	        lbr_commander.getSocket().startHeartbeatThread(); 
+	    }
+	    
 	    // Initialize DataControllers with proper null checks
 	    try {
 	        if (kmp_commander != null && kmp_commander.isSocketConnected() && kmp_commander.getSocket() != null) {
@@ -162,10 +170,30 @@ public class KMRiiwaSunriseApplication extends RoboticsAPIApplication {
 	    }
 	    // Establish remaining nodes if AppRunning...
 	    if(AppRunning) {
+	        // Critical control and status data uses TCP for reliability
 	        kmp_status_reader = new KMP_status_reader(KMP_status_port, kmp, TCPConnection);
 	        lbr_status_reader = new LBR_status_reader(LBR_status_port, lbr, TCPConnection);
-	        lbr_sensor_reader = new LBR_sensor_reader(LBR_sensor_port, lbr, TCPConnection);
-	        kmp_sensor_reader = new KMP_sensor_reader(KMP_laser_port, KMP_odometry_port, TCPConnection, TCPConnection);
+	        
+	        // High-frequency sensor data uses UDP for better performance
+	        lbr_sensor_reader = new LBR_sensor_reader(LBR_sensor_port, lbr, UDPConnection);
+	        
+	        // KMP sensor data uses separate UDP connections for laser and odometry
+	        // to prevent blocking and allow independent packet handling
+	        kmp_sensor_reader = new KMP_sensor_reader(
+	            KMP_laser_port, 
+	            KMP_odometry_port, 
+	            UDPConnection,  // Laser scanner data 
+	            UDPConnection   // Odometry data
+	        );
+	        
+	        // Configure UDP buffer sizes for sensor nodes
+	        if (lbr_sensor_reader != null && lbr_sensor_reader.getSocket() != null) {
+	            ((UDPSocket)lbr_sensor_reader.getSocket()).setReceiveBufferSize(65535);
+	        }
+	        
+	        System.out.println("Network configuration:");
+	        System.out.println("- TCP: Commands, Status (reliable delivery)");
+	        System.out.println("- UDP: Sensors, Laser, Odometry (optimized for speed)");
 	    }
 	}
 	
@@ -204,6 +232,14 @@ public class KMRiiwaSunriseApplication extends RoboticsAPIApplication {
 	    }
 	    if (lbr_sensor_reader != null) { 
 	        lbr_sensor_reader.setShutdown(true);
+	    }
+	    
+	    // Stop heartbeat threads before closing sockets
+	    if (kmp_commander != null && kmp_commander.getSocket() != null) {
+	        kmp_commander.getSocket().stopHeartbeatThread();
+	    }
+	    if (lbr_commander != null && lbr_commander.getSocket() != null) {
+	        lbr_commander.getSocket().stopHeartbeatThread();
 	    }
 	    
 	    // Add before closing nodes
