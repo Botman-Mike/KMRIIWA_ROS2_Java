@@ -263,4 +263,15 @@ public class UDPSocket implements ISocket {
             heartbeatThread = null;
         }
     }
+
+    public void setReceiveBufferSize(int size) {
+        try {
+            if (udpConn != null && !udpConn.isClosed()) {
+                udpConn.setReceiveBufferSize(size);
+                System.out.println(nodename + " UDP receive buffer size set to: " + udpConn.getReceiveBufferSize());
+            }
+        } catch (Exception e) {
+            System.out.println(nodename + " Error setting UDP receive buffer size: " + e.getMessage());
+        }
+    }
 }

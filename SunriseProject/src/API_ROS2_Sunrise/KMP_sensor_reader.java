@@ -244,14 +244,11 @@ public class KMP_sensor_reader extends Node {
 	}
 
 	public void createSocket(String Type) {
-        if (Type == "Laser") {
-            if (laser_socket != null && laser_socket instanceof UDPSocket) {
-                ((UDPSocket)laser_socket).setReceiveBufferSize(UDP_BUFFER_SIZE);
-            }
-        } else if (Type == "Odom") {
-            if (odometry_socket != null && odometry_socket instanceof UDPSocket) {
-                ((UDPSocket)odometry_socket).setReceiveBufferSize(UDP_BUFFER_SIZE);
-            }
+        super.createSocket(Type);
+        if (Type == "Laser" && laser_socket instanceof UDPSocket) {
+            ((UDPSocket)laser_socket).setReceiveBufferSize(UDP_BUFFER_SIZE);
+        } else if (Type == "Odom" && odometry_socket instanceof UDPSocket) {
+            ((UDPSocket)odometry_socket).setReceiveBufferSize(UDP_BUFFER_SIZE);
         }
     }
 	
