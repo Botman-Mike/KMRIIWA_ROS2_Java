@@ -13,9 +13,12 @@ import java.net.SocketTimeoutException;
 import API_ROS2_Sunrise.ISocket;
 
 
-public class UDPSocket implements ISocket{
+public class UDPSocket implements ISocket {
 	
 	public volatile boolean isConnected;
+	private volatile boolean isHeartbeatRunning = true;
+	private volatile boolean heartbeatRunning = false;
+	private Thread heartbeatThread;
 	DatagramSocket udpConn;
 	DatagramPacket package_out;
 	DatagramPacket package_in;
@@ -24,6 +27,8 @@ public class UDPSocket implements ISocket{
     static BindException b;
     String nodename;
     private boolean running;
+    private long lastHeartbeat = System.currentTimeMillis();
+    private static final long HEARTBEAT_TIMEOUT = 5000; // 5 second timeout
 
 	
 	public UDPSocket(int port, String node_name) {
@@ -144,6 +149,10 @@ public class UDPSocket implements ISocket{
 	        udpConn.receive(packet);
 	        
 	        String message = new String(packet.getData(), 0, packet.getLength());
+	        if (message != null && message.trim().equals("heartbeat")) {
+	            updateLastHeartbeat();
+	            return null; // Skip heartbeat messages
+	        }
 	        return message;
 	    } catch (SocketTimeoutException e) {
 	        // Timeout is normal, just return null
@@ -159,6 +168,8 @@ public class UDPSocket implements ISocket{
 	
     @Override
 	public void close() {
+	    stopHeartbeatThread();
+	    isHeartbeatRunning = false;
 	    System.out.println(nodename + " UDP connection closing");
 	    running = false;
 	    
@@ -189,11 +200,67 @@ public class UDPSocket implements ISocket{
 	        
 	        // Additional check: try a non-destructive socket operation
 	        udpConn.getReceiveBufferSize(); // This will throw if socket is invalid
-	        return true;
+	        return (System.currentTimeMillis() - lastHeartbeat) < HEARTBEAT_TIMEOUT;
 	    } catch (Exception e) {
 	        System.out.println(nodename + " UDP Socket check exception: " + e.getMessage());
 	        return false;
 	    }
 	}
 
+    @Override
+    public long getLastHeartbeat() {
+        return lastHeartbeat;
+    }
+    
+    @Override
+    public void updateLastHeartbeat() {
+        lastHeartbeat = System.currentTimeMillis();
+    }
+
+    @Override
+    public void sendHeartbeat() {
+        if (!isConnected || udpConn == null) {
+            return;
+        }
+        try {
+            byte[] buffer = "heartbeat".getBytes(UTF8_CHARSET);
+            package_out.setData(buffer);
+            package_out.setLength(buffer.length);
+            udpConn.send(package_out);
+        } catch (Exception e) {
+            System.out.println(nodename + " UDP heartbeat error: " + e.getMessage());
+        }
+    }
+
+    @Override
+    public void startHeartbeatThread() {
+        if (heartbeatThread != null && heartbeatThread.isAlive()) {
+            return;
+        }
+        
+        heartbeatRunning = true;
+        heartbeatThread = new Thread(new Runnable() {
+            public void run() {
+                while (heartbeatRunning && !Thread.currentThread().isInterrupted()) {
+                    try {
+                        sendHeartbeat();
+                        Thread.sleep(5000);
+                    } catch (InterruptedException e) {
+                        Thread.currentThread().interrupt();
+                        break;
+                    }
+                }
+            }
+        }, nodename + "-heartbeat");
+        heartbeatThread.setDaemon(true);
+        heartbeatThread.start();
+    }
+
+    public void stopHeartbeatThread() {
+        heartbeatRunning = false;
+        if (heartbeatThread != null) {
+            heartbeatThread.interrupt();
+            heartbeatThread = null;
+        }
+    }
 }

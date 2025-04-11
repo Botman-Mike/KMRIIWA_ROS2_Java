@@ -13,7 +13,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
 package API_ROS2_Sunrise;
 
 // Configuration
@@ -21,32 +20,19 @@ import javax.inject.Inject;
 import javax.inject.Named;
 import org.apache.log4j.BasicConfigurator;
 
-// Implementated classes
-// import API_ROS2_Sunrise.KMP_commander;
-// import API_ROS2_Sunrise.KMP_sensor_reader;
-// import API_ROS2_Sunrise.KMP_status_reader;
-// import API_ROS2_Sunrise.LBR_commander;
-// import API_ROS2_Sunrise.LBR_sensor_reader;
-// import API_ROS2_Sunrise.LBR_status_reader;
-// import API_ROS2_Sunrise.SafetyStateListener;
-
 //RoboticsAPI
 import com.kuka.roboticsAPI.annotations.*;
 import com.kuka.roboticsAPI.applicationModel.RoboticsAPIApplication;
 import com.kuka.roboticsAPI.controllerModel.Controller;
 import com.kuka.roboticsAPI.deviceModel.kmp.KmpOmniMove;
 import com.kuka.roboticsAPI.deviceModel.LBR;
-// import com.kuka.roboticsAPI.deviceModel.OperationMode;
 import static com.kuka.roboticsAPI.motionModel.BasicMotions.ptp;
-
 
 import com.kuka.generated.ioAccess.ControlPanelIOGroup;
 import com.kuka.task.ITaskManager;
-// import com.kuka.task.RoboticsAPITask;
 
-// AUT MODE: 3s, T1/T2/CRR: 2s
 @ResumeAfterPauseEvent(delay = 0 ,  afterRepositioning = true)
-public class KMRiiwaSunriseApplication extends RoboticsAPIApplication{
+public class KMRiiwaSunriseApplication extends RoboticsAPIApplication {
 	
 	// Runtime Variables
 	private volatile boolean AppRunning;
@@ -60,20 +46,13 @@ public class KMRiiwaSunriseApplication extends RoboticsAPIApplication{
 	public KmpOmniMove kmp;
 	public Controller controller;
 
-	
 	// Declare LBR
 	@Inject
 	@Named("LBR_iiwa_14_R820_1")
 	public LBR lbr;
 
-//	@Inject
-//	@Named("TaskManager")
 	private ITaskManager taskManager;
 
-	//@Inject
-	//@Named("name of tool")
-	//public Tool tool;
-	
 	// Define UDP ports
 	int KMP_status_port = 30001;
 	int KMP_command_port = 30002;
@@ -113,6 +92,10 @@ public class KMRiiwaSunriseApplication extends RoboticsAPIApplication{
 	private final Object shutdownLock = new Object();
 	private volatile boolean isShuttingDown = false;
 
+	// Add these declarations after other class variables
+	private DataController kmpDataController;
+	private DataController lbrDataController;
+
 	@Override
 	public void initialize() {
 	    try {
@@ -143,6 +126,21 @@ public class KMRiiwaSunriseApplication extends RoboticsAPIApplication{
 	    // Create nodes for communication
 	    kmp_commander = new KMP_commander(KMP_command_port, kmp, TCPConnection);
 	    lbr_commander = new LBR_commander(LBR_command_port, lbr, TCPConnection, getApplicationData().getFrame("/DrivePos"));
+	    
+	    // Initialize DataControllers with proper null checks
+	    try {
+	        if (kmp_commander != null && kmp_commander.isSocketConnected() && kmp_commander.getSocket() != null) {
+	            kmpDataController = new DataController(kmp_commander.getSocket(), null);
+	            kmp_commander.setDataController(kmpDataController);
+	        }
+	        
+	        if (lbr_commander != null && lbr_commander.isSocketConnected() && lbr_commander.getSocket() != null) {
+	            lbrDataController = new DataController(lbr_commander.getSocket(), null);
+	            lbr_commander.setDataController(lbrDataController);
+	        }
+	    } catch (Exception e) {
+	        System.out.println("Error initializing DataControllers: " + e.getMessage());
+	    }
 	    
 	    // SafetyStateListener
 	    safetylistener = new SafetyStateListener(controller, lbr_commander, kmp_commander, lbr_status_reader, kmp_status_reader);
@@ -206,6 +204,25 @@ public class KMRiiwaSunriseApplication extends RoboticsAPIApplication{
 	    }
 	    if (lbr_sensor_reader != null) { 
 	        lbr_sensor_reader.setShutdown(true);
+	    }
+	    
+	    // Add before closing nodes
+	    if (kmpDataController != null) {
+	        try {
+	            // Cleanup DataController resources if needed
+	            System.out.println("Closing KMP DataController");
+	        } catch (Exception e) {
+	            System.out.println("Error closing KMP DataController: " + e.getMessage());
+	        }
+	    }
+	    
+	    if (lbrDataController != null) {
+	        try {
+	            // Cleanup DataController resources if needed
+	            System.out.println("Closing LBR DataController");
+	        } catch (Exception e) {
+	            System.out.println("Error closing LBR DataController: " + e.getMessage());
+	        }
 	    }
 	    
 	    // 3. Stop any ongoing motions (using your available API – for instance, cancelMotion())
@@ -348,7 +365,6 @@ public class KMRiiwaSunriseApplication extends RoboticsAPIApplication{
 	    // Initialize mode monitoring variables
 	    String lastMode = lbr.getOperationMode().toString();
 	    long lastLogTime = System.currentTimeMillis();
-//	    boolean wasPaused = false;
 	    
 	    // Check if the commanders are still alive periodically
 	    long lastCommanderCheckTime = System.currentTimeMillis();
@@ -401,77 +417,9 @@ public class KMRiiwaSunriseApplication extends RoboticsAPIApplication{
 	            System.out.println("LBR commander shutdown: " + (lbr_commander != null ? lbr_commander.getShutdown() : "null"));
 	            System.out.println("KMP commander shutdown: " + (kmp_commander != null ? kmp_commander.getShutdown() : "null"));
 	            
-	            // NEW DIAGNOSTIC CODE
-	            System.out.println("DIAGNOSTIC: Tracking shutdown source");
-
-	            // Check controller states
-	            try {
-	                // Try to use controller methods to see if it's still valid
-	                Controller kmpController = kmp.getController();
-	                boolean kmpValid = true;
-	                try {
-	                    String name = kmpController.getName();
-	                    System.out.println("KMP controller appears valid (name: " + name + ")");
-	                } catch (Exception e) {
-	                    kmpValid = false;
-	                    System.out.println("KMP controller appears invalid: " + e.getMessage());
-	                }
-	                System.out.println("KMP controller state: " + (kmpValid ? "valid" : "invalid"));
-	            } catch (Exception e) {
-	                System.out.println("KMP controller check error: " + e.getMessage());
-	            }
-
-	            try {
-	                // Try to use controller methods to see if it's still valid  
-	                Controller lbrController = lbr.getController();
-	                boolean lbrValid = true;
-	                try {
-	                    String name = lbrController.getName();
-	                    System.out.println("LBR controller appears valid (name: " + name + ")");
-	                } catch (Exception e) {
-	                    lbrValid = false;
-	                    System.out.println("LBR controller appears invalid: " + e.getMessage());
-	                }
-	                System.out.println("LBR controller state: " + (lbrValid ? "valid" : "invalid"));
-	            } catch (Exception e) {
-	                System.out.println("LBR controller check error: " + e.getMessage());
-	            }
-	            // End DIAGNOSTIC CODE
-
 	            AppRunning = false;
 	            break;
 	        }
-	        
-	        // 3. Check if the application is paused using StatusController
-	        // Commenting out StatusController pause detection to avoid errors
-	        /*
-	        boolean isPaused = false;
-	        try {
-	            // Use the StatusController to check application state
-	            if (statusController != null) {
-	                String currentStatus = statusController.getStatusString("APPLICATION_STATE");
-	                isPaused = currentStatus != null && 
-	                          (currentStatus.contains("PAUSED") || 
-	                           currentStatus.contains("Motion paused") ||
-	                           currentStatus.contains("STOPPED"));
-	                
-	                if (isPaused != wasPaused) {
-	                    System.out.println("Application pause state changed to: " + (isPaused ? "PAUSED" : "RUNNING"));
-	                    System.out.println("Current status: " + currentStatus);
-	                    
-	                    // If we're paused by the user, be prepared to respond when they resume
-	                    if (isPaused) {
-	                        System.out.println("Application paused - waiting for resume button");
-	                    }
-	                }
-	                wasPaused = isPaused;
-	            } else {
-	                System.out.println("StatusController is null, cannot check application state");
-	            }
-	        } catch (Exception e) {
-	            System.out.println("Error checking pause state with StatusController: " + e.getMessage());
-	        }
-	        */
 	        
 	        // 4. Check for operation mode changes (with reduced logging)
 	        String currentMode = lbr.getOperationMode().toString();

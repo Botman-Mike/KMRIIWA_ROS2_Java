@@ -9,7 +9,7 @@
 //
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// WITHOUT WARRANTIES OR CONDITIONS OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
 package API_ROS2_Sunrise;
@@ -50,6 +50,8 @@ public abstract class Node extends Thread {
 	private long lastConnectionCheckTime = 0;
 	private boolean lastKnownConnectionState = false;
 	private int connectionFailCount = 0;
+
+	protected DataController dataController;
 	
 	public Node(int port1, String Conn1, int port2, String Conn2, String node_name) {
 		if (node_name == null) {
@@ -288,5 +290,13 @@ public abstract class Node extends Thread {
 	            System.out.println(node_name + ": Exception during socket reconnection: " + e.getMessage());
 	        }
 	    }
+	}
+
+	public ISocket getSocket() {
+	    return this.socket;
+	}
+	
+	public void setDataController(DataController controller) {
+	    this.dataController = controller;
 	}
 }

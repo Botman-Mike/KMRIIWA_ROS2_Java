@@ -34,6 +34,11 @@ public class TCPSocket implements ISocket{
 	String nodename;
 	private boolean running = true;
 	private ServerSocket serverSocket;
+	private long lastHeartbeat = System.currentTimeMillis();
+	private static final long HEARTBEAT_TIMEOUT = 5000; // 5 second timeout
+	private volatile boolean isHeartbeatRunning = true;
+	private volatile boolean heartbeatRunning = false;
+	private Thread heartbeatThread;
 	
 	public TCPSocket(int port, String node_name) {
 		isConnected = false;
@@ -104,7 +109,7 @@ public class TCPSocket implements ISocket{
 	            return false;
 	        }
 	        
-	        return true;
+	        return (System.currentTimeMillis() - lastHeartbeat) < HEARTBEAT_TIMEOUT;
 	    } catch (Exception e) {
 	        System.out.println(nodename + " TCP Socket check exception: " + e.getMessage());
 	        return false;
@@ -133,6 +138,10 @@ public class TCPSocket implements ISocket{
 	        
 	        BufferedReader reader = new BufferedReader(new InputStreamReader(TCPConn.getInputStream()));
 	        String message = reader.readLine();
+	        if (message != null && message.trim().equals("heartbeat")) {
+	            updateLastHeartbeat();
+	            return null; // Skip heartbeat messages
+	        }
 	        return message;
 	    } catch (SocketTimeoutException e) {
 	        // Timeout is normal, just return null
@@ -162,6 +171,8 @@ public class TCPSocket implements ISocket{
 
 	@Override
 	public void close() {
+	    stopHeartbeatThread();
+	    isHeartbeatRunning = false;
 	    System.out.println(nodename + " TCP connection closing");
 	    running = false;
 	    
@@ -184,6 +195,52 @@ public class TCPSocket implements ISocket{
 	    }
 	}
 	
+	@Override
+	public void sendHeartbeat() {
+	    if (!isConnected || outputStream == null) {
+	        return;
+	    }
+	    String heartbeatMsg = "heartbeat";
+	    String formattedMsg = String.format("%010d", heartbeatMsg.length()) + " " + heartbeatMsg;
+	    try {
+	        outputStream.write(formattedMsg);
+	        outputStream.flush();
+	    } catch (Exception e) {
+	        System.out.println(nodename + " TCP heartbeat error: " + e.getMessage());
+	    }
+	}
+
+	@Override
+	public void startHeartbeatThread() {
+	    if (heartbeatThread != null && heartbeatThread.isAlive()) {
+	        return;
+	    }
+	    
+	    heartbeatRunning = true;
+	    heartbeatThread = new Thread(new Runnable() {
+	        public void run() {
+	            while (heartbeatRunning && !Thread.currentThread().isInterrupted()) {
+	                try {
+	                    sendHeartbeat();
+	                    Thread.sleep(5000);
+	                } catch (InterruptedException e) {
+	                    Thread.currentThread().interrupt();
+	                    break;
+	                }
+	            }
+	        }
+	    }, nodename + "-heartbeat");
+	    heartbeatThread.setDaemon(true);
+	    heartbeatThread.start();
+	}
+
+	public void stopHeartbeatThread() {
+	    heartbeatRunning = false;
+	    if (heartbeatThread != null) {
+	        heartbeatThread.interrupt();
+	        heartbeatThread = null;
+	    }
+	}
 
 	public String decode(byte[] data) {
 		String message = new String(data,0,data.length, UTF8_CHARSET);
@@ -193,6 +250,16 @@ public class TCPSocket implements ISocket{
 	@Override
 	public byte[] encode(String string) {
 		return string.getBytes(UTF8_CHARSET);
+	}
+	
+	@Override 
+	public long getLastHeartbeat() {
+	    return lastHeartbeat;
+	}
+	
+	@Override
+	public void updateLastHeartbeat() {
+	    lastHeartbeat = System.currentTimeMillis(); 
 	}
 
 }
