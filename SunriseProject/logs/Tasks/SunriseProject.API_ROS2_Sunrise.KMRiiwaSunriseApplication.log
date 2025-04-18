@@ -1,0 +1,311 @@
+2025-04-18 17:04:14,745 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP commander socket: CONNECTED
+2025-04-18 17:04:14,745 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR commander socket: CONNECTED
+2025-04-18 17:04:19,842 INFO  [..KMRiiwaSunriseApplication@SunriseProject] === Socket Connection Status ===
+2025-04-18 17:04:19,843 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP commander socket: CONNECTED
+2025-04-18 17:04:19,843 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR commander socket: CONNECTED
+2025-04-18 17:04:24,972 INFO  [..KMRiiwaSunriseApplication@SunriseProject] === Socket Connection Status ===
+2025-04-18 17:04:24,972 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP commander socket: CONNECTED
+2025-04-18 17:04:24,972 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR commander socket: CONNECTED
+2025-04-18 17:04:30,102 INFO  [..KMRiiwaSunriseApplication@SunriseProject] === Socket Connection Status ===
+2025-04-18 17:04:30,102 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP commander socket: CONNECTED
+2025-04-18 17:04:30,102 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR commander socket: DISCONNECTED
+2025-04-18 17:04:35,232 INFO  [..KMRiiwaSunriseApplication@SunriseProject] === Socket Connection Status ===
+2025-04-18 17:04:35,232 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP commander socket: CONNECTED
+2025-04-18 17:04:35,232 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR commander socket: CONNECTED
+2025-04-18 17:04:40,366 INFO  [..KMRiiwaSunriseApplication@SunriseProject] === Socket Connection Status ===
+2025-04-18 17:04:40,366 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP commander socket: CONNECTED
+2025-04-18 17:04:40,366 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR commander socket: CONNECTED
+2025-04-18 17:04:45,400 INFO  [..KMRiiwaSunriseApplication@SunriseProject] === Socket Connection Status ===
+2025-04-18 17:04:45,401 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP commander socket: CONNECTED
+2025-04-18 17:04:45,401 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR commander socket: CONNECTED
+2025-04-18 17:04:47,992 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Current operating mode: AUT
+2025-04-18 17:04:50,521 INFO  [..KMRiiwaSunriseApplication@SunriseProject] === Socket Connection Status ===
+2025-04-18 17:04:50,521 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP commander socket: CONNECTED
+2025-04-18 17:04:50,521 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR commander socket: CONNECTED
+2025-04-18 17:04:55,526 INFO  [..KMRiiwaSunriseApplication@SunriseProject] === Socket Connection Status ===
+2025-04-18 17:04:55,526 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP commander socket: CONNECTED
+2025-04-18 17:04:55,526 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR commander socket: CONNECTED
+2025-04-18 17:05:00,623 INFO  [..KMRiiwaSunriseApplication@SunriseProject] === Socket Connection Status ===
+2025-04-18 17:05:00,623 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP commander socket: CONNECTED
+2025-04-18 17:05:00,623 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR commander socket: CONNECTED
+2025-04-18 17:05:05,704 INFO  [..KMRiiwaSunriseApplication@SunriseProject] === Socket Connection Status ===
+2025-04-18 17:05:05,704 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP commander socket: CONNECTED
+2025-04-18 17:05:05,704 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR commander socket: CONNECTED
+2025-04-18 17:05:10,786 INFO  [..KMRiiwaSunriseApplication@SunriseProject] === Socket Connection Status ===
+2025-04-18 17:05:10,786 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP commander socket: CONNECTED
+2025-04-18 17:05:10,786 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR commander socket: CONNECTED
+2025-04-18 17:05:15,856 INFO  [..KMRiiwaSunriseApplication@SunriseProject] === Socket Connection Status ===
+2025-04-18 17:05:15,856 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP commander socket: CONNECTED
+2025-04-18 17:05:15,856 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR commander socket: CONNECTED
+2025-04-18 17:05:17,797 DEBUG [..KMRiiwaSunriseApplication@SunriseProject] Task instance "1@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to DISPOSING.
+2025-04-18 17:05:18,095 DEBUG [..KMRiiwaSunriseApplication@SunriseProject] Task instance "1@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to STOPPING.
+2025-04-18 17:05:18,096 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Shutdown message received in main application
+2025-04-18 17:05:18,096 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP commander shutdown: false
+2025-04-18 17:05:18,096 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR commander shutdown: false
+2025-04-18 17:05:18,096 INFO  [..KMRiiwaSunriseApplication@SunriseProject] ----- Shutting down Application -----
+2025-04-18 17:05:18,098 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Closed KMP DataController
+2025-04-18 17:05:18,098 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Closed LBR DataController
+2025-04-18 17:05:18,098 INFO  [..KMRiiwaSunriseApplication@SunriseProject] INFO: KMPjogger: Stopping jogging execution, isMoving=false
+2025-04-18 17:05:18,098 INFO  [..KMRiiwaSunriseApplication@SunriseProject] INFO: KMPjogger: Executor was already null
+2025-04-18 17:05:18,098 INFO  [..KMRiiwaSunriseApplication@SunriseProject] INFO: KMPjogger: Device was not moving, no need to stop
+2025-04-18 17:05:18,098 INFO  [..KMRiiwaSunriseApplication@SunriseProject] INFO: KMPjogger: Jogger stopped without triggering commander shutdown
+2025-04-18 17:05:18,099 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Interrupting LBR status thread
+2025-04-18 17:05:18,099 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Interrupting KMP sensor thread
+2025-04-18 17:05:18,099 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Interrupting LBR sensor thread
+2025-04-18 17:05:18,099 INFO  [..KMRiiwaSunriseApplication@SunriseProject] INFO: KMPjogger: Stopping jogging execution, isMoving=false
+2025-04-18 17:05:18,099 INFO  [..KMRiiwaSunriseApplication@SunriseProject] INFO: KMPjogger: Executor was already null
+2025-04-18 17:05:18,099 INFO  [..KMRiiwaSunriseApplication@SunriseProject] INFO: KMPjogger: Device was not moving, no need to stop
+2025-04-18 17:05:18,099 INFO  [..KMRiiwaSunriseApplication@SunriseProject] INFO: KMPjogger: Jogger stopped without triggering commander shutdown
+2025-04-18 17:05:18,100 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR sensor reader closed.
+2025-04-18 17:05:18,100 WARN  [..KMRiiwaSunriseApplication@SunriseProject] Interrupted while waiting for LBR status thread
+2025-04-18 17:05:18,100 INFO  [..                              Thread-178] LBR sensor reader thread interrupted.
+2025-04-18 17:05:18,100 INFO  [..                              Thread-178] LBR sensor reader closed.
+2025-04-18 17:05:18,101 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Application terminated
+2025-04-18 17:05:18,106 DEBUG [..KMRiiwaSunriseApplication@SunriseProject] Task instance "1@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to STOPPED.
+2025-04-18 17:16:20,915 DEBUG [..executor for Service: AppServer-thread-1] Task instance "2@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to CREATING.
+2025-04-18 17:16:21,111 DEBUG [..KMRiiwaSunriseApplication@SunriseProject] Task instance "2@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to INITIALIZING.
+2025-04-18 17:16:21,112 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Task manager initialized: com.kuka.task.osgi.TaskManagerComponent@d4c222
+2025-04-18 17:16:21,112 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Initializing Robotics API Application
+2025-04-18 17:16:21,511 INFO  [..KMRiiwaSunriseApplication@SunriseProject] INFO: KMPjogger: Created jogger for KmpOmniMove with default period 50ms
+2025-04-18 17:16:21,514 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Application ready to run!
+2025-04-18 17:16:21,521 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR sensor socket initialized
+2025-04-18 17:16:21,521 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Network configuration:
+2025-04-18 17:16:21,521 INFO  [..KMRiiwaSunriseApplication@SunriseProject] - TCP: Commands, Status (reliable delivery)
+2025-04-18 17:16:21,521 INFO  [..KMRiiwaSunriseApplication@SunriseProject] - UDP: Sensors, Laser, Odometry (optimized for speed)
+2025-04-18 17:16:21,521 DEBUG [..KMRiiwaSunriseApplication@SunriseProject] Task instance "2@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to RUNNING.
+2025-04-18 17:16:21,539 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Running app!
+2025-04-18 17:16:21,540 INFO  [..KMRiiwaSunriseApplication@SunriseProject] State change.
+2025-04-18 17:16:21,701 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Shutdown message received in main application
+2025-04-18 17:16:21,701 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP commander shutdown: true
+2025-04-18 17:16:21,701 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR commander shutdown: true
+2025-04-18 17:16:21,701 INFO  [..KMRiiwaSunriseApplication@SunriseProject] ----- Shutting down Application -----
+2025-04-18 17:16:21,704 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Closed KMP DataController
+2025-04-18 17:16:21,704 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Closed LBR DataController
+2025-04-18 17:16:21,704 INFO  [..KMRiiwaSunriseApplication@SunriseProject] INFO: KMPjogger: Stopping jogging execution, isMoving=false
+2025-04-18 17:16:21,704 INFO  [..KMRiiwaSunriseApplication@SunriseProject] INFO: KMPjogger: Executor was already null
+2025-04-18 17:16:21,704 INFO  [..KMRiiwaSunriseApplication@SunriseProject] INFO: KMPjogger: Device was not moving, no need to stop
+2025-04-18 17:16:21,704 INFO  [..KMRiiwaSunriseApplication@SunriseProject] INFO: KMPjogger: Jogger stopped without triggering commander shutdown
+2025-04-18 17:16:21,704 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Interrupting LBR commander thread
+2025-04-18 17:16:21,704 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Interrupting KMP status thread
+2025-04-18 17:16:21,704 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Interrupting LBR status thread
+2025-04-18 17:16:21,704 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Interrupting KMP sensor thread
+2025-04-18 17:16:21,704 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Interrupting LBR sensor thread
+2025-04-18 17:16:21,710 INFO  [..                              Thread-205] LBR sensor reader thread interrupted.
+2025-04-18 17:16:21,710 INFO  [..                              Thread-205] LBR sensor reader closed.
+2025-04-18 17:16:21,714 ERROR [..                              Thread-202] Stopping task due to the following error:
+java.lang.IllegalStateException: Error during request GetCurrentConfigurationRequest: java.lang.InterruptedException
+	at com.kuka.roboticsAPI.controllerModel.RequestService.performDefaultHandling(RequestService.java:158)
+	at com.kuka.roboticsAPI.controllerModel.RequestService.performRequest(RequestService.java:122)
+	at com.kuka.roboticsAPI.controllerModel.sunrise.SunriseLBRBaseFlangeTrafoProvider.getPoseInformation(SunriseLBRBaseFlangeTrafoProvider.java:49)
+	at com.kuka.roboticsAPI.deviceModel.Robot.getCurrentJointPosition(Robot.java:254)
+	at API_ROS2_Sunrise.LBR_commander.run(LBR_commander.java:111)
+Caused by: com.kuka.common.ThreadInterruptedException: java.lang.InterruptedException
+	at com.kuka.common.ThreadInterruptedException.interruptAndThrow(ThreadInterruptedException.java:26)
+	at com.kuka.roboticsAPI.controllerModel.sunrise.api.SSR.await(SSR.java:203)
+	at com.kuka.roboticsAPI.controllerModel.sunrise.api.SSR.await(SSR.java:168)
+	at com.kuka.roboticsAPI.controllerModel.sunrise.SunriseRequestService.sendSynchronousSSR(SunriseRequestService.java:1076)
+	at com.kuka.roboticsAPI.controllerModel.sunrise.SunriseRequestService.getCurrentConfiguration(SunriseRequestService.java:481)
+	at com.kuka.roboticsAPI.controllerModel.sunrise.SunriseRequestService.onPerformRequest(SunriseRequestService.java:1252)
+	at com.kuka.roboticsAPI.controllerModel.RequestService.performDefaultHandling(RequestService.java:154)
+	... 4 more
+Caused by: java.lang.InterruptedException
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.tryAcquireSharedNanos(Unknown Source)
+	at java.util.concurrent.CountDownLatch.await(Unknown Source)
+	at com.kuka.roboticsAPI.controllerModel.sunrise.api.SSR.await(SSR.java:188)
+	... 9 more
+2025-04-18 17:16:21,715 DEBUG [..                              Thread-202] Task instance "2@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to DISPOSING.
+2025-04-18 17:16:21,863 DEBUG [..Executor for Pause State Events-thread-1] State of the task "class API_ROS2_Sunrise.KMRiiwaSunriseApplication" changed from "RUNNING" to "STOPPING".
+2025-04-18 17:16:21,908 INFO  [..KMRiiwaSunriseApplication@SunriseProject] INFO: KMPjogger: Stopping jogging execution, isMoving=false
+2025-04-18 17:16:21,908 INFO  [..KMRiiwaSunriseApplication@SunriseProject] INFO: KMPjogger: Executor was already null
+2025-04-18 17:16:21,908 INFO  [..KMRiiwaSunriseApplication@SunriseProject] INFO: KMPjogger: Device was not moving, no need to stop
+2025-04-18 17:16:21,908 INFO  [..KMRiiwaSunriseApplication@SunriseProject] INFO: KMPjogger: Jogger stopped without triggering commander shutdown
+2025-04-18 17:16:21,909 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR sensor reader closed.
+2025-04-18 17:16:21,909 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Application terminated
+2025-04-18 17:16:22,866 DEBUG [..KMRiiwaSunriseApplication@SunriseProject] Task instance "2@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to STOPPING.
+2025-04-18 17:16:22,870 DEBUG [..KMRiiwaSunriseApplication@SunriseProject] Task instance "2@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to ERROR.
+2025-04-18 17:17:39,024 DEBUG [..executor for Service: AppServer-thread-1] Task instance "3@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to CREATING.
+2025-04-18 17:17:39,221 DEBUG [..KMRiiwaSunriseApplication@SunriseProject] Task instance "3@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to INITIALIZING.
+2025-04-18 17:17:39,221 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Task manager initialized: com.kuka.task.osgi.TaskManagerComponent@d4c222
+2025-04-18 17:17:39,222 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Initializing Robotics API Application
+2025-04-18 17:17:39,628 INFO  [..KMRiiwaSunriseApplication@SunriseProject] INFO: KMPjogger: Created jogger for KmpOmniMove with default period 50ms
+2025-04-18 17:17:39,630 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Application ready to run!
+2025-04-18 17:17:39,637 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR sensor socket initialized
+2025-04-18 17:17:39,637 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Network configuration:
+2025-04-18 17:17:39,637 INFO  [..KMRiiwaSunriseApplication@SunriseProject] - TCP: Commands, Status (reliable delivery)
+2025-04-18 17:17:39,638 INFO  [..KMRiiwaSunriseApplication@SunriseProject] - UDP: Sensors, Laser, Odometry (optimized for speed)
+2025-04-18 17:17:39,638 DEBUG [..KMRiiwaSunriseApplication@SunriseProject] Task instance "3@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to RUNNING.
+2025-04-18 17:17:39,638 ERROR [..KMRiiwaSunriseApplication@SunriseProject] Error getting resume function: The instance providing task function com.kuka.roboticsAPI.annotations.IAutomaticResumeFunction is not running
+2025-04-18 17:17:39,638 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Running app!
+2025-04-18 17:17:39,639 INFO  [..KMRiiwaSunriseApplication@SunriseProject] State change.
+2025-04-18 17:17:39,748 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Shutdown message received in main application
+2025-04-18 17:17:39,749 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP commander shutdown: true
+2025-04-18 17:17:39,749 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR commander shutdown: true
+2025-04-18 17:17:39,749 INFO  [..KMRiiwaSunriseApplication@SunriseProject] ----- Shutting down Application -----
+2025-04-18 17:17:39,750 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Closed KMP DataController
+2025-04-18 17:17:39,750 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Closed LBR DataController
+2025-04-18 17:17:39,750 INFO  [..KMRiiwaSunriseApplication@SunriseProject] INFO: KMPjogger: Stopping jogging execution, isMoving=false
+2025-04-18 17:17:39,750 INFO  [..KMRiiwaSunriseApplication@SunriseProject] INFO: KMPjogger: Executor was already null
+2025-04-18 17:17:39,750 INFO  [..KMRiiwaSunriseApplication@SunriseProject] INFO: KMPjogger: Device was not moving, no need to stop
+2025-04-18 17:17:39,750 INFO  [..KMRiiwaSunriseApplication@SunriseProject] INFO: KMPjogger: Jogger stopped without triggering commander shutdown
+2025-04-18 17:17:39,750 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Interrupting KMP sensor thread
+2025-04-18 17:17:39,750 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Interrupting LBR sensor thread
+2025-04-18 17:17:39,751 INFO  [..                              Thread-236] LBR sensor reader thread interrupted.
+2025-04-18 17:17:39,751 INFO  [..                              Thread-236] LBR sensor reader closed.
+2025-04-18 17:17:39,961 INFO  [..KMRiiwaSunriseApplication@SunriseProject] INFO: KMPjogger: Stopping jogging execution, isMoving=false
+2025-04-18 17:17:39,961 INFO  [..KMRiiwaSunriseApplication@SunriseProject] INFO: KMPjogger: Executor was already null
+2025-04-18 17:17:39,961 INFO  [..KMRiiwaSunriseApplication@SunriseProject] INFO: KMPjogger: Device was not moving, no need to stop
+2025-04-18 17:17:39,961 INFO  [..KMRiiwaSunriseApplication@SunriseProject] INFO: KMPjogger: Jogger stopped without triggering commander shutdown
+2025-04-18 17:17:39,967 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR sensor reader closed.
+2025-04-18 17:17:39,967 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Application terminated
+2025-04-18 17:17:39,967 DEBUG [..KMRiiwaSunriseApplication@SunriseProject] Task instance "3@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to DISPOSING.
+2025-04-18 17:17:40,083 DEBUG [..Executor for Pause State Events-thread-1] State of the task "class API_ROS2_Sunrise.KMRiiwaSunriseApplication" changed from "RUNNING" to "STOPPING".
+2025-04-18 17:17:41,220 DEBUG [..KMRiiwaSunriseApplication@SunriseProject] Task instance "3@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to STOPPING.
+2025-04-18 17:17:41,224 DEBUG [..KMRiiwaSunriseApplication@SunriseProject] Task instance "3@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to STOPPED.
+2025-04-18 17:18:03,415 DEBUG [..executor for Service: AppServer-thread-1] Task instance "4@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to CREATING.
+2025-04-18 17:18:03,558 DEBUG [..KMRiiwaSunriseApplication@SunriseProject] Task instance "4@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to INITIALIZING.
+2025-04-18 17:18:03,572 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Task manager initialized: com.kuka.task.osgi.TaskManagerComponent@d4c222
+2025-04-18 17:18:03,572 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Initializing Robotics API Application
+2025-04-18 17:18:03,974 INFO  [..KMRiiwaSunriseApplication@SunriseProject] INFO: KMPjogger: Created jogger for KmpOmniMove with default period 50ms
+2025-04-18 17:18:03,976 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Application ready to run!
+2025-04-18 17:18:03,985 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR sensor socket initialized
+2025-04-18 17:18:03,985 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Network configuration:
+2025-04-18 17:18:03,985 INFO  [..KMRiiwaSunriseApplication@SunriseProject] - TCP: Commands, Status (reliable delivery)
+2025-04-18 17:18:03,985 INFO  [..KMRiiwaSunriseApplication@SunriseProject] - UDP: Sensors, Laser, Odometry (optimized for speed)
+2025-04-18 17:18:03,985 DEBUG [..KMRiiwaSunriseApplication@SunriseProject] Task instance "4@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to RUNNING.
+2025-04-18 17:18:03,989 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Running app!
+2025-04-18 17:18:03,990 INFO  [..KMRiiwaSunriseApplication@SunriseProject] State change.
+2025-04-18 17:18:04,093 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Shutdown message received in main application
+2025-04-18 17:18:04,093 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP commander shutdown: true
+2025-04-18 17:18:04,093 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR commander shutdown: true
+2025-04-18 17:18:04,093 INFO  [..KMRiiwaSunriseApplication@SunriseProject] ----- Shutting down Application -----
+2025-04-18 17:18:04,094 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Closed KMP DataController
+2025-04-18 17:18:04,094 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Closed LBR DataController
+2025-04-18 17:18:04,094 INFO  [..KMRiiwaSunriseApplication@SunriseProject] INFO: KMPjogger: Stopping jogging execution, isMoving=false
+2025-04-18 17:18:04,094 INFO  [..KMRiiwaSunriseApplication@SunriseProject] INFO: KMPjogger: Executor was already null
+2025-04-18 17:18:04,094 INFO  [..KMRiiwaSunriseApplication@SunriseProject] INFO: KMPjogger: Device was not moving, no need to stop
+2025-04-18 17:18:04,094 INFO  [..KMRiiwaSunriseApplication@SunriseProject] INFO: KMPjogger: Jogger stopped without triggering commander shutdown
+2025-04-18 17:18:04,094 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Interrupting KMP sensor thread
+2025-04-18 17:18:04,094 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Interrupting LBR sensor thread
+2025-04-18 17:18:04,094 INFO  [..                              Thread-247] LBR sensor reader thread interrupted.
+2025-04-18 17:18:04,094 INFO  [..                              Thread-247] LBR sensor reader closed.
+2025-04-18 17:18:04,345 INFO  [..KMRiiwaSunriseApplication@SunriseProject] INFO: KMPjogger: Stopping jogging execution, isMoving=false
+2025-04-18 17:18:04,345 INFO  [..KMRiiwaSunriseApplication@SunriseProject] INFO: KMPjogger: Executor was already null
+2025-04-18 17:18:04,345 INFO  [..KMRiiwaSunriseApplication@SunriseProject] INFO: KMPjogger: Device was not moving, no need to stop
+2025-04-18 17:18:04,345 INFO  [..KMRiiwaSunriseApplication@SunriseProject] INFO: KMPjogger: Jogger stopped without triggering commander shutdown
+2025-04-18 17:18:04,346 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR sensor reader closed.
+2025-04-18 17:18:04,346 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Application terminated
+2025-04-18 17:18:04,347 DEBUG [..KMRiiwaSunriseApplication@SunriseProject] Task instance "4@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to DISPOSING.
+2025-04-18 17:18:04,487 DEBUG [..Executor for Pause State Events-thread-1] State of the task "class API_ROS2_Sunrise.KMRiiwaSunriseApplication" changed from "RUNNING" to "STOPPING".
+2025-04-18 17:18:05,514 DEBUG [..KMRiiwaSunriseApplication@SunriseProject] Task instance "4@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to STOPPING.
+2025-04-18 17:18:05,518 DEBUG [..KMRiiwaSunriseApplication@SunriseProject] Task instance "4@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to STOPPED.
+2025-04-18 17:18:31,029 DEBUG [..executor for Service: AppServer-thread-1] Task instance "5@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to CREATING.
+2025-04-18 17:18:31,180 DEBUG [..KMRiiwaSunriseApplication@SunriseProject] Task instance "5@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to INITIALIZING.
+2025-04-18 17:18:31,183 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Task manager initialized: com.kuka.task.osgi.TaskManagerComponent@d4c222
+2025-04-18 17:18:31,184 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Initializing Robotics API Application
+2025-04-18 17:18:31,590 INFO  [..KMRiiwaSunriseApplication@SunriseProject] INFO: KMPjogger: Created jogger for KmpOmniMove with default period 50ms
+2025-04-18 17:18:31,593 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Application ready to run!
+2025-04-18 17:18:31,602 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR sensor socket initialized
+2025-04-18 17:18:31,602 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Network configuration:
+2025-04-18 17:18:31,602 INFO  [..KMRiiwaSunriseApplication@SunriseProject] - TCP: Commands, Status (reliable delivery)
+2025-04-18 17:18:31,602 INFO  [..KMRiiwaSunriseApplication@SunriseProject] - UDP: Sensors, Laser, Odometry (optimized for speed)
+2025-04-18 17:18:31,602 DEBUG [..KMRiiwaSunriseApplication@SunriseProject] Task instance "5@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to RUNNING.
+2025-04-18 17:18:31,609 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Running app!
+2025-04-18 17:18:31,609 INFO  [..KMRiiwaSunriseApplication@SunriseProject] State change.
+2025-04-18 17:18:31,711 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Shutdown message received in main application
+2025-04-18 17:18:31,711 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP commander shutdown: true
+2025-04-18 17:18:31,711 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR commander shutdown: true
+2025-04-18 17:18:31,711 INFO  [..KMRiiwaSunriseApplication@SunriseProject] ----- Shutting down Application -----
+2025-04-18 17:18:31,711 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Closed KMP DataController
+2025-04-18 17:18:31,711 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Closed LBR DataController
+2025-04-18 17:18:31,711 INFO  [..KMRiiwaSunriseApplication@SunriseProject] INFO: KMPjogger: Stopping jogging execution, isMoving=false
+2025-04-18 17:18:31,711 INFO  [..KMRiiwaSunriseApplication@SunriseProject] INFO: KMPjogger: Executor was already null
+2025-04-18 17:18:31,711 INFO  [..KMRiiwaSunriseApplication@SunriseProject] INFO: KMPjogger: Device was not moving, no need to stop
+2025-04-18 17:18:31,712 INFO  [..KMRiiwaSunriseApplication@SunriseProject] INFO: KMPjogger: Jogger stopped without triggering commander shutdown
+2025-04-18 17:18:31,712 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Interrupting KMP sensor thread
+2025-04-18 17:18:31,712 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Interrupting LBR sensor thread
+2025-04-18 17:18:31,712 INFO  [..                              Thread-258] LBR sensor reader thread interrupted.
+2025-04-18 17:18:31,713 INFO  [..                              Thread-258] LBR sensor reader closed.
+2025-04-18 17:18:31,920 INFO  [..KMRiiwaSunriseApplication@SunriseProject] INFO: KMPjogger: Stopping jogging execution, isMoving=false
+2025-04-18 17:18:31,920 INFO  [..KMRiiwaSunriseApplication@SunriseProject] INFO: KMPjogger: Executor was already null
+2025-04-18 17:18:31,920 INFO  [..KMRiiwaSunriseApplication@SunriseProject] INFO: KMPjogger: Device was not moving, no need to stop
+2025-04-18 17:18:31,920 INFO  [..KMRiiwaSunriseApplication@SunriseProject] INFO: KMPjogger: Jogger stopped without triggering commander shutdown
+2025-04-18 17:18:31,932 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR sensor reader closed.
+2025-04-18 17:18:31,932 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Application terminated
+2025-04-18 17:18:31,933 DEBUG [..KMRiiwaSunriseApplication@SunriseProject] Task instance "5@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to DISPOSING.
+2025-04-18 17:18:32,010 DEBUG [..Executor for Pause State Events-thread-1] State of the task "class API_ROS2_Sunrise.KMRiiwaSunriseApplication" changed from "RUNNING" to "STOPPING".
+2025-04-18 17:18:33,022 DEBUG [..KMRiiwaSunriseApplication@SunriseProject] Task instance "5@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to STOPPING.
+2025-04-18 17:18:33,025 DEBUG [..KMRiiwaSunriseApplication@SunriseProject] Task instance "5@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to STOPPED.
+2025-04-18 17:18:52,466 DEBUG [..executor for Service: AppServer-thread-1] Task instance "6@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to CREATING.
+2025-04-18 17:18:52,613 DEBUG [..KMRiiwaSunriseApplication@SunriseProject] Task instance "6@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to INITIALIZING.
+2025-04-18 17:18:52,614 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Task manager initialized: com.kuka.task.osgi.TaskManagerComponent@d4c222
+2025-04-18 17:18:52,614 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Initializing Robotics API Application
+2025-04-18 17:18:53,027 INFO  [..KMRiiwaSunriseApplication@SunriseProject] INFO: KMPjogger: Created jogger for KmpOmniMove with default period 50ms
+2025-04-18 17:18:53,030 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Application ready to run!
+2025-04-18 17:18:53,038 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR sensor socket initialized
+2025-04-18 17:18:53,038 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Network configuration:
+2025-04-18 17:18:53,038 INFO  [..KMRiiwaSunriseApplication@SunriseProject] - TCP: Commands, Status (reliable delivery)
+2025-04-18 17:18:53,038 INFO  [..KMRiiwaSunriseApplication@SunriseProject] - UDP: Sensors, Laser, Odometry (optimized for speed)
+2025-04-18 17:18:53,038 DEBUG [..KMRiiwaSunriseApplication@SunriseProject] Task instance "6@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to RUNNING.
+2025-04-18 17:18:53,039 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Running app!
+2025-04-18 17:18:53,040 INFO  [..KMRiiwaSunriseApplication@SunriseProject] State change.
+2025-04-18 17:18:53,143 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Shutdown message received in main application
+2025-04-18 17:18:53,143 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP commander shutdown: true
+2025-04-18 17:18:53,143 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR commander shutdown: true
+2025-04-18 17:18:53,143 INFO  [..KMRiiwaSunriseApplication@SunriseProject] ----- Shutting down Application -----
+2025-04-18 17:18:53,143 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Closed KMP DataController
+2025-04-18 17:18:53,143 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Closed LBR DataController
+2025-04-18 17:18:53,144 INFO  [..KMRiiwaSunriseApplication@SunriseProject] INFO: KMPjogger: Stopping jogging execution, isMoving=false
+2025-04-18 17:18:53,144 INFO  [..KMRiiwaSunriseApplication@SunriseProject] INFO: KMPjogger: Executor was already null
+2025-04-18 17:18:53,144 INFO  [..KMRiiwaSunriseApplication@SunriseProject] INFO: KMPjogger: Device was not moving, no need to stop
+2025-04-18 17:18:53,144 INFO  [..KMRiiwaSunriseApplication@SunriseProject] INFO: KMPjogger: Jogger stopped without triggering commander shutdown
+2025-04-18 17:18:53,144 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Interrupting KMP sensor thread
+2025-04-18 17:18:53,144 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Interrupting LBR sensor thread
+2025-04-18 17:18:53,144 INFO  [..                              Thread-267] LBR sensor reader thread interrupted.
+2025-04-18 17:18:53,144 INFO  [..                              Thread-267] LBR sensor reader closed.
+2025-04-18 17:18:53,389 INFO  [..KMRiiwaSunriseApplication@SunriseProject] INFO: KMPjogger: Stopping jogging execution, isMoving=false
+2025-04-18 17:18:53,389 INFO  [..KMRiiwaSunriseApplication@SunriseProject] INFO: KMPjogger: Executor was already null
+2025-04-18 17:18:53,389 INFO  [..KMRiiwaSunriseApplication@SunriseProject] INFO: KMPjogger: Device was not moving, no need to stop
+2025-04-18 17:18:53,389 INFO  [..KMRiiwaSunriseApplication@SunriseProject] INFO: KMPjogger: Jogger stopped without triggering commander shutdown
+2025-04-18 17:18:53,394 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR sensor reader closed.
+2025-04-18 17:18:53,394 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Application terminated
+2025-04-18 17:18:53,394 DEBUG [..KMRiiwaSunriseApplication@SunriseProject] Task instance "6@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to DISPOSING.
+2025-04-18 17:18:53,530 DEBUG [..Executor for Pause State Events-thread-1] State of the task "class API_ROS2_Sunrise.KMRiiwaSunriseApplication" changed from "RUNNING" to "STOPPING".
+2025-04-18 17:18:54,555 DEBUG [..KMRiiwaSunriseApplication@SunriseProject] Task instance "6@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to STOPPING.
+2025-04-18 17:18:54,560 DEBUG [..KMRiiwaSunriseApplication@SunriseProject] Task instance "6@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to STOPPED.
+2025-04-18 17:19:37,204 DEBUG [..executor for Service: AppServer-thread-1] Task instance "7@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to CREATING.
+2025-04-18 17:19:37,354 DEBUG [..KMRiiwaSunriseApplication@SunriseProject] Task instance "7@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to INITIALIZING.
+2025-04-18 17:19:37,354 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Task manager initialized: com.kuka.task.osgi.TaskManagerComponent@d4c222
+2025-04-18 17:19:37,354 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Initializing Robotics API Application
+2025-04-18 17:19:37,966 INFO  [..KMRiiwaSunriseApplication@SunriseProject] INFO: KMPjogger: Created jogger for KmpOmniMove with default period 50ms
+2025-04-18 17:19:37,969 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Application ready to run!
+2025-04-18 17:19:37,975 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR sensor socket initialized
+2025-04-18 17:19:37,975 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Network configuration:
+2025-04-18 17:19:37,975 INFO  [..KMRiiwaSunriseApplication@SunriseProject] - TCP: Commands, Status (reliable delivery)
+2025-04-18 17:19:37,975 INFO  [..KMRiiwaSunriseApplication@SunriseProject] - UDP: Sensors, Laser, Odometry (optimized for speed)
+2025-04-18 17:19:37,975 DEBUG [..KMRiiwaSunriseApplication@SunriseProject] Task instance "7@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to RUNNING.
+2025-04-18 17:19:37,983 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Running app!
+2025-04-18 17:19:37,984 INFO  [..KMRiiwaSunriseApplication@SunriseProject] State change.
+2025-04-18 17:19:38,093 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Shutdown message received in main application
+2025-04-18 17:19:38,093 INFO  [..KMRiiwaSunriseApplication@SunriseProject] KMP commander shutdown: true
+2025-04-18 17:19:38,093 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR commander shutdown: true
+2025-04-18 17:19:38,093 INFO  [..KMRiiwaSunriseApplication@SunriseProject] ----- Shutting down Application -----
+2025-04-18 17:19:38,096 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Closed KMP DataController
+2025-04-18 17:19:38,096 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Closed LBR DataController
+2025-04-18 17:19:38,096 INFO  [..KMRiiwaSunriseApplication@SunriseProject] INFO: KMPjogger: Stopping jogging execution, isMoving=false
+2025-04-18 17:19:38,096 INFO  [..KMRiiwaSunriseApplication@SunriseProject] INFO: KMPjogger: Executor was already null
+2025-04-18 17:19:38,096 INFO  [..KMRiiwaSunriseApplication@SunriseProject] INFO: KMPjogger: Device was not moving, no need to stop
+2025-04-18 17:19:38,096 INFO  [..KMRiiwaSunriseApplication@SunriseProject] INFO: KMPjogger: Jogger stopped without triggering commander shutdown
+2025-04-18 17:19:38,097 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Interrupting KMP sensor thread
+2025-04-18 17:19:38,097 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Interrupting LBR sensor thread
+2025-04-18 17:19:38,097 INFO  [..                              Thread-278] LBR sensor reader thread interrupted.
+2025-04-18 17:19:38,097 INFO  [..                              Thread-278] LBR sensor reader closed.
+2025-04-18 17:19:38,349 INFO  [..KMRiiwaSunriseApplication@SunriseProject] INFO: KMPjogger: Stopping jogging execution, isMoving=false
+2025-04-18 17:19:38,349 INFO  [..KMRiiwaSunriseApplication@SunriseProject] INFO: KMPjogger: Executor was already null
+2025-04-18 17:19:38,349 INFO  [..KMRiiwaSunriseApplication@SunriseProject] INFO: KMPjogger: Device was not moving, no need to stop
+2025-04-18 17:19:38,349 INFO  [..KMRiiwaSunriseApplication@SunriseProject] INFO: KMPjogger: Jogger stopped without triggering commander shutdown
+2025-04-18 17:19:38,351 INFO  [..KMRiiwaSunriseApplication@SunriseProject] LBR sensor reader closed.
+2025-04-18 17:19:38,351 INFO  [..KMRiiwaSunriseApplication@SunriseProject] Application terminated
+2025-04-18 17:19:38,352 DEBUG [..KMRiiwaSunriseApplication@SunriseProject] Task instance "7@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to DISPOSING.
+2025-04-18 17:19:38,386 DEBUG [..Executor for Pause State Events-thread-1] State of the task "class API_ROS2_Sunrise.KMRiiwaSunriseApplication" changed from "RUNNING" to "STOPPING".
+2025-04-18 17:19:39,406 DEBUG [..KMRiiwaSunriseApplication@SunriseProject] Task instance "7@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to STOPPING.
+2025-04-18 17:19:39,410 DEBUG [..KMRiiwaSunriseApplication@SunriseProject] Task instance "7@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject" changed state to STOPPED.

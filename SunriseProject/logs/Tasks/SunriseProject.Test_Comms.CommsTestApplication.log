@@ -1,0 +1,189 @@
+2025-04-18 15:42:14,337 DEBUG [..executor for Service: AppServer-thread-1] Task instance "1@Test_Comms.CommsTestApplication@SunriseProject" changed state to CREATING.
+2025-04-18 15:42:14,496 DEBUG [..omms.CommsTestApplication@SunriseProject] Task instance "1@Test_Comms.CommsTestApplication@SunriseProject" changed state to INITIALIZING.
+2025-04-18 15:42:14,497 INFO  [..omms.CommsTestApplication@SunriseProject] Initializing Communications Test Application
+2025-04-18 15:42:14,498 DEBUG [..omms.CommsTestApplication@SunriseProject] Task instance "1@Test_Comms.CommsTestApplication@SunriseProject" changed state to RUNNING.
+2025-04-18 15:42:14,499 INFO  [..omms.CommsTestApplication@SunriseProject] Checking firewall status for all ports...
+2025-04-18 15:42:14,508 INFO  [..omms.CommsTestApplication@SunriseProject] TCP Port 30001 is open
+2025-04-18 15:42:14,510 INFO  [..omms.CommsTestApplication@SunriseProject] TCP Port 30002 is open
+2025-04-18 15:42:14,512 INFO  [..omms.CommsTestApplication@SunriseProject] TCP Port 30005 is open
+2025-04-18 15:42:14,521 INFO  [..omms.CommsTestApplication@SunriseProject] TCP Port 30006 is open
+2025-04-18 15:42:14,522 INFO  [..omms.CommsTestApplication@SunriseProject] UDP Port 30003 is accessible
+2025-04-18 15:42:14,522 INFO  [..omms.CommsTestApplication@SunriseProject] UDP Port 30004 is accessible
+2025-04-18 15:42:14,522 INFO  [..omms.CommsTestApplication@SunriseProject] UDP Port 30007 is accessible
+2025-04-18 15:42:14,522 INFO  [..omms.CommsTestApplication@SunriseProject] Port check complete.
+
+2025-04-18 15:42:14,526 INFO  [..omms.CommsTestApplication@SunriseProject] All communication tests started
+2025-04-18 15:42:14,554 INFO  [..                               Thread-86] KMP_STATUS attempting connection to port 30001
+2025-04-18 15:42:14,555 INFO  [..                               Thread-87] KMP_COMMAND attempting connection to port 30002
+2025-04-18 15:42:14,555 INFO  [..                               Thread-88] LBR_COMMAND attempting connection to port 30005
+2025-04-18 15:42:14,556 INFO  [..                               Thread-89] LBR_STATUS attempting connection to port 30006
+2025-04-18 15:42:14,556 INFO  [..                               Thread-86] KMP_STATUS connected to port 30001
+2025-04-18 15:42:14,557 INFO  [..                               Thread-87] KMP_COMMAND connected to port 30002
+2025-04-18 15:42:14,559 INFO  [..                               Thread-88] LBR_COMMAND connected to port 30005
+2025-04-18 15:42:14,559 INFO  [..                               Thread-89] LBR_STATUS connected to port 30006
+2025-04-18 15:42:14,570 INFO  [..                               Thread-90] KMP_LASER started on port 30003
+2025-04-18 15:42:14,572 INFO  [..                               Thread-91] KMP_ODOM started on port 30004
+2025-04-18 15:42:14,572 INFO  [..                               Thread-92] LBR_SENSOR started on port 30007
+2025-04-18 15:42:15,509 INFO  [..                               Thread-86] KMP_STATUS waiting for server... will retry in 5 seconds
+2025-04-18 15:42:15,510 INFO  [..                               Thread-87] KMP_COMMAND waiting for server... will retry in 5 seconds
+2025-04-18 15:42:15,513 INFO  [..                               Thread-88] LBR_COMMAND waiting for server... will retry in 5 seconds
+2025-04-18 15:42:15,518 INFO  [..                               Thread-89] LBR_STATUS waiting for server... will retry in 5 seconds
+2025-04-18 15:42:20,648 INFO  [..                               Thread-86] KMP_STATUS attempting connection to port 30001
+2025-04-18 15:42:20,649 INFO  [..                               Thread-87] KMP_COMMAND attempting connection to port 30002
+2025-04-18 15:42:20,650 INFO  [..                               Thread-86] KMP_STATUS connected to port 30001
+2025-04-18 15:42:20,650 INFO  [..                               Thread-87] KMP_COMMAND connected to port 30002
+2025-04-18 15:42:20,652 INFO  [..                               Thread-88] LBR_COMMAND attempting connection to port 30005
+2025-04-18 15:42:20,656 INFO  [..                               Thread-88] LBR_COMMAND connected to port 30005
+2025-04-18 15:42:20,658 INFO  [..                               Thread-89] LBR_STATUS attempting connection to port 30006
+2025-04-18 15:42:20,659 INFO  [..                               Thread-89] LBR_STATUS connected to port 30006
+2025-04-18 15:42:52,474 DEBUG [..Executor for Pause State Events-thread-1] State of the task "class Test_Comms.CommsTestApplication" changed from "RUNNING" to "MOTIONPAUSED".
+2025-04-18 15:42:57,562 DEBUG [..omms.CommsTestApplication@SunriseProject] Task instance "1@Test_Comms.CommsTestApplication@SunriseProject" changed state to DISPOSING.
+2025-04-18 15:43:12,992 INFO  [..omms.CommsTestApplication@SunriseProject] All communication tests stopped
+2025-04-18 15:43:13,037 DEBUG [..omms.CommsTestApplication@SunriseProject] Task instance "1@Test_Comms.CommsTestApplication@SunriseProject" changed state to STOPPING.
+2025-04-18 15:43:13,043 ERROR [..omms.CommsTestApplication@SunriseProject] The task didn't terminate within 15.0s: The dispose method didn't terminate in time. Stacktrace:
+
+Thread Dispose thread for 1@Test_Comms.CommsTestApplication@SunriseProject@345: (state = TIMED_WAITING)
+ - java.lang.Object.wait(Native Method)
+ - java.lang.Thread.join(Unknown Source)
+ - Test_Comms.CommsTester.stopAll(CommsTester.java:72)
+ - Test_Comms.CommsTestApplication.dispose(CommsTestApplication.java:40)
+ - com.kuka.task.internal.TaskInstanceManagementThread$4.call(TaskInstanceManagementThread.java:631)
+ - com.kuka.task.internal.TaskInstanceManagementThread$4.call(TaskInstanceManagementThread.java:1)
+ - java.util.concurrent.FutureTask$Sync.innerRun(Unknown Source)
+ - java.util.concurrent.FutureTask.run(Unknown Source)
+ - java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Unknown Source)
+ - java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+ - java.lang.Thread.run(Unknown Source)
+
+2025-04-18 15:43:13,043 DEBUG [..omms.CommsTestApplication@SunriseProject] Task instance "1@Test_Comms.CommsTestApplication@SunriseProject" changed state to ERROR.
+2025-04-18 15:43:13,579 ERROR [..omms.CommsTestApplication@SunriseProject] Subsequent error while disposing task:
+com.kuka.task.internal.TaskStopTimeoutException: The task didn't terminate within 15.0s: Task thread group still has active threads.
+	at com.kuka.task.internal.TaskInstanceManagementThread.waitUntilUserTaskFinished(TaskInstanceManagementThread.java:424)
+	at com.kuka.task.internal.TaskInstanceManagementThread.run(TaskInstanceManagementThread.java:172)
+	at java.lang.Thread.run(Unknown Source)
+2025-04-18 15:43:33,498 DEBUG [..executor for Service: AppServer-thread-1] Task instance "2@Test_Comms.CommsTestApplication@SunriseProject" changed state to CREATING.
+2025-04-18 15:43:33,870 DEBUG [..omms.CommsTestApplication@SunriseProject] Task instance "2@Test_Comms.CommsTestApplication@SunriseProject" changed state to INITIALIZING.
+2025-04-18 15:43:33,871 INFO  [..omms.CommsTestApplication@SunriseProject] Initializing Communications Test Application
+2025-04-18 15:43:33,871 DEBUG [..omms.CommsTestApplication@SunriseProject] Task instance "2@Test_Comms.CommsTestApplication@SunriseProject" changed state to RUNNING.
+2025-04-18 15:43:33,872 INFO  [..omms.CommsTestApplication@SunriseProject] Checking firewall status for all ports...
+2025-04-18 15:43:33,874 INFO  [..omms.CommsTestApplication@SunriseProject] TCP Port 30001 is open
+2025-04-18 15:43:33,877 INFO  [..omms.CommsTestApplication@SunriseProject] TCP Port 30002 is open
+2025-04-18 15:43:33,879 INFO  [..omms.CommsTestApplication@SunriseProject] TCP Port 30005 is open
+2025-04-18 15:43:33,883 INFO  [..omms.CommsTestApplication@SunriseProject] TCP Port 30006 is open
+2025-04-18 15:43:33,883 INFO  [..omms.CommsTestApplication@SunriseProject] UDP Port 30003 is accessible
+2025-04-18 15:43:33,883 INFO  [..omms.CommsTestApplication@SunriseProject] UDP Port 30004 is accessible
+2025-04-18 15:43:33,884 INFO  [..omms.CommsTestApplication@SunriseProject] UDP Port 30007 is accessible
+2025-04-18 15:43:33,884 INFO  [..omms.CommsTestApplication@SunriseProject] Port check complete.
+
+2025-04-18 15:43:33,885 INFO  [..omms.CommsTestApplication@SunriseProject] All communication tests started
+2025-04-18 15:43:33,896 INFO  [..                              Thread-106] KMP_STATUS attempting connection to port 30001
+2025-04-18 15:43:33,897 INFO  [..                              Thread-107] KMP_COMMAND attempting connection to port 30002
+2025-04-18 15:43:33,897 INFO  [..                              Thread-108] LBR_COMMAND attempting connection to port 30005
+2025-04-18 15:43:33,898 INFO  [..                              Thread-109] LBR_STATUS attempting connection to port 30006
+2025-04-18 15:43:33,898 INFO  [..                              Thread-110] KMP_LASER started on port 30003
+2025-04-18 15:43:33,898 INFO  [..                              Thread-106] KMP_STATUS connected to port 30001
+2025-04-18 15:43:33,899 INFO  [..                              Thread-107] KMP_COMMAND connected to port 30002
+2025-04-18 15:43:33,899 INFO  [..                              Thread-111] KMP_ODOM started on port 30004
+2025-04-18 15:43:33,899 INFO  [..                              Thread-108] LBR_COMMAND connected to port 30005
+2025-04-18 15:43:33,900 INFO  [..                              Thread-112] LBR_SENSOR started on port 30007
+2025-04-18 15:43:33,900 INFO  [..                              Thread-109] LBR_STATUS connected to port 30006
+2025-04-18 15:43:34,887 INFO  [..                              Thread-106] KMP_STATUS waiting for server... will retry in 5 seconds
+2025-04-18 15:43:34,887 INFO  [..                              Thread-107] KMP_COMMAND waiting for server... will retry in 5 seconds
+2025-04-18 15:43:34,890 INFO  [..                              Thread-108] LBR_COMMAND waiting for server... will retry in 5 seconds
+2025-04-18 15:43:34,895 INFO  [..                              Thread-109] LBR_STATUS waiting for server... will retry in 5 seconds
+2025-04-18 15:43:40,026 INFO  [..                              Thread-107] KMP_COMMAND attempting connection to port 30002
+2025-04-18 15:43:40,026 INFO  [..                              Thread-106] KMP_STATUS attempting connection to port 30001
+2025-04-18 15:43:40,028 INFO  [..                              Thread-107] KMP_COMMAND connected to port 30002
+2025-04-18 15:43:40,028 INFO  [..                              Thread-106] KMP_STATUS connected to port 30001
+2025-04-18 15:43:40,042 INFO  [..                              Thread-108] LBR_COMMAND attempting connection to port 30005
+2025-04-18 15:43:40,042 INFO  [..                              Thread-109] LBR_STATUS attempting connection to port 30006
+2025-04-18 15:43:40,044 INFO  [..                              Thread-108] LBR_COMMAND connected to port 30005
+2025-04-18 15:43:40,045 INFO  [..                              Thread-109] LBR_STATUS connected to port 30006
+2025-04-18 15:46:12,004 DEBUG [..Executor for Pause State Events-thread-1] State of the task "class Test_Comms.CommsTestApplication" changed from "RUNNING" to "RUNNING".
+2025-04-18 15:46:22,403 DEBUG [..omms.CommsTestApplication@SunriseProject] Task instance "2@Test_Comms.CommsTestApplication@SunriseProject" changed state to DISPOSING.
+2025-04-18 15:46:37,838 INFO  [..omms.CommsTestApplication@SunriseProject] All communication tests stopped
+2025-04-18 15:46:37,886 DEBUG [..omms.CommsTestApplication@SunriseProject] Task instance "2@Test_Comms.CommsTestApplication@SunriseProject" changed state to STOPPING.
+2025-04-18 15:46:37,888 ERROR [..omms.CommsTestApplication@SunriseProject] The task didn't terminate within 15.0s: The dispose method didn't terminate in time. Stacktrace:
+
+Thread Dispose thread for 2@Test_Comms.CommsTestApplication@SunriseProject@391: (state = TIMED_WAITING)
+ - java.lang.Object.wait(Native Method)
+ - java.lang.Thread.join(Unknown Source)
+ - Test_Comms.CommsTester.stopAll(CommsTester.java:72)
+ - Test_Comms.CommsTestApplication.dispose(CommsTestApplication.java:40)
+ - com.kuka.task.internal.TaskInstanceManagementThread$4.call(TaskInstanceManagementThread.java:631)
+ - com.kuka.task.internal.TaskInstanceManagementThread$4.call(TaskInstanceManagementThread.java:1)
+ - java.util.concurrent.FutureTask$Sync.innerRun(Unknown Source)
+ - java.util.concurrent.FutureTask.run(Unknown Source)
+ - java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Unknown Source)
+ - java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+ - java.lang.Thread.run(Unknown Source)
+
+2025-04-18 15:46:37,888 DEBUG [..omms.CommsTestApplication@SunriseProject] Task instance "2@Test_Comms.CommsTestApplication@SunriseProject" changed state to ERROR.
+2025-04-18 15:46:38,410 ERROR [..omms.CommsTestApplication@SunriseProject] Subsequent error while disposing task:
+com.kuka.task.internal.TaskStopTimeoutException: The task didn't terminate within 15.0s: Task thread group still has active threads.
+	at com.kuka.task.internal.TaskInstanceManagementThread.waitUntilUserTaskFinished(TaskInstanceManagementThread.java:424)
+	at com.kuka.task.internal.TaskInstanceManagementThread.run(TaskInstanceManagementThread.java:172)
+	at java.lang.Thread.run(Unknown Source)
+2025-04-18 17:17:00,426 DEBUG [..executor for Service: AppServer-thread-1] Task instance "1@Test_Comms.CommsTestApplication@SunriseProject" changed state to CREATING.
+2025-04-18 17:17:00,689 DEBUG [..omms.CommsTestApplication@SunriseProject] Task instance "1@Test_Comms.CommsTestApplication@SunriseProject" changed state to INITIALIZING.
+2025-04-18 17:17:00,690 INFO  [..omms.CommsTestApplication@SunriseProject] Initializing Communications Test Application
+2025-04-18 17:17:00,691 DEBUG [..omms.CommsTestApplication@SunriseProject] Task instance "1@Test_Comms.CommsTestApplication@SunriseProject" changed state to RUNNING.
+2025-04-18 17:17:00,692 INFO  [..omms.CommsTestApplication@SunriseProject] Checking firewall status for all ports...
+2025-04-18 17:17:00,694 INFO  [..omms.CommsTestApplication@SunriseProject] TCP Port 30001 is open
+2025-04-18 17:17:00,697 INFO  [..omms.CommsTestApplication@SunriseProject] TCP Port 30002 is open
+2025-04-18 17:17:00,704 INFO  [..omms.CommsTestApplication@SunriseProject] TCP Port 30005 is open
+2025-04-18 17:17:00,706 INFO  [..omms.CommsTestApplication@SunriseProject] TCP Port 30006 is open
+2025-04-18 17:17:00,714 INFO  [..omms.CommsTestApplication@SunriseProject] UDP Port 30003 is accessible
+2025-04-18 17:17:00,714 INFO  [..omms.CommsTestApplication@SunriseProject] UDP Port 30004 is accessible
+2025-04-18 17:17:00,714 INFO  [..omms.CommsTestApplication@SunriseProject] UDP Port 30007 is accessible
+2025-04-18 17:17:00,714 INFO  [..omms.CommsTestApplication@SunriseProject] Port check complete.
+
+2025-04-18 17:17:00,718 INFO  [..omms.CommsTestApplication@SunriseProject] All communication tests started
+2025-04-18 17:17:00,721 INFO  [..                              Thread-212] KMP_STATUS attempting connection to port 30001
+2025-04-18 17:17:00,721 INFO  [..                              Thread-213] KMP_COMMAND attempting connection to port 30002
+2025-04-18 17:17:00,722 INFO  [..                              Thread-214] LBR_COMMAND attempting connection to port 30005
+2025-04-18 17:17:00,722 INFO  [..                              Thread-215] LBR_STATUS attempting connection to port 30006
+2025-04-18 17:17:00,722 INFO  [..                              Thread-212] KMP_STATUS connected to port 30001
+2025-04-18 17:17:00,723 INFO  [..                              Thread-213] KMP_COMMAND connected to port 30002
+2025-04-18 17:17:00,726 INFO  [..                              Thread-214] LBR_COMMAND connected to port 30005
+2025-04-18 17:17:00,726 INFO  [..                              Thread-215] LBR_STATUS connected to port 30006
+2025-04-18 17:17:00,726 INFO  [..                              Thread-216] KMP_LASER started on port 30003
+2025-04-18 17:17:00,728 INFO  [..                              Thread-217] KMP_ODOM started on port 30004
+2025-04-18 17:17:00,729 INFO  [..                              Thread-218] LBR_SENSOR started on port 30007
+2025-04-18 17:17:01,689 INFO  [..                              Thread-212] KMP_STATUS waiting for server... will retry in 5 seconds
+2025-04-18 17:17:01,691 INFO  [..                              Thread-213] KMP_COMMAND waiting for server... will retry in 5 seconds
+2025-04-18 17:17:01,694 INFO  [..                              Thread-214] LBR_COMMAND waiting for server... will retry in 5 seconds
+2025-04-18 17:17:01,702 INFO  [..                              Thread-215] LBR_STATUS waiting for server... will retry in 5 seconds
+2025-04-18 17:17:06,798 INFO  [..                              Thread-212] KMP_STATUS attempting connection to port 30001
+2025-04-18 17:17:06,800 INFO  [..                              Thread-212] KMP_STATUS connected to port 30001
+2025-04-18 17:17:06,817 INFO  [..                              Thread-213] KMP_COMMAND attempting connection to port 30002
+2025-04-18 17:17:06,817 INFO  [..                              Thread-214] LBR_COMMAND attempting connection to port 30005
+2025-04-18 17:17:06,818 INFO  [..                              Thread-215] LBR_STATUS attempting connection to port 30006
+2025-04-18 17:17:06,819 INFO  [..                              Thread-213] KMP_COMMAND connected to port 30002
+2025-04-18 17:17:06,821 INFO  [..                              Thread-214] LBR_COMMAND connected to port 30005
+2025-04-18 17:17:06,821 INFO  [..                              Thread-215] LBR_STATUS connected to port 30006
+2025-04-18 17:17:13,663 DEBUG [..Executor for Pause State Events-thread-1] State of the task "class Test_Comms.CommsTestApplication" changed from "RUNNING" to "MOTIONPAUSED".
+2025-04-18 17:17:17,784 DEBUG [..omms.CommsTestApplication@SunriseProject] Task instance "1@Test_Comms.CommsTestApplication@SunriseProject" changed state to DISPOSING.
+2025-04-18 17:17:33,140 INFO  [..omms.CommsTestApplication@SunriseProject] All communication tests stopped
+2025-04-18 17:17:33,164 DEBUG [..omms.CommsTestApplication@SunriseProject] Task instance "1@Test_Comms.CommsTestApplication@SunriseProject" changed state to STOPPING.
+2025-04-18 17:17:33,170 ERROR [..omms.CommsTestApplication@SunriseProject] The task didn't terminate within 15.0s: The dispose method didn't terminate in time. Stacktrace:
+
+Thread Dispose thread for 1@Test_Comms.CommsTestApplication@SunriseProject@670: (state = TIMED_WAITING)
+ - java.lang.Object.wait(Native Method)
+ - java.lang.Thread.join(Unknown Source)
+ - Test_Comms.CommsTester.stopAll(CommsTester.java:72)
+ - Test_Comms.CommsTestApplication.dispose(CommsTestApplication.java:40)
+ - com.kuka.task.internal.TaskInstanceManagementThread$4.call(TaskInstanceManagementThread.java:631)
+ - com.kuka.task.internal.TaskInstanceManagementThread$4.call(TaskInstanceManagementThread.java:1)
+ - java.util.concurrent.FutureTask$Sync.innerRun(Unknown Source)
+ - java.util.concurrent.FutureTask.run(Unknown Source)
+ - java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Unknown Source)
+ - java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+ - java.lang.Thread.run(Unknown Source)
+
+2025-04-18 17:17:33,170 DEBUG [..omms.CommsTestApplication@SunriseProject] Task instance "1@Test_Comms.CommsTestApplication@SunriseProject" changed state to ERROR.
+2025-04-18 17:17:33,794 ERROR [..omms.CommsTestApplication@SunriseProject] Subsequent error while disposing task:
+com.kuka.task.internal.TaskStopTimeoutException: The task didn't terminate within 15.0s: Task thread group still has active threads.
+	at com.kuka.task.internal.TaskInstanceManagementThread.waitUntilUserTaskFinished(TaskInstanceManagementThread.java:424)
+	at com.kuka.task.internal.TaskInstanceManagementThread.run(TaskInstanceManagementThread.java:172)
+	at java.lang.Thread.run(Unknown Source)

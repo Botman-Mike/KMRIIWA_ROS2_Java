@@ -1,0 +1,10 @@
+2025-04-18 08:52:40,234 [main] ERROR com.kuka.roboticsAPI.applicationModel.RoboticsAPIApplication - Exception running application.
+java.lang.NullPointerException: Cannot invoke "com.kuka.task.ITaskLogger.warn(String)" because "this.logger" is null
+	at API_ROS2_Sunrise.KMRiiwaSunriseApplication.initialize(KMRiiwaSunriseApplication.java:124)
+	at com.kuka.roboticsAPI.applicationModel.RoboticsAPIApplication.runApplication(RoboticsAPIApplication.java:81)
+	at API_ROS2_Sunrise.KMRiiwaSunriseApplication.main(KMRiiwaSunriseApplication.java:621)
+2025-04-18 08:52:52,678 [main] ERROR com.kuka.roboticsAPI.applicationModel.RoboticsAPIApplication - Exception running application.
+java.lang.NullPointerException: Cannot invoke "com.kuka.task.ITaskLogger.warn(String)" because "this.logger" is null
+	at API_ROS2_Sunrise.KMRiiwaSunriseApplication.initialize(KMRiiwaSunriseApplication.java:124)
+	at com.kuka.roboticsAPI.applicationModel.RoboticsAPIApplication.runApplication(RoboticsAPIApplication.java:81)
+	at API_ROS2_Sunrise.KMRiiwaSunriseApplication.main(KMRiiwaSunriseApplication.java:621)

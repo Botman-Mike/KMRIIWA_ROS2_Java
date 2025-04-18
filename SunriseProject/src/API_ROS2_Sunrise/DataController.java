@@ -15,114 +15,106 @@
 
 package API_ROS2_Sunrise;
 
-// Implemented classes
+import com.kuka.task.ITaskLogger;
+import javax.inject.Inject;
 
+/**
+ * DataController handles direct socket communication with ROS2 for laser and odometry data.
+ * No FDI dependencies. Includes heartbeat support.
+ */
+public class DataController {
+    private ISocket laser_socket;
+    private ISocket odometry_socket;
+    private long ms_sent = System.currentTimeMillis();
+    private HeartbeatThread heartbeatThread;
+    private volatile boolean running = false;
 
-// RoboticsAPI
-import API_ROS2_Sunrise.ISocket;
+    @Inject
+    private ITaskLogger logger;
 
-import com.kuka.nav.fdi.DataConnectionListener;
-import com.kuka.nav.fdi.DataListener;
-import com.kuka.nav.fdi.data.CommandedVelocity;
-import com.kuka.nav.fdi.data.Odometry;
-import com.kuka.nav.fdi.data.RobotPose;
-import com.kuka.nav.provider.LaserScan;
+    public DataController(ISocket laser_socket, ISocket odometry_socket) {
+        this.laser_socket = laser_socket;
+        this.odometry_socket = odometry_socket;
+    }
 
-public class DataController implements DataListener, DataConnectionListener{
+    // Example: send laser scan data to ROS
+    public void sendLaserScan(String scanData) {
+        if (laser_socket != null && laser_socket.isConnected()) {
+            try {
+                laser_socket.send_message(scanData);
+            } catch (Exception e) {
+                logger.error("Could not send laser data to ROS: " + e);
+            }
+        }
+    }
 
-	public boolean fdi_isConnected;
-	ISocket laser_socket;
-	ISocket odometry_socket;
-	long ms_sent = System.currentTimeMillis();
-	Odometry odom;
-	
+    // Example: send odometry data to ROS
+    public void sendOdometry(String odomData) {
+        if (odometry_socket != null && odometry_socket.isConnected()) {
+            try {
+                long msg_time = System.currentTimeMillis();
+                if (msg_time - ms_sent >= 50) {
+                    ms_sent = msg_time;
+                    odometry_socket.send_message(odomData);
+                }
+            } catch (Exception e) {
+                logger.error("Could not send odometry data to ROS: " + e);
+            }
+        }
+    }
 
-	public DataController(ISocket laser_socket, ISocket odometry_socket) {
-		this.fdi_isConnected=false;
-		this.laser_socket = laser_socket;
-		this.odometry_socket = odometry_socket;
-	}
+    // Heartbeat support
+    public void startHeartbeat() {
+        if (heartbeatThread == null || !heartbeatThread.isAlive()) {
+            running = true;
+            heartbeatThread = new HeartbeatThread();
+            heartbeatThread.start();
+        }
+    }
 
+    public void stopHeartbeat() {
+        running = false;
+        if (heartbeatThread != null) {
+            heartbeatThread.interrupt();
+        }
+    }
 
-	@Override
-	public void onNewCmdVelocity(CommandedVelocity arg0) {
-		// TODO Auto-generated method stub
-		
-	}
+    private class HeartbeatThread extends Thread {
+        @Override
+        public void run() {
+            while (running) {
+                try {
+                    if (laser_socket != null && laser_socket.isConnected()) {
+                        laser_socket.sendHeartbeat();
+                    }
+                    if (odometry_socket != null && odometry_socket.isConnected()) {
+                        odometry_socket.sendHeartbeat();
+                    }
+                    Thread.sleep(1000); // 1 second heartbeat
+                } catch (InterruptedException e) {
+                    break;
+                } catch (Exception e) {
+                    logger.warn("Heartbeat error: " + e);
+                }
+            }
+        }
+    }
 
-	@Override
-	public void onNewLaserData(LaserScan scan) {
-		if(fdi_isConnected && this.laser_socket.isConnected()){
-			String scan_data = ">laserScan " +  scan.getTimestamp() + " " + scan.getLaserId()  + " " + scan.getRangesAsString();
-			try{
-				this.laser_socket.send_message(scan_data);
-			}catch(Exception e){
-				System.out.println("Could not send KMP laserdata to ROS: " + e);
-			}
-		}
-	}
+    public void setLaserSocket(ISocket laser_socket2) {
+        this.laser_socket = laser_socket2;
+    }
 
-	@Override
-	public void onNewOdometryData(Odometry odom) {
-		long msg_time = System.currentTimeMillis();
-		if(fdi_isConnected && this.odometry_socket.isConnected()){
-			try{
-				if(msg_time-ms_sent>=50){
-					ms_sent = System.currentTimeMillis();
-					String odom_data = ">odometry " + odom.getTimestamp() + " " + odom.getPose().toString() + " " + odom.getVelocity().toString();
-					this.odometry_socket.send_message(odom_data);
-				}
-			}catch(Exception e){
-				System.out.println("Could not send KMP odometry data to ROS: " + e);
-			}
-	}
-	}
+    public void setOdometrySocket(ISocket odometry_socket2) {
+        this.odometry_socket = odometry_socket2;
+    }
 
-	@Override
-	public void onNewRobotPoseData(RobotPose arg0) {
-		// TODO Auto-generated method stub
-	}
-
-	@Override
-	public void onConnectionClosed() {
-		fdi_isConnected = false;
-		System.out.println("FDIConnection closed");
-		}
-
-	@Override
-	public void onConnectionFailed(Exception arg0) {
-		fdi_isConnected = false;
-		System.out.println("FDIConnection failed");
-		System.out.println(arg0);
-
-	}
-
-	@Override
-	public void onConnectionSuccessful() {
-		fdi_isConnected = true;
-		System.out.println("FDIConnection successful");
-		
-	}
-
-	@Override
-	public void onConnectionTimeout() {
-		System.out.println("FDIConnection timeout");
-	}
-
-	@Override
-	public void onReceiveError(Exception arg0) {
-		System.out.println("FDIconnection - Received error");
-		System.out.println(arg0);
-		
-	}
-
-
-	public void setLaserSocket(ISocket laser_socket2) {
-			this.laser_socket = laser_socket2;
-	}
-
-
-	public void setOdometrySocket(ISocket odometry_socket2) {
-		this.odometry_socket = odometry_socket2;
-	}	
+    public void close() throws Exception {
+        stopHeartbeat();
+        if (laser_socket != null) {
+            laser_socket.close();
+        }
+        if (odometry_socket != null) {
+            odometry_socket.close();
+        }
+    }
 }

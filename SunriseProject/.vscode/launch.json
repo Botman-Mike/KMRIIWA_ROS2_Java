@@ -1,0 +1,25 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Debug RobotSimClient",
+            "request": "launch",
+            "mainClass": "API_ROS2_Sunrise.RobotSimClient",
+            "projectName": "KMR_ROS2",
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen"
+        },
+        {
+            "type": "java",
+            "name": "Debug RobotSimServer",
+            "request": "launch",
+            "mainClass": "API_ROS2_Sunrise.RobotSimServer",
+            "projectName": "KMR_ROS2",
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen"
+        }
+    ]
+}

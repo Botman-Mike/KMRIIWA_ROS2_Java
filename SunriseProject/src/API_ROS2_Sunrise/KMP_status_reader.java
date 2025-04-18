@@ -15,139 +15,157 @@
 
 package API_ROS2_Sunrise;
 
-
-
 //RoboticsAPI
 import com.kuka.roboticsAPI.deviceModel.OperationMode;
 import com.kuka.roboticsAPI.deviceModel.kmp.KmpOmniMove;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-public class KMP_status_reader extends Node{
+public class KMP_status_reader extends Node {
 
-	// Robot
-	KmpOmniMove kmp;
-	
-	// Status variables
-	private OperationMode operation_mode = null;
-	private Object isReadyToMove = null; 
-	private volatile boolean WarningField = false;
-	private volatile boolean ProtectionField = false;
-	private long last_sendtime = System.currentTimeMillis();
+    private static final Logger logger = LoggerFactory.getLogger(KMP_status_reader.class);
 
-	public KMP_status_reader(int port, KmpOmniMove robot,String ConnectionType) {
-		super(port, ConnectionType, "KMP status reader");
+    // Robot
+    KmpOmniMove kmp;
 
-		this.kmp = robot;		
-		if (!(isSocketConnected())) {
-			Thread monitorKMPStatusConnections = new MonitorKMPStatusConnectionsThread();
-			monitorKMPStatusConnections.start();
-			}
-	}
-	
-	@Override
-	public void run() {
-		while(isNodeRunning())
-		{	
+    // Status variables
+    private OperationMode operation_mode = null;
+    private Object isReadyToMove = null;
+    private volatile boolean WarningField = false;
+    private volatile boolean ProtectionField = false;
+    private long last_sendtime = System.currentTimeMillis();
 
-			if(System.currentTimeMillis()-last_sendtime>30){
-				updateOperationMode();
-				updateReadyToMove();
-				updateWarningFieldState();
-				updateProtectionFieldState();
-				sendStatus();
-			}
-			
-			if(!isSocketConnected() || (closed)){
-				break;
-			}
-	
-		}
- }
+    public KMP_status_reader(int port, KmpOmniMove robot, String ConnectionType) {
+        super(port, ConnectionType, "KMP status reader");
 
-	
-	private void updateOperationMode() {
-		this.operation_mode = kmp.getOperationMode();
-	}
-	
-	private void updateReadyToMove() {
-		this.isReadyToMove = kmp.isReadyToMove();
-	}
-	
-	private void updateWarningFieldState() {
-			try{
-				 // true = violation
-				this.WarningField  = kmp.getMobilePlatformSafetyState().isWarningFieldBreached();
-			}catch(Exception e){}
-		}
-	
-	private void updateProtectionFieldState() {
-			try{
-				 // true = violation
-				this.ProtectionField = kmp.getMobilePlatformSafetyState().isSafetyFieldBreached();
-			}catch(Exception e){}
-		
-		}
+        this.kmp = robot;
+        if (!(isSocketConnected())) {
+            Thread monitorKMPStatusConnections = new MonitorKMPStatusConnectionsThread();
+            monitorKMPStatusConnections.start();
+        }
+    }
 
-	
-	private String generateStatusString() {
-		return 	">kmp_statusdata ,"  + System.nanoTime() + 
-				",OperationMode:"+ this.operation_mode.toString() + 
-				",ReadyToMove:" + this.isReadyToMove + 
-				",WarningField:" + !this.WarningField + 
-				",ProtectionField:" + !this.ProtectionField + 
-				",isKMPmoving:" + getisKMPMoving() +
-				",KMPsafetyStop:" + getEmergencyStop();
-	
-	}
-	
-	public void sendStatus() {
+    @Override
+    public void run() {
+        boolean pauseAlerted = false;
+        while (isNodeRunning()) {
+            if (Node.getShutdown()) break;
+            if (Node.isPaused()) {
+                if (!pauseAlerted) {
+                    logger.info("=== SYSTEM PAUSED: All logging is now suppressed until resume ===");
+                    pauseAlerted = true;
+                }
+                try {
+                    Thread.sleep(100);
+                } catch (InterruptedException e) {
+                    break;
+                }
+                continue;
+            } else {
+                pauseAlerted = false;
+            }
+            if (System.currentTimeMillis() - last_sendtime > 30) {
+                updateOperationMode();
+                updateReadyToMove();
+                updateWarningFieldState();
+                updateProtectionFieldState();
+                sendStatus();
+            }
 
-		String toSend = this.generateStatusString();
-		last_sendtime = System.currentTimeMillis();
-		if(isNodeRunning()){
-			try{
-				this.socket.send_message(toSend);
-				if(closed){
-					System.out.println("KMP status sender selv om han ikke faar lov");
-				}
-			}catch(Exception e){
-				System.out.println("Could not send KMP status message to ROS: " + e);
-			}
-		}
-	}
-	
-	public class MonitorKMPStatusConnectionsThread extends Thread {
-		public void run(){
-			while(!(isSocketConnected()) && (!(closed))) {
-				
-				createSocket();
-				if (isSocketConnected()){
-					break;
-				}
-				try {
-					Thread.sleep(connection_timeout);
-				} catch (InterruptedException e) {
-					System.out.println("");
-				}
-				
-			}
-			if(!closed){
-				System.out.println("Connection with KMP Status Node OK!");
-				runmainthread();					
-				}	
-		}
-	}
-	
-	
-	@Override
-	public void close() {
-		closed = true;
-		try{
-			this.socket.close();
-		}catch(Exception e){
-				System.out.println("Could not close KMP status connection: " +e);
-			}		System.out.println("KMP status closed!");
+            if (!isSocketConnected() || (closed)) {
+                break;
+            }
+        }
+    }
 
-	}
+    private void updateOperationMode() {
+        this.operation_mode = kmp.getOperationMode();
+    }
 
+    private void updateReadyToMove() {
+        this.isReadyToMove = kmp.isReadyToMove();
+    }
 
+    private void updateWarningFieldState() {
+        try {
+            // true = violation
+            this.WarningField = kmp.getMobilePlatformSafetyState().isWarningFieldBreached();
+        } catch (Exception e) {
+        }
+    }
+
+    private void updateProtectionFieldState() {
+        try {
+            // true = violation
+            this.ProtectionField = kmp.getMobilePlatformSafetyState().isSafetyFieldBreached();
+        } catch (Exception e) {
+        }
+    }
+
+    private String generateStatusString() {
+        return ">kmp_statusdata ," + System.nanoTime() +
+                ",OperationMode:" + this.operation_mode.toString() +
+                ",ReadyToMove:" + this.isReadyToMove +
+                ",WarningField:" + !this.WarningField +
+                ",ProtectionField:" + !this.ProtectionField +
+                ",isKMPmoving:" + getisKMPMoving() +
+                ",KMPsafetyStop:" + getEmergencyStop();
+    }
+
+    public void sendStatus() {
+        String toSend = this.generateStatusString();
+        last_sendtime = System.currentTimeMillis();
+        if (isNodeRunning()) {
+            try {
+                this.socket.send_message(toSend);
+                if (closed && !Node.isPaused()) {
+                    logger.warn("KMP status sender selv om han ikke faar lov");
+                }
+            } catch (Exception e) {
+                if (!Node.isPaused()) {
+                    logger.error("Could not send KMP status message to ROS: " + e);
+                }
+            }
+        }
+    }
+
+    public class MonitorKMPStatusConnectionsThread extends Thread {
+        public void run() {
+            while (!(isSocketConnected()) && (!(closed))) {
+                if (Thread.currentThread().isInterrupted()) {
+                    logger.info("KMP status connection monitor thread interrupted, exiting");
+                    break;
+                }
+
+                createSocket();
+                if (isSocketConnected()) {
+                    break;
+                }
+                try {
+                    Thread.sleep(connection_timeout);
+                } catch (InterruptedException e) {
+                    logger.info("KMP status connection monitor thread interrupted during sleep");
+                    Thread.currentThread().interrupt(); // Restore interrupt status
+                    break;
+                }
+            }
+            if (!closed) {
+                logger.info("Connection with KMP Status Node OK!");
+                runmainthread();
+            }
+        }
+    }
+
+    @Override
+    public void close() {
+        closed = true;
+        try {
+            this.socket.close();
+        } catch (Exception e) {
+            logger.error("Could not close KMP status connection: " + e);
+        }
+        if (!Node.isPaused()) {
+            logger.info("KMP status closed!");
+        }
+    }
 }

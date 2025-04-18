@@ -9,294 +9,340 @@
 //
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OR CONDITIONS OF ANY KIND, either express or implied.
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
 package API_ROS2_Sunrise;
 
-import API_ROS2_Sunrise.ISocket;
-import API_ROS2_Sunrise.TCPSocket;
-import API_ROS2_Sunrise.UDPSocket;
 import com.kuka.roboticsAPI.deviceModel.kmp.KmpOmniMove;
+import com.kuka.task.ITaskLogger;
+import javax.inject.Inject;
 
-public abstract class Node extends Thread {
-	
-	// Runtime Variables
-	private volatile static boolean shutdown;
-	public volatile boolean closed = false;
-	private static volatile boolean EmergencyStop;
-	private volatile static boolean PathFinished = true;
-	protected volatile static boolean isKMPmoving = false;
-	private volatile static boolean isLBRmoving = false;
-	private volatile static boolean isKMPconnected;
-	private volatile static boolean isLBRconnected;
+public class Node extends Thread {
+    @Inject
+    protected ITaskLogger logger;
 
-	// Socket
-	protected ISocket socket;
-	private String ConnectionType;
-	private int port;
-	public static int connection_timeout = 5000;
+    // Constants
+    protected static final int MAX_RECONNECT_ATTEMPTS = 5;
+    protected static final long CONNECTION_CHECK_INTERVAL = 5000; // 5 seconds
+    protected static final long PAUSE_LOG_INTERVAL_MS = 2000; // 2 seconds
+    protected static final int DEFAULT_CONNECTION_TIMEOUT = 600000; // 10 minutes
+    protected static final long STARTUP_GRACE_PERIOD_MS = 5000; // 5 second startup grace period
 
-	// For KMP sensor reader:
-	protected ISocket laser_socket;
-	protected ISocket odometry_socket;
-	private int KMP_laser_port;
-	private int KMP_odometry_port;
-	private String LaserConnectionType;
-	private String OdometryConnectionType;
-	
-	protected String node_name;
+    // Connection state
+    protected ISocket socket = null;
+    protected int port;
+    protected String ConnectionType;
+    protected String nodename;
+    protected int connection_timeout = 2000;
+    protected volatile boolean closed = false;
+    protected volatile boolean isNodeRunning = true;
+    protected String node_name;
+    
+    // Node state
+    private Thread connectionMonitorThread;
+    private static volatile boolean paused = false;
+    private static volatile boolean shutdown = false;
+    private static long lastPauseLogTime = 0;
+    private volatile boolean emergencyStop = false;
+    
+    // Added: startup protection - tracks when this node was created
+    private final long creationTime = System.currentTimeMillis();
+    protected boolean receivedRealCommand = false;
 
-	private long lastConnectionCheckTime = 0;
-	private boolean lastKnownConnectionState = false;
-	private int connectionFailCount = 0;
+    // Motion state
+    private volatile boolean PathFinished = false;
+    private volatile boolean isLBRmoving = false;
+    private volatile boolean isKMPmoving = false;
+    private volatile boolean isLBRconnected = false;
+    private volatile boolean isKMPconnected = false;
 
-	protected DataController dataController;
-	
-	public Node(int port1, String Conn1, int port2, String Conn2, String node_name) {
-		if (node_name == null) {
-			System.out.println("This is a test, node_name is null in Node.");
-		}
-		this.KMP_laser_port = port1;
-		this.KMP_odometry_port = port2;
-		this.LaserConnectionType = Conn1;
-		this.OdometryConnectionType = Conn2;
-		this.node_name = node_name;
-		setShutdown(false);
-		setEmergencyStop(false);
-		
-		createSocket("Laser");
-		createSocket("Odom");
-	}
-	
-	public Node(int port, String Conn, String nodeName) {
-		this.ConnectionType = Conn;
-		this.port = port;
-		this.node_name = nodeName;
-		setShutdown(false);
-		setEmergencyStop(false);
-		
-		createSocket();
-	}
-	
-	public void createSocket() {
-		if (this.ConnectionType == "TCP") {
-			this.socket = new TCPSocket(this.port, this.node_name);
-		} else {
-			this.socket = new UDPSocket(this.port, this.node_name);
-		}
-	}
-	
-	public void createSocket(String Type) {
-		if (Type == "Laser") {
-			if (LaserConnectionType == "TCP") {
-				this.laser_socket = new TCPSocket(KMP_laser_port, this.node_name);
-			} else {
-				this.laser_socket = new UDPSocket(KMP_laser_port, this.node_name);
-			}
-		} else if (Type == "Odom") {
-			if (OdometryConnectionType == "TCP") {
-				this.odometry_socket = new TCPSocket(KMP_odometry_port, this.node_name);
-			} else {
-				this.odometry_socket = new UDPSocket(KMP_odometry_port, this.node_name);
-			}
-		}
-	}
-	
-	public boolean isSocketConnected() {
-		return this.socket.isConnected();
-	}
-	
-	public boolean isNodeRunning() {
-		if (closed || getShutdown()) {
-			return false;
-		}
-		
-		long now = System.currentTimeMillis();
-		// Only check socket connection every second to avoid overwhelming with checks
-		if (now - lastConnectionCheckTime > 1000) {
-			lastConnectionCheckTime = now;
-			boolean currentConnected = this.socket != null && this.socket.isConnected();
-			
-			if (currentConnected) {
-				// Reset failure count if connection is working
-				connectionFailCount = 0;
-				lastKnownConnectionState = true;
-			} else {
-				// Only count actual transitions to disconnected state
-				if (lastKnownConnectionState) {
-					System.out.println(node_name + ": Connection state changed to DISCONNECTED");
-					connectionFailCount++;
-					lastKnownConnectionState = false;
-				}
-				
-				// Try to reconnect on first failure
-				if (connectionFailCount == 1) {
-					ensureSocketConnection();
-				}
-				
-				// Only report node as not running if socket has been disconnected for some time
-				// This prevents brief connection hiccups from stopping the node
-				if (connectionFailCount >= 3) {
-					System.out.println(node_name + ": Connection persistently lost, node will stop running");
-					return false;
-				}
-			}
-		}
-		
-		return !closed && !getShutdown();
-	}
-	
-	public static void setEmergencyStop(boolean es) {
-		EmergencyStop = es;
-	}
-	
-	public boolean getEmergencyStop() {
-		return EmergencyStop;
-	}
-	
-	public void runmainthread() {
-		this.run();
-	}
-	
-	public boolean getShutdown() {
-		return shutdown;
-	}
-	
-	public void setShutdown(boolean in) {
-		System.out.println("shutdown set by " + this.node_name + " to " + in);
-		shutdown = in;
-	}
-	
-	@Override
-	public void run() {
-	    try {
-	        while (isNodeRunning()) {
-	            // Check if thread has been interrupted
-	            if (Thread.currentThread().isInterrupted()) {
-	                System.out.println(node_name + " thread was interrupted, exiting");
-	                break;
-	            }
-	            
-	            try {
-	                // Use a timeout on socket operations
-	                String message = socket.receive_message();
-	                
-	                // Process the message if not null
-	                if (message != null) {
-	                    // Process message
-	                }
-	                
-	                // Small sleep to prevent CPU thrashing
-	                Thread.sleep(10);
-	            } catch (InterruptedException ie) {
-	                Thread.currentThread().interrupt(); // Restore interrupt status
-	                System.out.println(node_name + " thread interrupted during sleep");
-	                break;
-	            } catch (Exception e) {
-	                if (Thread.currentThread().isInterrupted() || getShutdown()) {
-	                    break;
-	                }
-	                // Log error but continue running
-	            }
-	        }
-	    } finally {
-	        System.out.println(node_name + " thread ending");
-	        // Close resources here
-	        close();
-	    }
-	}
-	
-	public abstract void close();
-	
-	public boolean getisPathFinished() {
-		return PathFinished;
-	}
-	
-	public void setisPathFinished(boolean in) {
-		PathFinished = in;
-	}
-	
-	public boolean getisLBRMoving() {
-		return isLBRmoving;
-	}
-	
-	public void setisLBRMoving(boolean in) {
-		isLBRmoving = in;
-	}
-	
-	public boolean getisKMPMoving() {
-		return isKMPmoving;
-	}
-	
-	public void setisKMPMoving(boolean in) {
-		isKMPmoving = in;
-	}
-	
-	public boolean getisLBRConnected() {
-		return isLBRconnected;
-	}
-	
-	public void setisLBRConnected(boolean in) {
-		isLBRconnected = in;
-	}
-	
-	public boolean getisKMPConnected() {
-		return isKMPconnected;
-	}
-	
-	public void setisKMPConnected(boolean in) {
-		isKMPconnected = in;
-	}
+    // For KMP sensor reader
+    protected ISocket laser_socket;
+    protected ISocket odometry_socket;
+    private int KMP_laser_port;
+    private int KMP_odometry_port;
+    private String LaserConnectionType;
+    private String OdometryConnectionType;
 
-	public void clearEmergencyStopIfSafe() {
-	    // Only clear if the device is actually ready to move again
-	    try {
-	        if (this instanceof KMP_commander) {
-	            KmpOmniMove kmp = ((KMP_commander)this).kmp;
-	            if (kmp != null && kmp.isReadyToMove() && 
-	                !kmp.getSafetyState().toString().contains("WARNING_FIELD")) {
-	                setEmergencyStop(false);
-	                System.out.println("Emergency stop cleared based on safety state");
-	            }
-	        }
-	    } catch (Exception e) {
-	        System.out.println("Error checking if emergency stop can be cleared: " + e.getMessage());
-	    }
-	}
+    protected DataController dataController;
 
-	public void ensureSocketConnection() {
-	    if (!isSocketConnected()) {
-	        System.out.println(node_name + ": Socket connection lost, attempting to reconnect");
-	        try {
-	            // Close existing if needed
-	            if (socket != null) {
-	                try {
-	                    socket.close();
-	                } catch (Exception e) {
-	                    // Ignore
-	                }
-	            }
-	            
-	            // Create new socket
-	            createSocket();
-	            
-	            if (isSocketConnected()) {
-	                System.out.println(node_name + ": Successfully reconnected socket");
-	            } else {
-	                System.out.println(node_name + ": Failed to reconnect socket");
-	            }
-	        } catch (Exception e) {
-	            System.out.println(node_name + ": Exception during socket reconnection: " + e.getMessage());
-	        }
-	    }
-	}
+    protected Node(int port, String ConnectionType, String nodeName) {
+        this.port = port;
+        this.ConnectionType = ConnectionType;
+        this.nodename = nodeName;
+        this.node_name = nodeName;
+        initializeSocket();
+    }
 
-	public ISocket getSocket() {
-	    return this.socket;
-	}
-	
-	public void setDataController(DataController controller) {
-	    this.dataController = controller;
-	}
+    protected Node(int port1, String Conn1, int port2, String Conn2, String nodeName) {
+        this.KMP_laser_port = port1;
+        this.KMP_odometry_port = port2;
+        this.LaserConnectionType = Conn1;
+        this.OdometryConnectionType = Conn2;
+        this.nodename = nodeName;
+        this.node_name = nodeName;
+        createSocket("Laser");
+        createSocket("Odom");
+    }
+
+    private void initializeSocket() {
+        createSocket();
+    }
+
+    protected void createSocket() {
+        try {
+            if (this.ConnectionType.equals("TCP")) {
+                ISocket newSocket = new TCPSocket(this.port, this.nodename);
+                this.socket = newSocket;
+            } else {
+                ISocket newSocket = new UDPSocket(this.port, this.nodename);
+                this.socket = newSocket;
+            }
+            if (logger != null) {
+                logger.info(nodename + ": Socket initialized successfully");
+            }
+        } catch (Exception e) {
+            if (logger != null) {
+                logger.error(nodename + ": Failed to create socket: " + e.getMessage());
+            }
+        }
+    }
+
+    protected void createSocket(String Type) {
+        if (Type.equals("Laser")) {
+            if (LaserConnectionType.equals("TCP")) {
+                ISocket newSocket = new TCPSocket(KMP_laser_port, this.nodename);
+                this.laser_socket = newSocket;
+            } else {
+                ISocket newSocket = new UDPSocket(KMP_laser_port, this.nodename);
+                this.laser_socket = newSocket;
+            }
+        } else if (Type.equals("Odom")) {
+            if (OdometryConnectionType.equals("TCP")) {
+                ISocket newSocket = new TCPSocket(KMP_odometry_port, this.nodename);
+                this.odometry_socket = newSocket;
+            } else {
+                ISocket newSocket = new UDPSocket(KMP_odometry_port, this.nodename);
+                this.odometry_socket = newSocket;
+            }
+        }
+    }
+
+    public boolean isNodeRunning() {
+        return isNodeRunning;
+    }
+
+    public void runmainthread() {
+        Thread nodeThread = new Thread(this, nodename + "-main");
+        nodeThread.start();
+    }
+
+    @Override
+    public void run() {
+        try {
+            while (isNodeRunning()) {
+                if (Thread.currentThread().isInterrupted()) {
+                    if (logger != null) logger.info(nodename + " thread was interrupted, exiting");
+                    break;
+                }
+
+                try {
+                    String message = socket.receive_message();
+                    if (message != null) {
+                        processMessage(message);
+                    }
+                    Thread.sleep(10);
+                } catch (InterruptedException ie) {
+                    Thread.currentThread().interrupt();
+                    if (logger != null) logger.info(nodename + " thread interrupted during sleep");
+                    break;
+                } catch (Exception e) {
+                    if (Thread.currentThread().isInterrupted() || shutdown) {
+                        break;
+                    }
+                    if (logger != null) logger.error(nodename + " Error processing message: " + e.getMessage());
+                }
+            }
+        } finally {
+            if (logger != null) logger.info(nodename + " thread ending");
+            close();
+        }
+    }
+
+    protected void processMessage(String message) {
+        // Override in subclasses
+    }
+
+    public void close() {
+        closed = true;
+        stopConnectionMonitoring();
+        if (socket != null) {
+            socket.close();
+        }
+    }
+
+    // Getters and setters
+    public boolean isSocketConnected() {
+        return this.socket != null && this.socket.isConnected();
+    }
+
+    public synchronized boolean getEmergencyStop() {
+        return emergencyStop;
+    }
+
+    public synchronized void setEmergencyStop(boolean state) {
+        this.emergencyStop = state;
+    }
+
+    public static boolean getShutdown() {
+        return shutdown;
+    }
+
+    public void setShutdown(boolean state) {
+        // Prevent immediate shutdown if within startup grace period
+        if (System.currentTimeMillis() - creationTime < STARTUP_GRACE_PERIOD_MS && !receivedRealCommand) {
+            if (logger != null) {
+                logger.warn("Ignoring shutdown command during startup grace period");
+            }
+            return;
+        }
+        shutdown = state;
+        if (logger != null) {
+            logger.info("Shutdown set by " + this.nodename + " to " + state);
+        }
+    }
+
+    public static void setPaused(boolean pause) {
+        if (pause && !paused) {
+            logInfo("=== SYSTEM PAUSED: All logging is now suppressed until resume ===");
+        }
+        paused = pause;
+        if (!pause) {
+            lastPauseLogTime = 0;
+        }
+    }
+
+    public static boolean isPaused() {
+        return paused;
+    }
+
+    public void setDataController(DataController controller) {
+        this.dataController = controller;
+    }
+
+    // State management methods
+    public boolean getisPathFinished() { return PathFinished; }
+    public void setisPathFinished(boolean in) { PathFinished = in; }
+    public boolean getisLBRMoving() { return isLBRmoving; }
+    public void setisLBRMoving(boolean in) { isLBRmoving = in; }
+    public boolean getisKMPMoving() { return isKMPmoving; }
+    public void setisKMPMoving(boolean in) { isKMPmoving = in; }
+    public boolean getisLBRConnected() { return isLBRconnected; }
+    public void setisLBRConnected(boolean in) { isLBRconnected = in; }
+    public boolean getisKMPConnected() { return isKMPconnected; }
+    public void setisKMPConnected(boolean in) { isKMPconnected = in; }
+
+    public ISocket getSocket() {
+        return this.socket;
+    }
+
+    protected void startConnectionMonitoring() {
+        if (connectionMonitorThread != null && connectionMonitorThread.isAlive()) {
+            return;
+        }
+
+        connectionMonitorThread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                while (!closed && !Thread.currentThread().isInterrupted()) {
+                    try {
+                        if (!socket.isConnected()) {
+                            if (logger != null) logger.warn(nodename + " Connection lost, attempting recovery");
+                            int attempts = 0;
+                            while (!socket.isConnected() && attempts < MAX_RECONNECT_ATTEMPTS) {
+                                attempts++;
+                                if (logger != null) logger.info(nodename + " Reconnection attempt " + attempts);
+                                createSocket();
+                                if (!socket.isConnected()) {
+                                    Thread.sleep(connection_timeout);
+                                }
+                            }
+                            if (!socket.isConnected()) {
+                                if (logger != null) logger.error(nodename + " Failed to recover connection after " + MAX_RECONNECT_ATTEMPTS + " attempts");
+                            }
+                        }
+                        Thread.sleep(CONNECTION_CHECK_INTERVAL);
+                    } catch (InterruptedException e) {
+                        Thread.currentThread().interrupt();
+                        break;
+                    } catch (Exception e) {
+                        if (logger != null) logger.error(nodename + " Error in connection monitoring: " + e.getMessage());
+                    }
+                }
+            }
+        });
+        connectionMonitorThread.setName(nodename + "_monitor");
+
+        connectionMonitorThread.setDaemon(true);
+        connectionMonitorThread.start();
+    }
+
+    protected void stopConnectionMonitoring() {
+        if (connectionMonitorThread != null) {
+            connectionMonitorThread.interrupt();
+            try {
+                connectionMonitorThread.join(1000);
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
+            connectionMonitorThread = null;
+        }
+    }
+
+    protected void ensureSocketConnection() {
+        if (!isSocketConnected()) {
+            if (logger != null) logger.info(nodename + ": Socket connection lost, attempting to reconnect");
+            try {
+                if (socket != null) {
+                    try {
+                        socket.close();
+                    } catch (Exception e) {
+                        // Ignore
+                    }
+                }
+                createSocket();
+                if (isSocketConnected()) {
+                    if (logger != null) logger.info(nodename + ": Successfully reconnected socket");
+                } else {
+                    if (logger != null) logger.warn(nodename + ": Failed to reconnect socket");
+                }
+            } catch (Exception e) {
+                if (logger != null) logger.error(nodename + ": Exception during socket reconnection: " + e.getMessage());
+            }
+        }
+    }
+
+    public void clearEmergencyStopIfSafe() {
+        try {
+            if (this instanceof KMP_commander) {
+                KmpOmniMove kmp = ((KMP_commander)this).kmp;
+                if (kmp != null && kmp.isReadyToMove() && 
+                    !kmp.getSafetyState().toString().contains("WARNING_FIELD")) {
+                    setEmergencyStop(false);
+                    if (logger != null) logger.info("Emergency stop cleared based on safety state");
+                }
+            }
+        } catch (Exception e) {
+            if (logger != null) logger.error("Error checking if emergency stop can be cleared: " + e.getMessage());
+        }
+    }
+
+    protected static void logInfo(String message) {
+        // Static logging helper method
+        if (!paused || (System.currentTimeMillis() - lastPauseLogTime > PAUSE_LOG_INTERVAL_MS)) {
+            lastPauseLogTime = System.currentTimeMillis();
+            // Note: Logger access needs to be handled carefully in static context
+        }
+    }
 }

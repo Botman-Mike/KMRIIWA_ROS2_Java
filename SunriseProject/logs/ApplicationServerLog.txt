@@ -1,0 +1,2645 @@
+INFO  2025-04-18 17:19:29,552 [..ollerStateEvents-thread-1] com.kuka.nav.kmp.omnimove.basedriver.listeners.SunriseControllerStateListener == Safety state changing to:  EmergencyStopExternal: NOT_CONFIGURED EmergencyStopInternal: INACTIVE OperationMode: T1 OperatorSafety: OPERATOR_SAFETY_CLOSED 
+DEBUG 2025-04-18 17:19:29,552 [..ollerStateEvents-thread-1] com.kuka.roboticsAPI.applicationServer.services.stationModel.StationDevice == updateAndSetCurrentDeviceState(false); OpMode=T1, canMove=true, canJog=true, used=false, motionEnabled=true 
+INFO  2025-04-18 17:19:29,554 [..ollerStateEvents-thread-1] com.kuka.nav.kmp.omnimove.basedriver.listeners.SunriseControllerStateListener == Safety state changing to:  EmergencyStopExternal: NOT_CONFIGURED EmergencyStopInternal: INACTIVE OperationMode: T1 OperatorSafety: OPERATOR_SAFETY_CLOSED 
+DEBUG 2025-04-18 17:19:29,697 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:19:30,204 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:19:30,704 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:19:31,198 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:19:31,698 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:19:32,202 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:19:32,693 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:19:33,199 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:19:33,703 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:19:34,205 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:19:34,692 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:19:35,198 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:19:35,686 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:19:36,189 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:19:36,679 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:19:37,198 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:19:37,204 [..rvice: AppServer-thread-1] com.kuka.roboticsAPI.applicationServer.services.applicationService.internal.UserTaskWrapper == Task API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject: Start requested false. User task state: IDLE. 
+DEBUG 2025-04-18 17:19:37,204 [..rvice: AppServer-thread-1] com.kuka.roboticsAPI.applicationServer.services.stationModel.StationDevice == LBR_iiwa_14_R820_1@KUKA_Sunrise_Cabinet_1 is locked by API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject 
+DEBUG 2025-04-18 17:19:37,204 [..rvice: AppServer-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.DeviceExecutor == Canceling all SPRs on: 'DeviceExecutor-7dce5 for device: LBR_iiwa_14_R820_1' (cancelObservers = false). 
+DEBUG 2025-04-18 17:19:37,204 [..rvice: AppServer-thread-1] com.kuka.roboticsAPI.applicationServer.services.stationModel.StationDevice == updateAndSetCurrentDeviceState(true); OpMode=T1, canMove=true, canJog=true, used=true, motionEnabled=true 
+DEBUG 2025-04-18 17:19:37,204 [..rvice: AppServer-thread-1] com.kuka.roboticsAPI.applicationServer.services.stationModel.StationDevice == KMR_omniMove_200_1@KUKA_Sunrise_Cabinet_1 is locked by API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject 
+DEBUG 2025-04-18 17:19:37,204 [..rvice: AppServer-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.DeviceExecutor == Canceling all SPRs on: 'DeviceExecutor-13fa673 for device: KMR_omniMove_200_1' (cancelObservers = false). 
+DEBUG 2025-04-18 17:19:37,204 [..rvice: AppServer-thread-1] com.kuka.roboticsAPI.applicationServer.services.stationModel.StationDevice == updateAndSetCurrentDeviceState(true); OpMode=T1, canMove=true, canJog=true, used=true, motionEnabled=true 
+DEBUG 2025-04-18 17:19:37,204 [..rvice: AppServer-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.DeviceExecutor == Canceling all SPRs on: 'DeviceExecutor-7dce5 for device: LBR_iiwa_14_R820_1' (cancelObservers = false). 
+DEBUG 2025-04-18 17:19:37,204 [..rvice: AppServer-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.DeviceExecutor == Canceling all SPRs on: 'DeviceExecutor-13fa673 for device: KMR_omniMove_200_1' (cancelObservers = false). 
+DEBUG 2025-04-18 17:19:37,204 [..rvice: AppServer-thread-1] com.kuka.task.internal.TaskInstanceManagementThread == UserTask thread group with name '7@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject' created 
+DEBUG 2025-04-18 17:19:37,204 [..rvice: AppServer-thread-1] com.kuka.task.internal.TaskInstance == Starting task instance '7@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject' 
+DEBUG 2025-04-18 17:19:37,238 [..n@SunriseProject-thread-1] com.kuka.roboticsAPI.applicationServer.services.applicationService.internal.UserTaskWrapper == Task API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject: Application state set to STARTING. 
+DEBUG 2025-04-18 17:19:37,249 [..pplication@SunriseProject] com.kuka.common.ResolveUtil == resolved resource bundleresource://262.fwk21559496/RoboticsAPI.config.xml 
+DEBUG 2025-04-18 17:19:37,251 [..ConnectionAccess-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseConnection == Requested sunrise connection for nameserver 192.168.0.2:23456 with keep alive timeoutes 0/5000. 
+DEBUG 2025-04-18 17:19:37,251 [..ConnectionAccess-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseConnection == Found existing sunrise connection for nameserver 192.168.0.2:23456 with keep alive timeoutes 0/5000. 
+DEBUG 2025-04-18 17:19:37,252 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseController == Creating ApplicationStateSPR 
+DEBUG 2025-04-18 17:19:37,256 [..pplication@SunriseProject] com.kuka.roboticsAPI.deviceModel.kmp.SunriseOmniMoveMobilePlatform == Capability interface already registered (com.kuka.roboticsAPI.capabilities.honk.IHonkCapability) 
+DEBUG 2025-04-18 17:19:37,256 [..pplication@SunriseProject] com.kuka.roboticsAPI.deviceModel.kmp.SunriseOmniMoveMobilePlatform == Capability interface already registered (com.kuka.roboticsAPI.capabilities.floorMountedCharge.IFloorMountedChargeCapability) 
+DEBUG 2025-04-18 17:19:37,256 [..pplication@SunriseProject] com.kuka.roboticsAPI.deviceModel.kmp.SunriseOmniMoveMobilePlatform == Capability interface already registered (com.kuka.roboticsAPI.capabilities.sideSocketCharge.ISideSocketChargeCapability) 
+DEBUG 2025-04-18 17:19:37,258 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == com.kuka.roboticsAPI.controllerModel.sunrise.conditions.SunriseConditionCommand@1bacd55 false null 
+DEBUG 2025-04-18 17:19:37,258 [..pplication@SunriseProject] com.kuka.roboticsAPI.executionModel.ExecutionContainer == Created SunriseExecutionContainer-00FEC7EF for command 'com.kuka.roboticsAPI.controllerModel.sunrise.conditions.SunriseConditionCommand@1bacd55' 
+DEBUG 2025-04-18 17:19:37,258 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.Primitive == Added SPR null ConditionObserverSPR (0xf856e4) to list '_activeSPRStateListener'. 
+DEBUG 2025-04-18 17:19:37,258 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.DeviceExecutor == Execute container (container: SunriseExecutionContainer-00FEC7EF, Sunrise executor for non device commands). 
+DEBUG 2025-04-18 17:19:37,258 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.DeviceExecutor == Initializing SPRs of SunriseExecutionContainer-00FEC7EF (Sunrise executor for non device commands). 
+DEBUG 2025-04-18 17:19:37,260 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.DeviceExecutor == Put SPR 0010.0001.00000003 in list '_runningSPRs' (Sunrise executor for non device commands). 
+DEBUG 2025-04-18 17:19:37,260 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.DeviceExecutor == Initialized: SPR 0010.0001.00000003 (Sunrise executor for non device commands). 
+DEBUG 2025-04-18 17:19:37,260 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.DeviceExecutor == Sending SPRs of SunriseExecutionContainer-00FEC7EF (Sunrise executor for non device commands). 
+DEBUG 2025-04-18 17:19:37,280 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.SPRRuntime == State change (CommandCreated --> Preparing) of SPR 0010.0001.00000003. 
+DEBUG 2025-04-18 17:19:37,280 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.Primitive == State change (Created --> Queued) of SprPrimitive(SPR 0010.0001.00000003). 
+DEBUG 2025-04-18 17:19:37,280 [.. setting thread.-thread-1] com.kuka.roboticsAPI.executionModel.ExecutionContainer == State change (Created --> Queued) of SunriseExecutionContainer-00FEC7EF 
+DEBUG 2025-04-18 17:19:37,281 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.SPRRuntime == State change (Preparing --> PreparationFinished) of SPR 0010.0001.00000003. 
+DEBUG 2025-04-18 17:19:37,281 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.SPRRuntime == State change (PreparationFinished --> Tuning) of SPR 0010.0001.00000003. 
+DEBUG 2025-04-18 17:19:37,281 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.SPRRuntime == State change (Tuning --> Active) of SPR 0010.0001.00000003. 
+DEBUG 2025-04-18 17:19:37,281 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.Primitive == State change (Queued --> Executing) of SprPrimitive(SPR 0010.0001.00000003). 
+DEBUG 2025-04-18 17:19:37,281 [.. setting thread.-thread-1] com.kuka.roboticsAPI.executionModel.ExecutionContainer == State change (Queued --> Executing) of SunriseExecutionContainer-00FEC7EF 
+DEBUG 2025-04-18 17:19:37,281 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.SPRRuntime == Wait until SPR is going to Active: 0010.0001.00000003 ConditionObserverSPR (0xf856e4) at state: Active 
+DEBUG 2025-04-18 17:19:37,281 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.SPRRuntime == SPR : 0010.0001.00000003 ConditionObserverSPR (0xf856e4) is Active 
+DEBUG 2025-04-18 17:19:37,283 [..pplication@SunriseProject] com.kuka.roboticsAPI.deviceModel.MovableDevice == Sending request for getting safety-state 
+INFO  2025-04-18 17:19:37,285 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseController == SSKState message received: AcknowledgedErrors 
+INFO  2025-04-18 17:19:37,285 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseController == SSKState message received: AcknowledgedErrors 
+INFO  2025-04-18 17:19:37,285 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseController == SSKState message received: AcknowledgedErrors 
+DEBUG 2025-04-18 17:19:37,285 [..pplication@SunriseProject] com.kuka.roboticsAPI.deviceModel.MovableDevice == Sending request for getting safety-state 
+DEBUG 2025-04-18 17:19:37,286 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseController == Executing ApplicationStateSPR 
+DEBUG 2025-04-18 17:19:37,286 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == SPR: null ApplicationState (0xde8271) false null 
+DEBUG 2025-04-18 17:19:37,286 [..pplication@SunriseProject] com.kuka.roboticsAPI.executionModel.ExecutionContainer == Created SunriseExecutionContainer-0045EE17 for command 'SPR: null ApplicationState (0xde8271)' 
+DEBUG 2025-04-18 17:19:37,286 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.Primitive == Added SPR null ApplicationState (0xde8271) to list '_activeSPRStateListener'. 
+DEBUG 2025-04-18 17:19:37,286 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.DeviceExecutor == Execute container (container: SunriseExecutionContainer-0045EE17, Sunrise executor for non device commands). 
+DEBUG 2025-04-18 17:19:37,286 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.DeviceExecutor == Initializing SPRs of SunriseExecutionContainer-0045EE17 (Sunrise executor for non device commands). 
+DEBUG 2025-04-18 17:19:37,286 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.DeviceExecutor == Put SPR 0010.0001.00000004 in list '_runningSPRs' (Sunrise executor for non device commands). 
+DEBUG 2025-04-18 17:19:37,286 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.DeviceExecutor == Initialized: SPR 0010.0001.00000004 (Sunrise executor for non device commands). 
+DEBUG 2025-04-18 17:19:37,286 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.DeviceExecutor == Sending SPRs of SunriseExecutionContainer-0045EE17 (Sunrise executor for non device commands). 
+DEBUG 2025-04-18 17:19:37,289 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.SPRRuntime == State change (CommandCreated --> Preparing) of SPR 0010.0001.00000004. 
+DEBUG 2025-04-18 17:19:37,289 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.Primitive == State change (Created --> Queued) of SprPrimitive(SPR 0010.0001.00000004). 
+DEBUG 2025-04-18 17:19:37,289 [.. setting thread.-thread-1] com.kuka.roboticsAPI.executionModel.ExecutionContainer == State change (Created --> Queued) of SunriseExecutionContainer-0045EE17 
+DEBUG 2025-04-18 17:19:37,289 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.SPRRuntime == State change (Preparing --> PreparationFinished) of SPR 0010.0001.00000004. 
+DEBUG 2025-04-18 17:19:37,290 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.predefinedCompounds.ApplicationStateModule == ApplicationStateSPR 0010.0001.00000004 ApplicationState (0xde8271) changed state to: Preparing 
+DEBUG 2025-04-18 17:19:37,290 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.predefinedCompounds.ApplicationStateModule == ApplicationStateSPR 0010.0001.00000004 ApplicationState (0xde8271) changed state to: PreparationFinished 
+DEBUG 2025-04-18 17:19:37,290 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.SPRRuntime == Wait until SPR is going to Active: 0010.0001.00000004 ApplicationState (0xde8271) at state: PreparationFinished 
+DEBUG 2025-04-18 17:19:37,290 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.SPRRuntime == State change (PreparationFinished --> Tuning) of SPR 0010.0001.00000004. 
+DEBUG 2025-04-18 17:19:37,290 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.SPRRuntime == State change (Tuning --> Active) of SPR 0010.0001.00000004. 
+DEBUG 2025-04-18 17:19:37,290 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.Primitive == State change (Queued --> Executing) of SprPrimitive(SPR 0010.0001.00000004). 
+DEBUG 2025-04-18 17:19:37,290 [.. setting thread.-thread-1] com.kuka.roboticsAPI.executionModel.ExecutionContainer == State change (Queued --> Executing) of SunriseExecutionContainer-0045EE17 
+DEBUG 2025-04-18 17:19:37,290 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.predefinedCompounds.ApplicationStateModule == ApplicationStateSPR 0010.0001.00000004 ApplicationState (0xde8271) changed state to: Tuning 
+DEBUG 2025-04-18 17:19:37,290 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.predefinedCompounds.ApplicationStateModule == ApplicationStateSPR 0010.0001.00000004 ApplicationState (0xde8271) changed state to: Active 
+DEBUG 2025-04-18 17:19:37,290 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.SPRRuntime == SPR : 0010.0001.00000004 ApplicationState (0xde8271) is Active 
+DEBUG 2025-04-18 17:19:37,290 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseController == ApplicationStateSPR active: 0010.0001.00000004 ApplicationState (0xde8271) 
+DEBUG 2025-04-18 17:19:37,293 [..pplication@SunriseProject] com.kuka.roboticsAPI.RoboticsAPIContext == Replacing engine type interface com.kuka.roboticsAPI.uiModel.IUIEngine, old engine: com.kuka.roboticsAPI.uiModel.UIEngine@16f023, new engine: com.kuka.roboticsAPI.applicationServer.services.applicationUIService.internal.ApplicationUIEngine@1ef9736 
+DEBUG 2025-04-18 17:19:37,294 [..pplication@SunriseProject] com.kuka.objectprovider.impl.ObjectProviderRegistry == Registered object provider com.kuka.roboticsAPI.task.impl.TemplateRuntimeV1Feeder 
+DEBUG 2025-04-18 17:19:37,353 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.predefinedCompounds.ApplicationStateModule == received _manualOverride 1.0 
+DEBUG 2025-04-18 17:19:37,353 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.predefinedCompounds.ApplicationStateModule == received _applicationOverride 1.0 
+DEBUG 2025-04-18 17:19:37,353 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.predefinedCompounds.ApplicationStateModule == received _effectiveOverride 1.0 
+DEBUG 2025-04-18 17:19:37,354 [..pplication@SunriseProject] com.kuka.roboticsAPI.applicationServer.services.applicationService.internal.UserTaskWrapper == updateEffectiveOverride: current: 1.0,  received: 1.0 
+DEBUG 2025-04-18 17:19:37,354 [..pplication@SunriseProject] com.kuka.roboticsAPI.applicationServer.services.applicationService.internal.UserTaskWrapper == updateApplicationOverride: current: 1.0,  received: 1.0 
+DEBUG 2025-04-18 17:19:37,354 [..pplication@SunriseProject] com.kuka.roboticsAPI.applicationServer.services.applicationService.internal.UserTaskWrapper == updateManualOverride: current: 1.0,  received: 1.0 
+DEBUG 2025-04-18 17:19:37,355 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == CartesianPTP to 'DrivePos [X=10.94 Y=-451.47 Z=376.28 A=0.95 B=0.01 C=-3.14]', [ vel=0.50 ] on device LBR_iiwa_14_R820_1 true null 
+DEBUG 2025-04-18 17:19:37,355 [..pplication@SunriseProject] com.kuka.roboticsAPI.motionModel.AbstractMotionContainer == Created SunriseMotionContainer-00BB332F for 'CartesianPTP to 'DrivePos [X=10.94 Y=-451.47 Z=376.28 A=0.95 B=0.01 C=-3.14]', [ vel=0.50 ] on device LBR_iiwa_14_R820_1' 
+DEBUG 2025-04-18 17:19:37,355 [..pplication@SunriseProject] com.kuka.roboticsAPI.executionModel.ExecutionContainer == Created SunriseMotionExecutionContainer-001D75E9 for command 'CartesianPTP to 'DrivePos [X=10.94 Y=-451.47 Z=376.28 A=0.95 B=0.01 C=-3.14]', [ vel=0.50 ] on device LBR_iiwa_14_R820_1' 
+DEBUG 2025-04-18 17:19:37,355 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Try to acquire resources for container (container: SunriseMotionExecutionContainer-001D75E9, SunriseExecutionService-284444 for KUKA_Sunrise_Cabinet_1). 
+DEBUG 2025-04-18 17:19:37,355 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Container tries to to enter execution area (container: SunriseMotionExecutionContainer-001D75E9, SunriseExecutionService-284444 for KUKA_Sunrise_Cabinet_1). 
+DEBUG 2025-04-18 17:19:37,355 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.FencedArea == Thread enters area (Thread[User thread for 7@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject,5,7@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject], FencedArea-d9ada4). 
+DEBUG 2025-04-18 17:19:37,355 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Container entered execution area (container: SunriseMotionExecutionContainer-001D75E9, SunriseExecutionService-284444 for KUKA_Sunrise_Cabinet_1). 
+DEBUG 2025-04-18 17:19:37,355 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Added container to list '_currentActiveExecutionContainers' (container: SunriseMotionExecutionContainer-001D75E9, SunriseExecutionService-284444 for KUKA_Sunrise_Cabinet_1). 
+DEBUG 2025-04-18 17:19:37,355 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Map container (container: SunriseMotionExecutionContainer-001D75E9, SunriseExecutionService-284444 for KUKA_Sunrise_Cabinet_1). 
+DEBUG 2025-04-18 17:19:37,355 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.mapping.SunriseMapper == isSplineMotion true 
+DEBUG 2025-04-18 17:19:37,355 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.mapping.SunriseMapper == Set motion control mode PositionControlMode 
+DEBUG 2025-04-18 17:19:37,356 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.mapping.SplineMotionMapper == About to map motion CartesianPTP to 'DrivePos [X=10.94 Y=-451.47 Z=376.28 A=0.95 B=0.01 C=-3.14]', [ vel=0.50 ] 
+DEBUG 2025-04-18 17:19:37,356 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.mapping.RobotMapper == Robot Mapper: Creating MeasureCommandSPR, new ControlMode: PositionControlMode, old ControlMode: PositionControlMode 
+DEBUG 2025-04-18 17:19:37,356 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.Primitive == Added SPR null Cmd2MsrSPR (0xdda426) to list '_activeSPRStateListener'. 
+DEBUG 2025-04-18 17:19:37,356 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.mapping.RobotMapper == Same control mode true, controlModeParametersChanged false 
+DEBUG 2025-04-18 17:19:37,356 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.mapping.RobotMapper == Setting new control mode PositionControlMode for robot LBR_iiwa_14_R820_1, old control mode PositionControlMode 
+DEBUG 2025-04-18 17:19:37,356 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.DeviceMappingSnapshot == firstMotion true, alwaysReset false, MotionTypeChanged false, TaskFrameChanged false 
+DEBUG 2025-04-18 17:19:37,356 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.DeviceMappingSnapshot == controlModeChanged false, ControlModeParametersChanged false 
+DEBUG 2025-04-18 17:19:37,356 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.mapping.SplineMotionSPRBuilder == RESET = TRUE for robot LBR_iiwa_14_R820_1 
+DEBUG 2025-04-18 17:19:37,356 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.mapping.SplineMotionSPRBuilder == IsFirstMotion = true 
+DEBUG 2025-04-18 17:19:37,356 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.Primitive == Added SPR null Spline Motion SPR (0x199fdad) to list '_activeSPRStateListener'. 
+DEBUG 2025-04-18 17:19:37,357 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.mapping.SplineMotionMapper == Mapping finished for motion CartesianPTP to 'DrivePos [X=10.94 Y=-451.47 Z=376.28 A=0.95 B=0.01 C=-3.14]', [ vel=0.50 ] 
+DEBUG 2025-04-18 17:19:37,357 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.DeviceExecutor == Execute container (container: SunriseMotionExecutionContainer-001D75E9, DeviceExecutor-1fca42b for device: LBR_iiwa_14_R820_1). 
+DEBUG 2025-04-18 17:19:37,357 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.DeviceExecutor == Initializing SPRs of SunriseMotionExecutionContainer-001D75E9 (DeviceExecutor-1fca42b for device: LBR_iiwa_14_R820_1). 
+DEBUG 2025-04-18 17:19:37,357 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.DeviceExecutor == Put SPR 0010.0001.00000005 in list '_runningSPRs' (DeviceExecutor-1fca42b for device: LBR_iiwa_14_R820_1). 
+DEBUG 2025-04-18 17:19:37,357 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.DeviceExecutor == Initialized: SPR 0010.0001.00000005 (DeviceExecutor-1fca42b for device: LBR_iiwa_14_R820_1). 
+DEBUG 2025-04-18 17:19:37,357 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.DeviceExecutor == Put SPR 0010.0001.00000006 in list '_runningSPRs' (DeviceExecutor-1fca42b for device: LBR_iiwa_14_R820_1). 
+DEBUG 2025-04-18 17:19:37,357 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.DeviceExecutor == Initialized: SPR 0010.0001.00000006 (DeviceExecutor-1fca42b for device: LBR_iiwa_14_R820_1). 
+DEBUG 2025-04-18 17:19:37,357 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.DeviceExecutor == DeviceExecutor: Container with MotionID 0010.0001.00000006 is being executed (DeviceExecutor-1fca42b for device: LBR_iiwa_14_R820_1). 
+DEBUG 2025-04-18 17:19:37,357 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.DeviceExecutor == Sending SPRs of SunriseMotionExecutionContainer-001D75E9 (DeviceExecutor-1fca42b for device: LBR_iiwa_14_R820_1). 
+DEBUG 2025-04-18 17:19:37,364 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.SPRRuntime == State change (CommandCreated --> Preparing) of SPR 0010.0001.00000005. 
+DEBUG 2025-04-18 17:19:37,364 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.Primitive == State change (Created --> Queued) of SprPrimitive(SPR 0010.0001.00000005). 
+DEBUG 2025-04-18 17:19:37,364 [.. setting thread.-thread-1] com.kuka.roboticsAPI.executionModel.ExecutionContainer == State change (Created --> Queued) of SunriseMotionExecutionContainer-001D75E9 
+DEBUG 2025-04-18 17:19:37,364 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.SPRRuntime == State change (Preparing --> PreparationFinished) of SPR 0010.0001.00000005. 
+DEBUG 2025-04-18 17:19:37,365 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.SPRRuntime == State change (PreparationFinished --> Tuning) of SPR 0010.0001.00000005. 
+DEBUG 2025-04-18 17:19:37,365 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.SPRRuntime == State change (CommandCreated --> Preparing) of SPR 0010.0001.00000006. 
+DEBUG 2025-04-18 17:19:37,365 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.Primitive == State change (Created --> Queued) of SprPrimitive(SPR 0010.0001.00000006). 
+DEBUG 2025-04-18 17:19:37,365 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.SPRRuntime == State change (Preparing --> PreparationFinished) of SPR 0010.0001.00000006. 
+DEBUG 2025-04-18 17:19:37,365 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.SPRRuntime == State change (PreparationFinished --> Tuning) of SPR 0010.0001.00000006. 
+DEBUG 2025-04-18 17:19:37,366 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.FencedArea == Thread leaves area (Thread[User thread for 7@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject,5,7@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject], FencedArea-d9ada4). 
+DEBUG 2025-04-18 17:19:37,366 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Container left execution area (container: SunriseMotionExecutionContainer-001D75E9, SunriseExecutionService-284444 for KUKA_Sunrise_Cabinet_1). 
+DEBUG 2025-04-18 17:19:37,366 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Start waiting for command container 'SunriseMotionContainer-00BB332F'. 
+DEBUG 2025-04-18 17:19:37,366 [..-ContainerEvents-thread-1] com.kuka.roboticsAPI.motionModel.AbstractMotionContainer == State change to state 'Queued' of SunriseMotionExecutionContainer-001D75E9. 
+DEBUG 2025-04-18 17:19:37,366 [..-ContainerEvents-thread-1] com.kuka.roboticsAPI.motionModel.AbstractMotionContainer == SunriseMotionExecutionContainer-001D75E9 is first to reach state Queued => pull SunriseMotionContainer-00BB332F to the new state. 
+DEBUG 2025-04-18 17:19:37,366 [..-ContainerEvents-thread-1] com.kuka.roboticsAPI.motionModel.AbstractMotionContainer == State change to state Queued (old state: Created) of SunriseMotionContainer-00BB332F 
+DEBUG 2025-04-18 17:19:37,366 [..-ContainerEvents-thread-1] com.kuka.roboticsAPI.motionModel.AbstractMotionContainer == SunriseMotionContainer-00BB332F fired container state changed event for state Queued 
+DEBUG 2025-04-18 17:19:37,376 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.SPRRuntime == SPR: 0010.0001.00000005 Cmd2MsrSPR (0xdda426) in state Tuning, received SprState: Tuning 
+DEBUG 2025-04-18 17:19:37,376 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.SPRRuntime == State change (Tuning --> PreActive) of SPR 0010.0001.00000005. 
+DEBUG 2025-04-18 17:19:37,483 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.SPRRuntime == SPR: 0010.0001.00000005 Cmd2MsrSPR (0xdda426) in state PreActive, received SprState: PreActive 
+DEBUG 2025-04-18 17:19:37,484 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.SPRRuntime == State change (PreActive --> Active) of SPR 0010.0001.00000005. 
+DEBUG 2025-04-18 17:19:37,484 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.Primitive == State change (Queued --> Executing) of SprPrimitive(SPR 0010.0001.00000005). 
+DEBUG 2025-04-18 17:19:37,484 [.. setting thread.-thread-1] com.kuka.roboticsAPI.executionModel.ExecutionContainer == State change (Queued --> Executing) of SunriseMotionExecutionContainer-001D75E9 
+DEBUG 2025-04-18 17:19:37,484 [..-ContainerEvents-thread-1] com.kuka.roboticsAPI.motionModel.AbstractMotionContainer == State change to state 'Executing' of SunriseMotionExecutionContainer-001D75E9. 
+DEBUG 2025-04-18 17:19:37,485 [..-ContainerEvents-thread-1] com.kuka.roboticsAPI.motionModel.AbstractMotionContainer == SunriseMotionExecutionContainer-001D75E9 is first to reach state Executing => pull SunriseMotionContainer-00BB332F to the new state. 
+DEBUG 2025-04-18 17:19:37,485 [..-ContainerEvents-thread-1] com.kuka.roboticsAPI.motionModel.AbstractMotionContainer == State change to state Executing (old state: Queued) of SunriseMotionContainer-00BB332F 
+DEBUG 2025-04-18 17:19:37,485 [..-ContainerEvents-thread-1] com.kuka.roboticsAPI.motionModel.AbstractMotionContainer == SunriseMotionContainer-00BB332F fired container state changed event for state Executing 
+INFO  2025-04-18 17:19:37,486 [..-ContainerEvents-thread-1] com.kuka.roboticsAPI.applicationServer.services.applicationService.internal.TaskManagerWrapper == Move to frame: /DrivePos 
+DEBUG 2025-04-18 17:19:37,487 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0010.0001.00000005 Cmd2MsrSPR (0xdda426)
+Message(Id: 0x0010000100000005, Type: 122)
+	[0] StopEvaluator
+	[1] MotionStopped
+	[2] AXIS_ACT: [-1.5601, 0.3040, 0.0181, -1.8872, -0.0126, 0.9479, 0.6607] 
+DEBUG 2025-04-18 17:19:37,487 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0010.0001.00000006 Spline Motion SPR (0x199fdad)
+Message(Id: 0x0010000100000006, Type: 122)
+	[0] SplineMotion
+	[1] MOTION_INFO
+	[2] PLANNING_STARTED: 06 00 00 00 01 00 10 00 
+DEBUG 2025-04-18 17:19:37,487 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0010.0001.00000006 Spline Motion SPR (0x199fdad)
+Message(Id: 0x0010000100000006, Type: 122)
+	[0] SplineMotion
+	[1] MOTION_INFO
+	[2] PLANNING_FINISHED: 06 00 00 00 01 00 10 00 
+DEBUG 2025-04-18 17:19:37,489 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Segment Event for motion 0010000100000006 in 0010.0001.00000006 Spline Motion SPR (0x199fdad)
+Message(Id: 0x0010000100000006, Type: 122)
+	[0] SplineMotion
+	[1] MOTION_INFO
+	[2] SEGMENT_START: 06 00 00 00 01 00 10 00
+	[3] TimeStamp: [1744996780, 120000000]
+	[4] AXIS_ACT: [-1.5601, 0.3040, 0.0181, -1.8872, -0.0126, 0.9479, 0.6607] 
+DEBUG 2025-04-18 17:19:37,489 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Segment Event for motion 0010000100000006 in 0010.0001.00000006 Spline Motion SPR (0x199fdad)
+Message(Id: 0x0010000100000006, Type: 122)
+	[0] SplineMotion
+	[1] MOTION_INFO
+	[2] SEGMENT_CHANGE_SPLINE_ID: 06 00 00 00 01 00 10 00
+	[3] SEGMENT_CHANGE_SEGMENT_ID: 0 (0x00000000)
+	[4] TimeStamp: [1744996780, 120000000]
+	[5] AXIS_ACT: [-1.5601, 0.3040, 0.0181, -1.8872, -0.0126, 0.9479, 0.6607] 
+DEBUG 2025-04-18 17:19:37,495 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.predefinedCompounds.StopEvaluatorModule == "MotionStopped" event received for 0010.0001.00000005 Cmd2MsrSPR (0xdda426). 
+DEBUG 2025-04-18 17:19:37,496 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.predefinedCompounds.StopEvaluatorModule == AXIS_ACT: [-1.5600903992778454, 0.3039511624677977, 0.018095520452135024, -1.8871671610264324, -0.012570780886846038, 0.9478912502202607, 0.660692116687349] (0010.0001.00000005 Cmd2MsrSPR (0xdda426)) 
+DEBUG 2025-04-18 17:19:37,496 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.DeviceExecutor == Motion of SPR 0010.0001.00000005 stopped => update recovery information in SunriseMotionExecutionContainer-001D75E9 (DeviceExecutor-1fca42b for device: LBR_iiwa_14_R820_1). 
+DEBUG 2025-04-18 17:19:37,496 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseMotionExecutionContainer == New recovery position '[-1.56, 0.30, 0.02, -1.89, -0.01, 0.95, 0.66]' and control mode 'PositionControlMode' set for motion execution container 'SunriseMotionExecutionContainer-001D75E9' by primitive 'SprPrimitive(SPR 0010.0001.00000005)'. 
+DEBUG 2025-04-18 17:19:37,496 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.SPRRuntime == SPR: 0010.0001.00000005 Cmd2MsrSPR (0xdda426) in state Active, received SprState: Active 
+DEBUG 2025-04-18 17:19:37,496 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.SPRRuntime == State change (Active --> Maintaining) of SPR 0010.0001.00000005. 
+DEBUG 2025-04-18 17:19:37,496 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.SPRRuntime == StopCondition fired 'Ist2Soll.isCmdSet == 1 (fired)' for SPR '0010.0001.00000005'. 
+DEBUG 2025-04-18 17:19:37,496 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.Primitive == State change (Executing --> Finished) of SprPrimitive(SPR 0010.0001.00000005). 
+DEBUG 2025-04-18 17:19:37,496 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.Primitive == Removed SPR 0010.0001.00000005 Cmd2MsrSPR (0xdda426) from list '_activeSPRStateListener'. 
+DEBUG 2025-04-18 17:19:37,496 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.SPRRuntime == SPR: 0010.0001.00000006 Spline Motion SPR (0x199fdad) in state Tuning, received SprState: Tuning 
+DEBUG 2025-04-18 17:19:37,496 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.SPRRuntime == State change (Tuning --> Active) of SPR 0010.0001.00000006. 
+DEBUG 2025-04-18 17:19:37,496 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.predefinedCompounds.SplineMotionModule == Removed reset flag for 0010.0001.00000006 Spline Motion SPR (0x199fdad). 
+DEBUG 2025-04-18 17:19:37,496 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.Primitive == State change (Queued --> Executing) of SprPrimitive(SPR 0010.0001.00000006). 
+DEBUG 2025-04-18 17:19:37,496 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.SPRRuntime == SPR: 0010.0001.00000005 Cmd2MsrSPR (0xdda426) in state Maintaining, received SprState: Maintaining 
+DEBUG 2025-04-18 17:19:37,496 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.SPRRuntime == State change (Maintaining --> Finalize) of SPR 0010.0001.00000005. 
+DEBUG 2025-04-18 17:19:37,496 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.SPRRuntime == State change (Finalize --> CommandFinished) of SPR 0010.0001.00000005. 
+DEBUG 2025-04-18 17:19:37,496 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.DeviceExecutor == 'removeFinishedSPRRuntime' called for SPR 0010.0001.00000005 (DeviceExecutor-1fca42b for device: LBR_iiwa_14_R820_1). 
+DEBUG 2025-04-18 17:19:37,496 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.DeviceExecutor == Using commanded joint position from the StopEvaluator as recovery position for SPR 0010.0001.00000005 (DeviceExecutor-1fca42b for device: LBR_iiwa_14_R820_1). 
+DEBUG 2025-04-18 17:19:37,497 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseMotionExecutionContainer == New recovery position '[-1.56, 0.30, 0.02, -1.89, -0.01, 0.95, 0.66]' and control mode 'PositionControlMode' set for motion execution container 'SunriseMotionExecutionContainer-001D75E9' by primitive 'SprPrimitive(SPR 0010.0001.00000005)'. 
+DEBUG 2025-04-18 17:19:37,497 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.DeviceExecutor == SPR 0010.0001.00000005 removed from list '_runningSPRs' (DeviceExecutor-1fca42b for device: LBR_iiwa_14_R820_1). 
+DEBUG 2025-04-18 17:19:37,497 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.MotionSprPrimitive == Event: SEGMENT_START, SPR-ID: 0010.0001.00000006 
+DEBUG 2025-04-18 17:19:37,497 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.MotionSprPrimitive == Interpolation of segment 0010.0001.00000006 is started. Setting container and MotionSPRPrim to executing state. 
+DEBUG 2025-04-18 17:19:37,497 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.MotionSprPrimitive == Event: SEGMENT_CHANGE_SPLINE_ID, SPR-ID: 0010.0001.00000006 
+DEBUG 2025-04-18 17:19:37,497 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.MotionSprPrimitive == Event: SEGMENT_CHANGE_SPLINE_ID received for SPR: 0010.0001.00000006, SegmentID: 0 
+DEBUG 2025-04-18 17:19:37,672 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:19:37,958 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Segment Event for motion 0010000100000006 in 0010.0001.00000006 Spline Motion SPR (0x199fdad)
+Message(Id: 0x0010000100000006, Type: 122)
+	[0] SplineMotion
+	[1] MOTION_INFO
+	[2] SEGMENT_END: 06 00 00 00 01 00 10 00
+	[3] TimeStamp: [1744996780, 596000000]
+	[4] AXIS_ACT: [-1.5602, 0.3039, 0.0181, -1.8871, -0.0125, 0.9479, 0.6607] 
+DEBUG 2025-04-18 17:19:37,958 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0010.0001.00000006 Spline Motion SPR (0x199fdad)
+Message(Id: 0x0010000100000006, Type: 122)
+	[0] StopEvaluator
+	[1] MotionStopped
+	[2] AXIS_ACT: [-1.5602, 0.3039, 0.0181, -1.8871, -0.0125, 0.9479, 0.6607] 
+DEBUG 2025-04-18 17:19:37,959 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.MotionSprPrimitive == Event: SEGMENT_END, SPR-ID: 0010.0001.00000006 
+DEBUG 2025-04-18 17:19:37,959 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.MotionSprPrimitive == setting _lastCmdJointPos: [-1.56, 0.30, 0.02, -1.89, -0.01, 0.95, 0.66] 
+DEBUG 2025-04-18 17:19:37,959 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.MotionSprPrimitive == Interpolation of segment 0010.0001.00000006 is finished. Setting container and MotionSPRPrimitive to finished state. 
+DEBUG 2025-04-18 17:19:37,959 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.Primitive == State change (Executing --> Finished) of SprPrimitive(SPR 0010.0001.00000006). 
+DEBUG 2025-04-18 17:19:37,959 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.Primitive == Removed SPR 0010.0001.00000006 Spline Motion SPR (0x199fdad) from list '_activeSPRStateListener'. 
+DEBUG 2025-04-18 17:19:37,959 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseMotionExecutionContainer == SunriseMotionExecutionContainer-001D75E9 finished but recovery information for SprPrimitive(SPR 0010.0001.00000006) not received yet => set container to 'FinishedAwaitingRecoveryInfo'. 
+DEBUG 2025-04-18 17:19:37,959 [.. setting thread.-thread-1] com.kuka.roboticsAPI.executionModel.ExecutionContainer == State change (Executing --> FinishedAwaitingRecoveryInfo) of SunriseMotionExecutionContainer-001D75E9 
+DEBUG 2025-04-18 17:19:37,959 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.predefinedCompounds.StopEvaluatorModule == "MotionStopped" event received for 0010.0001.00000006 Spline Motion SPR (0x199fdad). 
+DEBUG 2025-04-18 17:19:37,959 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.predefinedCompounds.StopEvaluatorModule == AXIS_ACT: [-1.560186603462431, 0.3039069875231651, 0.01805123872193497, -1.8871207257780194, -0.012518648540051395, 0.9478632620685514, 0.6607063645123856] (0010.0001.00000006 Spline Motion SPR (0x199fdad)) 
+DEBUG 2025-04-18 17:19:37,959 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.DeviceExecutor == Motion of SPR 0010.0001.00000006 stopped => update recovery information in SunriseMotionExecutionContainer-001D75E9 (DeviceExecutor-1fca42b for device: LBR_iiwa_14_R820_1). 
+DEBUG 2025-04-18 17:19:37,959 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseMotionExecutionContainer == New recovery position '[-1.56, 0.30, 0.02, -1.89, -0.01, 0.95, 0.66]' and control mode 'PositionControlMode' set for motion execution container 'SunriseMotionExecutionContainer-001D75E9' by primitive 'SprPrimitive(SPR 0010.0001.00000006)'. 
+DEBUG 2025-04-18 17:19:37,959 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseMotionExecutionContainer == Motion execution container finished and recovery infos received => set state of container to 'Finished' (SunriseMotionExecutionContainer-001D75E9). 
+DEBUG 2025-04-18 17:19:37,960 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Removed SunriseMotionExecutionContainer-001D75E9 from list '_currentActiveExecutionContainers'. 
+DEBUG 2025-04-18 17:19:37,960 [.. setting thread.-thread-1] com.kuka.roboticsAPI.executionModel.ExecutionContainer == State change (FinishedAwaitingRecoveryInfo --> Finished) of SunriseMotionExecutionContainer-001D75E9 
+DEBUG 2025-04-18 17:19:37,960 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Triggered storage of recovery information for finished movement ('SunriseMotionExecutionContainer-001D75E9'). 
+DEBUG 2025-04-18 17:19:37,960 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.recovery.RecoveryManager == Set RecoveryInformation (recovery position = [-1.56, 0.30, 0.02, -1.89, -0.01, 0.95, 0.66], recovery mode = PositionControlMode) for robot 'KUKA_Sunrise_Cabinet_1/LBR_iiwa_14_R820_1'. 
+DEBUG 2025-04-18 17:19:37,960 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.SPRRuntime == SPR: 0010.0001.00000006 Spline Motion SPR (0x199fdad) in state Active, received SprState: Active 
+DEBUG 2025-04-18 17:19:37,960 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.SPRRuntime == State change (Active --> Maintaining) of SPR 0010.0001.00000006. 
+DEBUG 2025-04-18 17:19:37,960 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.SPRRuntime == StopCondition fired 'SplineMotion.MotionFinished ==b true (fired)' for SPR '0010.0001.00000006'. 
+DEBUG 2025-04-18 17:19:37,961 [..-ContainerEvents-thread-1] com.kuka.roboticsAPI.motionModel.AbstractMotionContainer == State change to state 'FinishedAwaitingRecoveryInfo' of SunriseMotionExecutionContainer-001D75E9. 
+DEBUG 2025-04-18 17:19:37,961 [..-ContainerEvents-thread-1] com.kuka.roboticsAPI.motionModel.AbstractMotionContainer == SunriseMotionExecutionContainer-001D75E9 of SunriseMotionContainer-00BB332F reached state 'FinishedAwaitingRecoveryInfo' => check if motion container finished. 
+DEBUG 2025-04-18 17:19:37,961 [..-ContainerEvents-thread-1] com.kuka.roboticsAPI.motionModel.AbstractMotionContainer == All command containers of motion container SunriseMotionContainer-00BB332F have reached at least state FinishedAwaitingRecoveryInfo 
+DEBUG 2025-04-18 17:19:37,961 [..-ContainerEvents-thread-1] com.kuka.roboticsAPI.motionModel.AbstractMotionContainer == State change to state Finished (old state: Executing) of SunriseMotionContainer-00BB332F 
+DEBUG 2025-04-18 17:19:37,961 [..-ContainerEvents-thread-1] com.kuka.roboticsAPI.motionModel.AbstractMotionContainer == SunriseMotionContainer-00BB332F fired container state changed event for state Finished 
+DEBUG 2025-04-18 17:19:37,961 [..-ContainerEvents-thread-1] com.kuka.roboticsAPI.motionModel.AbstractMotionContainer == State change to state 'Finished' of SunriseMotionExecutionContainer-001D75E9. 
+DEBUG 2025-04-18 17:19:37,961 [..-ContainerEvents-thread-1] com.kuka.roboticsAPI.motionModel.AbstractMotionContainer == SunriseMotionExecutionContainer-001D75E9 of SunriseMotionContainer-00BB332F reached state 'Finished' => check if motion container finished. 
+INFO  2025-04-18 17:19:37,961 [..-ContainerEvents-thread-1] com.kuka.roboticsAPI.applicationServer.services.applicationService.internal.TaskManagerWrapper == Move to frame: null 
+DEBUG 2025-04-18 17:19:37,962 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == 'ICommandContainer' finished. 
+DEBUG 2025-04-18 17:19:37,976 [..n@SunriseProject-thread-1] com.kuka.roboticsAPI.applicationServer.services.applicationService.internal.UserTaskWrapper == Task API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject: Application state set to RUNNING. 
+DEBUG 2025-04-18 17:19:38,176 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:19:38,352 [..n@SunriseProject-thread-1] com.kuka.roboticsAPI.applicationServer.services.applicationService.internal.UserTaskWrapper == Task API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject: Application state set to STOPPING. 
+DEBUG 2025-04-18 17:19:38,357 [..pplication@SunriseProject] com.kuka.task.internal.pause.PauseManager == Call to signalPause() 
+DEBUG 2025-04-18 17:19:38,357 [..pplication@SunriseProject] com.kuka.task.internal.pause.PauseStateMachine == handleEvent called for event PAUSING, causing state change from UNPAUSED to PAUSING 
+DEBUG 2025-04-18 17:19:38,361 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Dispose: SunriseExecutionService-284444 for KUKA_Sunrise_Cabinet_1. 
+DEBUG 2025-04-18 17:19:38,361 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.conditions.SunriseConditionObserver == Waiting for Executor Service of SunriseConditionObserver (RisingEdge listener for 'ErrStateDrivesCondition: Monitored error states are [WarningHigh, Warning]') shutdown (5sec) 
+DEBUG 2025-04-18 17:19:38,361 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.SPRRuntime == Canceling on controller Runtime of SPR: 0010.0001.00000003 ConditionObserverSPR (0xf856e4) 
+DEBUG 2025-04-18 17:19:38,362 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.DeviceExecutor == Dispose DeviceExecutor-1fca42b for device: LBR_iiwa_14_R820_1. 
+DEBUG 2025-04-18 17:19:38,362 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.DeviceExecutor == Set '_pauseListActiveForChanges' to 'false' (DeviceExecutor-1fca42b for device: LBR_iiwa_14_R820_1). 
+DEBUG 2025-04-18 17:19:38,362 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.DeviceExecutor == List '_pauseSPRs' cleared (DeviceExecutor-1fca42b for device: LBR_iiwa_14_R820_1). 
+DEBUG 2025-04-18 17:19:38,364 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.SPRRuntime == State change (Active --> Finalize) of SPR 0010.0001.00000003. 
+DEBUG 2025-04-18 17:19:38,364 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.SPRRuntime == Set '_canceled' flag for SPR '0010.0001.00000003'. 
+DEBUG 2025-04-18 17:19:38,364 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.SPRRuntime == State change (Finalize --> CommandFinished) of SPR 0010.0001.00000003. 
+DEBUG 2025-04-18 17:19:38,364 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.DeviceExecutor == 'removeFinishedSPRRuntime' called for SPR 0010.0001.00000003 (Sunrise executor for non device commands). 
+DEBUG 2025-04-18 17:19:38,365 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.DeviceExecutor == SPR 0010.0001.00000003 removed from list '_runningSPRs' (Sunrise executor for non device commands). 
+DEBUG 2025-04-18 17:19:38,365 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.Primitive == State change (Executing --> ApplicationExit) of SprPrimitive(SPR 0010.0001.00000003). 
+DEBUG 2025-04-18 17:19:38,365 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionContainer == SunriseExecutionContainer-00FEC7EF goes to invalid state because SprPrimitive(SPR 0010.0001.00000003) failed with error: The application was asked to terminate. 
+DEBUG 2025-04-18 17:19:38,365 [.. setting thread.-thread-1] com.kuka.roboticsAPI.executionModel.ExecutionContainer == State change (Executing --> ApplicationExit) of SunriseExecutionContainer-00FEC7EF 
+INFO  2025-04-18 17:19:38,385 [..s Event Executor-thread-1] com.kuka.nav.robot.provider.NavApplicationPauseListener == Pausing task instance 7@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject 
+DEBUG 2025-04-18 17:19:38,385 [..s Event Executor-thread-2] com.kuka.roboticsAPI.applicationServer.services.applicationService.internal.SunrisePauseHandler == Command pause for 'SunriseExecutionService-284444 for KUKA_Sunrise_Cabinet_1'. 
+DEBUG 2025-04-18 17:19:38,385 [..s Event Executor-thread-2] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Pause mechanism triggered (SunriseExecutionService-284444 for KUKA_Sunrise_Cabinet_1). 
+DEBUG 2025-04-18 17:19:38,385 [..n@SunriseProject-thread-1] com.kuka.event.ParallelSyncEventProvider == Exception in caller:  
+java.util.concurrent.ExecutionException: com.kuka.roboticsAPI.executionModel.ApplicationExitException: Controller has been disposed
+	at java.util.concurrent.FutureTask$Sync.innerGet(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at com.kuka.event.ParallelSyncEventProvider.callListenersWithTimeout(ParallelSyncEventProvider.java:131)
+	at com.kuka.event.ParallelSyncEventProvider.callListenersSync(ParallelSyncEventProvider.java:97)
+	at com.kuka.task.internal.pause.PauseRunnable.run(PauseRunnable.java:38)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: com.kuka.roboticsAPI.executionModel.ApplicationExitException: Controller has been disposed
+	at com.kuka.roboticsAPI.controllerModel.Controller.checkServicesInitialized(Controller.java:834)
+	at com.kuka.roboticsAPI.controllerModel.Controller.getRequestService(Controller.java:254)
+	at com.kuka.roboticsAPI.controllerModel.sunrise.SunriseController.getRequestService(SunriseController.java:1033)
+	at com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService.startPause(SunriseExecutionService.java:1081)
+	at com.kuka.roboticsAPI.applicationServer.services.applicationService.internal.SunrisePauseHandler.onPause(SunrisePauseHandler.java:72)
+	at com.kuka.task.internal.pause.PauseRunnable$1.callFor(PauseRunnable.java:43)
+	at com.kuka.task.internal.pause.PauseRunnable$1.callFor(PauseRunnable.java:1)
+	at com.kuka.event.ParallelSyncEventProvider$1.run(ParallelSyncEventProvider.java:116)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask$Sync.innerRun(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	... 3 more
+DEBUG 2025-04-18 17:19:38,386 [..n@SunriseProject-thread-1] com.kuka.task.internal.pause.PauseStateMachine == handleEvent called for event PAUSED_RESUMABLE, causing state change from PAUSING to PAUSED_RESUMABLE 
+DEBUG 2025-04-18 17:19:38,386 [..use State Events-thread-1] com.kuka.roboticsAPI.applicationServer.services.applicationService.internal.UserTaskWrapper == Task API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject: Schedule OnPathChecker 
+DEBUG 2025-04-18 17:19:38,386 [..use State Events-thread-1] com.kuka.roboticsAPI.applicationServer.services.stationModel.StationDevice == LBR_iiwa_14_R820_1@KUKA_Sunrise_Cabinet_1 has been unlocked by API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject 
+DEBUG 2025-04-18 17:19:38,386 [..use State Events-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.DeviceExecutor == Canceling all SPRs on: 'DeviceExecutor-7dce5 for device: LBR_iiwa_14_R820_1' (cancelObservers = false). 
+DEBUG 2025-04-18 17:19:38,386 [..use State Events-thread-1] com.kuka.roboticsAPI.applicationServer.services.stationModel.StationDevice == updateAndSetCurrentDeviceState(true); OpMode=T1, canMove=true, canJog=true, used=false, motionEnabled=true 
+DEBUG 2025-04-18 17:19:38,386 [..use State Events-thread-1] com.kuka.roboticsAPI.applicationServer.services.stationModel.StationDevice == KMR_omniMove_200_1@KUKA_Sunrise_Cabinet_1 has been unlocked by API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject 
+DEBUG 2025-04-18 17:19:38,386 [..use State Events-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.DeviceExecutor == Canceling all SPRs on: 'DeviceExecutor-13fa673 for device: KMR_omniMove_200_1' (cancelObservers = false). 
+DEBUG 2025-04-18 17:19:38,386 [..use State Events-thread-1] com.kuka.roboticsAPI.applicationServer.services.stationModel.StationDevice == updateAndSetCurrentDeviceState(true); OpMode=T1, canMove=true, canJog=true, used=false, motionEnabled=true 
+DEBUG 2025-04-18 17:19:38,388 [..ionEventExecutor-thread-1] com.kuka.roboticsAPI.applicationServer.services.applicationService.internal.UserTaskWrapper == calling onApplicationStateChanged(MOTIONPAUSING) for IRoboticsAPIApplication API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject 
+DEBUG 2025-04-18 17:19:38,663 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:19:39,169 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:19:39,389 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.DeviceExecutor == Dispose DeviceExecutor-512d95 for device: KMR_omniMove_200_1. 
+DEBUG 2025-04-18 17:19:39,390 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.DeviceExecutor == Set '_pauseListActiveForChanges' to 'false' (DeviceExecutor-512d95 for device: KMR_omniMove_200_1). 
+DEBUG 2025-04-18 17:19:39,390 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.DeviceExecutor == List '_pauseSPRs' cleared (DeviceExecutor-512d95 for device: KMR_omniMove_200_1). 
+DEBUG 2025-04-18 17:19:39,390 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.DeviceExecutor == Dispose Sunrise executor for non device commands. 
+DEBUG 2025-04-18 17:19:39,390 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.SPRRuntime == Canceling on controller Runtime of SPR: 0010.0001.00000004 ApplicationState (0xde8271) 
+DEBUG 2025-04-18 17:19:39,390 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.DeviceExecutor == Set '_pauseListActiveForChanges' to 'false' (Sunrise executor for non device commands). 
+DEBUG 2025-04-18 17:19:39,390 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.DeviceExecutor == List '_pauseSPRs' cleared (Sunrise executor for non device commands). 
+DEBUG 2025-04-18 17:19:39,392 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.SPRRuntime == State change (Active --> Finalize) of SPR 0010.0001.00000004. 
+DEBUG 2025-04-18 17:19:39,392 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.SPRRuntime == Set '_canceled' flag for SPR '0010.0001.00000004'. 
+DEBUG 2025-04-18 17:19:39,392 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.predefinedCompounds.ApplicationStateModule == ApplicationStateSPR 0010.0001.00000004 ApplicationState (0xde8271) changed state to: Finalize 
+DEBUG 2025-04-18 17:19:39,393 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.SPRRuntime == State change (Finalize --> CommandFinished) of SPR 0010.0001.00000004. 
+DEBUG 2025-04-18 17:19:39,393 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.DeviceExecutor == 'removeFinishedSPRRuntime' called for SPR 0010.0001.00000004 (Sunrise executor for non device commands). 
+DEBUG 2025-04-18 17:19:39,393 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.DeviceExecutor == SPR 0010.0001.00000004 removed from list '_runningSPRs' (Sunrise executor for non device commands). 
+DEBUG 2025-04-18 17:19:39,393 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.predefinedCompounds.ApplicationStateModule == ApplicationStateSPR 0010.0001.00000004 ApplicationState (0xde8271) finished 
+DEBUG 2025-04-18 17:19:39,393 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.Primitive == State change (Executing --> ApplicationExit) of SprPrimitive(SPR 0010.0001.00000004). 
+DEBUG 2025-04-18 17:19:39,393 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionContainer == SunriseExecutionContainer-0045EE17 goes to invalid state because SprPrimitive(SPR 0010.0001.00000004) failed with error: The application was asked to terminate. 
+DEBUG 2025-04-18 17:19:39,394 [.. setting thread.-thread-1] com.kuka.roboticsAPI.executionModel.ExecutionContainer == State change (Executing --> ApplicationExit) of SunriseExecutionContainer-0045EE17 
+DEBUG 2025-04-18 17:19:39,394 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.predefinedCompounds.ApplicationStateModule == ApplicationStateSPR 0010.0001.00000004 ApplicationState (0xde8271) changed state to: CommandFinished 
+DEBUG 2025-04-18 17:19:39,394 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseController == Removing ApplicationStateSPR: 0010.0001.00000004 ApplicationState (0xde8271) 
+DEBUG 2025-04-18 17:19:39,394 [.. setting thread.-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseController == ApplicationStateSPR removed and is null 
+DEBUG 2025-04-18 17:19:39,394 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.FencedArea == Start disposing of FencedArea-d9ada4. 
+DEBUG 2025-04-18 17:19:39,394 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.FencedArea == Permits withdrawn (FencedArea-d9ada4). 
+DEBUG 2025-04-18 17:19:39,394 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.FencedArea == Gate closed (FencedArea-d9ada4). 
+DEBUG 2025-04-18 17:19:39,394 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.FencedArea == Interrupt threads which are waiting to enter the fenced area (FencedArea-d9ada4) ... 
+DEBUG 2025-04-18 17:19:39,394 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.FencedArea == Disposing complete (FencedArea-d9ada4). 
+DEBUG 2025-04-18 17:19:39,394 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Disposed: SunriseExecutionService-284444 for KUKA_Sunrise_Cabinet_1. 
+DEBUG 2025-04-18 17:19:39,394 [..pplication@SunriseProject] com.kuka.roboticsAPI.persistenceModel.XmlApplicationDataSource == Saving data source file file:/C:/KRC/Projects/SunriseProject/src/RoboticsAPI.data.xml 
+DEBUG 2025-04-18 17:19:39,403 [..pplication@SunriseProject] com.kuka.roboticsAPI.persistenceModel.XmlApplicationDataSource == Data source file saved. 
+DEBUG 2025-04-18 17:19:39,406 [..pplication@SunriseProject] com.kuka.task.internal.TaskInstanceManagementThread == Task instance '7@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject' disposed after 1055 milliseconds. 
+DEBUG 2025-04-18 17:19:39,407 [..pplication@SunriseProject] com.kuka.task.internal.TaskInstanceManagementThread == Task instance '7@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject' finished, calling cleanup hook 
+DEBUG 2025-04-18 17:19:39,407 [..n@SunriseProject-thread-1] com.kuka.roboticsAPI.applicationServer.services.debuggingService.internal.DebuggingServiceImpl == Sending stop request notification for robot application '7@API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject' to connected workbenches... 
+DEBUG 2025-04-18 17:19:39,407 [..pplication@SunriseProject] com.kuka.objectprovider.impl.ObjectProviderRegistry == Deregistered runtime object feeder com.kuka.roboticsAPI.task.impl.TemplateRuntimeV1Feeder 
+INFO  2025-04-18 17:19:39,409 [..pplication@SunriseProject] com.kuka.roboticsAPI.applicationServer.services.stateService.mobilePlatform.common.listeners.TaskInstanceHookImpl == ARMRA - onInstanceRemoved - removed the pause listener 
+DEBUG 2025-04-18 17:19:39,410 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.DeviceExecutor == Canceling all SPRs on: 'DeviceExecutor-7dce5 for device: LBR_iiwa_14_R820_1' (cancelObservers = false). 
+DEBUG 2025-04-18 17:19:39,410 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.DeviceExecutor == Canceling all SPRs on: 'DeviceExecutor-13fa673 for device: KMR_omniMove_200_1' (cancelObservers = false). 
+DEBUG 2025-04-18 17:19:39,410 [..pplication@SunriseProject] com.kuka.roboticsAPI.applicationServer.services.applicationService.internal.UserTaskWrapper == Task API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject: OnPathChecker canceled. 
+DEBUG 2025-04-18 17:19:39,410 [..pplication@SunriseProject] com.kuka.roboticsAPI.applicationServer.services.stationModel.StationDevice == LBR_iiwa_14_R820_1@KUKA_Sunrise_Cabinet_1 is locked by API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject 
+DEBUG 2025-04-18 17:19:39,410 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.DeviceExecutor == Canceling all SPRs on: 'DeviceExecutor-7dce5 for device: LBR_iiwa_14_R820_1' (cancelObservers = false). 
+DEBUG 2025-04-18 17:19:39,410 [..pplication@SunriseProject] com.kuka.roboticsAPI.applicationServer.services.stationModel.StationDevice == updateAndSetCurrentDeviceState(true); OpMode=T1, canMove=true, canJog=true, used=true, motionEnabled=true 
+DEBUG 2025-04-18 17:19:39,410 [..pplication@SunriseProject] com.kuka.roboticsAPI.applicationServer.services.stationModel.StationDevice == LBR_iiwa_14_R820_1@KUKA_Sunrise_Cabinet_1 has been unlocked by API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject 
+DEBUG 2025-04-18 17:19:39,410 [..pplication@SunriseProject] com.kuka.roboticsAPI.controllerModel.sunrise.DeviceExecutor == Canceling all SPRs on: 'DeviceExecutor-7dce5 for device: LBR_iiwa_14_R820_1' (cancelObservers = false). 
+DEBUG 2025-04-18 17:19:39,410 [..pplication@SunriseProject] com.kuka.roboticsAPI.applicationServer.services.stationModel.StationDevice == updateAndSetCurrentDeviceState(true); OpMode=T1, canMove=true, canJog=true, used=false, motionEnabled=true 
+DEBUG 2025-04-18 17:19:39,411 [..n@SunriseProject-thread-1] com.kuka.roboticsAPI.applicationServer.services.applicationService.internal.UserTaskWrapper == Task API_ROS2_Sunrise.KMRiiwaSunriseApplication@SunriseProject: Application state set to IDLE. 
+DEBUG 2025-04-18 17:19:39,669 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:19:40,160 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:19:40,662 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:19:41,168 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:19:41,655 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:19:42,161 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:19:42,648 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:19:43,155 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:19:43,662 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:19:44,159 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:19:44,662 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:19:45,169 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:19:45,657 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:19:46,164 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:19:46,665 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:19:47,172 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:19:47,660 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:19:48,165 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:19:48,657 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:19:49,164 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:19:49,664 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:19:50,171 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:19:50,660 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:19:51,167 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:19:51,669 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:19:52,160 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:19:52,664 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:19:53,171 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:19:53,661 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:19:54,170 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:19:54,662 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:19:55,172 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:19:55,594 [..  Message Handling worker] com.kuka.roboticsAPI.applicationServer.services.stationModel.MovableStationDevice == Robot LBR_iiwa_14_R820_1@KUKA_Sunrise_Cabinet_1 is not ready to move, cancelling all commands 
+DEBUG 2025-04-18 17:19:55,594 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.DeviceExecutor == Canceling all SPRs on: 'DeviceExecutor-7dce5 for device: LBR_iiwa_14_R820_1' (cancelObservers = false). 
+DEBUG 2025-04-18 17:19:55,594 [..  Message Handling worker] com.kuka.roboticsAPI.applicationServer.services.stationModel.StationDevice == updateAndSetCurrentDeviceState(true); OpMode=T1, canMove=false, canJog=false, used=false, motionEnabled=false 
+INFO  2025-04-18 17:19:55,594 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseController == Received safety-event of type 'StopRequestChanged' with value 2;
+New safety-state is EmStopEx: NOT_CONFIGURED, EmStopInt: INACTIVE, OpMode: T1, OpSafety: OPERATOR_SAFETY_CLOSED, SafetyStop: STOP1, EnablingDeviceState: NORMAL, device: LBR_iiwa_14_R820_1, deviceName: LBR_iiwa_14_R820_1, deviceJointCount: 7 
+DEBUG 2025-04-18 17:19:55,594 [..  Message Handling worker] com.kuka.roboticsAPI.applicationServer.services.stationModel.MovableStationDevice == Robot KMR_omniMove_200_1@KUKA_Sunrise_Cabinet_1 is not ready to move, cancelling all commands 
+DEBUG 2025-04-18 17:19:55,594 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.DeviceExecutor == Canceling all SPRs on: 'DeviceExecutor-13fa673 for device: KMR_omniMove_200_1' (cancelObservers = false). 
+DEBUG 2025-04-18 17:19:55,594 [..  Message Handling worker] com.kuka.roboticsAPI.applicationServer.services.stationModel.StationDevice == updateAndSetCurrentDeviceState(true); OpMode=T1, canMove=false, canJog=false, used=false, motionEnabled=false 
+INFO  2025-04-18 17:19:55,594 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseController == Received safety-event of type 'StopRequestChanged' with value 2;
+New safety-state is EmStopEx: NOT_CONFIGURED, EmStopInt: INACTIVE, OpMode: T1, OpSafety: OPERATOR_SAFETY_CLOSED, SafetyStop: STOP1, EnablingDeviceState: NORMAL, device: KMR_omniMove_200_1, deviceName: KMR_omniMove_200_1, deviceJointCount: 0 
+INFO  2025-04-18 17:19:55,594 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseController == Received safety-event of type 'VoEnableStateChanged' with value 0;
+New safety-state is EmStopEx: NOT_CONFIGURED, EmStopInt: INACTIVE, OpMode: T1, OpSafety: OPERATOR_SAFETY_CLOSED, SafetyStop: STOP1, EnablingDeviceState: NONE, device: LBR_iiwa_14_R820_1, deviceName: LBR_iiwa_14_R820_1, deviceJointCount: 7 
+INFO  2025-04-18 17:19:55,594 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseController == Received safety-event of type 'VoEnableStateChanged' with value 0;
+New safety-state is EmStopEx: NOT_CONFIGURED, EmStopInt: INACTIVE, OpMode: T1, OpSafety: OPERATOR_SAFETY_CLOSED, SafetyStop: STOP1, EnablingDeviceState: NONE, device: KMR_omniMove_200_1, deviceName: KMR_omniMove_200_1, deviceJointCount: 0 
+INFO  2025-04-18 17:19:55,594 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseController == Received safety-event of type 'StopRequestChanged' with value 2;
+New safety-state is EmStopEx: NOT_CONFIGURED, EmStopInt: INACTIVE, OpMode: T1, OpSafety: OPERATOR_SAFETY_CLOSED, SafetyStop: STOP1, EnablingDeviceState: NORMAL, device: LBR_iiwa_14_R820_1, deviceName: LBR_iiwa_14_R820_1, deviceJointCount: 7 
+INFO  2025-04-18 17:19:55,594 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseController == Received safety-event of type 'StopRequestChanged' with value 2;
+New safety-state is EmStopEx: NOT_CONFIGURED, EmStopInt: INACTIVE, OpMode: T1, OpSafety: OPERATOR_SAFETY_CLOSED, SafetyStop: STOP1, EnablingDeviceState: NORMAL, device: KMR_omniMove_200_1, deviceName: KMR_omniMove_200_1, deviceJointCount: 0 
+INFO  2025-04-18 17:19:55,594 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseController == Received safety-event of type 'VoEnableStateChanged' with value 0;
+New safety-state is EmStopEx: NOT_CONFIGURED, EmStopInt: INACTIVE, OpMode: T1, OpSafety: OPERATOR_SAFETY_CLOSED, SafetyStop: STOP1, EnablingDeviceState: NONE, device: LBR_iiwa_14_R820_1, deviceName: LBR_iiwa_14_R820_1, deviceJointCount: 7 
+INFO  2025-04-18 17:19:55,594 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseController == Received safety-event of type 'VoEnableStateChanged' with value 0;
+New safety-state is EmStopEx: NOT_CONFIGURED, EmStopInt: INACTIVE, OpMode: T1, OpSafety: OPERATOR_SAFETY_CLOSED, SafetyStop: STOP1, EnablingDeviceState: NONE, device: KMR_omniMove_200_1, deviceName: KMR_omniMove_200_1, deviceJointCount: 0 
+DEBUG 2025-04-18 17:19:55,594 [..ol-StationEvents-thread-1] com.kuka.roboticsAPI.applicationServer.services.stationModel.StationController == LBR_iiwa_14_R820_1 is not ready to move. 
+DEBUG 2025-04-18 17:19:55,594 [..ol-StationEvents-thread-1] com.kuka.roboticsAPI.applicationServer.services.stationModel.Station == KUKA_Sunrise_Cabinet_1 is not ready to move! 
+DEBUG 2025-04-18 17:19:55,595 [..ol-StationEvents-thread-1] com.kuka.roboticsAPI.applicationServer.services.stationModel.StationController == LBR_iiwa_14_R820_1 is not ready to move. 
+DEBUG 2025-04-18 17:19:55,595 [..ol-StationEvents-thread-1] com.kuka.roboticsAPI.applicationServer.services.stationModel.Station == KUKA_Sunrise_Cabinet_1 is not ready to move! 
+DEBUG 2025-04-18 17:19:55,596 [..ol-StationEvents-thread-1] com.kuka.roboticsAPI.applicationServer.services.stationModel.StationController == LBR_iiwa_14_R820_1 is not ready to move. 
+DEBUG 2025-04-18 17:19:55,596 [..ol-StationEvents-thread-1] com.kuka.roboticsAPI.applicationServer.services.stationModel.Station == KUKA_Sunrise_Cabinet_1 is not ready to move! 
+DEBUG 2025-04-18 17:19:55,596 [..ol-StationEvents-thread-1] com.kuka.roboticsAPI.applicationServer.services.stationModel.StationController == LBR_iiwa_14_R820_1 is not ready to move. 
+DEBUG 2025-04-18 17:19:55,596 [..ol-StationEvents-thread-1] com.kuka.roboticsAPI.applicationServer.services.stationModel.Station == KUKA_Sunrise_Cabinet_1 is not ready to move! 
+DEBUG 2025-04-18 17:19:55,597 [..ol-StationEvents-thread-1] com.kuka.roboticsAPI.applicationServer.services.stationModel.StationController == LBR_iiwa_14_R820_1 is not ready to move. 
+DEBUG 2025-04-18 17:19:55,597 [..ol-StationEvents-thread-1] com.kuka.roboticsAPI.applicationServer.services.stationModel.Station == KUKA_Sunrise_Cabinet_1 is not ready to move! 
+DEBUG 2025-04-18 17:19:55,597 [..ol-StationEvents-thread-1] com.kuka.roboticsAPI.applicationServer.services.stationModel.StationController == LBR_iiwa_14_R820_1 is not ready to move. 
+DEBUG 2025-04-18 17:19:55,597 [..ol-StationEvents-thread-1] com.kuka.roboticsAPI.applicationServer.services.stationModel.Station == KUKA_Sunrise_Cabinet_1 is not ready to move! 
+DEBUG 2025-04-18 17:19:55,597 [..ollerStateEvents-thread-1] com.kuka.roboticsAPI.applicationServer.services.stationModel.MovableStationDevice == Robot LBR_iiwa_14_R820_1@KUKA_Sunrise_Cabinet_1 is not ready to move, cancelling all commands 
+DEBUG 2025-04-18 17:19:55,597 [..ollerStateEvents-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.DeviceExecutor == Canceling all SPRs on: 'DeviceExecutor-7dce5 for device: LBR_iiwa_14_R820_1' (cancelObservers = false). 
+DEBUG 2025-04-18 17:19:55,597 [..ollerStateEvents-thread-1] com.kuka.roboticsAPI.applicationServer.services.stationModel.StationDevice == updateAndSetCurrentDeviceState(false); OpMode=T1, canMove=false, canJog=false, used=false, motionEnabled=false 
+DEBUG 2025-04-18 17:19:55,597 [..ollerStateEvents-thread-1] com.kuka.roboticsAPI.applicationServer.services.stationModel.MovableStationDevice == Robot KMR_omniMove_200_1@KUKA_Sunrise_Cabinet_1 is not ready to move, cancelling all commands 
+DEBUG 2025-04-18 17:19:55,597 [..ollerStateEvents-thread-1] com.kuka.roboticsAPI.controllerModel.sunrise.DeviceExecutor == Canceling all SPRs on: 'DeviceExecutor-13fa673 for device: KMR_omniMove_200_1' (cancelObservers = false). 
+DEBUG 2025-04-18 17:19:55,597 [..ollerStateEvents-thread-1] com.kuka.roboticsAPI.applicationServer.services.stationModel.StationDevice == updateAndSetCurrentDeviceState(false); OpMode=T1, canMove=false, canJog=false, used=false, motionEnabled=false 
+DEBUG 2025-04-18 17:19:55,597 [..ollerStateEvents-thread-1] com.kuka.roboticsAPI.applicationServer.services.stationModel.StationDevice == updateAndSetCurrentDeviceState(false); OpMode=T1, canMove=false, canJog=false, used=false, motionEnabled=false 
+DEBUG 2025-04-18 17:19:55,598 [..ol-StationEvents-thread-1] com.kuka.roboticsAPI.applicationServer.services.stationModel.StationController == LBR_iiwa_14_R820_1 is not ready to move. 
+DEBUG 2025-04-18 17:19:55,598 [..ol-StationEvents-thread-1] com.kuka.roboticsAPI.applicationServer.services.stationModel.Station == KUKA_Sunrise_Cabinet_1 is not ready to move! 
+INFO  2025-04-18 17:19:55,603 [..ollerStateEvents-thread-1] com.kuka.nav.kmp.omnimove.basedriver.listeners.SunriseControllerStateListener == Safety state changing to:  EmergencyStopExternal: NOT_CONFIGURED EmergencyStopInternal: INACTIVE OperationMode: T1 OperatorSafety: OPERATOR_SAFETY_CLOSED 
+DEBUG 2025-04-18 17:19:55,603 [..ollerStateEvents-thread-1] com.kuka.roboticsAPI.applicationServer.services.stationModel.StationDevice == updateAndSetCurrentDeviceState(false); OpMode=T1, canMove=false, canJog=false, used=false, motionEnabled=false 
+INFO  2025-04-18 17:19:55,605 [..ollerStateEvents-thread-1] com.kuka.nav.kmp.omnimove.basedriver.listeners.SunriseControllerStateListener == Safety state changing to:  EmergencyStopExternal: NOT_CONFIGURED EmergencyStopInternal: INACTIVE OperationMode: T1 OperatorSafety: OPERATOR_SAFETY_CLOSED 
+DEBUG 2025-04-18 17:19:55,606 [..ollerStateEvents-thread-1] com.kuka.roboticsAPI.applicationServer.services.stationModel.StationDevice == updateAndSetCurrentDeviceState(false); OpMode=T1, canMove=false, canJog=false, used=false, motionEnabled=false 
+INFO  2025-04-18 17:19:55,608 [..ollerStateEvents-thread-1] com.kuka.nav.kmp.omnimove.basedriver.listeners.SunriseControllerStateListener == Safety state changing to:  EmergencyStopExternal: NOT_CONFIGURED EmergencyStopInternal: INACTIVE OperationMode: T1 OperatorSafety: OPERATOR_SAFETY_CLOSED 
+DEBUG 2025-04-18 17:19:55,608 [..ollerStateEvents-thread-1] com.kuka.roboticsAPI.applicationServer.services.stationModel.StationDevice == updateAndSetCurrentDeviceState(false); OpMode=T1, canMove=false, canJog=false, used=false, motionEnabled=false 
+INFO  2025-04-18 17:19:55,610 [..ollerStateEvents-thread-1] com.kuka.nav.kmp.omnimove.basedriver.listeners.SunriseControllerStateListener == Safety state changing to:  EmergencyStopExternal: NOT_CONFIGURED EmergencyStopInternal: INACTIVE OperationMode: T1 OperatorSafety: OPERATOR_SAFETY_CLOSED 
+DEBUG 2025-04-18 17:19:55,679 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:19:56,188 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:19:56,684 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:19:57,195 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:19:57,702 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:19:58,214 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:19:58,708 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:19:59,219 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:19:59,726 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:20:00,222 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:20:00,719 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:20:01,230 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:20:01,735 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:20:02,242 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:20:02,742 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:20:03,237 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:20:03,737 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:20:04,229 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:20:04,732 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:20:05,239 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:20:05,729 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:20:06,234 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:20:06,722 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:20:07,229 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:20:07,729 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:20:08,234 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:20:08,738 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:20:09,232 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:20:09,732 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:20:10,239 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:20:10,728 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:20:11,236 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:20:11,741 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:20:12,233 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:20:12,741 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:20:13,239 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:20:13,746 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:20:14,256 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:20:14,763 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:20:15,261 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:20:15,767 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:20:16,263 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:20:16,772 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:20:17,270 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:20:17,776 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:20:18,287 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:20:18,781 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:20:19,289 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:20:19,778 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:20:20,295 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:20:20,800 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:20:21,295 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:20:21,796 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:20:22,291 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:20:22,792 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:20:23,300 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:20:23,789 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:20:24,294 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:20:24,798 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:20:25,294 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:20:25,795 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:20:26,302 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:20:26,804 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:20:27,299 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:20:27,801 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:20:28,293 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:20:28,799 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:20:29,300 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:20:29,802 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:20:30,327 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:20:30,808 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:20:31,320 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:20:31,827 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:20:32,326 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:20:32,846 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:20:33,346 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:20:33,853 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:20:34,352 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:20:34,860 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:20:35,359 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:20:35,866 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:20:36,374 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:20:36,879 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:20:37,374 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:20:37,875 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:20:38,382 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:20:38,871 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:20:39,378 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:20:39,879 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:20:40,372 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:20:40,876 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:20:41,371 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:20:41,872 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:20:42,379 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:20:42,880 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:20:43,387 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:20:43,875 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:20:44,381 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:20:44,872 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:20:45,379 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:20:45,882 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:20:46,381 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:20:46,882 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:20:47,380 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:20:47,887 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:20:48,397 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:20:48,906 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:20:49,404 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:20:49,911 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:20:50,410 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:20:50,917 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:20:51,428 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:20:51,922 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:20:52,431 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:20:52,940 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:20:53,439 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:20:53,943 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:20:54,449 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:20:54,950 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:20:55,445 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:20:55,945 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:20:56,450 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:20:56,941 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:20:57,448 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:20:57,948 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:20:58,443 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:20:58,943 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:20:59,437 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:20:59,938 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:21:00,443 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:21:00,947 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:21:01,443 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:21:01,944 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:21:02,440 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:21:02,942 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:21:03,451 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:21:03,956 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:21:04,465 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:21:04,963 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:21:05,474 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:21:05,970 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:21:06,481 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:21:06,989 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:21:07,488 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:21:07,996 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:21:08,504 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:21:09,001 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:21:09,513 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:21:10,021 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:21:10,520 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:21:11,027 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:21:11,535 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:21:12,024 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:21:12,529 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:21:13,033 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:21:13,528 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:21:14,030 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:21:14,525 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:21:15,026 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:21:15,533 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:21:16,034 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:21:16,540 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:21:17,031 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:21:17,539 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:21:18,040 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:21:18,534 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:21:19,036 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:21:19,530 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:21:20,033 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:21:20,528 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:21:21,032 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:21:21,541 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+INFO  2025-04-18 17:21:21,616 [..          NCFServerThread] com.kuka.publishing.ncf.server.NCFRemotingTechnology == NCF client connected: /172.31.1.205:60994 
+DEBUG 2025-04-18 17:21:22,034 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:21:22,546 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:21:22,649 [..rkerThreadPort Port:60994] com.kuka.publishing.ncf.server.internal.NCFSession == Session.Remove() called, Shutting down the execution worker 
+DEBUG 2025-04-18 17:21:22,649 [..rkerThreadPort Port:60994] com.kuka.publishing.ncf.server.internal.NCFSession == Disposing session NCF session with client Socket[addr=/172.31.1.205,port=60994,localport=8090] 
+INFO  2025-04-18 17:21:22,650 [..rkerThreadPort Port:60994] com.kuka.publishing.ncf.server.NCFRemotingTechnology == NCF session closed, 1 active session(s) remaining 
+DEBUG 2025-04-18 17:21:23,053 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:21:23,552 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+INFO  2025-04-18 17:21:23,634 [..          NCFServerThread] com.kuka.publishing.ncf.server.NCFRemotingTechnology == NCF client connected: /172.31.1.205:60996 
+DEBUG 2025-04-18 17:21:23,638 [..DiagnosisService-thread-1] com.kuka.windows.ShellCommander == Waiting for command to be executed 
+DEBUG 2025-04-18 17:21:23,651 [..     cmd.out StreamThread] com.kuka.util.AsyncStreamReader == Reading lines from 'cmd.out' stream 
+DEBUG 2025-04-18 17:21:24,147 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:21:24,566 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:21:25,063 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:21:25,574 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:21:26,081 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:21:26,581 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:21:27,091 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:21:27,591 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:21:28,100 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:21:28,613 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:21:29,104 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:21:29,611 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:21:30,100 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:21:30,606 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:21:31,107 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:21:31,602 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:21:32,016 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:21:32,502 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:21:32,980 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:21:33,454 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:21:33,814 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:21:34,138 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:21:34,389 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:21:34,655 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:21:34,912 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:21:35,163 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:21:35,536 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:21:36,033 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:21:36,544 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:21:37,039 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:21:37,563 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:21:38,039 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:21:38,566 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:21:39,047 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:21:39,518 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:21:40,035 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:21:40,514 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:21:41,035 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:21:41,399 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:21:41,773 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:21:42,255 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:21:42,706 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:21:43,023 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:21:43,282 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:21:43,463 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:21:43,642 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:21:43,937 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:21:44,328 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:21:44,448 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:21:44,852 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:21:45,395 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:21:45,615 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:21:46,105 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 
+DEBUG 2025-04-18 17:21:46,663 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 1 (0x00000001)
+	[5] 0 (0x00000000) 
+DEBUG 2025-04-18 17:21:47,206 [..  Message Handling worker] com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService == Compound Event for 0003.0001.00000007 IOWatcherSPR (0x2b3223)
+Message(Id: 0x0003000100000007, Type: 122)
+	[0] IOWatcherModule
+	[1] IO_CHANGED
+	[2] RemoteControl@Heartbeat
+	[3] 3 (0x00000003)
+	[4] 0 (0x00000000)
+	[5] 1 (0x00000001) 

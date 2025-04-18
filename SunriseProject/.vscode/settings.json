@@ -1,0 +1,22 @@
+{
+    "java.configuration.runtimes": [
+        {
+            "name": "JavaSE-1.6",
+            "path": "C:\\Program Files\\Eclipse Adoptium\\jdk-8.0.442.6-hotspot",
+            "sources": "C:\\Program Files\\Eclipse Adoptium\\jdk-8.0.442.6-hotspot\\lib\\src.zip",
+            "javadoc": "https://docs.oracle.com/javase/6/docs/api/",
+            "default": true
+        }
+    ],
+    "java.jdt.ls.java.home": "C:\\Program Files\\Eclipse Adoptium\\jdk-8.0.442.6-hotspot",
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "java.compile.nullAnalysis.mode": "disabled",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "KUKAJavaLib/**/*.jar",
+        "ROS2JavaLib/**/*.jar"
+    ],
+    "java.project.targetRuntime": "JavaSE-1.6",
+    "java.project.source": "1.6",
+    "java.project.target": "1.6"
+}

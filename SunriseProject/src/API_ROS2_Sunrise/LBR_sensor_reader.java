@@ -29,7 +29,6 @@ public class LBR_sensor_reader extends Node {
     // Socket
     int port;
     String ConnectionType;
-    private long last_sendtime = System.currentTimeMillis();
 
     public LBR_sensor_reader(int port, LBR robot, String ConnectionType) {
         super(port, ConnectionType, "LBR sensor reader");
@@ -44,6 +43,11 @@ public class LBR_sensor_reader extends Node {
     public class MonitorSensorConnectionThread extends Thread {
         public void run() {
             while (!(isSocketConnected()) && (!(closed))) {
+                if (Thread.currentThread().isInterrupted()) {
+                    logger.info("LBR sensor connection monitor thread interrupted, exiting");
+                    break;
+                }
+                
                 createSocket();
                 if (isSocketConnected()) {
                     break;
@@ -51,11 +55,13 @@ public class LBR_sensor_reader extends Node {
                 try {
                     Thread.sleep(connection_timeout);
                 } catch (InterruptedException e) {
-                    System.out.println("Waiting for connection to LBR commander node ..");
+                    logger.info("LBR sensor connection monitor thread interrupted during sleep");
+                    Thread.currentThread().interrupt(); // Restore interrupt status
+                    break;
                 }
             }
             if (!closed) {
-                System.out.println("Connection with KMP Command Node OK!");
+                logger.info("Connection with LBR Sensor Node OK!");
                 runmainthread();
             }    
         }
@@ -113,7 +119,6 @@ public class LBR_sensor_reader extends Node {
     
     public void sendStatus() {
         String sensorString = generateSensorString();
-        last_sendtime = System.currentTimeMillis();
         if (isNodeRunning()) {
             try {
                 this.socket.send_message(sensorString);
@@ -142,8 +147,6 @@ public class LBR_sensor_reader extends Node {
     // Add UDP-specific handling for sensor data
     public void createSocket() {
         super.createSocket();
-        if (socket != null && socket instanceof UDPSocket) {
-            ((UDPSocket) socket).setReceiveBufferSize(65535);
-        }
+        socket = new UDPSocket(port, "LBR_sensor_reader");
     }
 }

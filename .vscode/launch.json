@@ -1,0 +1,26 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "type": "java",
+            "name": "KMRiiwaSunriseApplication",
+            "request": "launch",
+            "mainClass": "API_ROS2_Sunrise.KMRiiwaSunriseApplication",
+            "projectName": "SunriseProject"
+        },
+        {
+            "type": "java",
+            "name": "Debug RobotSimClient",
+            "request": "launch",
+            "mainClass": "Test_Comms.RobotSimClient",
+            "projectName": "SunriseProject",
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen"
+        }
+    ]
+}

@@ -16,16 +16,17 @@
 
 package API_ROS2_Sunrise;
 
-
-import API_ROS2_Sunrise.KMPjogger;
-
-import com.kuka.jogging.provider.api.common.ICartesianJoggingSupport;
 import com.kuka.roboticsAPI.deviceModel.kmp.KmpOmniMove;
 import com.kuka.roboticsAPI.executionModel.ICommandContainer;
 import com.kuka.roboticsAPI.motionModel.kmp.MobilePlatformRelativeMotion;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-public class KMP_commander extends Node{
+public class KMP_commander extends Node {
+
+	// Logger
+	private static final Logger logger = LoggerFactory.getLogger(KMP_commander.class);
 
 	// Robot
 	KmpOmniMove kmp;
@@ -45,68 +46,118 @@ public class KMP_commander extends Node{
 	// Added:
 	// Startup
 	boolean startup = true;
+	// Removed redundant isNodeRunning field
 
-	public KMP_commander(int port, KmpOmniMove robot, String ConnectionType) {
-		super(port,ConnectionType, "KMP commander");
-		this.kmp = robot;
-		this.kmp_jogger = new KMPjogger((ICartesianJoggingSupport)kmp, jogging_period);
+	public KMP_commander(int port, KmpOmniMove kmp, String ConnectionType) {
+		super(port, ConnectionType, "KMP_commander");
+		this.kmp = kmp;
+		this.kmp_jogger = new KMPjogger(kmp);
 		
-		
-		if (!(isSocketConnected())) {
-			Thread monitorKMPCommandConnections = new MonitorKMPCommandConnectionsThread();
-			monitorKMPCommandConnections.start();
-			}else {
-				setisKMPConnected(true);
+		// Ensure socket is initialized
+		if (!isSocketConnected()) {
+			createSocket();
+			if (logger != null) {
+				logger.info("KMP_commander: Initializing socket connection");
+			}
+			// Give socket time to establish
+			try {
+				Thread.sleep(100);
+			} catch (InterruptedException e) {
+				Thread.currentThread().interrupt();
+			}
 		}
 	}
 
 	@Override
 	public void run() {
+	    boolean pauseAlerted = false;
 	    if (startup) {
 	        Thread emergencyStopThread = new MonitorEmergencyStopThread();
 	        emergencyStopThread.start();
 	        startup = false;
 	    }
 	    
+	    // Added: Track startup time
+	    long nodeStartTime = System.currentTimeMillis();
+	    boolean isInStartupGracePeriod = true;
+	    int messageCount = 0;
+	    
 	    while (isNodeRunning()) {
+	        if (Node.getShutdown()) break;
+	        if (Node.isPaused()) {
+	            if (!pauseAlerted) {
+	                logger.info("=== SYSTEM PAUSED: All logging is now suppressed until resume ===");
+	                pauseAlerted = true;
+	            }
+	            try { Thread.sleep(100); } catch (InterruptedException e) { break; }
+	            continue;
+	        } else {
+	            pauseAlerted = false;
+	        }
+	        
 	        try {
-	            // Receive the command
+	            // Check if startup grace period has ended
+	            long currentTime = System.currentTimeMillis();
+	            if (isInStartupGracePeriod && currentTime - nodeStartTime > STARTUP_GRACE_PERIOD_MS) {
+	                isInStartupGracePeriod = false;
+	                logger.info("KMP_commander: Startup grace period ended");
+	            }
+	            
 	            String Commandstr = this.socket.receive_message();
 	            if (Commandstr == null || Commandstr.trim().isEmpty()) {
-	                // If no command is received, skip this iteration.
 	                continue;
 	            }
 	            
-	            System.out.println("KMP_commander: Received command: " + Commandstr);
-	            String[] splt = Commandstr.split(" ");
+	            messageCount++;
 	            
+	            // During startup grace period, log ALL messages to help diagnose issues
+	            if (isInStartupGracePeriod) {
+	                logger.info("KMP_commander: [STARTUP] Message #" + messageCount + ": " + Commandstr);
+	                
+	                // Special handling for shutdown commands during startup
+	                if (Commandstr.toLowerCase().contains("shutdown")) {
+	                    logger.warn("KMP_commander: Ignoring shutdown command during startup grace period");
+	                    continue; // Skip processing this command
+	                }
+	            } else {
+	                // Normal logging once startup period is over
+	                logger.debug("KMP_commander: Received command: " + Commandstr);
+	            }
+	            
+	            String[] splt = Commandstr.split(" ");
 	            if (!getShutdown() && !closed) {
 	                if (splt.length > 0 && splt[0].equals("shutdown")) {
-	                    System.out.println("KMP_commander: Received explicit shutdown command");
+	                    // Don't process shutdown during startup grace period
+	                    if (isInStartupGracePeriod) {
+	                        logger.warn("KMP_commander: Ignoring shutdown command during startup grace period");
+	                        continue;
+	                    }
+	                    
+	                    logger.info("KMP_commander: Received explicit shutdown command");
 	                    setShutdown(true);
 	                    break;
 	                }
+	                
+	                // Process velocity and position commands normally
 	                if (splt.length > 0 && splt[0].equals("setTwist") && !getEmergencyStop()) {
-	                    System.out.println("KMP_commander: Processing setTwist command");
+	                    logger.debug("KMP_commander: Processing setTwist command");
+	                    receivedRealCommand = true;
 	                    setNewVelocity(Commandstr);
-	                    // Don't set shutdown flag for normal commands
 	                }
 	                if (splt.length > 0 && splt[0].equals("setPose") && !getEmergencyStop()) {
-	                    System.out.println("KMP_commander: Processing setPose command");
+	                    logger.debug("KMP_commander: Processing setPose command");
+	                    receivedRealCommand = true;
 	                    setNewPose(Commandstr);
-	                    // Don't set shutdown flag for normal commands
 	                }
 	            } else {
-	                System.out.println("KMP_commander: Command ignored - Shutdown: " + getShutdown() + ", Closed: " + closed);
+	                logger.debug("KMP_commander: Command ignored - Shutdown: " + getShutdown() + ", Closed: " + closed);
 	            }
 	        } catch (Exception e) {
-	            System.out.println("KMP_commander: Error processing command: " + e.getMessage());
+	            logger.error("KMP_commander: Error processing command: " + e.getMessage());
 	            e.printStackTrace();
-	            // Only set shutdown on unrecoverable errors, not for normal operation
-	            // setShutdown(true); // <-- Remove/comment this if it exists
 	        }
 	    }
-	    System.out.println("KMPcommander no longer running");
+	    logger.info("KMPcommander no longer running");
 	}
 	
 	public class MonitorEmergencyStopThread extends Thread {
@@ -115,21 +166,22 @@ public class KMP_commander extends Node{
 	    
 	    public void stopMonitoring() {
 	        running = false;
+	        this.interrupt(); // Add interruption when stopping
 	    }
 	    
 	    public void run() {
-	        while(isNodeRunning() && running) {
+	        while(isNodeRunning() && running && !Thread.currentThread().isInterrupted() && !getShutdown()) {
 	            boolean currentEmergencyState = getEmergencyStop();
 	            
 	            // Check for emergency condition
 	            if (currentEmergencyState && getisKMPMoving()) {
 	                setisKMPMoving(false);
 	                kmp_jogger.killJoggingExecution(getisKMPMoving());
-	                System.out.println("KMP_commander: Motion stopped due to safety event");
+	                logger.info("KMP_commander: Motion stopped due to safety event");
 	                
 	                // Don't trigger full shutdown for recoverable safety events
 	                if (isRecoverableSafetyEvent()) {
-	                    System.out.println("KMP_commander: Recoverable safety event detected - waiting for conditions to clear");
+	                    logger.info("KMP_commander: Recoverable safety event detected - waiting for conditions to clear");
 	                } else if(!(KMP_currentMotion==null)) {
 	                    KMP_currentMotion.cancel();
 	                }
@@ -137,19 +189,21 @@ public class KMP_commander extends Node{
 	            
 	            // Check for recovery from emergency condition
 	            if (previousEmergencyState && !currentEmergencyState) {
-	                System.out.println("KMP_commander: Safety condition cleared, robot can move again");
-	                // The emergency stop flag is now false again, so commands will work
+	                logger.info("KMP_commander: Safety condition cleared, robot can move again");
 	            }
 	            
 	            // Store state for next comparison
 	            previousEmergencyState = currentEmergencyState;
 	            
 	            try {
-	                Thread.sleep(100); // Check emergency state every 100ms
+	                Thread.sleep(50); // Reduced from 100ms to match LBR version
 	            } catch (InterruptedException e) {
+	                logger.info("KMP_commander: MonitorEmergencyStopThread interrupted, exiting thread");
+	                Thread.currentThread().interrupt(); // Restore interrupt status
 	                break;
 	            }
 	        }
+	        logger.info("KMP_commander: MonitorEmergencyStopThread terminated normally");
 	    }
 	    
 	    private boolean isRecoverableSafetyEvent() {
@@ -160,7 +214,7 @@ public class KMP_commander extends Node{
 	                       safetyStateStr.contains("PROTECTIVE_FIELD");
 	            }
 	        } catch (Exception e) {
-	            System.out.println("Error checking safety state: " + e.getMessage());
+	            logger.error("Error checking safety state: " + e.getMessage());
 	        }
 	        return false;
 	    }
@@ -169,9 +223,6 @@ public class KMP_commander extends Node{
 	public void setNewPose(String data){
 		String []lineSplt = data.split(" ");
 		if (lineSplt.length==4){
-			
-			// Declare state change
-			API_ROS2_Sunrise.KMRiiwaSunriseApplication.StateChange = true;
 			
 			double pose_x = Double.parseDouble(lineSplt[1]);
 			double pose_y = Double.parseDouble(lineSplt[2]);
@@ -184,70 +235,76 @@ public class KMP_commander extends Node{
 			MRM.setAcceleration(10, 10);
 
 			if(kmp.isReadyToMove()) {
-				System.out.println("moving");
+				logger.debug("moving");
 				this.KMP_currentMotion =  kmp.moveAsync(MRM);
 			}
 			else {
-				System.out.println("Kmp is not ready to move!");
+				logger.info("Kmp is not ready to move!");
 			}
 
 		}else{
-			System.out.println("Unacceptable Mobile Platform Relative Velocity command!");
-
+			logger.info("Unacceptable Mobile Platform Relative Velocity command!");
 		}
 	}
 
 	
 	public void setNewVelocity(String vel){
 	    String []lineSplt = vel.split(" ");
-	    System.out.println("KMP_commander: Received velocity command: " + vel);
+	    logger.info("KMP_commander: Received velocity command: " + vel);  // Changed from debug to info for better visibility
 
 	    if(lineSplt.length==4){
 	        this.velocities[0] = Double.parseDouble(lineSplt[1]); // x
 	        this.velocities[1] = Double.parseDouble(lineSplt[2]); // y
 	        this.velocities[2] = Double.parseDouble(lineSplt[3]); // theta
-	        System.out.println("KMP_commander: Parsed velocities - x: " + velocities[0] + 
-	                          ", y: " + velocities[1] + ", theta: " + velocities[2]);
+	        logger.info("KMP_commander: Parsed velocities - x: " + velocities[0] + 
+	                            ", y: " + velocities[1] + ", theta: " + velocities[2]);
 	        
 	        if(velocities[0] == 0 && velocities[1] == 0 && velocities[2] == 0) {
-	            System.out.println("KMP_commander: Zero velocity command received");
+	            logger.info("KMP_commander: Zero velocity command received");
 	            if(getisKMPMoving()) {
-	                System.out.println("KMP_commander: Robot is currently moving, stopping");
+	                logger.info("KMP_commander: Robot is currently moving, stopping");
 	                setisKMPMoving(false);
 	                this.kmp_jogger.killJoggingExecution(true);
-	                // Do NOT set shutdown flag here - we only want to stop motion
-	                System.out.println("KMP_commander: Motion stopped successfully without shutdown");
+	                logger.info("KMP_commander: Motion stopped successfully without shutdown");
 	            } else {
-	                System.out.println("KMP_commander: Robot already stopped");
+	                logger.info("KMP_commander: Robot already stopped");
 	            }
 	        } else {
-	            System.out.println("KMP_commander: Non-zero velocity command received");
-	            System.out.println("KMP_commander: Current states - IsMoving: " + getisKMPMoving() + 
+	            logger.info("KMP_commander: Non-zero velocity command received");
+	            logger.info("KMP_commander: Current states - IsMoving: " + getisKMPMoving() + 
 	                              ", EmergencyStop: " + getEmergencyStop() + 
 	                              ", ReadyToMove: " + kmp.isReadyToMove());
 	            
 	            if(getisKMPMoving() && !getEmergencyStop()) {
-	                System.out.println("KMP_commander: Robot already moving, updating velocities");
+	                logger.info("KMP_commander: Robot already moving, updating velocities");
 	                this.kmp_jogger.updateVelocities(this.velocities);
 	            }
 	            else if(!getisKMPMoving() && !getEmergencyStop() && kmp.isReadyToMove()) {
-	                System.out.println("KMP_commander: Starting robot movement");
+	                logger.info("KMP_commander: Starting robot movement");
 	                setisKMPMoving(true);
-	                
-	                // Declare state change.
-	                API_ROS2_Sunrise.KMRiiwaSunriseApplication.StateChange = true;
 	                
 	                this.kmp_jogger.updateVelocities(this.velocities);
 	                this.kmp_jogger.startJoggingExecution();
 	            } else {
-	                System.out.println("KMP_commander: Cannot jog robot - ReadyToMove: " + kmp.isReadyToMove() + 
+	                logger.info("KMP_commander: Cannot jog robot - ReadyToMove: " + kmp.isReadyToMove() + 
 	                                  ", EmergencyStop: " + getEmergencyStop() + 
 	                                  ", SafetyState: " + kmp.getSafetyState() + 
 	                                  ", CalculatedReadyToMove: " + KmpOmniMove.calculateReadyToMove(kmp.getSafetyState()));
+	                
+	                // Check if application is in MOTIONPAUSED state in a safer way
+	                try {
+	                    // Try to get application state indirectly through the controller or other means
+	                    if (Node.isPaused()) {
+	                        logger.warn("KMP_commander: Application is paused - this will prevent movement");
+	                        logger.warn("KMP_commander: To resume motion, resume the application via SmartPad");
+	                    }
+	                } catch (Exception e) {
+	                    logger.warn("KMP_commander: Could not determine application state: " + e.getMessage());
+	                }
 	            }
 	        }
 	    } else {
-	        System.out.println("KMP_commander: Invalid velocity command format, expected 4 parts, got " + lineSplt.length);
+	        logger.info("KMP_commander: Invalid velocity command format, expected 4 parts, got " + lineSplt.length);
 	    }
 	}
 	
@@ -255,6 +312,20 @@ public class KMP_commander extends Node{
 		int timeout = 3000;
 		public void run(){
 			while(!(isSocketConnected()) && (!(closed))) {
+				if (Thread.currentThread().isInterrupted()) {
+					logger.info("KMP command connection monitor thread interrupted, exiting");
+					break;
+				}
+				
+				if (Node.getShutdown()) break;
+				if (Node.isPaused()) {
+				    try { Thread.sleep(100); } catch (InterruptedException e) {
+						logger.info("KMP command connection monitor thread interrupted during pause wait");
+						Thread.currentThread().interrupt();
+						break;
+					}
+				    continue;
+				}
 				if(getisLBRConnected()) {
 					timeout = 5000;
 				}
@@ -266,43 +337,66 @@ public class KMP_commander extends Node{
 				try {
 					Thread.sleep(timeout);
 				} catch (InterruptedException e) {
-					System.out.println(node_name + " connection thread could not sleep");
+					logger.info("KMP command connection monitor thread interrupted during sleep");
+					Thread.currentThread().interrupt(); // Restore interrupt status
+					break;
 				}
 			}
 			if(!closed){
-				System.out.println("Connection with KMP Command Node OK!");
-				runmainthread();
-				}	
+				logger.info("Connection with KMP Command Node OK!");
+				start(); // Use proper thread start
+			}	
 		}
 	}
 
 	public void stopMotion() {
-	    // Safely stop the jogging execution
 	    if (kmp_jogger != null) {
-	        kmp_jogger.killJoggingExecution(false);
-	        setisKMPMoving(false);
-	        System.out.println("KMP_commander: Motion stopped.");
+	        try {
+	            kmp_jogger.killJoggingExecution(getisKMPMoving());
+	            setisKMPMoving(false);
+	            logger.info("KMP_commander: Motion stopped.");
+	        } catch (Exception e) {
+	            logger.error("KMP_commander: Error stopping motion: " + e.getMessage());
+	        }
 	    } else {
-	        System.out.println("KMP_commander: No jogging instance found; nothing to stop.");
+	        logger.info("KMP_commander: No jogging instance found; nothing to stop.");
 	    }
 	}
 
 	@Override
 	public void close() {
-		closed = true;
-		try{
-			 this.kmp_jogger.killJoggingExecution(getisKMPMoving());
-			 System.out.println("KMPJogger ended successfully");
-			 
-		}catch(Exception e){
-			System.out.println("Could not kill jogging execution");
-		}
-		try{
-			this.socket.close();
-		}catch(Exception e){
-				System.out.println("Could not close KMP commander connection: " +e);
-			}
-		System.out.println("KMP commander closed!");
- 	}
+	    closed = true;
+	    
+	    // First stop any ongoing motion
+	    try {
+	        if (kmp_jogger != null) {
+	            kmp_jogger.killJoggingExecution(false); // Pass false to avoid recursive checks
+	            logger.info("KMPJogger ended successfully");
+	        }
+	    } catch(Exception e) {
+	        logger.error("Could not kill jogging execution: " + e.getMessage());
+	    }
+
+	    // Then close socket
+	    try {
+	        if (socket != null) {
+	            socket.close();
+	            logger.info("KMP commander TCP connection closing");
+	        }
+	    } catch(Exception e) {
+	        logger.error("Could not close KMP commander connection: " + e);
+	    }
+
+	    // Set flags to ensure threads terminate
+	    setShutdown(true);
+	    isNodeRunning = false;
+	    
+	    // Interrupt any running threads
+	    if (Thread.currentThread() != this) {
+	        this.interrupt();
+	    }
+
+	    logger.info("KMP commander closed!");
+	}
 	
 }
