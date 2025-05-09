@@ -105,7 +105,7 @@ public class RobotSimClient {
     private void checkTCPPort(int port) {
         java.net.Socket socket = null;
         try {
-            socket = new java.net.Socket("172.31.1.147", port);
+            socket = new java.net.Socket("172.31.1.206", port);
             System.out.println("TCP Port " + port + " is accessible");
         } catch (Exception e) {
             System.out.println("WARNING: TCP Port " + port + " appears to be blocked. Error: " + e.getMessage());
@@ -125,7 +125,7 @@ public class RobotSimClient {
         java.net.DatagramSocket socket = null;
         try {
             socket = new java.net.DatagramSocket();
-            socket.connect(java.net.InetAddress.getByName("172.31.1.147"), port);
+            socket.connect(java.net.InetAddress.getByName("172.31.1.206"), port);
             System.out.println("UDP Port " + port + " is accessible");
         } catch (Exception e) {
             System.out.println("WARNING: UDP Port " + port + " appears to be blocked. Error: " + e.getMessage());

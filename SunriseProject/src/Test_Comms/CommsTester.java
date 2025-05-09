@@ -156,7 +156,10 @@ public class CommsTester {
                         public void run() {
                             while (!Thread.currentThread().isInterrupted()) {
                                 try {
-                                    out.write("heartbeat\n");
+                                    // Fix: Add a space between the length prefix and the heartbeat message
+                                    String heartbeatMsg = "heartbeat";
+                                    String lengthPrefix = String.format("%010d", heartbeatMsg.length());
+                                    out.write(lengthPrefix + " " + heartbeatMsg);
                                     out.flush();
                                     Thread.sleep(1000);
                                 } catch (Exception e) {

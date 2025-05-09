@@ -18,6 +18,10 @@ package API_ROS2_Sunrise;
 import com.kuka.roboticsAPI.deviceModel.LBR;
 
 import java.util.logging.Logger;
+import java.util.logging.Level;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 
 public class LBR_status_reader extends Node {
 
@@ -26,15 +30,56 @@ public class LBR_status_reader extends Node {
     private long last_sendtime = System.currentTimeMillis();
     private static final Logger logger = Logger.getLogger(LBR_status_reader.class.getName());
 
-    public LBR_status_reader(int port, LBR robot, String ConnectionType) {
-        super(port, ConnectionType, "LBR_status_reader"); // Set node_name in parent constructor
-        this.lbr = robot;
+    // Scheduler and backoff parameters
+    private final ScheduledExecutorService reconnectScheduler = Executors.newSingleThreadScheduledExecutor();
+    private static final long RECONNECT_BACKOFF_INITIAL_MS = 500;
+    private static final long RECONNECT_BACKOFF_MAX_MS     = 30000;
+    private volatile long currentReconnectDelay = RECONNECT_BACKOFF_INITIAL_MS;
 
-        if (!(isSocketConnected())) {
-            logger.info("Starting thread to connect LBR status node....");
-            Thread monitorLBRStatusConnections = new MonitorLBRStatusConnectionsThread();
-            monitorLBRStatusConnections.start();
+    public LBR_status_reader(int port, LBR robot, String ConnectionType) {
+        super(port, ConnectionType, "LBR_status_reader");
+        assert port == 30006 : "Port mismatch for LBR_status_reader";
+        logger.info(getClass().getSimpleName() + "|port " + port + " expected and initialized");
+        this.lbr = robot;
+        // start scheduler-based reconnect
+        scheduleReconnect();
+        // Always start heartbeat thread for status socket
+        getSocket().startHeartbeatThread();
+    }
+
+    /** Schedule next reconnect with exponential backoff */
+    private void scheduleReconnect() {
+        reconnectScheduler.schedule(new Runnable() {
+            public void run() {
+                try { reconnectTask(); } catch (Throwable t) { logger.log(Level.SEVERE, "Unexpected error in LBR status reconnect", t); }
+            }
+        }, currentReconnectDelay, TimeUnit.MILLISECONDS);
+    }
+
+    /** Attempt reconnect, reset backoff on success, apply jitter on failure */
+    private void reconnectTask() {
+        if (closed || Node.getShutdown()) return;
+        if (Node.isPaused()) { scheduleReconnect(); return; }
+        createSocket();
+        if (socket instanceof TCPSocket) {
+            try {
+                ((TCPSocket) socket).TCPConn.setKeepAlive(true);
+                ((TCPSocket) socket).TCPConn.setSoTimeout(5000);
+            } catch (Exception ignore) {}
         }
+        if (isSocketConnected()) {
+            logger.info("Connection with LBR Status Node OK!");
+            // Restart heartbeat thread on successful reconnect
+            getSocket().startHeartbeatThread();
+            start();
+            currentReconnectDelay = RECONNECT_BACKOFF_INITIAL_MS;
+            logger.info("Status reconnect successful, backoff reset to " + currentReconnectDelay + " ms");
+        } else {
+            long base = currentReconnectDelay * 2;
+            long jitter = (long)((Math.random()*0.4 - 0.2)*base);
+            currentReconnectDelay = (int)Math.min(RECONNECT_BACKOFF_MAX_MS, base+jitter);
+        }
+        scheduleReconnect();
     }
 
     @Override
@@ -82,6 +127,11 @@ public class LBR_status_reader extends Node {
 
         if (isNodeRunning()) {
             try {
+                // Add debug logs for header and body
+                String body = statusString;
+                String header = String.format("%010d", body.length());
+                logger.log(Level.FINE, getClass().getSimpleName() + "|port " + port + " sending header: " + header);
+                logger.log(Level.FINE, getClass().getSimpleName() + "|port " + port + " sending body: " + body);
                 this.socket.send_message(statusString);
                 if (closed && !Node.isPaused()) {
                     logger.warning(this.node_name + " tried to send a message when application was closed");
@@ -94,32 +144,7 @@ public class LBR_status_reader extends Node {
         }
     }
 
-    public class MonitorLBRStatusConnectionsThread extends Thread {
-        public void run() {
-            while (!(isSocketConnected()) && (!(closed))) {
-                if (Thread.currentThread().isInterrupted()) {
-                    logger.info("LBR status connection monitor thread interrupted, exiting");
-                    break;
-                }
-                
-                createSocket();
-                if (isSocketConnected()) {
-                    break;
-                }
-                try {
-                    Thread.sleep(connection_timeout);
-                } catch (InterruptedException e) {
-                    logger.warning("LBR status connection monitor thread interrupted during sleep");
-                    Thread.currentThread().interrupt(); // Restore interrupt status
-                    break;
-                }
-            }
-            if (!closed) {
-                logger.info("Connection with LBR Status Node OK!");
-                start(); // Use Thread's start() method instead of runmainthread
-            }
-        }
-    }
+    // Old monitor thread removed; replaced by scheduler
 
     public void setLBRemergencyStop(boolean stop) {
         setEmergencyStop(stop);
@@ -127,6 +152,9 @@ public class LBR_status_reader extends Node {
 
     @Override
     public void close() {
+        reconnectScheduler.shutdownNow();
+        // Stop heartbeat thread on close
+        getSocket().stopHeartbeatThread();
         closed = true;
         try {
             this.socket.close();

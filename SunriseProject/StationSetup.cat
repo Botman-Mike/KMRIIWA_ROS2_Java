@@ -550,7 +550,7 @@
                 <Interface id="com.kuka/StartKRC/StartKRC" version="0.1.0"/>
                 <Interface id="com.kuka/StartKRC/StartKRCConfig" version="0.1.0"/>
             </SoftwareItem>
-            <SoftwareItem autoSelected="false" canChangeSelection="true" displayName="KUKA Sunrise.StatusController" installItem="false" installedVersion="1.1.0" itemPath="com.kuka/StatusController" selectedVersion="NONE" usage="Feature"/>
+            <SoftwareItem autoSelected="false" canChangeSelection="true" displayName="KUKA Sunrise.StatusController" installItem="false" installedVersion="NONE" itemPath="com.kuka/StatusController" selectedVersion="NONE" usage="Feature"/>
             <SoftwareItem autoSelected="true" canChangeSelection="true" displayName="SunriseBasicCompounds" installItem="true" installedVersion="1" itemPath="com.kuka/SunriseBasicCompounds" selectedVersion="1" usage="Library">
                 <Interface id="com.kuka/SunriseBasicCompounds/SunriseBasicCompounds" version="0.1.1"/>
             </SoftwareItem>
@@ -1546,17 +1546,17 @@
                 <Interface id="com.kuka/Bundle/com.kuka.stateService.api" version="1.15.0"/>
                 <Interface id="com.kuka/OSGi/com.kuka.roboticsAPI.applicationServer.services.stateService.mobilePlatform.api" version="1.15.0"/>
             </SoftwareItem>
-            <SoftwareItem autoSelected="true" canChangeSelection="true" displayName="com.kuka.statuscontroller" installItem="true" installedVersion="1.1.0.9" itemPath="com.kuka/com.kuka.statuscontroller" selectedVersion="NONE" usage="Library">
+            <SoftwareItem autoSelected="true" canChangeSelection="true" displayName="com.kuka.statuscontroller" installItem="true" installedVersion="NONE" itemPath="com.kuka/com.kuka.statuscontroller" selectedVersion="NONE" usage="Library">
                 <Interface id="com.kuka/OSGi/com.kuka.statuscontroller.exception" version="1.1.0"/>
                 <Interface id="com.kuka/Bundle/com.kuka.statuscontroller" version="1.1.0"/>
                 <Interface id="com.kuka/OSGi/com.kuka.statuscontroller.api.monitors" version="1.1.0"/>
                 <Interface id="com.kuka/OSGi/com.kuka.statuscontroller.api" version="1.1.0"/>
             </SoftwareItem>
-            <SoftwareItem autoSelected="true" canChangeSelection="true" displayName="com.kuka.statuscontroller.statusgroups" installItem="true" installedVersion="1.1.0.9" itemPath="com.kuka/com.kuka.statuscontroller.statusgroups" selectedVersion="NONE" usage="Library">
+            <SoftwareItem autoSelected="true" canChangeSelection="true" displayName="com.kuka.statuscontroller.statusgroups" installItem="true" installedVersion="NONE" itemPath="com.kuka/com.kuka.statuscontroller.statusgroups" selectedVersion="NONE" usage="Library">
                 <Interface id="com.kuka/Bundle/com.kuka.statuscontroller.statusgroups" version="1.1.0"/>
                 <Interface id="com.kuka/OSGi/com.kuka.statuscontroller.statusgroups" version="1.1.0"/>
             </SoftwareItem>
-            <SoftwareItem autoSelected="true" canChangeSelection="true" displayName="com.kuka.statuscontroller.systemstatussource" installItem="true" installedVersion="1.1.0.9" itemPath="com.kuka/com.kuka.statuscontroller.systemstatussource" selectedVersion="NONE" usage="Library">
+            <SoftwareItem autoSelected="true" canChangeSelection="true" displayName="com.kuka.statuscontroller.systemstatussource" installItem="true" installedVersion="NONE" itemPath="com.kuka/com.kuka.statuscontroller.systemstatussource" selectedVersion="NONE" usage="Library">
                 <Interface id="com.kuka/Bundle/com.kuka.statuscontroller.systemstatussource" version="1.1.0"/>
             </SoftwareItem>
             <SoftwareItem autoSelected="true" canChangeSelection="true" displayName="com.kuka.sunrise.api" installItem="true" installedVersion="NONE" itemPath="com.kuka/com.kuka.sunrise.api" selectedVersion="NONE" usage="Library"/>

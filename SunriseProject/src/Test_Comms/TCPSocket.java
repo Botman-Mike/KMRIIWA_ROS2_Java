@@ -18,10 +18,16 @@ public class TCPSocket implements ISocket {
     private static final int MAX_RECONNECT_ATTEMPTS = 3;
     private static final long RECONNECT_DELAY = 2000; // 2 second delay between reconnection attempts
     private static final int CONNECTION_TIMEOUT = 5000; // 5 second connection timeout
+    
+    // TCP keep-alive configuration
+    private static final boolean KEEP_ALIVE_ENABLED = true; // Enable TCP keep-alive
+    // Note: Advanced keep-alive parameters like idle time, interval, and count
+    // cannot be configured through standard Java Socket API
+    
     private final String remoteIP;
 
     public TCPSocket(int port, String node_name) {
-        this(port, node_name, "172.31.1.147"); // Default IP for backward compatibility
+        this(port, node_name, "172.31.1.206"); // Updated to match production IP
     }
 
     public TCPSocket(int port, String node_name, String remoteIP) {
@@ -53,6 +59,15 @@ public class TCPSocket implements ISocket {
                 TCPConn.setReuseAddress(true);
                 TCPConn.setTcpNoDelay(true); // Disable Nagle's algorithm
                 TCPConn.setSoTimeout(1000); // Read timeout
+                
+                // Set TCP keep-alive options
+                if (KEEP_ALIVE_ENABLED) {
+                    TCPConn.setKeepAlive(true);
+                    System.out.println(nodename + " TCP keep-alive enabled");
+                    
+                    // Note: Advanced keep-alive parameters require Java 9+ and only work on some platforms
+                    // If you need more control over keep-alive parameters, consider platform-specific solutions
+                }
                 
                 // Connect with timeout
                 TCPConn.connect(new InetSocketAddress(remoteIP, COMport), CONNECTION_TIMEOUT);
@@ -101,7 +116,9 @@ public class TCPSocket implements ISocket {
         }
 
         try {
-            outputStream.println(buffer);
+            // Format the message with length prefix
+            String formattedMessage = formatMessage(buffer);
+            outputStream.println(formattedMessage);
             outputStream.flush();
         } catch (Exception e) {
             System.err.println(nodename + " TCP send error: " + e.getMessage());
@@ -128,11 +145,30 @@ public class TCPSocket implements ISocket {
             TCPConn.setSoTimeout(1000);
             String message = inputStream.readLine();
             
-            if (message != null && message.trim().equals("heartbeat")) {
+            // Check for null message
+            if (message == null) {
+                return null;
+            }
+            
+            // Use our helper function to check if this is a heartbeat message
+            if (isHeartbeatMessage(message)) {
+                // Only log heartbeats occasionally to avoid filling logs
+                if (System.currentTimeMillis() % 60000 < 1000) { 
+                    System.out.println(nodename + " Received heartbeat message");
+                }
                 updateLastHeartbeat();
                 return null;
             }
-            return message;
+            
+            // For non-heartbeat messages, check if we need to extract content
+            // This ensures compatibility with both prefixed and non-prefixed formats
+            String content = extractMessageContent(message);
+            if (content != null) {
+                return content; // Return just the message content without prefix
+            }
+            
+            return message; // Return the original message if not in prefixed format
+            
         } catch (SocketTimeoutException e) {
             return null;
         } catch (Exception e) {
@@ -259,5 +295,60 @@ public class TCPSocket implements ISocket {
 
     private boolean isHeartbeatTimedOut() {
         return System.currentTimeMillis() - lastHeartbeat > HEARTBEAT_TIMEOUT;
+    }
+
+    /**
+     * Format a message with the standard length prefix format
+     * @param message The raw message to format
+     * @return The formatted message with length prefix
+     */
+    private String formatMessage(String message) {
+        byte[] bytes = encode(message);
+        int len = bytes.length;
+        return String.format("%010d", len) + " " + message;
+    }
+    
+    /**
+     * Extract the actual message content from a prefixed message
+     * @param prefixedMessage The message with length prefix
+     * @return The extracted message content, or null if format is invalid
+     */
+    private String extractMessageContent(String prefixedMessage) {
+        if (prefixedMessage == null || prefixedMessage.length() < 12) {
+            return null;
+        }
+        
+        try {
+            // Standard format is: <10-digit-length> <space> <message>
+            // So we split on the first space
+            int firstSpacePos = prefixedMessage.indexOf(" ");
+            if (firstSpacePos > 0) {
+                return prefixedMessage.substring(firstSpacePos + 1);
+            }
+        } catch (Exception e) {
+            System.err.println(nodename + " Failed to extract message content: " + e.getMessage());
+        }
+        
+        return null;
+    }
+    
+    /**
+     * Checks if a message (with or without prefix) is a heartbeat message
+     * @param message The message to check
+     * @return true if this is a heartbeat message
+     */
+    private boolean isHeartbeatMessage(String message) {
+        if (message == null) {
+            return false;
+        }
+        
+        // First try to treat it as a prefixed message
+        String content = extractMessageContent(message);
+        if (content != null && content.equals("heartbeat")) {
+            return true;
+        }
+        
+        // Also handle unprefixed heartbeats for compatibility
+        return message.equals("heartbeat");
     }
 }

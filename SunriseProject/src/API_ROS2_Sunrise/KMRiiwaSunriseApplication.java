@@ -31,6 +31,7 @@ import static com.kuka.roboticsAPI.motionModel.BasicMotions.ptp;
 import com.kuka.generated.ioAccess.ControlPanelIOGroup;
 import com.kuka.task.ITaskManager;
 import com.kuka.task.ITaskLogger;
+import com.kuka.roboticsAPI.applicationModel.IApplicationControl;
 
 @ResumeAfterPauseEvent(delay = 0 ,  afterRepositioning = true)
 public class KMRiiwaSunriseApplication extends RoboticsAPIApplication {
@@ -41,9 +42,12 @@ public class KMRiiwaSunriseApplication extends RoboticsAPIApplication {
 	SafetyStateListener safetylistener;
 	private volatile boolean stateChange = true;
 	
-	// Added: Startup protection against immediate shutdown
-	private static final long STARTUP_GRACE_PERIOD_MS = 5000; // 5 seconds
+	// Field for startup grace-period tracking
 	private volatile long startupTime;
+    // Grace period duration to ignore early shutdowns
+    private static final long STARTUP_GRACE_PERIOD_MS = 5000; // 5 seconds
+    // Field to track custom shutdown requests
+    private volatile boolean shutdownRequested;
 	
 	// Declare KMP
 	@Inject
@@ -70,6 +74,9 @@ public class KMRiiwaSunriseApplication extends RoboticsAPIApplication {
 	int LBR_status_port = 30006;
 	int LBR_sensor_port = 30007;
 	
+	// Single TCP socket instance to manage all TCP connections
+	private TCPSocket tcpSocket;
+	
 	// Threading parameter
 	private String threadingPriority = "LBR";  // Using String instead of enum for Java 6
 	private static final String PRIORITY_LBR = "LBR";
@@ -80,7 +87,7 @@ public class KMRiiwaSunriseApplication extends RoboticsAPIApplication {
 	String UDPConnection = "UDP";
 
 	// Implemented node classes
-	KMP_commander kmp_commander;
+	KMP_commander kmpCommanderRunnable;
 	LBR_commander lbr_commander;
 	LBR_sensor_reader lbr_sensor_reader;
 	KMP_sensor_reader kmp_sensor_reader;
@@ -88,7 +95,7 @@ public class KMRiiwaSunriseApplication extends RoboticsAPIApplication {
 	LBR_status_reader lbr_status_reader;
 
 	// Thread references
-	private Thread kmp_commander_thread;
+	private Thread kmp_commander;
 	private Thread kmp_status_thread;
 	private Thread kmp_sensor_thread;
 	private Thread lbr_commander_thread;
@@ -105,10 +112,11 @@ public class KMRiiwaSunriseApplication extends RoboticsAPIApplication {
 	// Add these declarations after other class variables
 	private DataController kmpDataController;
 	private DataController lbrDataController;
+	private java.util.concurrent.ScheduledExecutorService executorService;
 
 	// Add constants for commonly used values
 	private static final int THREAD_SLEEP_TIME = 100; // 100ms
-
+	
 	// Add relevant getters/setters for non-static access
 	public synchronized boolean getStateChange() {
 		return stateChange; 
@@ -145,23 +153,24 @@ public class KMRiiwaSunriseApplication extends RoboticsAPIApplication {
 	    // Move to drive position
 	    lbr.move(ptp(getApplicationData().getFrame("/DrivePos")).setJointVelocityRel(0.5));
 	    
-	    // Create nodes for communication
-	    kmp_commander = new KMP_commander(KMP_command_port, kmp, TCPConnection);
-	    lbr_commander = new LBR_commander(LBR_command_port, lbr, TCPConnection, getApplicationData().getFrame("/DrivePos"));
+	    // Initialize the single TCPSocket instance with the default port (will be used when node classes are created)
+	    tcpSocket = new TCPSocket(KMP_command_port, "MainSocket");
+	    if (tcpSocket != null) {
+	        logger.info("Main TCP Socket initialized - managing persistent connections to 172.31.1.206 (ports 30001, 30002, 30005, 30006)");
+	        tcpSocket.startHeartbeatThread();
+	    } else {
+	        logger.error("FAILED to initialize main TCP Socket");
+	    }
 	    
-	    // Start heartbeat threads immediately after socket creation
-	    if (kmp_commander != null && kmp_commander.isSocketConnected()) {
-	        kmp_commander.getSocket().startHeartbeatThread();
-	    }
-	    if (lbr_commander != null && lbr_commander.isSocketConnected()) {
-	        lbr_commander.getSocket().startHeartbeatThread(); 
-	    }
+	    // Create nodes for communication - passing the shared TCPSocket instance
+	    kmpCommanderRunnable = new KMP_commander(KMP_command_port, kmp, TCPConnection);
+	    lbr_commander = new LBR_commander(LBR_command_port, lbr, TCPConnection, getApplicationData().getFrame("/DrivePos"));
 	    
 	    // Initialize DataControllers with proper null checks
 	    try {
-	        if (kmp_commander != null && kmp_commander.isSocketConnected() && kmp_commander.getSocket() != null) {
-	            kmpDataController = new DataController(kmp_commander.getSocket(), null);
-	            kmp_commander.setDataController(kmpDataController);
+	        if (kmpCommanderRunnable != null && kmpCommanderRunnable.isSocketConnected() && kmpCommanderRunnable.getSocket() != null) {
+	            kmpDataController = new DataController(kmpCommanderRunnable.getSocket(), null);
+	            kmpCommanderRunnable.setDataController(kmpDataController);
 	        }
 	        
 	        if (lbr_commander != null && lbr_commander.isSocketConnected() && lbr_commander.getSocket() != null) {
@@ -173,14 +182,14 @@ public class KMRiiwaSunriseApplication extends RoboticsAPIApplication {
 	    }
 	    
 	    // SafetyStateListener
-	    safetylistener = new SafetyStateListener(controller, lbr, lbr_commander, kmp_commander, lbr_status_reader, kmp_status_reader);
+	    safetylistener = new SafetyStateListener(controller, lbr, lbr_commander, kmpCommanderRunnable, lbr_status_reader, kmp_status_reader);
 	    safetylistener.startSafetyStateListener();
 	    
 	    // Check if a commander node is active...
 	    long startTime = System.currentTimeMillis();
 	    int shutDownAfterMs = 600000; // 10 minutes in milliseconds
 	    while(!AppRunning) {
-	        if(kmp_commander.isSocketConnected() || lbr_commander.isSocketConnected()){
+	        if(kmpCommanderRunnable.isSocketConnected() || lbr_commander.isSocketConnected()){
 	            AppRunning = true;
 	            logger.info("Application ready to run!");   
 	            break;
@@ -214,9 +223,11 @@ public class KMRiiwaSunriseApplication extends RoboticsAPIApplication {
 	        }
 	        
 	        logger.info("Network configuration:");
-	        logger.info("- TCP: Commands, Status (reliable delivery)");
+	        logger.info("- TCP: Commands, Status (reliable delivery with persistent connections)");
 	        logger.info("- UDP: Sensors, Laser, Odometry (optimized for speed)");
 	    }
+
+	    // NOTE: OSGi BundleContext/IApplicationControl service fetch is not implemented here because the API does not support restartApplication().
 	}
 	
 
@@ -237,31 +248,35 @@ public class KMRiiwaSunriseApplication extends RoboticsAPIApplication {
 	    }
 	    
 	    // 2. Set the shutdown flags on all nodes
-	    if (kmp_commander != null) { 
-	        kmp_commander.setShutdown(true);
+	    if (kmpCommanderRunnable != null) { 
+	        logger.info("Setting shutdown flag for KMP commander");
+	        kmpCommanderRunnable.setShutdown(true);
 	    }
 	    if (lbr_commander != null) { 
+	        logger.info("Setting shutdown flag for LBR commander");
 	        lbr_commander.setShutdown(true);
 	    }
 	    if (kmp_status_reader != null) { 
+	        logger.info("Setting shutdown flag for KMP status reader");
 	        kmp_status_reader.setShutdown(true);
 	    }
 	    if (lbr_status_reader != null) { 
+	        logger.info("Setting shutdown flag for LBR status reader");
 	        lbr_status_reader.setShutdown(true);
 	    }
 	    if (kmp_sensor_reader != null) { 
+	        logger.info("Setting shutdown flag for KMP sensor reader");
 	        kmp_sensor_reader.setShutdown(true);
 	    }
 	    if (lbr_sensor_reader != null) { 
+	        logger.info("Setting shutdown flag for LBR sensor reader");
 	        lbr_sensor_reader.setShutdown(true);
 	    }
 	    
-	    // Stop heartbeat threads before closing sockets
-	    if (kmp_commander != null && kmp_commander.getSocket() != null) {
-	        kmp_commander.getSocket().stopHeartbeatThread();
-	    }
-	    if (lbr_commander != null && lbr_commander.getSocket() != null) {
-	        lbr_commander.getSocket().stopHeartbeatThread();
+	    // Stop the shared TCP socket's heartbeat thread
+	    if (tcpSocket != null) {
+	        logger.info("Stopping main TCP Socket heartbeat thread");
+	        tcpSocket.stopHeartbeatThread();
 	    }
 	    
 	    // Add before closing nodes
@@ -269,15 +284,15 @@ public class KMRiiwaSunriseApplication extends RoboticsAPIApplication {
 	    cleanupDataController(lbrDataController, "LBR");
 	    
 	    // 3. Stop any ongoing motions (using your available API – for instance, cancelMotion())
-	    if (kmp_commander != null) {
-	        kmp_commander.stopMotion();
+	    if (kmpCommanderRunnable != null) {
+	        kmpCommanderRunnable.stopMotion();
 	    }
 	    if (lbr_commander != null) {
 	        lbr_commander.stopMotion();
 	    }
 	    
 	    // 4. Interrupt all threads
-	    interruptThread(kmp_commander_thread, "KMP commander");
+	    interruptThread(kmp_commander, "KMP commander");
 	    interruptThread(lbr_commander_thread, "LBR commander");
 	    interruptThread(kmp_status_thread, "KMP status");
 	    interruptThread(lbr_status_thread, "LBR status");
@@ -291,15 +306,22 @@ public class KMRiiwaSunriseApplication extends RoboticsAPIApplication {
 	        Thread.currentThread().interrupt();
 	    }
 	    
-	    closeNodeSafely(kmp_commander, "KMP commander");
+	    closeNodeSafely(kmpCommanderRunnable, "KMP commander");
 	    closeNodeSafely(lbr_commander, "LBR commander");
 	    closeNodeSafely(kmp_status_reader, "KMP status");
 	    closeNodeSafely(kmp_sensor_reader, "KMP sensor");
 	    closeNodeSafely(lbr_status_reader, "LBR status");
 	    closeNodeSafely(lbr_sensor_reader, "LBR sensor");
 	    
+	    // Close the shared TCP socket
+	    if (tcpSocket != null) {
+	        logger.info("Closing main TCP Socket");
+	        tcpSocket.close();
+	        tcpSocket = null;
+	    }
+	    
 	    // 6. Wait for all threads to finish
-	    waitForThread(kmp_commander_thread, "KMP commander", 2000);
+	    waitForThread(kmp_commander, "KMP commander", 2000);
 	    waitForThread(lbr_commander_thread, "LBR commander", 2000);
 	    waitForThread(kmp_status_thread, "KMP status", 1000);
 	    waitForThread(lbr_status_thread, "LBR status", 1000);
@@ -319,6 +341,7 @@ public class KMRiiwaSunriseApplication extends RoboticsAPIApplication {
 	private void waitForThread(Thread thread, String name, long timeoutMs) {
 	    if (thread != null && thread.isAlive()) {
 	        try {
+	            logger.info("Waiting for thread to finish: " + name);
 	            thread.join(timeoutMs);
 	            if (thread.isAlive()) {
 	                logger.warn("WARNING: " + name + " thread did not terminate within timeout");
@@ -333,9 +356,11 @@ public class KMRiiwaSunriseApplication extends RoboticsAPIApplication {
 	private void closeNodeSafely(Node node, String name) {
 	    if (node != null) {
 	        try {
+	            logger.info("Attempting to close node: " + name);
 	            node.close();
+	            logger.info("Successfully closed node: " + name);
 	        } catch (Exception e) {
-	            logger.error("Error closing " + name + ": " + e.getMessage());
+	            logger.error("Error closing " + name + ": " + e.getMessage(), e);
 	        }
 	    }
 	}
@@ -368,6 +393,11 @@ public class KMRiiwaSunriseApplication extends RoboticsAPIApplication {
 
 	@Override
 	public void run() {
+	    // 1) Clear shutdown guard and restart grace-period clock
+	    isShuttingDown = false;                // Clear KUKA shutdown guard
+	    shutdownRequested = false;              // Clear any custom shutdown flag
+	    AppRunning = true;                     // Ensure main loop will run
+	    startupTime = System.currentTimeMillis();  // Fresh grace-period start
 	    try {
 	        resumeFunction = getTaskFunction(IAutomaticResumeFunction.class);
 	        setAutomaticallyResumable(true);
@@ -378,12 +408,13 @@ public class KMRiiwaSunriseApplication extends RoboticsAPIApplication {
 	    logger.info("Running app!");
 	    
 	    // Start all connected nodes
-	    kmp_commander.setPriority(Thread.MAX_PRIORITY);
+	    kmpCommanderRunnable.setPriority(Thread.MAX_PRIORITY);
 	    lbr_commander.setPriority(Thread.MAX_PRIORITY);
 	    
-	    if (!(kmp_commander == null) && kmp_commander.isSocketConnected()) {
+	    if (kmpCommanderRunnable != null && kmpCommanderRunnable.isSocketConnected()) {
+	        kmp_commander = new Thread(kmpCommanderRunnable, "KMP-Commander");
+	        kmp_commander.setDaemon(true);
 	        kmp_commander.start();
-	        kmp_commander_thread = kmp_commander;
 	    }
 	    
 	    if (!(kmp_status_reader == null) && kmp_status_reader.isSocketConnected()) {
@@ -417,27 +448,40 @@ public class KMRiiwaSunriseApplication extends RoboticsAPIApplication {
 	    
 	    // Check if the commanders are still alive periodically
 	    long lastCommanderCheckTime = System.currentTimeMillis();
-	    long lastSocketCheckTime = System.currentTimeMillis();
 	    
-	    // Added: Record startup time
-	    startupTime = System.currentTimeMillis();
-	    
+	    // Initialize and schedule executorService for periodic tasks
+	    if (executorService == null || executorService.isShutdown()) {
+	        executorService = java.util.concurrent.Executors.newSingleThreadScheduledExecutor();
+	        executorService.scheduleAtFixedRate(new Runnable() {
+	            public void run() {
+	                getLogger().info("[executorService] Periodic health check at " + new java.util.Date());
+	                // Add any periodic logic here
+	            }
+	        }, 0, 10, java.util.concurrent.TimeUnit.SECONDS);
+	    }
+
 	    while (AppRunning) {
+	        // Check external shutdown flag (for future use)
+	        if (shutdownRequested) {
+	            logger.info("External shutdownRequested flag detected, initiating shutdown");
+	            isShuttingDown = true;
+	        }
 	        // 1. Monitor if the commander threads are still alive
 	        long currentTime = System.currentTimeMillis();
 	        if (currentTime - lastCommanderCheckTime > 5000) { // Check every 5 seconds
 	            lastCommanderCheckTime = currentTime;
 	            
 	            // Check KMP commander
-	            if (kmp_commander_thread != null && !kmp_commander_thread.isAlive() && !isShuttingDown) {
+	            if (kmp_commander != null && !kmp_commander.isAlive() && !isShuttingDown) {
 	                logger.warn("WARNING: KMP commander thread died unexpectedly, attempting restart");
 	                try {
-	                    kmp_commander = new KMP_commander(KMP_command_port, kmp, TCPConnection);
-	                    kmp_commander.setPriority(Thread.MAX_PRIORITY);
-	                    kmp_commander.start();
-	                    kmp_commander_thread = kmp_commander;
+	                    kmpCommanderRunnable = new KMP_commander(KMP_command_port, kmp, TCPConnection);
+	                    kmpCommanderRunnable.setPriority(Thread.MAX_PRIORITY);
+	                    kmpCommanderRunnable.start();
+	                    kmp_commander = kmpCommanderRunnable;
+	                    logger.info("KMP commander thread restarted");
 	                } catch (Exception e) {
-	                    logger.error("Failed to restart KMP commander: " + e.getMessage());
+	                    logger.error("Failed to restart KMP commander: " + e.getMessage(), e);
 	                }
 	            }
 	            
@@ -449,26 +493,21 @@ public class KMRiiwaSunriseApplication extends RoboticsAPIApplication {
 	                    lbr_commander.setPriority(Thread.MAX_PRIORITY);
 	                    lbr_commander.start();
 	                    lbr_commander_thread = lbr_commander;
+	                    logger.info("LBR commander thread restarted");
 	                } catch (Exception e) {
-	                    logger.error("Failed to restart LBR commander: " + e.getMessage());
+	                    logger.error("Failed to restart LBR commander: " + e.getMessage(), e);
 	                }
 	            }
 	        }
 	        
-	        // Add to run() method in KMRiiwaSunriseApplication.java
-	        // Call every few seconds, perhaps alongside commander thread checks
-	        if (currentTime - lastSocketCheckTime > 5000) {
-	            lastSocketCheckTime = currentTime;
-	            monitorSocketConnections();
-	        }
-	        
-	        // 2. Check if any of the commanders signaled for shutdown
-	        if (Node.getShutdown()) {
-	            // Added: Ignore shutdown commands during startup grace period
-	            if (currentTime - startupTime < STARTUP_GRACE_PERIOD_MS) {
-	                logger.info("Ignoring shutdown command during startup grace period");
-	            } else {
+	        // 2. Check shutdown guard via isShuttingDown and grace period
+	        if (isShuttingDown) {
+	            long elapsed = System.currentTimeMillis() - startupTime;
+	            if (elapsed > STARTUP_GRACE_PERIOD_MS) {
+	                logger.info("Shutdown requested - exiting run loop after grace period");
 	                AppRunning = false;
+	            } else {
+	                logger.info("Ignoring shutdown request during startup grace period (" + elapsed + "ms)");
 	            }
 	        }
 	        
@@ -533,7 +572,7 @@ public class KMRiiwaSunriseApplication extends RoboticsAPIApplication {
 	        }
 
 	        // Check if safety scanner warning fields have cleared
-	        if (kmp_commander != null && kmp_commander.getEmergencyStop()) {
+	        if (kmpCommanderRunnable != null && kmpCommanderRunnable.getEmergencyStop()) {
 	            handleEmergencyStop();
 	        }
 	        
@@ -547,8 +586,7 @@ public class KMRiiwaSunriseApplication extends RoboticsAPIApplication {
 	    }
 	    
 	    logger.info("Shutdown message received in main application");
-	    logger.info("KMP commander shutdown: " + Node.getShutdown());
-	    logger.info("LBR commander shutdown: " + Node.getShutdown());
+	    logger.info("AppRunning = " + AppRunning + ", isShuttingDown = " + isShuttingDown);
 	    shutdown_application();
 	}
 	
@@ -585,8 +623,8 @@ public class KMRiiwaSunriseApplication extends RoboticsAPIApplication {
 	            logger.info("Safety scanner warning field detected");
 	            
 	            // Pause motion but don't shut down
-	            if (kmp_commander != null) {
-	                kmp_commander.stopMotion();
+	            if (kmpCommanderRunnable != null) {
+	                kmpCommanderRunnable.stopMotion();
 	            }
 	            if (lbr_commander != null) {
 	                lbr_commander.stopMotion();
@@ -606,31 +644,73 @@ public class KMRiiwaSunriseApplication extends RoboticsAPIApplication {
 	    }
 	}
 	
-	private void monitorSocketConnections() {
-	    logger.info("=== Socket Connection Status ===");
-	    if (kmp_commander != null) {
-	        boolean socketOk = kmp_commander.isSocketConnected();
-	        logger.info("KMP commander socket: " + (socketOk ? "CONNECTED" : "DISCONNECTED")); 
-	    }
-	    if (lbr_commander != null) {
-	        boolean socketOk = lbr_commander.isSocketConnected();
-	        logger.info("LBR commander socket: " + (socketOk ? "CONNECTED" : "DISCONNECTED"));
-	    }
-	    // Add same checks for other nodes
-	}
+	// Remove the monitorSocketConnections method - no longer needed with persistent socket
 
 	private void handleEmergencyStop() {
-	    if (kmp_commander != null) {
-	        kmp_commander.setEmergencyStop(true);
+	    if (kmpCommanderRunnable != null) {
+	        kmpCommanderRunnable.setEmergencyStop(true);
 	    }
 	    if (lbr_commander != null) {
 	        lbr_commander.setEmergencyStop(true); 
 	    }
 	}
 
-	public static void main(String[] args){
-		KMRiiwaSunriseApplication app = new KMRiiwaSunriseApplication();
-		app.runApplication();
+	@Override
+	public void dispose() {
+	    // 1. Disable AutomaticResume background task
+	    setAutomaticallyResumable(false);
+	    // 2. Call super.dispose() immediately after
+	    super.dispose();
+	    // 3. Existing cleanup
+	    for (Thread t : Thread.getAllStackTraces().keySet()) {
+	        getLogger().info("💀 Still alive on shutdown: " + t.getName());
+	    }
+	    if (kmp_commander != null && kmp_commander.isAlive()) {
+	        kmp_commander.interrupt();
+	        try {
+	            kmp_commander.join(10000);
+	        } catch (InterruptedException e) {
+	            Thread.currentThread().interrupt();
+	        }
+	    }
+	    if (executorService != null) {
+	        executorService.shutdownNow();
+	        try {
+	            executorService.awaitTermination(5, java.util.concurrent.TimeUnit.SECONDS);
+	        } catch (InterruptedException e) {
+	            Thread.currentThread().interrupt();
+	        }
+	    }
+	    // 4. Hand control back to Sunrise’s framework
+	    IApplicationControl ctrl = getApplicationControl();
+	    if (ctrl != null) {
+	        getLogger().info("🛑 Application shutdown via PositionAndGMSReferencing pattern");
+	        ctrl.halt();
+	    } else {
+	        getLogger().warn("⚠️ Cannot get ApplicationControl, shutdown may not be clean");
+	    }
+	}
+
+	public void triggerCleanRestart() {
+	    getLogger().warn("⚠️ ApplicationControl.restartApplication() is not available in this API version. Manual restart required.");
+	}
+
+	// Stub for application ID (replace with actual logic if needed)
+	public String getApplicationId() {
+	    return "com.botman.kmriiwa.sunrise";
+	}
+
+	public static void main(String[] args) {
+	    final KMRiiwaSunriseApplication app = new KMRiiwaSunriseApplication();
+	    // Register JVM shutdown hook to cleanly shutdown KMP commander
+	    Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
+	        public void run() {
+	            if (app.kmpCommanderRunnable != null) {
+	                app.kmpCommanderRunnable.shutdown();
+	            }
+	        }
+	    }));
+	    app.runApplication();
 	}
 	
 }

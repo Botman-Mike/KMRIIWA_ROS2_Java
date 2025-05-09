@@ -22,11 +22,24 @@ import com.kuka.roboticsAPI.motionModel.kmp.MobilePlatformRelativeMotion;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
-public class KMP_commander extends Node {
+public class KMP_commander extends AbstractCommander<ISocket> {
+
+	// Main loop control flag
+	private volatile boolean running = true;
 
 	// Logger
 	private static final Logger logger = LoggerFactory.getLogger(KMP_commander.class);
+
+	// Scheduler for reconnection attempts
+    private final ScheduledExecutorService reconScheduler = Executors.newSingleThreadScheduledExecutor();
+    // Exponential backoff configuration for reconnect attempts
+    private static final long RECONNECT_BACKOFF_INITIAL_MS = 500;
+    private static final long RECONNECT_BACKOFF_MAX_MS = 30000;
+    private volatile long currentReconnectDelay = RECONNECT_BACKOFF_INITIAL_MS;
 
 	// Robot
 	KmpOmniMove kmp;
@@ -48,117 +61,156 @@ public class KMP_commander extends Node {
 	boolean startup = true;
 	// Removed redundant isNodeRunning field
 
-	public KMP_commander(int port, KmpOmniMove kmp, String ConnectionType) {
-		super(port, ConnectionType, "KMP_commander");
-		this.kmp = kmp;
-		this.kmp_jogger = new KMPjogger(kmp);
-		
-		// Ensure socket is initialized
-		if (!isSocketConnected()) {
-			createSocket();
-			if (logger != null) {
-				logger.info("KMP_commander: Initializing socket connection");
-			}
-			// Give socket time to establish
-			try {
-				Thread.sleep(100);
-			} catch (InterruptedException e) {
-				Thread.currentThread().interrupt();
-			}
-		}
-	}
+    public KMP_commander(int port, KmpOmniMove kmp, String ConnectionType) {
+        super(port, ConnectionType, "KMP_commander");
+        assert port == 30002 : "Port mismatch for KMP_commander";
+        logger.info(getClass().getSimpleName() + "|port " + port + " expected and initialized");
+        // JMX availability check
+        boolean jmxAvailable = true;
+        try {
+            Class.forName("java.lang.management.ManagementFactory");
+        } catch (ClassNotFoundException e) {
+            jmxAvailable = false;
+            logger.warn("JMX not supported on this JVM, skipping MBean registration.");
+        }
+        this.kmp = kmp;
+        this.kmp_jogger = new KMPjogger(kmp);
+        // Register MBean if available
+        if (jmxAvailable) {
+            try {
+                javax.management.MBeanServer mbs = java.lang.management.ManagementFactory.getPlatformMBeanServer();
+                javax.management.ObjectName name = new javax.management.ObjectName("API_ROS2_Sunrise:type=" + getClass().getSimpleName() + "Metrics");
+                mbs.registerMBean(this, name);
+                logger.info("Registered MBean: " + name);
+            } catch (Exception ex) {
+                logger.error("Failed to register MBean, continuing without metrics", ex);
+            }
+        }
+    }
 
-	@Override
-	public void run() {
-	    boolean pauseAlerted = false;
-	    if (startup) {
-	        Thread emergencyStopThread = new MonitorEmergencyStopThread();
-	        emergencyStopThread.start();
-	        startup = false;
-	    }
-	    
-	    // Added: Track startup time
-	    long nodeStartTime = System.currentTimeMillis();
-	    boolean isInStartupGracePeriod = true;
-	    int messageCount = 0;
-	    
-	    while (isNodeRunning()) {
-	        if (Node.getShutdown()) break;
-	        if (Node.isPaused()) {
-	            if (!pauseAlerted) {
-	                logger.info("=== SYSTEM PAUSED: All logging is now suppressed until resume ===");
-	                pauseAlerted = true;
-	            }
-	            try { Thread.sleep(100); } catch (InterruptedException e) { break; }
-	            continue;
-	        } else {
-	            pauseAlerted = false;
-	        }
-	        
-	        try {
-	            // Check if startup grace period has ended
-	            long currentTime = System.currentTimeMillis();
-	            if (isInStartupGracePeriod && currentTime - nodeStartTime > STARTUP_GRACE_PERIOD_MS) {
-	                isInStartupGracePeriod = false;
-	                logger.info("KMP_commander: Startup grace period ended");
-	            }
-	            
-	            String Commandstr = this.socket.receive_message();
-	            if (Commandstr == null || Commandstr.trim().isEmpty()) {
-	                continue;
-	            }
-	            
-	            messageCount++;
-	            
-	            // During startup grace period, log ALL messages to help diagnose issues
-	            if (isInStartupGracePeriod) {
-	                logger.info("KMP_commander: [STARTUP] Message #" + messageCount + ": " + Commandstr);
-	                
-	                // Special handling for shutdown commands during startup
-	                if (Commandstr.toLowerCase().contains("shutdown")) {
-	                    logger.warn("KMP_commander: Ignoring shutdown command during startup grace period");
-	                    continue; // Skip processing this command
-	                }
-	            } else {
-	                // Normal logging once startup period is over
-	                logger.debug("KMP_commander: Received command: " + Commandstr);
-	            }
-	            
-	            String[] splt = Commandstr.split(" ");
-	            if (!getShutdown() && !closed) {
-	                if (splt.length > 0 && splt[0].equals("shutdown")) {
-	                    // Don't process shutdown during startup grace period
-	                    if (isInStartupGracePeriod) {
-	                        logger.warn("KMP_commander: Ignoring shutdown command during startup grace period");
-	                        continue;
-	                    }
-	                    
-	                    logger.info("KMP_commander: Received explicit shutdown command");
-	                    setShutdown(true);
-	                    break;
-	                }
-	                
-	                // Process velocity and position commands normally
-	                if (splt.length > 0 && splt[0].equals("setTwist") && !getEmergencyStop()) {
-	                    logger.debug("KMP_commander: Processing setTwist command");
-	                    receivedRealCommand = true;
-	                    setNewVelocity(Commandstr);
-	                }
-	                if (splt.length > 0 && splt[0].equals("setPose") && !getEmergencyStop()) {
-	                    logger.debug("KMP_commander: Processing setPose command");
-	                    receivedRealCommand = true;
-	                    setNewPose(Commandstr);
-	                }
-	            } else {
-	                logger.debug("KMP_commander: Command ignored - Shutdown: " + getShutdown() + ", Closed: " + closed);
-	            }
-	        } catch (Exception e) {
-	            logger.error("KMP_commander: Error processing command: " + e.getMessage());
-	            e.printStackTrace();
-	        }
-	    }
-	    logger.info("KMPcommander no longer running");
-	}
+    @Override
+    protected void connect() {
+        createSocket();
+        // Log successful socket creation and connection
+        if (getSocket() instanceof TCPSocket) {
+            String host = ((TCPSocket) getSocket()).TCPConn.getInetAddress().getHostAddress();
+            logger.info(getClass().getSimpleName() + "|port " + port + " connected to " + host + ":" + port);
+        }
+        socketClient = getSocket();
+        // enable keep-alive
+        try {
+            if (socketClient instanceof TCPSocket) {
+                ((TCPSocket) socketClient).TCPConn.setKeepAlive(true);
+                logger.info("KMP_commander: Socket TCP keep-alive enabled");
+            }
+        } catch (Exception e) {
+            logger.warn("KMP_commander: Failed to enable TCP keep-alive: " + e.getMessage());
+        }
+        // schedule reconnect attempts
+        scheduleReconnect();
+    }
+
+    @Override
+    protected void runLoop() throws Exception {
+        boolean pauseAlerted = false;
+        if (startup) {
+            Thread emergencyStopThread = new MonitorEmergencyStopThread();
+            emergencyStopThread.start();
+            startup = false;
+        }
+        
+        // Track startup time
+        long nodeStartTime = System.currentTimeMillis();
+        boolean isInStartupGracePeriod = true;
+        int messageCount = 0;
+        
+        while (running) {
+            if (Node.getShutdown()) break;
+            if (Node.isPaused()) {
+                if (!pauseAlerted) {
+                    logger.info("=== SYSTEM PAUSED: All logging is now suppressed until resume ===");
+                    pauseAlerted = true;
+                }
+                try { Thread.sleep(100); } catch (InterruptedException e) { break; }
+                continue;
+            } else {
+                pauseAlerted = false;
+            }
+            
+            try {
+                // Check if startup grace period has ended
+                long currentTime = System.currentTimeMillis();
+                if (isInStartupGracePeriod && currentTime - nodeStartTime > STARTUP_GRACE_PERIOD_MS) {
+                    isInStartupGracePeriod = false;
+                    logger.info("KMP_commander: Startup grace period ended after " + 
+                               (currentTime - nodeStartTime) + "ms");
+                }
+                
+                String Commandstr = this.socket.receive_message();
+                if (Commandstr == null || Commandstr.trim().isEmpty()) {
+                    try {
+                        Thread.sleep(10); // Don't busy-wait, give some time between checks
+                    } catch (InterruptedException e) {
+                        logger.info("KMP_commander: Sleep interrupted, reconnecting...");
+                        Thread.currentThread().interrupt();
+                        continue;
+                    }
+                    continue;
+                }
+                
+                messageCount++;
+                
+                // During startup grace period, log ALL messages to help diagnose issues
+                if (isInStartupGracePeriod) {
+                    logger.info("KMP_commander: [STARTUP] Message #" + messageCount + ": " + Commandstr);
+                    
+                    // Special handling for shutdown commands during startup
+                    if (Commandstr.toLowerCase().contains("shutdown")) {
+                        logger.warn("KMP_commander: Ignoring shutdown command during startup grace period");
+                        continue; // Skip processing this command
+                    }
+                }
+                
+                String[] splt = Commandstr.split(" ");
+                if (!getShutdown() && !closed) {
+                    if (splt.length > 0 && splt[0].equals("shutdown")) {
+                        // Don't process shutdown during startup grace period
+                        if (isInStartupGracePeriod) {
+                            logger.warn("KMP_commander: Ignoring shutdown command during startup grace period");
+                            continue;
+                        }
+                        
+                        logger.info("KMP_commander: Received explicit shutdown command");
+                        setShutdown(true);
+                        break;
+                    }
+                    
+                    // Process velocity and position commands normally
+                    if (splt.length > 0 && splt[0].equals("setTwist") && !getEmergencyStop()) {
+                        logger.debug("KMP_commander: Processing setTwist command");
+                        receivedRealCommand = true;
+                        setNewVelocity(Commandstr);
+                    }
+                    if (splt.length > 0 && splt[0].equals("setPose") && !getEmergencyStop()) {
+                        logger.debug("KMP_commander: Processing setPose command");
+                        receivedRealCommand = true;
+                        setNewPose(Commandstr);
+                    }
+                } else {
+                    logger.debug("KMP_commander: Command ignored - Shutdown: " + getShutdown() + ", Closed: " + closed);
+                }
+            } catch (Exception e) {
+                logger.error("KMP_commander: Error processing command: " + e.getMessage());
+                e.printStackTrace();
+            }
+        }
+        logger.info("KMPcommander no longer running");
+    }
+
+    @Override
+    protected void disconnect() {
+        super.close();
+    }
 	
 	public class MonitorEmergencyStopThread extends Thread {
 	    private volatile boolean running = true;
@@ -344,7 +396,8 @@ public class KMP_commander extends Node {
 			}
 			if(!closed){
 				logger.info("Connection with KMP Command Node OK!");
-				start(); // Use proper thread start
+				// FIX: Call runmainthread() instead of start()
+				runmainthread(); 
 			}	
 		}
 	}
@@ -365,6 +418,8 @@ public class KMP_commander extends Node {
 
 	@Override
 	public void close() {
+	    // Shutdown reconnection scheduler
+	    reconScheduler.shutdownNow();
 	    closed = true;
 	    
 	    // First stop any ongoing motion
@@ -399,4 +454,57 @@ public class KMP_commander extends Node {
 	    logger.info("KMP commander closed!");
 	}
 	
+	// Schedule the next reconnect attempt using exponential backoff
+    private void scheduleReconnect() {
+        reconScheduler.schedule(new Runnable() {
+            public void run() {
+                try {
+                    reconnectTask();
+                } catch (Throwable t) {
+                    logger.error("Unexpected error in reconnect task", t);
+                }
+            }
+        }, currentReconnectDelay, TimeUnit.MILLISECONDS);
+    }
+
+    // Reconnect task that applies exponential backoff
+    private void reconnectTask() {
+        try {
+            if (closed || Node.getShutdown()) {
+                return;
+            }
+            if (Node.isPaused()) {
+                return;
+            }
+            if (!isSocketConnected()) {
+                createSocket();
+                // Keep-alive on new socket
+                if (socket instanceof TCPSocket) {
+                    ((TCPSocket) socket).TCPConn.setKeepAlive(true);
+                    logger.info("KMP_commander: Reconnected socket TCP keep-alive enabled");
+                }
+                if (isSocketConnected()) {
+                    setisKMPConnected(true);
+                    logger.info("KMP_commander: Connection with KMP Command Node OK!");
+                    runmainthread();
+                    // Reset backoff on success
+                    currentReconnectDelay = RECONNECT_BACKOFF_INITIAL_MS;
+                    logger.info("Reconnect successful, backoff reset to {} ms", currentReconnectDelay);
+                } else {
+                    // Compute doubled delay with ±20% jitter
+                    long base = currentReconnectDelay * 2;
+                    long jitter = (long)((Math.random() * 0.4 - 0.2) * base);
+                    currentReconnectDelay = (int)Math.min(RECONNECT_BACKOFF_MAX_MS, base + jitter);
+                }
+            } else {
+                // Already connected, reset backoff
+                currentReconnectDelay = RECONNECT_BACKOFF_INITIAL_MS;
+            }
+        } catch (Throwable t) {
+            logger.error("Unexpected in reconnect job", t);
+        } finally {
+            // Schedule next attempt
+            scheduleReconnect();
+        }
+    }
 }

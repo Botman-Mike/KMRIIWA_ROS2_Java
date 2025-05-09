@@ -20,6 +20,9 @@ import com.kuka.roboticsAPI.deviceModel.OperationMode;
 import com.kuka.roboticsAPI.deviceModel.kmp.KmpOmniMove;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 
 public class KMP_status_reader extends Node {
 
@@ -35,14 +38,54 @@ public class KMP_status_reader extends Node {
     private volatile boolean ProtectionField = false;
     private long last_sendtime = System.currentTimeMillis();
 
+    // Reconnect scheduler and backoff
+    private final ScheduledExecutorService reconnectScheduler = Executors.newSingleThreadScheduledExecutor();
+    private static final long RECONNECT_BACKOFF_INITIAL_MS = 500;
+    private static final long RECONNECT_BACKOFF_MAX_MS = 30000;
+    private volatile long currentReconnectDelay = RECONNECT_BACKOFF_INITIAL_MS;
+
     public KMP_status_reader(int port, KmpOmniMove robot, String ConnectionType) {
         super(port, ConnectionType, "KMP status reader");
-
+        assert port == 30001 : "Port mismatch for KMP_status_reader";
+        logger.info(getClass().getSimpleName() + "|port " + port + " expected and initialized");
         this.kmp = robot;
-        if (!(isSocketConnected())) {
-            Thread monitorKMPStatusConnections = new MonitorKMPStatusConnectionsThread();
-            monitorKMPStatusConnections.start();
+        // schedule reconnect attempts
+        scheduleReconnect();
+        // Always start heartbeat thread for status socket
+        getSocket().startHeartbeatThread();
+    }
+
+    /** Schedule next reconnect with exponential backoff */
+    private void scheduleReconnect() {
+        reconnectScheduler.schedule(new Runnable() {
+            public void run() {
+                try { reconnectTask(); } catch (Throwable t) { logger.error("Unexpected error in status reconnect", t);}            
+            }
+        }, currentReconnectDelay, TimeUnit.MILLISECONDS);
+    }
+
+    /** Attempt reconnect, reset backoff on success, apply jitter on failure */
+    private void reconnectTask() {
+        if (closed || Node.getShutdown()) return;
+        if (Node.isPaused()) { scheduleReconnect(); return; }
+        createSocket();
+        if (socket instanceof TCPSocket) {
+            try {
+                ((TCPSocket) socket).TCPConn.setKeepAlive(true);
+                ((TCPSocket) socket).TCPConn.setSoTimeout(5000);
+            } catch (Exception ignore) {}
         }
+        if (isSocketConnected()) {
+            logger.info("Connection with KMP Status Node OK!");
+            runmainthread();
+            currentReconnectDelay = RECONNECT_BACKOFF_INITIAL_MS;
+            logger.info("Status reconnect successful, backoff reset to " + currentReconnectDelay + " ms");
+        } else {
+            long base = currentReconnectDelay * 2;
+            long jitter = (long)((Math.random()*0.4 - 0.2)*base);
+            currentReconnectDelay = (int)Math.min(RECONNECT_BACKOFF_MAX_MS, base+jitter);
+        }
+        scheduleReconnect();
     }
 
     @Override
@@ -117,6 +160,11 @@ public class KMP_status_reader extends Node {
         last_sendtime = System.currentTimeMillis();
         if (isNodeRunning()) {
             try {
+                // Add debug logs for header and body
+                String body = toSend;
+                String header = String.format("%010d", body.length());
+                logger.debug(getClass().getSimpleName() + "|port " + port + " sending header: " + header);
+                logger.debug(getClass().getSimpleName() + "|port " + port + " sending body: " + body);
                 this.socket.send_message(toSend);
                 if (closed && !Node.isPaused()) {
                     logger.warn("KMP status sender selv om han ikke faar lov");
@@ -129,36 +177,11 @@ public class KMP_status_reader extends Node {
         }
     }
 
-    public class MonitorKMPStatusConnectionsThread extends Thread {
-        public void run() {
-            while (!(isSocketConnected()) && (!(closed))) {
-                if (Thread.currentThread().isInterrupted()) {
-                    logger.info("KMP status connection monitor thread interrupted, exiting");
-                    break;
-                }
-
-                createSocket();
-                if (isSocketConnected()) {
-                    break;
-                }
-                try {
-                    Thread.sleep(connection_timeout);
-                } catch (InterruptedException e) {
-                    logger.info("KMP status connection monitor thread interrupted during sleep");
-                    Thread.currentThread().interrupt(); // Restore interrupt status
-                    break;
-                }
-            }
-            if (!closed) {
-                logger.info("Connection with KMP Status Node OK!");
-                runmainthread();
-            }
-        }
-    }
-
     @Override
     public void close() {
         closed = true;
+        // Stop heartbeat thread on close
+        getSocket().stopHeartbeatThread();
         try {
             this.socket.close();
         } catch (Exception e) {

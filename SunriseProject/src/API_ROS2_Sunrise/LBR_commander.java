@@ -32,9 +32,11 @@ import static com.kuka.roboticsAPI.motionModel.BasicMotions.ptp;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 
-public class LBR_commander extends Node {
-
+public class LBR_commander extends AbstractCommander<ISocket> {
     private static final Logger logger = Logger.getLogger(LBR_commander.class.getName());
 
     // Robot Specific
@@ -65,9 +67,17 @@ public class LBR_commander extends Node {
     // Startup
     boolean startup = true;
 
-    public LBR_commander(int port, LBR robot, String ConnectionType, AbstractFrame drivepos) {
-        super(port, ConnectionType, "LBR commander");
+    // Scheduler for reconnect attempts
+    private final ScheduledExecutorService reconnectScheduler = Executors.newSingleThreadScheduledExecutor();
+    // Exponential backoff configuration
+    private static final long RECONNECT_BACKOFF_INITIAL_MS = 1000;
+    private static final long RECONNECT_BACKOFF_MAX_MS     = 16000;
+    private volatile long currentReconnectDelay = RECONNECT_BACKOFF_INITIAL_MS;
 
+    public LBR_commander(int port, LBR robot, String ConnectionType, AbstractFrame drivepos) {
+        super(port, ConnectionType, "LBR_commander");
+        assert port == 30005 : "Port mismatch for LBR_commander";
+        logger.info(getClass().getSimpleName() + "|port " + port + " expected and initialized");
         this.lbr = robot;
         this.drivePos = drivepos;
 
@@ -76,135 +86,209 @@ public class LBR_commander extends Node {
         velocities = new double[jointCount];
         accelerations = new double[jointCount];
 
-        // Ensure socket is initialized
-        if (!isSocketConnected()) {
-            createSocket();
-            if (logger != null) {
-                logger.info("LBR_commander: Initializing socket connection");
-            }
-            // Give socket time to establish
+        // schedule initial reconnect attempts
+        scheduleReconnect();
+
+        // JMX availability check
+        boolean jmxAvailable = true;
+        try {
+            Class.forName("java.lang.management.ManagementFactory");
+        } catch (ClassNotFoundException e) {
+            jmxAvailable = false;
+            logger.warning("JMX not supported on this JVM, skipping MBean registration.");
+        }
+        if (jmxAvailable) {
             try {
-                Thread.sleep(100);
-            } catch (InterruptedException e) {
-                Thread.currentThread().interrupt();
+                javax.management.MBeanServer mbs = java.lang.management.ManagementFactory.getPlatformMBeanServer();
+                javax.management.ObjectName name = new javax.management.ObjectName(
+                    "API_ROS2_Sunrise:type=" + getClass().getSimpleName() + "Metrics"
+                );
+                mbs.registerMBean(this, name);
+                logger.info("Registered MBean: " + name);
+            } catch (Exception ex) {
+                logger.log(java.util.logging.Level.SEVERE,
+                    "Failed to register MBean, continuing without metrics", ex
+                );
             }
         }
+    }
 
-        if (!(isSocketConnected())) {
-            logger.info("Starting thread to connect LBR command node....");
-            Thread monitorLBRCommandConnections = new MonitorLBRCommandConnectionsThread();
-            monitorLBRCommandConnections.start();
+    @Override
+    protected void connect() {
+        createSocket();
+        if (getSocket() instanceof TCPSocket) {
+            String host = ((TCPSocket) getSocket()).TCPConn.getInetAddress().getHostAddress();
+            logger.info(getClass().getSimpleName() + "|port " + port + " connected to " + host + ":" + port);
+        }
+        socketClient = getSocket();
+        if (!isSocketConnected()) {
+            logger.info("LBR_commander: Initializing socket connection");
+            // let scheduler handle reconnection
         } else {
             setisLBRConnected(true);
         }
     }
 
+    /** Schedule next reconnect attempt with backoff and jitter */
+    private void scheduleReconnect() {
+        reconnectScheduler.schedule(new Runnable() {
+            public void run() {
+                try {
+                    reconnectTask();
+                } catch (Throwable t) {
+                    logger.severe("Unexpected error in LBR reconnect task: " + t.getMessage());
+                }
+            }
+        }, currentReconnectDelay, TimeUnit.MILLISECONDS);
+    }
+
+    /** Perform a reconnect attempt with backoff and reset on success */
+    private void reconnectTask() {
+        if (closed || Node.getShutdown()) return;
+        if (Node.isPaused()) { scheduleReconnect(); return; }
+        try {
+            if (!isSocketConnected()) {
+                createSocket();
+                if (socket instanceof TCPSocket) {
+                    try {
+                        ((TCPSocket) socket).TCPConn.setKeepAlive(true);
+                        ((TCPSocket) socket).TCPConn.setSoTimeout(5000);
+                        logger.info("LBR_commander: Socket TCP keep-alive enabled");
+                    } catch (java.net.SocketException e) {
+                        logger.warning("LBR_commander: Could not configure socket keep-alive or timeout: " + e.getMessage());
+                    }
+                }
+                if (isSocketConnected()) {
+                    setisLBRConnected(true);
+                    logger.info("LBR_commander: Connection with LBR Command Node OK!");
+                    runmainthread();
+                    // reset backoff
+                    currentReconnectDelay = RECONNECT_BACKOFF_INITIAL_MS;
+                    logger.info("Reconnect successful, backoff reset to " + currentReconnectDelay + " ms");
+                } else {
+                    long base = currentReconnectDelay * 2;
+                    long jitter = (long)((Math.random() * 0.4 - 0.2) * base);
+                    currentReconnectDelay = (int)Math.min(RECONNECT_BACKOFF_MAX_MS, base + jitter);
+                }
+            } else {
+                currentReconnectDelay = RECONNECT_BACKOFF_INITIAL_MS;
+            }
+        } finally {
+            scheduleReconnect();
+        }
+    }
+
     @Override
-    public void run() {
-        // Added: Track startup time
-        long nodeStartTime = System.currentTimeMillis();
-        boolean isInStartupGracePeriod = true;
-        int messageCount = 0;
-        
-        while (!closed && isNodeRunning()) {
-            if (Node.getShutdown()) break;
-            if (Node.isPaused()) {
-                try { Thread.sleep(100); } catch (InterruptedException e) { break; }
-                continue;
-            }
-            
-            try {
-                // Check if startup grace period has ended
-                long currentTime = System.currentTimeMillis();
-                if (isInStartupGracePeriod && currentTime - nodeStartTime > STARTUP_GRACE_PERIOD_MS) {
-                    isInStartupGracePeriod = false;
-                    if (logger != null) {
-                        logger.info("LBR_commander: Startup grace period ended");
-                    }
-                }
-                
-                String message = socket.receive_message();
-                if (message != null) {
-                    messageCount++;
-                    
-                    // During startup grace period, log ALL messages to help diagnose issues
-                    if (isInStartupGracePeriod && logger != null) {
-                        logger.info("LBR_commander: [STARTUP] Message #" + messageCount + ": " + message);
-                        
-                        // Special handling for shutdown commands during startup
-                        if (message.toLowerCase().contains("shutdown")) {
-                            logger.info("LBR_commander: Ignoring shutdown command during startup grace period");
-                            continue; // Skip processing this command
-                        }
-                    }
-                    
-                    String[] splt = message.split(" ");
-                    if (splt.length > 0) {
-                        if (splt[0].equals("shutdown")) {
-                            // Don't process shutdown during startup grace period
-                            if (isInStartupGracePeriod) {
-                                if (logger != null) {
-                                    logger.info("LBR_commander: Ignoring shutdown command during startup grace period");
-                                }
-                                continue;
-                            }
-                            
-                            if (logger != null) {
-                                logger.info("LBR_commander: Received explicit shutdown command");
-                            }
-                            setShutdown(true);
-                        } else if (splt[0].equals("setJointVelocity") && !getEmergencyStop()) {
-                            receivedRealCommand = true;
-                            try {
-                                if (logger != null) logger.info("received joint command: " + message);
-                                String[] cmdArray = message.split(" ");
-                                double[] jointVelocity = new double[7];
-                                
-                                if (cmdArray.length == 8) { // setJointVelocity + 7 joint values
-                                    for (int i = 0; i < 7; i++) {
-                                        jointVelocity[i] = Double.parseDouble(cmdArray[i + 1]);
-                                    }
-                                    
-                                    if (lbr.isReadyToMove()) {
-                                        // This functionality appears to be incomplete in the original code
-                                        // The LBRJogger class and startPosition variable are not defined
-                                        // For now just log the condition to avoid compilation errors
-                                        if (!getisLBRMoving() && !getEmergencyStop()) {
-                                            setisLBRMoving(true);
-                                            if (logger != null) logger.info("Starting LBR movement!");
-                                            // Implementation would go here
-                                        } else {
-                                            // Implementation would go here
-                                        }
-                                    } else {
-                                        if (logger != null) logger.info("Can't move the robot - not ready to move!");
-                                    }
-                                } else {
-                                    if (logger != null) logger.info("Invalid joint command format: " + message);
-                                }
-                            } catch (Exception e) {
-                                if (logger != null) logger.info("Error processing joint velocity command: " + e.getMessage());
-                            }
-                        } else if (splt[0].equals("setCartVelocity") && !getEmergencyStop()) {
-                            receivedRealCommand = true;
-                            // (implementation for Cartesian velocity would go here)
-                            if (logger != null) logger.info("Cartesian velocity not implemented yet");
-                        }
-                    }
-                }
-                
-                Thread.sleep(10);
-            } catch (InterruptedException e) {
-                Thread.currentThread().interrupt();
-                if (logger != null) logger.info("LBR commander thread interrupted, exiting");
-                break;
-            } catch (Exception e) {
-                if (logger != null) logger.info("Error in LBR commander: " + e.getMessage());
-                e.printStackTrace();
-            }
+    protected void runLoop() throws Exception {
+        // Single iteration of message processing
+        if (Node.getShutdown()) {
+            running = false;
+            return;
         }
         
-        if (logger != null) logger.info("LBR commander no longer running");
+        if (Node.isPaused()) {
+            Thread.sleep(100);
+            return;
+        }
+        
+        try {
+            String message = socket.receive_message();
+            if (message != null) {
+                if (logger != null) {
+                    logger.info("LBR_commander received message: " + message);
+                }
+                
+                // Process the received message
+                String[] splt = message.split(" ");
+                if (splt.length > 0) {
+                    if (splt[0].equals("shutdown")) {
+                        // Don't process shutdown during startup grace period
+                        long elapsedSinceCreation = System.currentTimeMillis() - getCreationTime();
+                        if (elapsedSinceCreation < STARTUP_GRACE_PERIOD_MS) {
+                            if (logger != null) {
+                                logger.info("LBR_commander: Ignoring shutdown command during startup grace period");
+                            }
+                            return;
+                        }
+                        
+                        if (logger != null) {
+                            logger.info("LBR_commander: Received explicit shutdown command");
+                        }
+                        setShutdown(true);
+                    } else if (splt[0].equals("setJointVelocity") && !getEmergencyStop()) {
+                        receivedRealCommand = true;
+                        try {
+                            if (logger != null) logger.info("received joint command: " + message);
+                            String[] cmdArray = message.split(" ");
+                            double[] jointVelocity = new double[7];
+                            
+                            if (cmdArray.length == 8) { // setJointVelocity + 7 joint values
+                                for (int i = 0; i < 7; i++) {
+                                    jointVelocity[i] = Double.parseDouble(cmdArray[i + 1]);
+                                }
+                                
+                                if (lbr.isReadyToMove()) {
+                                    // This functionality appears to be incomplete in the original code
+                                    // The LBRJogger class and startPosition variable are not defined
+                                    // For now just log the condition to avoid compilation errors
+                                    if (!getisLBRMoving() && !getEmergencyStop()) {
+                                        setisLBRMoving(true);
+                                        if (logger != null) logger.info("Starting LBR movement!");
+                                        // Implementation would go here
+                                    } else {
+                                        // Implementation would go here
+                                    }
+                                } else {
+                                    if (logger != null) logger.info("Can't move the robot - not ready to move!");
+                                }
+                            } else {
+                                if (logger != null) logger.info("Invalid joint command format: " + message);
+                            }
+                        } catch (Exception e) {
+                            if (logger != null) logger.info("Error processing joint velocity command: " + e.getMessage());
+                        }
+                    } else if (splt[0].equals("setCartVelocity") && !getEmergencyStop()) {
+                        receivedRealCommand = true;
+                        // (implementation for Cartesian velocity would go here)
+                        if (logger != null) logger.info("Cartesian velocity not implemented yet");
+                    }
+                }
+            }
+            
+            // If there might be more work to do, add a small sleep to prevent tight loops
+            // This needs to be done outside the message processing to allow thread interruption
+            if (Node.isPaused() || message == null) {
+                Thread.sleep(100);
+            }
+            
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+            if (logger != null) logger.warning("LBR commander thread interrupted: " + e.getMessage());
+            throw e;
+        } catch (Exception e) {
+            if (logger != null) {
+                logger.warning("Error in LBR commander (will retry): " + e.getMessage());
+                // Print stack trace for debugging
+                java.io.StringWriter sw = new java.io.StringWriter();
+                java.io.PrintWriter pw = new java.io.PrintWriter(sw);
+                e.printStackTrace(pw);
+                logger.warning("Stack trace: " + sw.toString());
+            }
+            
+            // Avoid tight loops on repeated errors - add a small sleep
+            try {
+                Thread.sleep(100);
+            } catch (InterruptedException ie) {
+                Thread.currentThread().interrupt();
+                throw ie; // Re-throw to signal higher level that we're interrupted
+            }
+        }
+    }
+
+    @Override
+    protected void disconnect() {
+        reconnectScheduler.shutdownNow();
+        super.close();
     }
 
     @SuppressWarnings("unused") // Keep for future use or when called from ROS
@@ -388,9 +472,7 @@ public class LBR_commander extends Node {
                 }
             }
             if (!closed) {
-                if (!Node.isPaused()) {
-                    logger.info("Connection with LBR Command Node OK!");
-                }
+                logger.info("Connection with LBR Command Node OK!");
                 runmainthread();
             }
         }

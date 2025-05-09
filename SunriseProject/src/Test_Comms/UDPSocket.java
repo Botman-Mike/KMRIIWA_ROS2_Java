@@ -14,7 +14,7 @@ public class UDPSocket implements ISocket {
         this.COMport = port;
         this.nodename = node_name;
         try {
-            remoteAddress = InetAddress.getByName("172.31.1.147"); // Robot's IP
+            remoteAddress = InetAddress.getByName("172.31.1.206"); // Updated to match production IP
             UDPConn = new DatagramSocket();
             UDPConn.setReuseAddress(true);
             System.out.println(nodename + " UDP socket created on port " + port);

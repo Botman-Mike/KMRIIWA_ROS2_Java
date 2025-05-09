@@ -99,6 +99,13 @@ public class Node extends Thread {
                 ISocket newSocket = new UDPSocket(this.port, this.nodename);
                 this.socket = newSocket;
             }
+            // Always enable TCP keep-alive & socket read timeout
+            if (this.socket instanceof TCPSocket) {
+                try {
+                    ((TCPSocket) this.socket).TCPConn.setKeepAlive(true);
+                    ((TCPSocket) this.socket).TCPConn.setSoTimeout(TCPSocket.SO_TIMEOUT);
+                } catch (Exception ignore) {}
+            }
             if (logger != null) {
                 logger.info(nodename + ": Socket initialized successfully");
             }
@@ -118,6 +125,13 @@ public class Node extends Thread {
                 ISocket newSocket = new UDPSocket(KMP_laser_port, this.nodename);
                 this.laser_socket = newSocket;
             }
+            // Enable TCP keep-alive if applicable
+            if (this.laser_socket instanceof TCPSocket) {
+                try {
+                    ((TCPSocket) this.laser_socket).TCPConn.setKeepAlive(true);
+                    ((TCPSocket) this.laser_socket).TCPConn.setSoTimeout(TCPSocket.SO_TIMEOUT);
+                } catch (Exception ignore) {}
+            }
         } else if (Type.equals("Odom")) {
             if (OdometryConnectionType.equals("TCP")) {
                 ISocket newSocket = new TCPSocket(KMP_odometry_port, this.nodename);
@@ -125,6 +139,13 @@ public class Node extends Thread {
             } else {
                 ISocket newSocket = new UDPSocket(KMP_odometry_port, this.nodename);
                 this.odometry_socket = newSocket;
+            }
+            // Enable TCP keep-alive if applicable
+            if (this.odometry_socket instanceof TCPSocket) {
+                try {
+                    ((TCPSocket) this.odometry_socket).TCPConn.setKeepAlive(true);
+                    ((TCPSocket) this.odometry_socket).TCPConn.setSoTimeout(TCPSocket.SO_TIMEOUT);
+                } catch (Exception ignore) {}
             }
         }
     }
@@ -200,13 +221,28 @@ public class Node extends Thread {
     }
 
     public void setShutdown(boolean state) {
-        // Prevent immediate shutdown if within startup grace period
-        if (System.currentTimeMillis() - creationTime < STARTUP_GRACE_PERIOD_MS && !receivedRealCommand) {
+        long currentTime = System.currentTimeMillis();
+        
+        // Enhanced startup protection logic:
+        // 1. Check if we're in startup grace period
+        // 2. Make sure we ignore ALL shutdowns during this period
+        if (state && (currentTime - creationTime < STARTUP_GRACE_PERIOD_MS)) {
             if (logger != null) {
-                logger.warn("Ignoring shutdown command during startup grace period");
+                logger.warn(nodename + ": Ignoring shutdown command during startup grace period (" + 
+                           (currentTime - creationTime) + "ms < " + STARTUP_GRACE_PERIOD_MS + "ms)");
             }
             return;
         }
+        
+        // Only allow actual shutdown if the node has established proper communication
+        if (state && !receivedRealCommand && socket != null) {
+            // Check if we've established any real communication yet
+            if (logger != null) {
+                logger.warn(nodename + ": Ignoring premature shutdown command - no real commands received yet");
+            }
+            return;
+        }
+        
         shutdown = state;
         if (logger != null) {
             logger.info("Shutdown set by " + this.nodename + " to " + state);
@@ -242,9 +278,22 @@ public class Node extends Thread {
     public void setisLBRConnected(boolean in) { isLBRconnected = in; }
     public boolean getisKMPConnected() { return isKMPconnected; }
     public void setisKMPConnected(boolean in) { isKMPconnected = in; }
+    
+    /**
+     * Returns the creation time of this node, for use in startup grace period calculations.
+     * @return time in milliseconds when this node was created
+     */
+    protected long getCreationTime() { return creationTime; }
 
     public ISocket getSocket() {
         return this.socket;
+    }
+
+    /**
+     * Manually inject an ITaskLogger instance when DI isn't used.
+     */
+    public void setLogger(ITaskLogger logger) {
+        this.logger = logger;
     }
 
     protected void startConnectionMonitoring() {
